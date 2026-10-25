@@ -31,4 +31,4 @@ Podepsaný WFP je bezeztrátově rozdělený na `.wfpart` soubory kvůli limitu 
 
 GitHub import obsahuje úplný sestavitelný pracovní strom, testy, licence a zdroje. Původní historie s nadlimitními WFP je v dříve předaných zdrojových archivech. Nová historie GitHubu začíná úplným importem. Soukromé podpisové klíče do repozitáře nepatří.
 
-Uživatel potvrdil kompletní funkční kontrolu verze 16 po opravě pádu. To neznamená test nové verze 17, měřené FPS, TalkBack, druhý telefon ani herní přejímku. Ověření obnoveného sestavení je v `docs/qa/e10audit`.
+Uživatel potvrdil kompletní funkční kontrolu verze 16 po opravě pádu. To neznamená test nové verze 17, měřené FPS, TalkBack, druhý telefon ani herní přejímku. Původní archiv neobsahoval protokoly nového sestavení. Obnova a následné ověření jsou popsané v [záznamu importu](GITHUB_IMPORT.md); aktuální výsledky jsou v GitHub Actions.
