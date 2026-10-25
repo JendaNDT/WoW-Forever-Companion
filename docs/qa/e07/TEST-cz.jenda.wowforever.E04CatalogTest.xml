@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E04CatalogTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T16:03:11.189Z" hostname="f05490768d7a" time="0.008">
+  <properties/>
+  <testcase name="absentCoordinatesStayAbsentAndBookmarkFilterUsesEntryIdentity" classname="cz.jenda.wowforever.E04CatalogTest" time="0.003"/>
+  <testcase name="searchesCzechAliasesWithoutAccentsAndSeparatesIdenticallyNamedQuests" classname="cz.jenda.wowforever.E04CatalogTest" time="0.002"/>
+  <testcase name="multiplePositionsFloorsAndTransformsStayDistinct" classname="cz.jenda.wowforever.E04CatalogTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

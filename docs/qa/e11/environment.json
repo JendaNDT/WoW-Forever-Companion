@@ -1,0 +1,10 @@
+{
+  "scope": "host validation environment; not Samsung performance",
+  "os": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "logical_cpu_visible": 9,
+  "cpu_quota": "800000 100000",
+  "memory_limit_bytes": "8589934592",
+  "host_graphics": "Robolectric 4.14.1 native graphics API28; no adb device",
+  "device_acceptance_pending": true
+}

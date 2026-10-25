@@ -1,0 +1,307 @@
+{
+  "checked_on": "2026-10-23",
+  "note": "Otisky souborů stažených pro kontrolu. Celé cizí HTML stránky nejsou součástí výstupního balíčku.",
+  "snapshots": [
+    {
+      "name": "att_durotar.lua",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/64b17f0be6d062412de564cd20f739c1241a0743/.contrib/.db/forever/zones/kalimdor/durotar.lua",
+      "status": 200,
+      "bytes": 42151,
+      "sha256": "41c2907215ea87d168d50297cc4351591bcfe2abac4569b7b80f456aaf8b7e21",
+      "content_type": "text/plain; charset=utf-8",
+      "first_lines": [
+        "---------------------------------------------------",
+        "--          Z O N E S        M O D U L E         --",
+        "---------------------------------------------------",
+        "",
+        "maproot(MAP.KALIMDOR, MAP.DUROTAR, {",
+        "\t[\"lore\"] = \"Once the home of the savage quilboar, the Horde arrived on Kalimdor's shore and, in the aftermath of the Third War, drove the quilboar from the land and established this region as its own. Warchief Thrall named the new nation after his father, Durotan, and rules ably. Horde settlements are scattered throughout the rocky land, which is only marginally more fertile than the Barrens.\\n\\nThe Horde's greatest city is Orgrimmar, a warrior city that symbolizes the greatness of the orcs and their allies. Much of Durotar remains wild, and the orcs continually fend off centaur and quilboar as they attempt to tame the land.\",",
+        "\t[\"icon\"] = 236756,",
+        "\t[\"groups\"] = {"
+      ]
+    },
+    {
+      "name": "att_license.txt",
+      "url": "https://raw.githubusercontent.com/ATTWoWAddon/AllTheThings/64b17f0be6d062412de564cd20f739c1241a0743/LICENSE",
+      "status": 200,
+      "bytes": 1079,
+      "sha256": "955281b9174e0f66b08c8e83d31e0f38b2fcaa247ca3af92d1723d81a13cddfb"
+    },
+    {
+      "name": "azeroth_beta.webp",
+      "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/947.webp",
+      "status": 200,
+      "bytes": 183904,
+      "sha256": "8838133de22f546b327a3c978eac57dd4597ac092aa075df61e899b67a7fbcff",
+      "size": [
+        1002,
+        668
+      ]
+    },
+    {
+      "name": "durotar_azerpug.webp",
+      "url": "https://forever.azerpug.com/maps/1411.webp",
+      "status": 200,
+      "bytes": 274456,
+      "sha256": "8ae613f279cc544aa1b7f47a8e7f0ab8601290d8bc89aada3e364eb0b0bae51c",
+      "content_type": "image/webp",
+      "image_size": [
+        1002,
+        668
+      ]
+    },
+    {
+      "name": "durotar_beta.webp",
+      "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1411.webp",
+      "status": 200,
+      "bytes": 188968,
+      "sha256": "a998caacadb308e1c5bffbd1f8d31611b789547a1fdd90368d0697cb0fcc0275",
+      "content_type": "image/webp",
+      "image_size": [
+        1002,
+        668
+      ]
+    },
+    {
+      "name": "eq_available.lua",
+      "url": "https://raw.githubusercontent.com/wheelbarrel00/EverythingQuests/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestAvailable_Forever.lua",
+      "status": 200,
+      "bytes": 487124,
+      "sha256": "fec3ffd4259933aa691fa23fcde19d70356dd93d7b6ddfe994d6543ca257d47f",
+      "content_type": "text/plain; charset=utf-8",
+      "first_lines": [
+        "local _, ns = ...",
+        "",
+        "-- Where every quest can be PICKED UP, and the gates that decide whether it can be.",
+        "-- The client answers none of this for a quest that is not in the log, so it ships.",
+        "--",
+        "-- start  [questID] = { [uiMapID] = { packed, ... } }",
+        "--        packed = srcID*1e9 + kind*1e8 + floor(x*1e4)*1e4 + floor(y*1e4)",
+        "--        kind 1=an NPC offers it, 2=an object offers it, 3=an item that starts it"
+      ]
+    },
+    {
+      "name": "eq_license.txt",
+      "url": "https://raw.githubusercontent.com/wheelbarrel00/EverythingQuests/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/LICENSE",
+      "status": 200,
+      "bytes": 1070,
+      "sha256": "1792e40a17d56f3f0b12b2600052e16329fb2a283a9890e07370d5c12c4b2aa6",
+      "content_type": "text/plain; charset=utf-8",
+      "first_lines": [
+        "MIT License",
+        "",
+        "Copyright (c) 2026 Wheelbarrel00",
+        "",
+        "Permission is hereby granted, free of charge, to any person obtaining a copy",
+        "of this software and associated documentation files (the \"Software\"), to deal",
+        "in the Software without restriction, including without limitation the rights",
+        "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell"
+      ]
+    },
+    {
+      "name": "eq_sources.lua",
+      "url": "https://raw.githubusercontent.com/wheelbarrel00/EverythingQuests/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestSources_Forever.lua",
+      "status": 200,
+      "bytes": 49665,
+      "sha256": "60d2afc7ab8b9c405073ccc9fa80d607cbab38b38bd3d3a6a70cc656acf56ff6",
+      "content_type": "text/plain; charset=utf-8",
+      "first_lines": [
+        "local _, ns = ...",
+        "",
+        "-- Names for the creatures and objects that START or FINISH a quest, so a start or",
+        "-- turn-in pin can say WHO is standing there and not only where.",
+        "--",
+        "-- npc  [creatureID] = name",
+        "-- obj  [objectID]   = name",
+        "--"
+      ]
+    },
+    {
+      "name": "eq_turnin.lua",
+      "url": "https://raw.githubusercontent.com/wheelbarrel00/EverythingQuests/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestTurnIn_Forever.lua",
+      "status": 200,
+      "bytes": 154397,
+      "sha256": "726e4c041f875cb9f4c16916050bb7b0d31315e90acdc9de85a35c6c1df3c9f2",
+      "content_type": "text/plain; charset=utf-8",
+      "first_lines": [
+        "local _, ns = ...",
+        "",
+        "-- [questID] = { [uiMapID] = { packed, ... } }",
+        "-- packed = srcID*1e9 + kind*1e8 + floor(x*1e4)*1e4 + floor(y*1e4)",
+        "-- kind 1=an NPC takes it, 2=an object does, and the same +4 (5,6) for a DUNGEON",
+        "-- ENTRANCE - the turn-in is inside an instance whose interior coordinates nobody",
+        "-- records, so the pin marks the way in. Recover the real kind by subtracting 4.",
+        "-- srcID is the creature id when kind is 1 and the object id when kind is 2, for the"
+      ]
+    },
+    {
+      "name": "frezza_page.html",
+      "url": "https://warcraftforever.games/npcs/9564",
+      "status": 200,
+      "bytes": 162951,
+      "sha256": "2f48e305d2a35627949bb86d28b17e2e081a1f06fc1e52832075cc8348dadb46"
+    },
+    {
+      "name": "gadrin_page.html",
+      "url": "https://warcraftforever.games/npcs/3188",
+      "status": 200,
+      "bytes": 167288,
+      "sha256": "43260c9626648d7fc747f59437605ac5024a3fce05fe8c5db0ecbf57c7322bef"
+    },
+    {
+      "name": "gornek_page.html",
+      "url": "https://warcraftforever.games/npcs/3143",
+      "status": 200,
+      "bytes": 169968,
+      "sha256": "cebbc0189dd3018542147cb382b348a592dd68cc6e9be322ec8170e8cfd1a18d"
+    },
+    {
+      "name": "grosk_page.html",
+      "url": "https://warcraftforever.games/npcs/6928",
+      "status": 200,
+      "bytes": 164743,
+      "sha256": "a098890d5a7c9c2eaf3b4159480c1a846d5d7aea1a6a0bb01f98ea17fbc7b840"
+    },
+    {
+      "name": "item_5778.html",
+      "url": "https://warcraftforever.games/items/5778",
+      "status": 200,
+      "bytes": 162085,
+      "sha256": "291e8c329bec097f97b2ae083c6c0801e0694a9f8912fa312634b9016b61c057"
+    },
+    {
+      "name": "kalimdor_beta.webp",
+      "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1414.webp",
+      "status": 200,
+      "bytes": 170178,
+      "sha256": "cc54264bb9d7b89ae1619cc84f60c3912318fad82c6683565248e7b830717ab1",
+      "size": [
+        1002,
+        668
+      ]
+    },
+    {
+      "name": "kaltunk_page.html",
+      "url": "https://warcraftforever.games/npcs/10176",
+      "status": 200,
+      "bytes": 163303,
+      "sha256": "b673ddf167e429832209e7c5f9405d034d53fad730814256a8486dbec160b50b"
+    },
+    {
+      "name": "kzan_page.html",
+      "url": "https://warcraftforever.games/npcs/3159",
+      "status": 200,
+      "bytes": 182274,
+      "sha256": "50c87aaa418ebd588d8f009b9996935c49d066425c23f6a902f03e271f74b6c4"
+    },
+    {
+      "name": "orgrimmar_beta.webp",
+      "url": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1454.webp",
+      "status": 200,
+      "bytes": 135640,
+      "sha256": "c7c684ce1d1a14540c3d441cdf777381bcdb42a292843fce03ca8c08fafae59e",
+      "size": [
+        1002,
+        668
+      ]
+    },
+    {
+      "name": "orgrimmar_page.html",
+      "url": "https://warcraftforever.games/maps/orgrimmar",
+      "status": 200,
+      "bytes": 1265017,
+      "sha256": "fa5f8e1f0ae638ab3858fba9061182b1539cf25c6144b86bff848d617755cb2c"
+    },
+    {
+      "name": "quest_4641.html",
+      "url": "https://warcraftforever.games/quests/4641",
+      "status": 200,
+      "bytes": 165393,
+      "sha256": "00f63a3046aebcab97fb992e41dfb7971f425a6261d7098cbc91182ecc20fc7e"
+    },
+    {
+      "name": "quest_788.html",
+      "url": "https://warcraftforever.games/quests/788",
+      "status": 200,
+      "bytes": 170684,
+      "sha256": "055251d7ae3ec8a36a86ae8ec12f0482ff5e1d049e86385127acc60ef5912881"
+    },
+    {
+      "name": "quest_792.html",
+      "url": "https://warcraftforever.games/quests/792",
+      "status": 200,
+      "bytes": 174336,
+      "sha256": "ea15a05070de961ba5b2fd5e9a9c79832c448d955ef3e1890baef9729898aee0"
+    },
+    {
+      "name": "quest_794.html",
+      "url": "https://warcraftforever.games/quests/794",
+      "status": 200,
+      "bytes": 174203,
+      "sha256": "fded5eea6fb616fc86a91597d456732b98e2b8fc6203e312267b03524e49809c"
+    },
+    {
+      "name": "quest_805.html",
+      "url": "https://warcraftforever.games/quests/805",
+      "status": 200,
+      "bytes": 166543,
+      "sha256": "516cf1e95cd44faa9a4973f8ca4b890402f8dae74f459a963ecef93f6874d9d1"
+    },
+    {
+      "name": "quest_97279.html",
+      "url": "https://warcraftforever.games/quests/97279",
+      "status": 200,
+      "bytes": 167452,
+      "sha256": "457c476d0cb101080996d983fec2cc367c993a6987da0779f5843084f12fae42"
+    },
+    {
+      "name": "ruzan_page.html",
+      "url": "https://warcraftforever.games/npcs/5765",
+      "status": 200,
+      "bytes": 161633,
+      "sha256": "9acb0d5b57e765765da5c2efe02f6446dafd2606cace482eecc3336e81e54bca"
+    },
+    {
+      "name": "zureetha_page.html",
+      "url": "https://warcraftforever.games/npcs/3145",
+      "status": 200,
+      "bytes": 165192,
+      "sha256": "843ff704580d472a3fcb254cdc8b37a25982baef9a3fe304cf44b3299616e0ad"
+    },
+    {
+      "name": "azerpug_azeroth",
+      "url": "https://forever.azerpug.com/azeroth",
+      "status": 200,
+      "bytes": 81170,
+      "sha256": "5db6a59c18ca497232fa735ab1a890ae0e87e98f17cb9cc8d44d75b60c5602f0"
+    },
+    {
+      "name": "azerpug_durotar",
+      "url": "https://forever.azerpug.com/zones/1411/durotar",
+      "status": 200,
+      "bytes": 94453,
+      "sha256": "febba0ef9d775c2ed5132559ca6746e8f0190782dae8c7e8b0016697d1a08946"
+    },
+    {
+      "name": "foreverera_1499",
+      "url": "https://theforeverera.com/en/quests/1499/",
+      "status": 200,
+      "bytes": 91544,
+      "sha256": "f7c80a8c58866579884ca15df8262d017a38855cfb1a965ab0951e53acf32357"
+    },
+    {
+      "name": "questing_1499",
+      "url": "https://questing.wiki/wow-forever/quests/1499/",
+      "status": 200,
+      "bytes": 41477,
+      "sha256": "6070b1a822f5c870c27e1ca1b602eff61ccda0b9540db21b4a359f78837a0b13"
+    },
+    {
+      "name": "recorder_durotar",
+      "url": "https://warcraftforever.games/maps/durotar",
+      "status": 200,
+      "bytes": 683760,
+      "sha256": "cad6b6a9c4c1bf342565bb4025b8f0038373c467d510420243211d141fb27f74"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E08FlowTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-25T15:43:37.968Z" hostname="eb5eafc03222" time="1.852">
+  <properties/>
+  <testcase name="personalDiscoveryIsSavedButDoesNotPromoteTheBetaZeppelinToVerifiedTransport" classname="cz.jenda.wowforever.E08FlowTest" time="0.368"/>
+  <testcase name="reorderRemoveDuplicateVisitsAndRecreationKeepTheVisiblePlanConsistent" classname="cz.jenda.wowforever.E08FlowTest" time="0.495"/>
+  <testcase name="realCatalogAddsOrderedTargetsAndNumbersAppearOnTheActualMap" classname="cz.jenda.wowforever.E08FlowTest" time="0.424"/>
+  <testcase name="syntheticVerifiedFlightAppearsOnlyAfterBothDiscoveryChipsAreSet" classname="cz.jenda.wowforever.E08FlowTest" time="0.564"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

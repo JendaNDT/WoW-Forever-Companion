@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "generation": 7,
+  "files": 1104,
+  "maps": 61,
+  "entries": 12352,
+  "publisher_signature_verified": true,
+  "positions": 18441,
+  "sha256": "ba94fb218ad63cae250c7d32b32ef16532c4daa5b8ab822685d5b623a8cb563e",
+  "tiles": 1103,
+  "allPublishedMapTilesUnchanged": true,
+  "pixelExactNewMapReconstructions": 56
+}

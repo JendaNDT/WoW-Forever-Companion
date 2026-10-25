@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E07UpdateTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-24T18:42:47.791Z" hostname="71ac4b1786b3" time="0.13">
+  <properties/>
+  <testcase name="generationOneUpgradeReopensWithAllPersonalTablesAndPortableBackupIntact" classname="cz.jenda.wowforever.E07UpdateTest" time="0.081"/>
+  <testcase name="failedNewContentTransactionCanBeRetriedWithoutPartialGeneration" classname="cz.jenda.wowforever.E07UpdateTest" time="0.048"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,1220 @@
+[
+  {
+    "key": "wow-forever:map:947",
+    "uiMapId": 947,
+    "floorId": 0,
+    "name": "Azeroth",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:947:1.60.1.69893:v1",
+    "sourceId": "recorder_maps",
+    "sourceUrl": "https://warcraftforever.games/maps/azeroth",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    }
+  },
+  {
+    "key": "wow-forever:map:1414",
+    "uiMapId": 1414,
+    "floorId": 0,
+    "name": "Kalimdor",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1414:1.60.1.69893:v1",
+    "sourceId": "recorder_maps",
+    "sourceUrl": "https://warcraftforever.games/maps/kalimdor",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    }
+  },
+  {
+    "key": "wow-forever:map:1411",
+    "uiMapId": 1411,
+    "floorId": 0,
+    "name": "Durotar",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+    "sourceId": "recorder_maps",
+    "sourceUrl": "https://warcraftforever.games/maps/durotar",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1454",
+    "uiMapId": 1454,
+    "floorId": 0,
+    "name": "Orgrimmar",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+    "sourceId": "recorder_maps",
+    "sourceUrl": "https://warcraftforever.games/maps/orgrimmar",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1413",
+    "uiMapId": 1413,
+    "floorId": 0,
+    "name": "The Barrens",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+    "sourceId": "e10_map_1413",
+    "sourceUrl": "https://warcraftforever.games/maps/the-barrens",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1412",
+    "uiMapId": 1412,
+    "floorId": 0,
+    "name": "Mulgore",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1412:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1412",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1412.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1416",
+    "uiMapId": 1416,
+    "floorId": 0,
+    "name": "Alterac Mountains",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1416:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1416",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1416.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1417",
+    "uiMapId": 1417,
+    "floorId": 0,
+    "name": "Arathi Highlands",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1417:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1417",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1417.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1418",
+    "uiMapId": 1418,
+    "floorId": 0,
+    "name": "Badlands",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1418:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1418",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1418.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1419",
+    "uiMapId": 1419,
+    "floorId": 0,
+    "name": "Blasted Lands",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1419:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1419",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1419.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1420",
+    "uiMapId": 1420,
+    "floorId": 0,
+    "name": "Tirisfal Glades",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1420:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1420",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1420.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1421",
+    "uiMapId": 1421,
+    "floorId": 0,
+    "name": "Silverpine Forest",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1421:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1421",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1421.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1422",
+    "uiMapId": 1422,
+    "floorId": 0,
+    "name": "Western Plaguelands",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1422:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1422",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1422.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1423",
+    "uiMapId": 1423,
+    "floorId": 0,
+    "name": "Eastern Plaguelands",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1423:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1423",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1423.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1424",
+    "uiMapId": 1424,
+    "floorId": 0,
+    "name": "Hillsbrad Foothills",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1424:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1424",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1424.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1425",
+    "uiMapId": 1425,
+    "floorId": 0,
+    "name": "The Hinterlands",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1425:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1425",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1425.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1426",
+    "uiMapId": 1426,
+    "floorId": 0,
+    "name": "Dun Morogh",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1426:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1426",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1426.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1427",
+    "uiMapId": 1427,
+    "floorId": 0,
+    "name": "Searing Gorge",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1427:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1427",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1427.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1428",
+    "uiMapId": 1428,
+    "floorId": 0,
+    "name": "Burning Steppes",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1428:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1428",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1428.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1429",
+    "uiMapId": 1429,
+    "floorId": 0,
+    "name": "Elwynn Forest",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1429:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1429",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1429.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1430",
+    "uiMapId": 1430,
+    "floorId": 0,
+    "name": "Deadwind Pass",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1430:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1430",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1430.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1431",
+    "uiMapId": 1431,
+    "floorId": 0,
+    "name": "Duskwood",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1431:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1431",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1431.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1432",
+    "uiMapId": 1432,
+    "floorId": 0,
+    "name": "Loch Modan",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1432:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1432",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1432.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1433",
+    "uiMapId": 1433,
+    "floorId": 0,
+    "name": "Redridge Mountains",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1433:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1433",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1433.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1434",
+    "uiMapId": 1434,
+    "floorId": 0,
+    "name": "Stranglethorn Vale",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1434:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1434",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1434.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1435",
+    "uiMapId": 1435,
+    "floorId": 0,
+    "name": "Swamp of Sorrows",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1435:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1435",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1435.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1436",
+    "uiMapId": 1436,
+    "floorId": 0,
+    "name": "Westfall",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1436:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1436",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1436.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1437",
+    "uiMapId": 1437,
+    "floorId": 0,
+    "name": "Wetlands",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1437:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1437",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1437.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1438",
+    "uiMapId": 1438,
+    "floorId": 0,
+    "name": "Teldrassil",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1438:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1438",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1438.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1439",
+    "uiMapId": 1439,
+    "floorId": 0,
+    "name": "Darkshore",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1439:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1439",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1439.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1440",
+    "uiMapId": 1440,
+    "floorId": 0,
+    "name": "Ashenvale",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1440:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1440",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1440.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1441",
+    "uiMapId": 1441,
+    "floorId": 0,
+    "name": "Thousand Needles",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1441:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1441",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1441.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1442",
+    "uiMapId": 1442,
+    "floorId": 0,
+    "name": "Stonetalon Mountains",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1442:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1442",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1442.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1443",
+    "uiMapId": 1443,
+    "floorId": 0,
+    "name": "Desolace",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1443:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1443",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1443.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1444",
+    "uiMapId": 1444,
+    "floorId": 0,
+    "name": "Feralas",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1444:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1444",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1444.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1445",
+    "uiMapId": 1445,
+    "floorId": 0,
+    "name": "Dustwallow Marsh",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1445:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1445",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1445.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1446",
+    "uiMapId": 1446,
+    "floorId": 0,
+    "name": "Tanaris",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1446:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1446",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1446.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1447",
+    "uiMapId": 1447,
+    "floorId": 0,
+    "name": "Azshara",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1447:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1447",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1447.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1448",
+    "uiMapId": 1448,
+    "floorId": 0,
+    "name": "Felwood",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1448:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1448",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1448.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1449",
+    "uiMapId": 1449,
+    "floorId": 0,
+    "name": "Un'Goro Crater",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1449:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1449",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1449.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1450",
+    "uiMapId": 1450,
+    "floorId": 0,
+    "name": "Moonglade",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1450:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1450",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1450.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1451",
+    "uiMapId": 1451,
+    "floorId": 0,
+    "name": "Silithus",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1451:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1451",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1451.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1452",
+    "uiMapId": 1452,
+    "floorId": 0,
+    "name": "Winterspring",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1452:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1452",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1452.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1453",
+    "uiMapId": 1453,
+    "floorId": 0,
+    "name": "Stormwind City",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1453:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1453",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1453.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1455",
+    "uiMapId": 1455,
+    "floorId": 0,
+    "name": "Ironforge",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1455:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1455",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1455.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1456",
+    "uiMapId": 1456,
+    "floorId": 0,
+    "name": "Thunder Bluff",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1456:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1456",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1456.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1457",
+    "uiMapId": 1457,
+    "floorId": 0,
+    "name": "Darnassus",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1457:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1457",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1457.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1458",
+    "uiMapId": 1458,
+    "floorId": 0,
+    "name": "Undercity",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1458:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1458",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1458.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1459",
+    "uiMapId": 1459,
+    "floorId": 0,
+    "name": "Alterac Valley",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1459:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1459",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1459.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1460",
+    "uiMapId": 1460,
+    "floorId": 0,
+    "name": "Warsong Gulch",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1460:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1460",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1460.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1461",
+    "uiMapId": 1461,
+    "floorId": 0,
+    "name": "Arathi Basin",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1461:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1461",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1461.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:1415",
+    "uiMapId": 1415,
+    "floorId": 0,
+    "name": "Eastern Kingdoms",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:1415:1.60.1.69893:v1",
+    "sourceId": "e10full_map_1415",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1415.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:2548",
+    "uiMapId": 2548,
+    "floorId": 0,
+    "name": "Riverglades",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:2548:1.60.1.69893:v1",
+    "sourceId": "e10full_map_2548",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/2548.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:2482",
+    "uiMapId": 2482,
+    "floorId": 0,
+    "name": "Mount Hyjal",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:2482:1.60.1.69893:v1",
+    "sourceId": "e10full_map_2482",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/2482.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:2652",
+    "uiMapId": 2652,
+    "floorId": 0,
+    "name": "Shen'dralas",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:2652:1.60.1.69893:v1",
+    "sourceId": "e10full_map_2652",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/2652.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:2521",
+    "uiMapId": 2521,
+    "floorId": 0,
+    "name": "Zephras Isle",
+    "width": 1002,
+    "height": 668,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:2521:1.60.1.69893:v1",
+    "sourceId": "e10full_map_2521",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/2521.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Referenční katalog Horda / Warlock 1–60. Souřadnice převzaté z komunitní databáze; nejde o potvrzení vydané hry. Rozsah a mezery viz Pokrytí obsahu."
+  },
+  {
+    "key": "wow-forever:map:902959",
+    "uiMapId": 902959,
+    "floorId": 0,
+    "name": "City of Dalaran",
+    "width": 1114,
+    "height": 1370,
+    "levels": 4,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:902959:1.60.1.69893:v1",
+    "sourceId": "e10full_map_902959",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/2959.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Přehled vnitřku instance; samostatný obrazový rámec bez převodu souřadnic NPC. Vstupy a úkoly hledej v katalogu."
+  },
+  {
+    "key": "wow-forever:map:902998",
+    "uiMapId": 902998,
+    "floorId": 0,
+    "name": "Excavation Site: Wetlands",
+    "width": 1242,
+    "height": 890,
+    "levels": 4,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:902998:1.60.1.69893:v1",
+    "sourceId": "e10full_map_902998",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/2998.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Přehled vnitřku instance; samostatný obrazový rámec bez převodu souřadnic NPC. Vstupy a úkoly hledej v katalogu."
+  },
+  {
+    "key": "wow-forever:map:902999",
+    "uiMapId": 902999,
+    "floorId": 0,
+    "name": "Ruins of Lordaeron",
+    "width": 698,
+    "height": 762,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:902999:1.60.1.69893:v1",
+    "sourceId": "e10full_map_902999",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/2999.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Přehled vnitřku instance; samostatný obrazový rámec bez převodu souřadnic NPC. Vstupy a úkoly hledej v katalogu."
+  },
+  {
+    "key": "wow-forever:map:903065",
+    "uiMapId": 903065,
+    "floorId": 0,
+    "name": "The Hall of Thanes",
+    "width": 560,
+    "height": 764,
+    "levels": 3,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:903065:1.60.1.69893:v1",
+    "sourceId": "e10full_map_903065",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/3065.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Přehled vnitřku instance; samostatný obrazový rámec bez převodu souřadnic NPC. Vstupy a úkoly hledej v katalogu."
+  },
+  {
+    "key": "wow-forever:map:903002",
+    "uiMapId": 903002,
+    "floorId": 0,
+    "name": "Half-Pint Tavern",
+    "width": 1536,
+    "height": 1536,
+    "levels": 4,
+    "build": "1.60.1.69893",
+    "coordinateVersion": "wow-forever:map:903002:1.60.1.69893:v1",
+    "sourceId": "e10full_map_903002",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/3002.webp",
+    "transform": {
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "offsetX": 0.0,
+      "offsetY": 0.0
+    },
+    "scopeCs": "Přehled vnitřku instance; samostatný obrazový rámec bez převodu souřadnic NPC. Vstupy a úkoly hledej v katalogu."
+  }
+]

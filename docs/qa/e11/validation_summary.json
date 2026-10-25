@@ -1,0 +1,109 @@
+{
+  "stage": "E11",
+  "date": "2026-10-25",
+  "version": "0.11.0-e11",
+  "versionCode": 11,
+  "application_id": "cz.jenda.wowforever.guide",
+  "build_variant_delivered": "release, non-debug, profileable shell API29+",
+  "clean_build_passed": true,
+  "host_tests_passed": 169,
+  "new_e11_host_tests": 11,
+  "host_tests_failed": 0,
+  "host_tests_skipped": 0,
+  "python_parser_tests_passed": 3,
+  "lint": {
+    "debug": {
+      "errors": 0,
+      "warnings": 5,
+      "issues": [
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of ovh.plrapps:mapcompose than 3.2.0 is available: 3.2.8"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.8.1 is available: 1.12.0"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of org.robolectric:robolectric than 4.14.1 is available: 4.17"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        }
+      ]
+    },
+    "release": {
+      "errors": 0,
+      "warnings": 6,
+      "issues": [
+        {
+          "id": "UnusedAttribute",
+          "severity": "Warning",
+          "message": "Attribute `shell` is only used in API level 29 and higher (current min is 26)"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of ovh.plrapps:mapcompose than 3.2.0 is available: 3.2.8"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.8.1 is available: 1.12.0"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of org.robolectric:robolectric than 4.14.1 is available: 4.17"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        }
+      ]
+    }
+  },
+  "apk_sha256": "857756594ad31759a6c674fbd818cdb47c633b40333ef9c9ec9381c357452de2",
+  "apk_bytes": 15905121,
+  "same_owner_certificate_as_E09_E10": true,
+  "certificate_sha256": "e422650dc10efbf7074ae880c0cbc0d7e6d09c8d3ba6a1b1e761f99f441c2f6b",
+  "all_content_assets_identical_to_E10": true,
+  "room_schemas_unchanged": true,
+  "backup_format": 1,
+  "fallback_generation": 2,
+  "distribution_generation": 4,
+  "distribution_entries": 139,
+  "distribution_positions": 62,
+  "distribution_maps": 5,
+  "distribution_unchanged": true,
+  "performance_phone_acceptance": "pending: no adb device or emulator available",
+  "phone_3s_start_verified": false,
+  "phone_300ms_search_ui_verified": false,
+  "phone_60fps_verified": false,
+  "phone_20min_memory_verified": false,
+  "actual_process_kill_verified": false,
+  "second_device_restore_verified": false,
+  "talkback_verified": false,
+  "M1": "open; last general user phone confirmation E05",
+  "E11_implementation_complete": true,
+  "E11_physical_acceptance_complete": false,
+  "M2_M3_content_complete": false,
+  "known_host_limitation": "Robolectric #8460, resolved for checks by using default phone window for Dialog/TextField and fixed landscape separately; no test skipped"
+}

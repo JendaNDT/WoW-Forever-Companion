@@ -1,0 +1,210 @@
+{
+  "repository": "Questie/QuestieDB",
+  "revision": "5c094f6e9a264f0dc54e2fde9731a37a97ed197c",
+  "checkedOn": "2026-10-25",
+  "files": [
+    {
+      "path": "LICENSE.md",
+      "bytes": 2598,
+      "sha256": "d9937e385c401d234ef416b91f00290f8ea8e517f39ed4359aed99115770d8c9",
+      "gitBlob": "8464e61259ccfbcff721b3a1d1c6727cffc26849",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/LICENSE.md"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "bytes": 4198,
+      "sha256": "f0af04c5daf16d72952710d6f78d82524f3c9d2f2876a1d59b86cc4759a7f628",
+      "gitBlob": "93d1c806f138a2bac93e7eeb2b27ee72a5f04652",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/PROVENANCE.md"
+    },
+    {
+      "path": "data/Forever/conversion.json",
+      "bytes": 56775,
+      "sha256": "0229566017126c2577e77d2bcc7c9f995648fb27ed32a7918fa44ace0664fb22",
+      "gitBlob": "d4ada64003ffbcda61620f604cbe13424595a358",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/data/Forever/conversion.json"
+    },
+    {
+      "path": "data/Forever/foreverItemDB.lua",
+      "bytes": 2181706,
+      "sha256": "987d037b6df94d5b0b1dc326a1670581e3abb952736a4ae055fd9f161328b71c",
+      "gitBlob": "8cacee3220dd7c370513ba80fed31801a5b44e41",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/data/Forever/foreverItemDB.lua"
+    },
+    {
+      "path": "data/Forever/foreverNpcDB.lua",
+      "bytes": 2033176,
+      "sha256": "a8c4169690726323dac3c6441f74f7a4d9cafcc08ec42231d72ff28c9471f0ee",
+      "gitBlob": "7940d463751b2e0ecffed4f63a7f75c807140e1e",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/data/Forever/foreverNpcDB.lua"
+    },
+    {
+      "path": "data/Forever/foreverObjectDB.lua",
+      "bytes": 1011387,
+      "sha256": "af4536c12c5b1da5fd32cb33be5c9c01d2436f97a5b9f60e2cdd238273b2cc09",
+      "gitBlob": "8d57a7f1d10949d5e154e19622426855cc7aec2a",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/data/Forever/foreverObjectDB.lua"
+    },
+    {
+      "path": "data/Forever/foreverQuestDB.lua",
+      "bytes": 1057548,
+      "sha256": "d5be8516877505334f02073826ea0f22a394ddbf604bb5a33f5a39de5bb1ee87",
+      "gitBlob": "3111554923c22048f037eaa0f9d409cf0d2d1b62",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/data/Forever/foreverQuestDB.lua"
+    },
+    {
+      "path": "docs/forever-delta-base.md",
+      "bytes": 14948,
+      "sha256": "22a9fbf77c2116aa880d9081716a1736cb0cb5603b9bb77c2f376ad816b2361f",
+      "gitBlob": "2d6742bad244436495d74d5e45447b36020c1cb3",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/docs/forever-delta-base.md"
+    },
+    {
+      "path": "gpl-3.0.md",
+      "bytes": 34893,
+      "sha256": "cc5470feed66192387f06ae93aed0bd4fefae5a5fd7c1e54a4acf4ea64f1028b",
+      "gitBlob": "496acdb2ae812f69b9ef60a610f505fbab35aca0",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/gpl-3.0.md"
+    },
+    {
+      "path": "src/config.lua",
+      "bytes": 24330,
+      "sha256": "46cc623756894dd6f803b7fddec9682c5df8232e993fabdb6a8edbf43f450262",
+      "gitBlob": "9bd2041f21f7506a426c6f2f2664b45a61224ffe",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/config.lua"
+    },
+    {
+      "path": "src/corrections/Forever/foreverItemFixes.lua",
+      "bytes": 6622,
+      "sha256": "098bb9833f937d4ee18388568953828bd0930f1e23d5ee93dfb87e76da6efb90",
+      "gitBlob": "6aac1bd5c3d653bc2ec6718f86a4fe3eee6ec226",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/Forever/foreverItemFixes.lua"
+    },
+    {
+      "path": "src/corrections/Forever/foreverNPCFixes.lua",
+      "bytes": 36647,
+      "sha256": "5246dd8c90e39a42e7195615e881495f6083676205ae74a4ebf42396c4d2fea4",
+      "gitBlob": "70ce1d31c7404584ede3ca6fad2d4b1eadfc49d4",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/Forever/foreverNPCFixes.lua"
+    },
+    {
+      "path": "src/corrections/Forever/foreverObjectFixes.lua",
+      "bytes": 26447,
+      "sha256": "bac79e9a3a4385b6f00fed280bacd9d0556627829ade019f498dcf394d6a6802",
+      "gitBlob": "07c05aa6a65938034253533b462694393b53b4b9",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/Forever/foreverObjectFixes.lua"
+    },
+    {
+      "path": "src/corrections/Forever/foreverQuestFixes.lua",
+      "bytes": 150257,
+      "sha256": "27d50fe25842bf8a6a09ed5f45cf8d189a5c0081b052f9370347734100d98d46",
+      "gitBlob": "ccfa592daf70637cab01ac889144f3857844b4f5",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/Forever/foreverQuestFixes.lua"
+    },
+    {
+      "path": "src/corrections/Forever/generated/foreverBaseItem.lua",
+      "bytes": 2526376,
+      "sha256": "4824f55dbb542dcf62e65eb9b9129c330e2188ff431163c2bfe1501088208424",
+      "gitBlob": "94dd13ba5852d8092c8b000befd805deee1f28e9",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/Forever/generated/foreverBaseItem.lua"
+    },
+    {
+      "path": "src/corrections/Forever/generated/foreverBaseNpc.lua",
+      "bytes": 1067988,
+      "sha256": "25ae0556d29b792758d95682d3974a847bdbe2773322fe863872dc1340260a32",
+      "gitBlob": "a0435bd31bb9f28d821b415c8bff8bb969d1d879",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/Forever/generated/foreverBaseNpc.lua"
+    },
+    {
+      "path": "src/corrections/Forever/generated/foreverBaseObject.lua",
+      "bytes": 111486,
+      "sha256": "f589af8d868330de2ff174c7a80147539ee407ce95ddae6ba7bd602535ef0869",
+      "gitBlob": "d19e656c69b443d896b92befd253b09a12def2b4",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/Forever/generated/foreverBaseObject.lua"
+    },
+    {
+      "path": "src/corrections/Forever/generated/foreverBaseQuest.lua",
+      "bytes": 689189,
+      "sha256": "25a5eec6855e8e63098217b2dbe87b0725e2a2df61b54bb65857fef931a2e1b4",
+      "gitBlob": "ab12cfb05caa4ca95bc91681e9ea442e76247ee0",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/Forever/generated/foreverBaseQuest.lua"
+    },
+    {
+      "path": "src/corrections/enum/expansions.lua",
+      "bytes": 9691,
+      "sha256": "33ee6a3592f88883314f6afc3067c17d2d3c8f4d83ba45a10baefdcfa4b364f6",
+      "gitBlob": "62e8e307d95ab431d7c28891abe557fb82476450",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/enum/expansions.lua"
+    },
+    {
+      "path": "src/corrections/enum/factions.lua",
+      "bytes": 4539,
+      "sha256": "c71d1c5b858b329f19babe681afc8f424ae71aacf1b47f8c06a73b66335dfe2d",
+      "gitBlob": "972054d6b3f050a9e09bcf3e81e4d9aa835c9852",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/enum/factions.lua"
+    },
+    {
+      "path": "src/corrections/enum/items.lua",
+      "bytes": 346,
+      "sha256": "c4b861584fe54ad3edb8a46338064e6ffa9759032dcbaa79756ba4172fa579a2",
+      "gitBlob": "84c9f77b850a686c29b041dd35c91110e35052d2",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/enum/items.lua"
+    },
+    {
+      "path": "src/corrections/enum/professions.lua",
+      "bytes": 1666,
+      "sha256": "3ae501a3b0d288159c566c88622c2f870fc4fd937a919a0f640a8ead8b3fc138",
+      "gitBlob": "e498356db2bd7deeac8938a581d04c0fe2b23405",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/enum/professions.lua"
+    },
+    {
+      "path": "src/corrections/enum/quests.lua",
+      "bytes": 2242,
+      "sha256": "eb15f94f58be894772786706bb9c3db56756df1985d7ab93fc180d7567103ede",
+      "gitBlob": "759d5d333a52f03e0aee82a35b4eb09235d3ec56",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/enum/quests.lua"
+    },
+    {
+      "path": "src/corrections/enum/zones.lua",
+      "bytes": 20269,
+      "sha256": "20e7af36ec38f6f1640368d1c2030315cbdd068d895578c1374591b2f5dd9216",
+      "gitBlob": "4189d8e39cd1a2947135763454e7eafd85354c49",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/enum/zones.lua"
+    },
+    {
+      "path": "src/corrections/tablePatch.lua",
+      "bytes": 9305,
+      "sha256": "a170406dcf8f1b5480e1263b43e2338dfce5b2716574c7c5971c6a0e755f6553",
+      "gitBlob": "4c4268f791d56c13cbe978735ee76a36d27edfa8",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/src/corrections/tablePatch.lua"
+    },
+    {
+      "path": "support/Forever/Zones/areaIdToUiMapId.lua",
+      "bytes": 59425,
+      "sha256": "c6f26a18a2d0d9bdf5750039eabe111f545700a751928e8f79aedb12fbb8ff09",
+      "gitBlob": "2c7e1d3643bf2584802db35f4f6e797e995cd862",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/support/Forever/Zones/areaIdToUiMapId.lua"
+    },
+    {
+      "path": "support/Forever/Zones/dungeons.lua",
+      "bytes": 13482,
+      "sha256": "9318b4ea05ca6459535bb681813de88bb988655cdbc2394b148605d65aa48236",
+      "gitBlob": "92c09e2041e54447ffbd59cc77e45782499d395a",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/support/Forever/Zones/dungeons.lua"
+    },
+    {
+      "path": "support/Forever/Zones/subZoneToParentZone.lua",
+      "bytes": 125714,
+      "sha256": "17a9b6369519a0dc34c17ebe0504029802afeafa3eb69eee1e8631eb71fd547a",
+      "gitBlob": "01f6ef85b5aac143f137a571648b79d90c0c627d",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/support/Forever/Zones/subZoneToParentZone.lua"
+    },
+    {
+      "path": "support/Forever/Zones/uiMapIdToAreaId.lua",
+      "bytes": 4770,
+      "sha256": "4964def0918a8cddef6c5f8292526a076b2afe73ea58f178f68a78e35bec39e3",
+      "gitBlob": "5f83b93f8ea5a667bc2fd3ceedf9484bf3ded3d3",
+      "url": "https://raw.githubusercontent.com/Questie/QuestieDB/5c094f6e9a264f0dc54e2fde9731a37a97ed197c/support/Forever/Zones/uiMapIdToAreaId.lua"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "environment": "Robolectric 4.14.1 native graphics API 28",
+  "qualifiers": "w360dp-h800dp-port",
+  "simple_alert_dialog_passed": true,
+  "real_catalog_without_map": "AppNotIdleException after 60 seconds",
+  "primary_issue": "https://github.com/robolectric/robolectric/issues/8460",
+  "resolution": "Use default small phone window for Dialog/TextField tests; retain actual 200% font and all assertions. Separate fixed landscape config for main screen."
+}

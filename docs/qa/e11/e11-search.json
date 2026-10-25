@@ -1,0 +1,1 @@
+{"environment":"host JVM; not an Android device or UI latency","java":"17.0.21","rows":10000,"warmup_queries":16,"index_build_ms":52.031039,"legacy_e10":{"runs":24,"p50_ms":46.114541,"p95_ms":64.619208,"max_ms":67.320799},"indexed_e11":{"runs":24,"p50_ms":0.764968,"p95_ms":1.401515,"max_ms":1.479901},"all_results_equal":true,"android_300ms_goal_measured":false}

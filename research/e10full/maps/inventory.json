@@ -1,0 +1,2141 @@
+[
+  {
+    "uiMapId": 1411,
+    "areaId": 14,
+    "name": "Durotar",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1411.webp",
+    "sourcePage": "https://warcraftforever.games/maps/durotar",
+    "sha256": "a998caacadb308e1c5bffbd1f8d31611b789547a1fdd90368d0697cb0fcc0275",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1411,
+      "source_name": "Durotar",
+      "target_name": "Durotar",
+      "area_id": 14,
+      "map_id": 1,
+      "source_assignment_id": 46721,
+      "target_assignment_id": 46721,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -1962.4998779297,
+        "right": -7249.9995117188,
+        "top": 1808.3332519531,
+        "bottom": -1716.6666259766
+      },
+      "target_bounds": {
+        "left": -1962.4998779297,
+        "right": -7249.9995117188,
+        "top": 1808.3332519531,
+        "bottom": -1716.6666259766
+      }
+    }
+  },
+  {
+    "uiMapId": 1412,
+    "areaId": 215,
+    "name": "Mulgore",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1412.webp",
+    "sourcePage": "https://warcraftforever.games/maps/mulgore",
+    "sha256": "4f44c8e6e34562bbbf41333f36aee6f18fe9ac8b0fe04d5b39fa73b99f4013f7",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1412,
+      "source_name": "Mulgore",
+      "target_name": "Mulgore",
+      "area_id": 215,
+      "map_id": 1,
+      "source_assignment_id": 46722,
+      "target_assignment_id": 46722,
+      "changed": true,
+      "coefficients": {
+        "scale_x": 0.8348002068275978,
+        "offset_x": 7.007453108736848,
+        "scale_y": 0.8349418225477033,
+        "offset_y": 13.15387327724201
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 2047.9166259766,
+        "right": -3089.5832519531,
+        "top": -272.91665649414,
+        "bottom": -3697.9165039062
+      },
+      "target_bounds": {
+        "left": 2479.1669921875,
+        "right": -3675.0,
+        "top": 266.666015625,
+        "bottom": -3835.416015625
+      }
+    }
+  },
+  {
+    "uiMapId": 1413,
+    "areaId": 17,
+    "name": "The Barrens",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1413.webp",
+    "sourcePage": "https://warcraftforever.games/maps/the-barrens",
+    "sha256": "c1ec3eb1e55cb944224c989de53c3aba8cefee8880f9eaaa01aa1251c18f6ee6",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1413,
+      "source_name": "The Barrens",
+      "target_name": "The Barrens",
+      "area_id": 17,
+      "map_id": 1,
+      "source_assignment_id": 46723,
+      "target_assignment_id": 46723,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 2622.9165039062,
+        "right": -7510.4165039062,
+        "top": 1612.4998779297,
+        "bottom": -5143.75
+      },
+      "target_bounds": {
+        "left": 2622.9165039062,
+        "right": -7510.4165039062,
+        "top": 1612.4998779297,
+        "bottom": -5143.75
+      }
+    }
+  },
+  {
+    "uiMapId": 1416,
+    "areaId": 36,
+    "name": "Alterac Mountains",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1416.webp",
+    "sourcePage": "https://warcraftforever.games/maps/alterac-mountains",
+    "sha256": "fbd121c1ad1238ccb15c81cac04d8773da4ed542a7f41f4a0b3c56f9ef34277b",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1416,
+      "source_name": "Alterac Mountains",
+      "target_name": "Alterac Mountains",
+      "area_id": 36,
+      "map_id": 0,
+      "source_assignment_id": 46726,
+      "target_assignment_id": 46726,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 783.33331298828,
+        "right": -2016.6666259766,
+        "top": 1500.0,
+        "bottom": -366.66665649414
+      },
+      "target_bounds": {
+        "left": 783.33331298828,
+        "right": -2016.6666259766,
+        "top": 1500.0,
+        "bottom": -366.66665649414
+      }
+    }
+  },
+  {
+    "uiMapId": 1417,
+    "areaId": 45,
+    "name": "Arathi Highlands",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1417.webp",
+    "sourcePage": "https://warcraftforever.games/maps/arathi-highlands",
+    "sha256": "ce928fe8aa30be19f635c4e706288f2bcff80b5d078286c4d9b6047e884979fe",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1417,
+      "source_name": "Arathi Highlands",
+      "target_name": "Arathi Highlands",
+      "area_id": 45,
+      "map_id": 0,
+      "source_assignment_id": 46727,
+      "target_assignment_id": 46727,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -866.66662597656,
+        "right": -4466.6665039062,
+        "top": -133.33332824707,
+        "bottom": -2533.3332519531
+      },
+      "target_bounds": {
+        "left": -866.66662597656,
+        "right": -4466.6665039062,
+        "top": -133.33332824707,
+        "bottom": -2533.3332519531
+      }
+    }
+  },
+  {
+    "uiMapId": 1418,
+    "areaId": 3,
+    "name": "Badlands",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1418.webp",
+    "sourcePage": "https://warcraftforever.games/maps/badlands",
+    "sha256": "2a927d156cd92432080cde36bc8a94c5cdeae8f517f97aefb168d9c8c7e72fa9",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1418,
+      "source_name": "Badlands",
+      "target_name": "Badlands",
+      "area_id": 3,
+      "map_id": 0,
+      "source_assignment_id": 46728,
+      "target_assignment_id": 46728,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -2079.1665039062,
+        "right": -4566.6665039062,
+        "top": -5889.5830078125,
+        "bottom": -7547.9165039062
+      },
+      "target_bounds": {
+        "left": -2079.1665039062,
+        "right": -4566.6665039062,
+        "top": -5889.5830078125,
+        "bottom": -7547.9165039062
+      }
+    }
+  },
+  {
+    "uiMapId": 1419,
+    "areaId": 4,
+    "name": "Blasted Lands",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1419.webp",
+    "sourcePage": "https://warcraftforever.games/maps/blasted-lands",
+    "sha256": "258346d7317bc7009fc96d25c84f47f7b2669296ce02b326332c6c29f6913d25",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1419,
+      "source_name": "Blasted Lands",
+      "target_name": "Blasted Lands",
+      "area_id": 4,
+      "map_id": 0,
+      "source_assignment_id": 46729,
+      "target_assignment_id": 46729,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -1241.6666259766,
+        "right": -4591.6665039062,
+        "top": -10566.666015625,
+        "bottom": -12800.0
+      },
+      "target_bounds": {
+        "left": -1241.6666259766,
+        "right": -4591.6665039062,
+        "top": -10566.666015625,
+        "bottom": -12800.0
+      }
+    }
+  },
+  {
+    "uiMapId": 1420,
+    "areaId": 85,
+    "name": "Tirisfal Glades",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1420.webp",
+    "sourcePage": "https://warcraftforever.games/maps/tirisfal-glades",
+    "sha256": "e0073280a772d7bfb2f3273874446e2d59653a34761c2cc81f57ab41b02bec5b",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1420,
+      "source_name": "Tirisfal Glades",
+      "target_name": "Tirisfal Glades",
+      "area_id": 85,
+      "map_id": 0,
+      "source_assignment_id": 46730,
+      "target_assignment_id": 46730,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 3033.3332519531,
+        "right": -1485.4166259766,
+        "top": 3837.4997558594,
+        "bottom": 824.99993896484
+      },
+      "target_bounds": {
+        "left": 3033.3332519531,
+        "right": -1485.4166259766,
+        "top": 3837.4997558594,
+        "bottom": 824.99993896484
+      }
+    }
+  },
+  {
+    "uiMapId": 1421,
+    "areaId": 130,
+    "name": "Silverpine Forest",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1421.webp",
+    "sourcePage": "https://warcraftforever.games/maps/silverpine-forest",
+    "sha256": "109efb44a0c327c61221a7fc4a38b57b8d1b3a99fd20a02e0d929ab92af7cf1f",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1421,
+      "source_name": "Silverpine Forest",
+      "target_name": "Silverpine Forest",
+      "area_id": 130,
+      "map_id": 0,
+      "source_assignment_id": 46731,
+      "target_assignment_id": 46731,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 3449.9997558594,
+        "right": -750.0,
+        "top": 1666.6666259766,
+        "bottom": -1133.3332519531
+      },
+      "target_bounds": {
+        "left": 3449.9997558594,
+        "right": -750.0,
+        "top": 1666.6666259766,
+        "bottom": -1133.3332519531
+      }
+    }
+  },
+  {
+    "uiMapId": 1422,
+    "areaId": 28,
+    "name": "Western Plaguelands",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1422.webp",
+    "sourcePage": "https://warcraftforever.games/maps/western-plaguelands",
+    "sha256": "2645d75cb5e6360d697da0525f477a7c8c3761cb4080b0f67093c7fd3e443275",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1422,
+      "source_name": "Western Plaguelands",
+      "target_name": "Western Plaguelands",
+      "area_id": 28,
+      "map_id": 0,
+      "source_assignment_id": 46732,
+      "target_assignment_id": 46732,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 416.66665649414,
+        "right": -3883.3332519531,
+        "top": 3366.6665039062,
+        "bottom": 499.99996948242
+      },
+      "target_bounds": {
+        "left": 416.66665649414,
+        "right": -3883.3332519531,
+        "top": 3366.6665039062,
+        "bottom": 499.99996948242
+      }
+    }
+  },
+  {
+    "uiMapId": 1423,
+    "areaId": 139,
+    "name": "Eastern Plaguelands",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1423.webp",
+    "sourcePage": "https://warcraftforever.games/maps/eastern-plaguelands",
+    "sha256": "51a2d5c8b4ea7a937909e7b3d77fd8a0ebc269e70c2ad22ddc9f89522b38a870",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1423,
+      "source_name": "Eastern Plaguelands",
+      "target_name": "Eastern Plaguelands",
+      "area_id": 139,
+      "map_id": 0,
+      "source_assignment_id": 46733,
+      "target_assignment_id": 46733,
+      "changed": true,
+      "coefficients": {
+        "scale_x": 0.8997577709204458,
+        "offset_x": -1.6464926382438023,
+        "scale_y": 0.9004358590984077,
+        "offset_y": -3.7790494664060477
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -2185.4165039062,
+        "right": -6056.25,
+        "top": 3799.9997558594,
+        "bottom": 1218.75
+      },
+      "target_bounds": {
+        "left": -2256.25,
+        "right": -6558.333984375,
+        "top": 3691.6669921875,
+        "bottom": 825.0
+      }
+    }
+  },
+  {
+    "uiMapId": 1424,
+    "areaId": 267,
+    "name": "Hillsbrad Foothills",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1424.webp",
+    "sourcePage": "https://warcraftforever.games/maps/hillsbrad-foothills",
+    "sha256": "10a55cc79db68a3f7bd20c2eabadede63be559483031c685272820c1528f29e0",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1424,
+      "source_name": "Hillsbrad Foothills",
+      "target_name": "Hillsbrad Foothills",
+      "area_id": 267,
+      "map_id": 0,
+      "source_assignment_id": 46734,
+      "target_assignment_id": 46734,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 1066.6666259766,
+        "right": -2133.3332519531,
+        "top": 400.0,
+        "bottom": -1733.3332519531
+      },
+      "target_bounds": {
+        "left": 1066.6666259766,
+        "right": -2133.3332519531,
+        "top": 400.0,
+        "bottom": -1733.3332519531
+      }
+    }
+  },
+  {
+    "uiMapId": 1425,
+    "areaId": 47,
+    "name": "The Hinterlands",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1425.webp",
+    "sourcePage": "https://warcraftforever.games/maps/the-hinterlands",
+    "sha256": "d54c524d91b7c9d2ef4c17e3647ce2b0829bf5fe4f464c0def8d7f84fdee6302",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1425,
+      "source_name": "The Hinterlands",
+      "target_name": "The Hinterlands",
+      "area_id": 47,
+      "map_id": 0,
+      "source_assignment_id": 46735,
+      "target_assignment_id": 46735,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -1575.0,
+        "right": -5425.0,
+        "top": 1466.6666259766,
+        "bottom": -1100.0
+      },
+      "target_bounds": {
+        "left": -1575.0,
+        "right": -5425.0,
+        "top": 1466.6666259766,
+        "bottom": -1100.0
+      }
+    }
+  },
+  {
+    "uiMapId": 1426,
+    "areaId": 1,
+    "name": "Dun Morogh",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1426.webp",
+    "sourcePage": "https://warcraftforever.games/maps/dun-morogh",
+    "sha256": "3eab388d6c4f684567c04a7608b3b531b3ce411af6f24d83da3cefdcf87727d1",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1426,
+      "source_name": "Dun Morogh",
+      "target_name": "Dun Morogh",
+      "area_id": 1,
+      "map_id": 0,
+      "source_assignment_id": 46736,
+      "target_assignment_id": 46736,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 1802.0832519531,
+        "right": -3122.9165039062,
+        "top": -3877.0832519531,
+        "bottom": -7160.4165039062
+      },
+      "target_bounds": {
+        "left": 1802.0832519531,
+        "right": -3122.9165039062,
+        "top": -3877.0832519531,
+        "bottom": -7160.4165039062
+      }
+    }
+  },
+  {
+    "uiMapId": 1427,
+    "areaId": 51,
+    "name": "Searing Gorge",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1427.webp",
+    "sourcePage": "https://warcraftforever.games/maps/searing-gorge",
+    "sha256": "ca662cd630211070b19909b92fcd4506bf803bf84b8725ee6a3d576aaddaf623",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1427,
+      "source_name": "Searing Gorge",
+      "target_name": "Searing Gorge",
+      "area_id": 51,
+      "map_id": 0,
+      "source_assignment_id": 46737,
+      "target_assignment_id": 46737,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -322.91665649414,
+        "right": -2554.1665039062,
+        "top": -6100.0,
+        "bottom": -7587.4995117188
+      },
+      "target_bounds": {
+        "left": -322.91665649414,
+        "right": -2554.1665039062,
+        "top": -6100.0,
+        "bottom": -7587.4995117188
+      }
+    }
+  },
+  {
+    "uiMapId": 1428,
+    "areaId": 46,
+    "name": "Burning Steppes",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1428.webp",
+    "sourcePage": "https://warcraftforever.games/maps/burning-steppes",
+    "sha256": "a54abda7c93815cabcc28b6aac15638fa793d77ca53161bca05fcc9708769dd9",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1428,
+      "source_name": "Burning Steppes",
+      "target_name": "Burning Steppes",
+      "area_id": 46,
+      "map_id": 0,
+      "source_assignment_id": 46738,
+      "target_assignment_id": 46738,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -266.66665649414,
+        "right": -3195.8332519531,
+        "top": -7031.2495117188,
+        "bottom": -8983.3330078125
+      },
+      "target_bounds": {
+        "left": -266.66665649414,
+        "right": -3195.8332519531,
+        "top": -7031.2495117188,
+        "bottom": -8983.3330078125
+      }
+    }
+  },
+  {
+    "uiMapId": 1429,
+    "areaId": 12,
+    "name": "Elwynn Forest",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1429.webp",
+    "sourcePage": "https://warcraftforever.games/maps/elwynn-forest",
+    "sha256": "7cb9531c77f9645256e8411234f7630d528a1ad3b07625474672956218ee525f",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1429,
+      "source_name": "Elwynn Forest",
+      "target_name": "Elwynn Forest",
+      "area_id": 12,
+      "map_id": 0,
+      "source_assignment_id": 46739,
+      "target_assignment_id": 46739,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 1535.4166259766,
+        "right": -1935.4166259766,
+        "top": -7939.5830078125,
+        "bottom": -10254.166015625
+      },
+      "target_bounds": {
+        "left": 1535.4166259766,
+        "right": -1935.4166259766,
+        "top": -7939.5830078125,
+        "bottom": -10254.166015625
+      }
+    }
+  },
+  {
+    "uiMapId": 1430,
+    "areaId": 41,
+    "name": "Deadwind Pass",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1430.webp",
+    "sourcePage": "https://warcraftforever.games/maps/deadwind-pass",
+    "sha256": "8834d5101bc525afef90f01af286d20effb4ad8fb1cbd9417d3aabc6c6da18e9",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1430,
+      "source_name": "Deadwind Pass",
+      "target_name": "Deadwind Pass",
+      "area_id": 41,
+      "map_id": 0,
+      "source_assignment_id": 46740,
+      "target_assignment_id": 46740,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -833.33331298828,
+        "right": -3333.3332519531,
+        "top": -9866.666015625,
+        "bottom": -11533.333007812
+      },
+      "target_bounds": {
+        "left": -833.33331298828,
+        "right": -3333.3332519531,
+        "top": -9866.666015625,
+        "bottom": -11533.333007812
+      }
+    }
+  },
+  {
+    "uiMapId": 1431,
+    "areaId": 10,
+    "name": "Duskwood",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1431.webp",
+    "sourcePage": "https://warcraftforever.games/maps/duskwood",
+    "sha256": "9e3e509c784d267c966ea9e75e5bb1dd92451fb23a67c95c489b7a614e98a213",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1431,
+      "source_name": "Duskwood",
+      "target_name": "Duskwood",
+      "area_id": 10,
+      "map_id": 0,
+      "source_assignment_id": 46741,
+      "target_assignment_id": 46741,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 833.33331298828,
+        "right": -1866.6666259766,
+        "top": -9716.666015625,
+        "bottom": -11516.666015625
+      },
+      "target_bounds": {
+        "left": 833.33331298828,
+        "right": -1866.6666259766,
+        "top": -9716.666015625,
+        "bottom": -11516.666015625
+      }
+    }
+  },
+  {
+    "uiMapId": 1432,
+    "areaId": 38,
+    "name": "Loch Modan",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1432.webp",
+    "sourcePage": "https://warcraftforever.games/maps/loch-modan",
+    "sha256": "cd4c051cf331cffa2bdb354d9769accae241a2f470f696b66bb508893edb68db",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1432,
+      "source_name": "Loch Modan",
+      "target_name": "Loch Modan",
+      "area_id": 38,
+      "map_id": 0,
+      "source_assignment_id": 46742,
+      "target_assignment_id": 46742,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -1993.7498779297,
+        "right": -4752.0830078125,
+        "top": -4487.5,
+        "bottom": -6327.0830078125
+      },
+      "target_bounds": {
+        "left": -1993.7498779297,
+        "right": -4752.0830078125,
+        "top": -4487.5,
+        "bottom": -6327.0830078125
+      }
+    }
+  },
+  {
+    "uiMapId": 1433,
+    "areaId": 44,
+    "name": "Redridge Mountains",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1433.webp",
+    "sourcePage": "https://warcraftforever.games/maps/redridge-mountains",
+    "sha256": "86c82c7e216caa4002c3fc2bb5d409837478558ff368de5b17edb07641ab2487",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1433,
+      "source_name": "Redridge Mountains",
+      "target_name": "Redridge Mountains",
+      "area_id": 44,
+      "map_id": 0,
+      "source_assignment_id": 46743,
+      "target_assignment_id": 46743,
+      "changed": true,
+      "coefficients": {
+        "scale_x": 0.9999996626080551,
+        "offset_x": -5.086374584221827,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -1570.8332519531,
+        "right": -3741.6665039062,
+        "top": -8575.0,
+        "bottom": -10022.916015625
+      },
+      "target_bounds": {
+        "left": -1681.25,
+        "right": -3852.083984375,
+        "top": -8575.0,
+        "bottom": -10022.916015625
+      }
+    }
+  },
+  {
+    "uiMapId": 1434,
+    "areaId": 33,
+    "name": "Stranglethorn Vale",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1434.webp",
+    "sourcePage": "https://warcraftforever.games/maps/stranglethorn-vale",
+    "sha256": "795134f2d5a0d22a6555fe69dc9728ef78ed77577a91cc5748190782537efd9b",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1434,
+      "source_name": "Stranglethorn Vale",
+      "target_name": "Stranglethorn Vale",
+      "area_id": 33,
+      "map_id": 0,
+      "source_assignment_id": 46744,
+      "target_assignment_id": 46744,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 2220.8332519531,
+        "right": -4160.4165039062,
+        "top": -11168.75,
+        "bottom": -15422.916015625
+      },
+      "target_bounds": {
+        "left": 2220.8332519531,
+        "right": -4160.4165039062,
+        "top": -11168.75,
+        "bottom": -15422.916015625
+      }
+    }
+  },
+  {
+    "uiMapId": 1435,
+    "areaId": 8,
+    "name": "Swamp of Sorrows",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1435.webp",
+    "sourcePage": "https://warcraftforever.games/maps/swamp-of-sorrows",
+    "sha256": "c2a6e6bbc73ba009844778a9f3ac9d59f598c884ea5f5397d80e03c0e6c23e26",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1435,
+      "source_name": "Swamp of Sorrows",
+      "target_name": "Swamp of Sorrows",
+      "area_id": 8,
+      "map_id": 0,
+      "source_assignment_id": 46745,
+      "target_assignment_id": 46745,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -2222.9165039062,
+        "right": -4516.6665039062,
+        "top": -9620.8330078125,
+        "bottom": -11150.0
+      },
+      "target_bounds": {
+        "left": -2222.9165039062,
+        "right": -4516.6665039062,
+        "top": -9620.8330078125,
+        "bottom": -11150.0
+      }
+    }
+  },
+  {
+    "uiMapId": 1436,
+    "areaId": 40,
+    "name": "Westfall",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1436.webp",
+    "sourcePage": "https://warcraftforever.games/maps/westfall",
+    "sha256": "3f01ba8731e22718993971d818593d7d4e75c148a5a22892fe97829bbb14c759",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1436,
+      "source_name": "Westfall",
+      "target_name": "Westfall",
+      "area_id": 40,
+      "map_id": 0,
+      "source_assignment_id": 46746,
+      "target_assignment_id": 46746,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 3016.6665039062,
+        "right": -483.33331298828,
+        "top": -9400.0,
+        "bottom": -11733.333007812
+      },
+      "target_bounds": {
+        "left": 3016.6665039062,
+        "right": -483.33331298828,
+        "top": -9400.0,
+        "bottom": -11733.333007812
+      }
+    }
+  },
+  {
+    "uiMapId": 1437,
+    "areaId": 11,
+    "name": "Wetlands",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1437.webp",
+    "sourcePage": "https://warcraftforever.games/maps/wetlands",
+    "sha256": "57ed5eddc99b0f7645a0bc4ffe8f5539226a29e4fa56f468c339322d77b387fa",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1437,
+      "source_name": "Wetlands",
+      "target_name": "Wetlands",
+      "area_id": 11,
+      "map_id": 0,
+      "source_assignment_id": 46747,
+      "target_assignment_id": 46747,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -389.58331298828,
+        "right": -4525.0,
+        "top": -2147.9165039062,
+        "bottom": -4904.1665039062
+      },
+      "target_bounds": {
+        "left": -389.58331298828,
+        "right": -4525.0,
+        "top": -2147.9165039062,
+        "bottom": -4904.1665039062
+      }
+    }
+  },
+  {
+    "uiMapId": 1438,
+    "areaId": 141,
+    "name": "Teldrassil",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1438.webp",
+    "sourcePage": "https://warcraftforever.games/maps/teldrassil",
+    "sha256": "bc1ebe0bad6f21d63f519af7555e370790ae4f3916a3e059fd9aaf640139e66b",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1438,
+      "source_name": "Teldrassil",
+      "target_name": "Teldrassil",
+      "area_id": 141,
+      "map_id": 1,
+      "source_assignment_id": 46748,
+      "target_assignment_id": 46748,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 3814.5832519531,
+        "right": -1277.0832519531,
+        "top": 11831.25,
+        "bottom": 8437.5
+      },
+      "target_bounds": {
+        "left": 3814.5832519531,
+        "right": -1277.0832519531,
+        "top": 11831.25,
+        "bottom": 8437.5
+      }
+    }
+  },
+  {
+    "uiMapId": 1439,
+    "areaId": 148,
+    "name": "Darkshore",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1439.webp",
+    "sourcePage": "https://warcraftforever.games/maps/darkshore",
+    "sha256": "022e6870c1103e6e3569e3e4c29fb28649d193cd0d419e9f7fdd341f9a9fdd5c",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1439,
+      "source_name": "Darkshore",
+      "target_name": "Darkshore",
+      "area_id": 148,
+      "map_id": 1,
+      "source_assignment_id": 46749,
+      "target_assignment_id": 46749,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 2941.6665039062,
+        "right": -3608.3332519531,
+        "top": 8333.3330078125,
+        "bottom": 3966.6665039062
+      },
+      "target_bounds": {
+        "left": 2941.6665039062,
+        "right": -3608.3332519531,
+        "top": 8333.3330078125,
+        "bottom": 3966.6665039062
+      }
+    }
+  },
+  {
+    "uiMapId": 1440,
+    "areaId": 331,
+    "name": "Ashenvale",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1440.webp",
+    "sourcePage": "https://warcraftforever.games/maps/ashenvale",
+    "sha256": "74d8f8aad4c5173be89b3a978220233b484fc05002586ec4a72adeeac548775c",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1440,
+      "source_name": "Ashenvale",
+      "target_name": "Ashenvale",
+      "area_id": 331,
+      "map_id": 1,
+      "source_assignment_id": 46750,
+      "target_assignment_id": 46750,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 1699.9998779297,
+        "right": -4066.6665039062,
+        "top": 4672.9165039062,
+        "bottom": 829.16662597656
+      },
+      "target_bounds": {
+        "left": 1699.9998779297,
+        "right": -4066.6665039062,
+        "top": 4672.9165039062,
+        "bottom": 829.16662597656
+      }
+    }
+  },
+  {
+    "uiMapId": 1441,
+    "areaId": 400,
+    "name": "Thousand Needles",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1441.webp",
+    "sourcePage": "https://warcraftforever.games/maps/thousand-needles",
+    "sha256": "8ab41a68db18beef77dc318c3afd43a09533b7c60ac5c25a349e24572ebff013",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1441,
+      "source_name": "Thousand Needles",
+      "target_name": "Thousand Needles",
+      "area_id": 400,
+      "map_id": 1,
+      "source_assignment_id": 46751,
+      "target_assignment_id": 46751,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -433.33331298828,
+        "right": -4833.3330078125,
+        "top": -3966.6665039062,
+        "bottom": -6899.9995117188
+      },
+      "target_bounds": {
+        "left": -433.33331298828,
+        "right": -4833.3330078125,
+        "top": -3966.6665039062,
+        "bottom": -6899.9995117188
+      }
+    }
+  },
+  {
+    "uiMapId": 1442,
+    "areaId": 406,
+    "name": "Stonetalon Mountains",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1442.webp",
+    "sourcePage": "https://warcraftforever.games/maps/stonetalon-mountains",
+    "sha256": "e456be393cf25bb702280f80938ebe7bc31c7de36c4526a36cce6db45b889c36",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1442,
+      "source_name": "Stonetalon Mountains",
+      "target_name": "Stonetalon Mountains",
+      "area_id": 406,
+      "map_id": 1,
+      "source_assignment_id": 46752,
+      "target_assignment_id": 46752,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 3245.8332519531,
+        "right": -1637.4998779297,
+        "top": 2916.6665039062,
+        "bottom": -339.58331298828
+      },
+      "target_bounds": {
+        "left": 3245.8332519531,
+        "right": -1637.4998779297,
+        "top": 2916.6665039062,
+        "bottom": -339.58331298828
+      }
+    }
+  },
+  {
+    "uiMapId": 1443,
+    "areaId": 405,
+    "name": "Desolace",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1443.webp",
+    "sourcePage": "https://warcraftforever.games/maps/desolace",
+    "sha256": "84c7db97d61460503ff78b53bdaa4a4797b2631db9979e4e4db9e911121269cf",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1443,
+      "source_name": "Desolace",
+      "target_name": "Desolace",
+      "area_id": 405,
+      "map_id": 1,
+      "source_assignment_id": 46753,
+      "target_assignment_id": 46753,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 4233.3330078125,
+        "right": -262.5,
+        "top": 452.08331298828,
+        "bottom": -2545.8332519531
+      },
+      "target_bounds": {
+        "left": 4233.3330078125,
+        "right": -262.5,
+        "top": 452.08331298828,
+        "bottom": -2545.8332519531
+      }
+    }
+  },
+  {
+    "uiMapId": 1444,
+    "areaId": 357,
+    "name": "Feralas",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1444.webp",
+    "sourcePage": "https://warcraftforever.games/maps/feralas",
+    "sha256": "48d7ee09175a69e64c060a371f5bbebaba57b11a7fc64add9b150dc9b664e3d9",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1444,
+      "source_name": "Feralas",
+      "target_name": "Feralas",
+      "area_id": 357,
+      "map_id": 1,
+      "source_assignment_id": 46754,
+      "target_assignment_id": 46754,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 5441.6665039062,
+        "right": -1508.3332519531,
+        "top": -2366.6665039062,
+        "bottom": -6999.9995117188
+      },
+      "target_bounds": {
+        "left": 5441.6665039062,
+        "right": -1508.3332519531,
+        "top": -2366.6665039062,
+        "bottom": -6999.9995117188
+      }
+    }
+  },
+  {
+    "uiMapId": 1445,
+    "areaId": 15,
+    "name": "Dustwallow Marsh",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1445.webp",
+    "sourcePage": "https://warcraftforever.games/maps/dustwallow-marsh",
+    "sha256": "7f0e92e2bedf8a8edd6007c3c51c44c4968cb1f3beb58373e68788784fc68fec",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1445,
+      "source_name": "Dustwallow Marsh",
+      "target_name": "Dustwallow Marsh",
+      "area_id": 15,
+      "map_id": 1,
+      "source_assignment_id": 46755,
+      "target_assignment_id": 46755,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -974.99993896484,
+        "right": -6225.0,
+        "top": -2033.3332519531,
+        "bottom": -5533.3330078125
+      },
+      "target_bounds": {
+        "left": -974.99993896484,
+        "right": -6225.0,
+        "top": -2033.3332519531,
+        "bottom": -5533.3330078125
+      }
+    }
+  },
+  {
+    "uiMapId": 1446,
+    "areaId": 440,
+    "name": "Tanaris",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1446.webp",
+    "sourcePage": "https://warcraftforever.games/maps/tanaris",
+    "sha256": "1f6b39aee9ae8d376eed2250962f33f87fdc3624c7b93d997158a7273d1dbfe9",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1446,
+      "source_name": "Tanaris",
+      "target_name": "Tanaris",
+      "area_id": 440,
+      "map_id": 1,
+      "source_assignment_id": 46756,
+      "target_assignment_id": 46756,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -218.74998474121,
+        "right": -7118.7495117188,
+        "top": -5875.0,
+        "bottom": -10475.0
+      },
+      "target_bounds": {
+        "left": -218.74998474121,
+        "right": -7118.7495117188,
+        "top": -5875.0,
+        "bottom": -10475.0
+      }
+    }
+  },
+  {
+    "uiMapId": 1447,
+    "areaId": 16,
+    "name": "Azshara",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1447.webp",
+    "sourcePage": "https://warcraftforever.games/maps/azshara",
+    "sha256": "1a9a005512f9025e0010bd14989fe9c4ef385dd846ecc55be059a84dafe7efdc",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1447,
+      "source_name": "Azshara",
+      "target_name": "Azshara",
+      "area_id": 16,
+      "map_id": 1,
+      "source_assignment_id": 46757,
+      "target_assignment_id": 46757,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -3277.0832519531,
+        "right": -8347.916015625,
+        "top": 5341.6665039062,
+        "bottom": 1960.4166259766
+      },
+      "target_bounds": {
+        "left": -3277.0832519531,
+        "right": -8347.916015625,
+        "top": 5341.6665039062,
+        "bottom": 1960.4166259766
+      }
+    }
+  },
+  {
+    "uiMapId": 1448,
+    "areaId": 361,
+    "name": "Felwood",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1448.webp",
+    "sourcePage": "https://warcraftforever.games/maps/felwood",
+    "sha256": "9d8048223a2f5a1e53a05fec4c448c79ad1233c90ec007ebd5ec51e75a5356fc",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1448,
+      "source_name": "Felwood",
+      "target_name": "Felwood",
+      "area_id": 361,
+      "map_id": 1,
+      "source_assignment_id": 46758,
+      "target_assignment_id": 46758,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 1641.6666259766,
+        "right": -4108.3330078125,
+        "top": 7133.3330078125,
+        "bottom": 3299.9997558594
+      },
+      "target_bounds": {
+        "left": 1641.6666259766,
+        "right": -4108.3330078125,
+        "top": 7133.3330078125,
+        "bottom": 3299.9997558594
+      }
+    }
+  },
+  {
+    "uiMapId": 1449,
+    "areaId": 490,
+    "name": "Un'Goro Crater",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1449.webp",
+    "sourcePage": "https://warcraftforever.games/maps/ungoro-crater",
+    "sha256": "279e59d6f4dea38885cebcc5b6988b32ccb6c22994095517cee63f77c5b5d58b",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1449,
+      "source_name": "Un'Goro Crater",
+      "target_name": "Un'Goro Crater",
+      "area_id": 490,
+      "map_id": 1,
+      "source_assignment_id": 46759,
+      "target_assignment_id": 46759,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 533.33331298828,
+        "right": -3166.6665039062,
+        "top": -5966.6665039062,
+        "bottom": -8433.3330078125
+      },
+      "target_bounds": {
+        "left": 533.33331298828,
+        "right": -3166.6665039062,
+        "top": -5966.6665039062,
+        "bottom": -8433.3330078125
+      }
+    }
+  },
+  {
+    "uiMapId": 1450,
+    "areaId": 493,
+    "name": "Moonglade",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1450.webp",
+    "sourcePage": "https://warcraftforever.games/maps/moonglade",
+    "sha256": "9c7cd8c423f75ee28c47afbcba26ef1732357b389f29afb5c2588a2043428eec",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1450,
+      "source_name": "Moonglade",
+      "target_name": "Moonglade",
+      "area_id": 493,
+      "map_id": 1,
+      "source_assignment_id": 46760,
+      "target_assignment_id": 46760,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -1381.25,
+        "right": -3689.5832519531,
+        "top": 8491.666015625,
+        "bottom": 6952.0830078125
+      },
+      "target_bounds": {
+        "left": -1381.25,
+        "right": -3689.5832519531,
+        "top": 8491.666015625,
+        "bottom": 6952.0830078125
+      }
+    }
+  },
+  {
+    "uiMapId": 1451,
+    "areaId": 1377,
+    "name": "Silithus",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1451.webp",
+    "sourcePage": "https://warcraftforever.games/maps/silithus",
+    "sha256": "eac9a627ff8f634f5d2b6b90ce23799603fc53b0c9542f4f8cbe3449d885c151",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1451,
+      "source_name": "Silithus",
+      "target_name": "Silithus",
+      "area_id": 1377,
+      "map_id": 1,
+      "source_assignment_id": 46761,
+      "target_assignment_id": 46761,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 2537.5,
+        "right": -945.833984375,
+        "top": -5958.333984375,
+        "bottom": -8281.25
+      },
+      "target_bounds": {
+        "left": 2537.5,
+        "right": -945.833984375,
+        "top": -5958.333984375,
+        "bottom": -8281.25
+      }
+    }
+  },
+  {
+    "uiMapId": 1452,
+    "areaId": 618,
+    "name": "Winterspring",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1452.webp",
+    "sourcePage": "https://warcraftforever.games/maps/winterspring",
+    "sha256": "6515054a240a958ed2c92054c0aec7ea3f2a66488914a2c6f43bf891d992953e",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1452,
+      "source_name": "Winterspring",
+      "target_name": "Winterspring",
+      "area_id": 618,
+      "map_id": 1,
+      "source_assignment_id": 46762,
+      "target_assignment_id": 46762,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -316.66665649414,
+        "right": -7416.6665039062,
+        "top": 8533.3330078125,
+        "bottom": 3799.9997558594
+      },
+      "target_bounds": {
+        "left": -316.66665649414,
+        "right": -7416.6665039062,
+        "top": 8533.3330078125,
+        "bottom": 3799.9997558594
+      }
+    }
+  },
+  {
+    "uiMapId": 1453,
+    "areaId": 1519,
+    "name": "Stormwind City",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1453.webp",
+    "sourcePage": "https://warcraftforever.games/maps/stormwind-city",
+    "sha256": "4305d134517595b310a1ab94359f06dbf59f0fb7390100fdeef6f2faa1502f4a",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1453,
+      "source_name": "Stormwind City",
+      "target_name": "Stormwind City",
+      "area_id": 1519,
+      "map_id": 0,
+      "source_assignment_id": 46763,
+      "target_assignment_id": 46763,
+      "changed": true,
+      "coefficients": {
+        "scale_x": 0.7736792385183993,
+        "offset_x": 19.680449646264936,
+        "scale_y": 0.773826866980289,
+        "offset_y": 24.433287807510073
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 1380.9714355469,
+        "right": 36.70063018799,
+        "top": -8278.8505859375,
+        "bottom": -9175.205078125
+      },
+      "target_bounds": {
+        "left": 1722.9200439453,
+        "right": -14.58399963379,
+        "top": -7995.830078125,
+        "bottom": -9154.169921875
+      }
+    }
+  },
+  {
+    "uiMapId": 1454,
+    "areaId": 1637,
+    "name": "Orgrimmar",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1454.webp",
+    "sourcePage": "https://warcraftforever.games/maps/orgrimmar",
+    "sha256": "c7c684ce1d1a14540c3d441cdf777381bcdb42a292843fce03ca8c08fafae59e",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1454,
+      "source_name": "Orgrimmar",
+      "target_name": "Orgrimmar",
+      "area_id": 1637,
+      "map_id": 1,
+      "source_assignment_id": 46764,
+      "target_assignment_id": 46764,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -3680.6010742188,
+        "right": -5083.2055664062,
+        "top": 2273.8771972656,
+        "bottom": 1338.4605712891
+      },
+      "target_bounds": {
+        "left": -3680.6010742188,
+        "right": -5083.2055664062,
+        "top": 2273.8771972656,
+        "bottom": 1338.4605712891
+      }
+    }
+  },
+  {
+    "uiMapId": 1455,
+    "areaId": 1537,
+    "name": "Ironforge",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1455.webp",
+    "sourcePage": "https://warcraftforever.games/maps/ironforge",
+    "sha256": "dc3245a769cebeda44d6c0897d3cd716a953ff02975d14a085ee9d15948276fb",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1455,
+      "source_name": "Ironforge",
+      "target_name": "Ironforge",
+      "area_id": 1537,
+      "map_id": 0,
+      "source_assignment_id": 46765,
+      "target_assignment_id": 46765,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": -713.59136962891,
+        "right": -1504.2164306641,
+        "top": -4569.2412109375,
+        "bottom": -5096.845703125
+      },
+      "target_bounds": {
+        "left": -713.59136962891,
+        "right": -1504.2164306641,
+        "top": -4569.2412109375,
+        "bottom": -5096.845703125
+      }
+    }
+  },
+  {
+    "uiMapId": 1456,
+    "areaId": 1638,
+    "name": "Thunder Bluff",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1456.webp",
+    "sourcePage": "https://warcraftforever.games/maps/thunder-bluff",
+    "sha256": "4cb460fe83e99aa70dc003e0f80dc0e62c1a43668f9963e3e8237d77080704db",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1456,
+      "source_name": "Thunder Bluff",
+      "target_name": "Thunder Bluff",
+      "area_id": 1638,
+      "map_id": 1,
+      "source_assignment_id": 46766,
+      "target_assignment_id": 46766,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 516.66662597656,
+        "right": -527.08331298828,
+        "top": -849.99993896484,
+        "bottom": -1545.8332519531
+      },
+      "target_bounds": {
+        "left": 516.66662597656,
+        "right": -527.08331298828,
+        "top": -849.99993896484,
+        "bottom": -1545.8332519531
+      }
+    }
+  },
+  {
+    "uiMapId": 1457,
+    "areaId": 1657,
+    "name": "Darnassus",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1457.webp",
+    "sourcePage": "https://warcraftforever.games/maps/darnassus",
+    "sha256": "c8e46d8272d2e54638feaaa97237faad14c63d1b8ae4e2d5d89f2d916830181f",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1457,
+      "source_name": "Darnassus",
+      "target_name": "Darnassus",
+      "area_id": 1657,
+      "map_id": 1,
+      "source_assignment_id": 46767,
+      "target_assignment_id": 46767,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 2938.3627929688,
+        "right": 1880.0295410156,
+        "top": 10238.31640625,
+        "bottom": 9532.5869140625
+      },
+      "target_bounds": {
+        "left": 2938.3627929688,
+        "right": 1880.0295410156,
+        "top": 10238.31640625,
+        "bottom": 9532.5869140625
+      }
+    }
+  },
+  {
+    "uiMapId": 1458,
+    "areaId": 1497,
+    "name": "Undercity",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1458.webp",
+    "sourcePage": "https://warcraftforever.games/maps/undercity",
+    "sha256": "bc28ab8ea1928e5e68040eb4709e648891f964279074d20d9b72df6868036e9f",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1458,
+      "source_name": "Undercity",
+      "target_name": "Undercity",
+      "area_id": 1497,
+      "map_id": 0,
+      "source_assignment_id": 46768,
+      "target_assignment_id": 46768,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 873.19262695313,
+        "right": -86.18240356445,
+        "top": 1877.9453125,
+        "bottom": 1237.8411865234
+      },
+      "target_bounds": {
+        "left": 873.19262695313,
+        "right": -86.18240356445,
+        "top": 1877.9453125,
+        "bottom": 1237.8411865234
+      }
+    }
+  },
+  {
+    "uiMapId": 1459,
+    "areaId": 2597,
+    "name": "Alterac Valley",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1459.webp",
+    "sourcePage": "https://warcraftforever.games/maps/alterac-valley",
+    "sha256": "ebe1ba46fba2b84e8d4549ab9a4c9b88e684f78bc5704ab8a53971417b56318f",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1459,
+      "source_name": "Alterac Valley",
+      "target_name": "Alterac Valley",
+      "area_id": 2597,
+      "map_id": 30,
+      "source_assignment_id": 46769,
+      "target_assignment_id": 46769,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 1781.2498779297,
+        "right": -2456.25,
+        "top": 1085.4166259766,
+        "bottom": -1739.5832519531
+      },
+      "target_bounds": {
+        "left": 1781.2498779297,
+        "right": -2456.25,
+        "top": 1085.4166259766,
+        "bottom": -1739.5832519531
+      }
+    }
+  },
+  {
+    "uiMapId": 1460,
+    "areaId": 3277,
+    "name": "Warsong Gulch",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1460.webp",
+    "sourcePage": "https://warcraftforever.games/maps/warsong-gulch",
+    "sha256": "029936017647fab1831488ab7df6f1ea50b66509812d1c9228670efd9d9b7de0",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1460,
+      "source_name": "Warsong Gulch",
+      "target_name": "Warsong Gulch",
+      "area_id": 3277,
+      "map_id": 489,
+      "source_assignment_id": 46770,
+      "target_assignment_id": 46770,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 2041.6666259766,
+        "right": 895.83331298828,
+        "top": 1627.0832519531,
+        "bottom": 862.49993896484
+      },
+      "target_bounds": {
+        "left": 2041.6666259766,
+        "right": 895.83331298828,
+        "top": 1627.0832519531,
+        "bottom": 862.49993896484
+      }
+    }
+  },
+  {
+    "uiMapId": 1461,
+    "areaId": 3358,
+    "name": "Arathi Basin",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1461.webp",
+    "sourcePage": "https://warcraftforever.games/maps/arathi-basin",
+    "sha256": "6fc539dcc0b92b75d92523a57e4dae6a01b8a96c0c98588ecb19e0445ff4375e",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "referenceCoordinates": true,
+    "conversion": {
+      "ui_map_id": 1461,
+      "source_name": "Arathi Basin",
+      "target_name": "Arathi Basin",
+      "area_id": 3358,
+      "map_id": 529,
+      "source_assignment_id": 46771,
+      "target_assignment_id": 46771,
+      "changed": false,
+      "coefficients": {
+        "scale_x": 1.0,
+        "offset_x": 0.0,
+        "scale_y": 1.0,
+        "offset_y": 0.0
+      },
+      "area_transform_supported": true,
+      "source_bounds": {
+        "left": 1858.3332519531,
+        "right": 102.08332824707,
+        "top": 1508.3332519531,
+        "bottom": 337.5
+      },
+      "target_bounds": {
+        "left": 1858.3332519531,
+        "right": 102.08332824707,
+        "top": 1508.3332519531,
+        "bottom": 337.5
+      }
+    }
+  },
+  {
+    "uiMapId": 1415,
+    "areaId": null,
+    "name": "Eastern Kingdoms",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1415.webp",
+    "sourcePage": "https://warcraftforever.games/maps/eastern-kingdoms",
+    "sha256": "0284b848894cc3fd696fe38d5e8cd5e5f35ca9703b5790498c549d6673eba336",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "overviewOnly": false,
+    "referenceCoordinates": false
+  },
+  {
+    "uiMapId": 2548,
+    "areaId": null,
+    "name": "Riverglades",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/2548.webp",
+    "sourcePage": "https://warcraftforever.games/maps/riverglades",
+    "sha256": "cfd065ad4ed7298e1526fdfcaa0fda61824a1c405b7e9fbbebbc810f5e80469b",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "overviewOnly": false,
+    "referenceCoordinates": false
+  },
+  {
+    "uiMapId": 2482,
+    "areaId": null,
+    "name": "Mount Hyjal",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/2482.webp",
+    "sourcePage": "https://warcraftforever.games/maps/mount-hyjal",
+    "sha256": "fc5d9d8508f871dd3e18cf1d5f13abc72564dac5e6dd19b75c2a59ee38dd603b",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "overviewOnly": false,
+    "referenceCoordinates": false
+  },
+  {
+    "uiMapId": 2652,
+    "areaId": null,
+    "name": "Shen'dralas",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/2652.webp",
+    "sourcePage": "https://warcraftforever.games/maps/shendralas",
+    "sha256": "308ab9ba57c44dbb52b811c4ef0b83fe36cb462478f45179a6f36f0bd750ec5c",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "overviewOnly": false,
+    "referenceCoordinates": false
+  },
+  {
+    "uiMapId": 2521,
+    "areaId": null,
+    "name": "Zephras Isle",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/2521.webp",
+    "sourcePage": "https://warcraftforever.games/maps/zephras-isle",
+    "sha256": "3084e5077f003c7d8140a549c3ada4f2550f0ea7fc7771bcdc0d0013c9a438d9",
+    "width": 1002,
+    "height": 668,
+    "build": "1.60.1.69893",
+    "overviewOnly": false,
+    "referenceCoordinates": false
+  },
+  {
+    "uiMapId": 902959,
+    "areaId": null,
+    "name": "City of Dalaran",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/2959.webp",
+    "sourcePage": "https://warcraftforever.games/maps/city-of-dalaran",
+    "sha256": "b38cd564b856d9fdbd12bc5e0e6e24bff7ac0657be565919b685ef50ad78348b",
+    "width": 1114,
+    "height": 1370,
+    "build": "1.60.1.69893",
+    "overviewOnly": true,
+    "referenceCoordinates": false
+  },
+  {
+    "uiMapId": 902998,
+    "areaId": null,
+    "name": "Excavation Site: Wetlands",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/2998.webp",
+    "sourcePage": "https://warcraftforever.games/maps/excavation-site-wetlands",
+    "sha256": "90ba178b0bfa3cf6eb50197a1698b7ac3cbcc21bbf4e5364dc66d78d5d84f212",
+    "width": 1242,
+    "height": 890,
+    "build": "1.60.1.69893",
+    "overviewOnly": true,
+    "referenceCoordinates": false
+  },
+  {
+    "uiMapId": 902999,
+    "areaId": null,
+    "name": "Ruins of Lordaeron",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/2999.webp",
+    "sourcePage": "https://warcraftforever.games/maps/ruins-of-lordaeron",
+    "sha256": "d003815a97b10619a94d9c40b256f63e5991e06315e603f58ba3f38b2afb30b3",
+    "width": 698,
+    "height": 762,
+    "build": "1.60.1.69893",
+    "overviewOnly": true,
+    "referenceCoordinates": false
+  },
+  {
+    "uiMapId": 903065,
+    "areaId": null,
+    "name": "The Hall of Thanes",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/3065.webp",
+    "sourcePage": "https://warcraftforever.games/maps/the-hall-of-thanes",
+    "sha256": "b151c9cd606b262ff8732f08a7235befdab7016e9ddc092f5b14bc537271178d",
+    "width": 560,
+    "height": 764,
+    "build": "1.60.1.69893",
+    "overviewOnly": true,
+    "referenceCoordinates": false
+  },
+  {
+    "uiMapId": 903002,
+    "areaId": null,
+    "name": "Half-Pint Tavern",
+    "sourceUrl": "https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/dungeons/3002.webp",
+    "sourcePage": "https://warcraftforever.games/maps/half-pint-tavern",
+    "sha256": "3a278c9b5628279e9a43b7d8b6b9ac2e109525b15d76e2de34e6b491cb90d878",
+    "width": 1536,
+    "height": 1536,
+    "build": "1.60.1.69893",
+    "overviewOnly": true,
+    "referenceCoordinates": false
+  }
+]

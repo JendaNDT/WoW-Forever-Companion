@@ -1,0 +1,70 @@
+[
+  {
+    "path": "maps/1413/0/0/0.png",
+    "sha256": "23894fe80a7153bd195d248ecf538285643a9e728eccb16727ece9fc5d0810d7"
+  },
+  {
+    "path": "maps/1413/1/0/0.png",
+    "sha256": "2ea724c8030b6a9514acc2ae9fd6689f5ec67854f2c0b0c28b67608e5b448cc1"
+  },
+  {
+    "path": "maps/1413/1/0/1.png",
+    "sha256": "48a0eecca85400b00325c4cb5446fd2d135d38735b160d473e1ee2355f4efdb8"
+  },
+  {
+    "path": "maps/1413/1/1/0.png",
+    "sha256": "7929a577c4de1e8760adb8a5c2155b838c0e12b4481b369090837b158e6a6cc6"
+  },
+  {
+    "path": "maps/1413/1/1/1.png",
+    "sha256": "102c039480dd4c9f8e17afbfe3253cf6df6fb2197032059c5985f400feffa96a"
+  },
+  {
+    "path": "maps/1413/2/0/0.png",
+    "sha256": "8d80a310cbec65f75ee136d086efaa471da9611a88a6557efb18ae605fc9e9db"
+  },
+  {
+    "path": "maps/1413/2/0/1.png",
+    "sha256": "33dd2343ce2eeaf36b903ce702175b90e04d5f6061b5dbe5fdbd70d50b3f89dc"
+  },
+  {
+    "path": "maps/1413/2/0/2.png",
+    "sha256": "4ee407461baccc4dac975d840da77ff2ff9539b983c8e7df6d083c0b97f1c333"
+  },
+  {
+    "path": "maps/1413/2/0/3.png",
+    "sha256": "48c7e970e54724663bd734197f4a1f86a133c3d445a95c4ce29f8fe764a90893"
+  },
+  {
+    "path": "maps/1413/2/1/0.png",
+    "sha256": "13bfd1f07af981b561375460d90264b941b286b55fcb38c8cb5158dc6d3ccc4b"
+  },
+  {
+    "path": "maps/1413/2/1/1.png",
+    "sha256": "0a1dd7108bc0fcb897d460eb204412293c5542cea7bfc3aff4a6e267ac78451e"
+  },
+  {
+    "path": "maps/1413/2/1/2.png",
+    "sha256": "703dc5f7b0f24a13b9bc780b0da8e15d7da5e252e6c395d149b53b692a9cfaf2"
+  },
+  {
+    "path": "maps/1413/2/1/3.png",
+    "sha256": "69ac1f6bb2c8c1c942efb91222133d8de48e3bd38b751ea7155d10e5373268c0"
+  },
+  {
+    "path": "maps/1413/2/2/0.png",
+    "sha256": "747fa221dea7d765988c73c7dcaad782a117166ec94f1018b7a25a7a7f1f9985"
+  },
+  {
+    "path": "maps/1413/2/2/1.png",
+    "sha256": "719a108e63f0663b51ec489fd1ee62a030d042a909bd2182f615bb2c34518468"
+  },
+  {
+    "path": "maps/1413/2/2/2.png",
+    "sha256": "fcc23bd22f373bee8d181ae2811a82792ad435852d57d2161e2e741a832bd8a0"
+  },
+  {
+    "path": "maps/1413/2/2/3.png",
+    "sha256": "5765567340bc21b42b37412af95416f90679de0c0bd2ebc9897ca712fdc9af36"
+  }
+]

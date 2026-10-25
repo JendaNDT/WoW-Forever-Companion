@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E10MemoryFixTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-25T16:34:27.418Z" hostname="eb5eafc03222" time="0.167">
+  <properties/>
+  <testcase name="streamingDecoderPreservesCzechAndQuotedPayloadAcrossTinyReads" classname="cz.jenda.wowforever.E10MemoryFixTest" time="0.006"/>
+  <testcase name="streamingDecoderCountsTrailingWhitespaceWithoutBufferingOversizedInput" classname="cz.jenda.wowforever.E10MemoryFixTest" time="0.144"/>
+  <testcase name="npcsSharingAnItemDropAreNotRelatedToEveryOtherDropSource" classname="cz.jenda.wowforever.E10MemoryFixTest" time="0.013"/>
+  <testcase name="streamingDecoderStillRejectsTooDeepDataAndTrailingDocuments" classname="cz.jenda.wowforever.E10MemoryFixTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

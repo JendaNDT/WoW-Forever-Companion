@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.AtlasAssetsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T13:08:25.057Z" hostname="f05490768d7a" time="6.479">
+  <properties/>
+  <testcase name="all four offline pyramids decode and cover every edge" classname="cz.jenda.wowforever.AtlasAssetsTest" time="6.406"/>
+  <testcase name="only eight sourced beta locations enter the active map" classname="cz.jenda.wowforever.AtlasAssetsTest" time="0.073"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

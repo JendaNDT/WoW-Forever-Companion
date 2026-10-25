@@ -1,0 +1,23 @@
+{
+  "stage": "E03",
+  "date": "2026-10-23",
+  "version": "0.3.0-e03",
+  "clean_build_passed": true,
+  "host_tests_passed": 43,
+  "host_tests_failed": 0,
+  "lint_errors": 0,
+  "lint_warnings": 1,
+  "personal_schema_version": 1,
+  "content_schema_version": 1,
+  "room_schemas_unchanged_from_e02": true,
+  "signature_matches_e02": true,
+  "certificate_sha256": "4cf7eca57b91111c3324a0267bc9115594074fa10ebd363e0cecf7cff98ea8bb",
+  "apk_sha256": "cebd26082e6b2098012f625303d331f2a2d54daf2bddde07022ce77e9e4b2a8c",
+  "apk_bytes": 19226288,
+  "instrumentation_apk_built": true,
+  "device_tested_e03": false,
+  "actual_os_process_kill_tested": false,
+  "cold_datastore_reconstruction_tested": true,
+  "new_viewmodel_session_reconstruction_tested": true,
+  "independent_game_checks": 0
+}

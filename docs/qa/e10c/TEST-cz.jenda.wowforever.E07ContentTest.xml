@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E07ContentTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-25T14:27:54.011Z" hostname="eb5eafc03222" time="0.024">
+  <properties/>
+  <testcase name="sameNamesAndRewardChoicesRemainSeparateAndReferenceLinksStayInactive" classname="cz.jenda.wowforever.E07ContentTest" time="0.003"/>
+  <testcase name="pilotPreservesOldIdsAndOnlyAddsDatedSourceBackedRecords" classname="cz.jenda.wowforever.E07ContentTest" time="0.013"/>
+  <testcase name="newDemonTrainerAndServicesUseBetaPositionsWithNoInventedQuestObjectives" classname="cz.jenda.wowforever.E07ContentTest" time="0.003"/>
+  <testcase name="completingClassicPredecessorDoesNotPromoteBetaSuggestionsToAvailable" classname="cz.jenda.wowforever.E07ContentTest" time="0.003"/>
+  <testcase name="newerSpellbookReferenceDoesNotRelabelOldMapsOrClaimCompleteAccess" classname="cz.jenda.wowforever.E07ContentTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

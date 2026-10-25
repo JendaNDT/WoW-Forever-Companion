@@ -1,0 +1,9 @@
+{
+  "synthetic_candidates": 5000,
+  "fit_semantic_nodes": 21,
+  "operation_rounds": 12,
+  "finite_viewport": true,
+  "environment": "Robolectric native graphics; not Android device timing",
+  "fps_measured": false,
+  "twenty_minute_memory_goal_measured": false
+}

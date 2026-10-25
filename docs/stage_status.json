@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-25",
+  "channel": "pilot",
+  "application_id": "cz.jenda.wowforever.guide",
+  "E12_user_basic_phone_check": {
+    "status": "confirmed_by_user",
+    "reportedOn": "2026-10-25",
+    "statement": "Na telefonu už jsem to zkontroloval",
+    "scope": "basic app check; no measured performance, second-device or detailed formal acceptance asserted"
+  },
+  "E13_user_basic_phone_check": {
+    "status": "confirmed_by_user",
+    "reportedOn": "2026-10-25",
+    "statement": "Ok, vše funguje",
+    "scope": "basic E13 phone check after APK handover; no measured performance or second-device acceptance asserted"
+  },
+  "E10_3_user_basic_phone_check": {
+    "status": "confirmed_by_user",
+    "reportedOn": "2026-10-25",
+    "statement": "Zatím vše otestováno bez problémů",
+    "scope": "basic preceding build check; not new full stage or measured performance"
+  },
+  "stage": "E10-audit",
+  "version": "0.16.0-audit",
+  "versionCode": 17,
+  "room_schemas_unchanged": true,
+  "backup_format": 1,
+  "fallback_generation": 2,
+  "content_generation": 8,
+  "bundled_content_generation": 8,
+  "bundled_content_entries": 11912,
+  "bundled_content_positions": 17330,
+  "bundled_content_maps": 61,
+  "bundled_content_tiles": 1103,
+  "new_entries": 11696,
+  "new_quests": 2708,
+  "new_items": 2824,
+  "new_locations": 17246,
+  "previous_published_records_unchanged": false,
+  "published_map_tiles_unchanged": true,
+  "new_maps": 56,
+  "manual_content_import_required": false,
+  "implementation_delivery_complete": true,
+  "reference_1_60_catalog_delivered": true,
+  "M2_M3_game_acceptance_complete": false,
+  "M1": "Version 16 functional phone check confirmed; release game acceptance pending",
+  "release_verified_entries": 0,
+  "verified_transport_edges": 0,
+  "physical_E10_3_basic_check_verified": true,
+  "physical_installation_verified": false,
+  "physical_phone_acceptance": "User confirmed complete functional check of version 16; version 17 is not phone-tested",
+  "performance_phone_goals_verified": false,
+  "talkback_verified": false,
+  "second_device_restore_verified": false,
+  "remote_workflow_executed": false,
+  "public_hosting_or_store_published": false,
+  "private_key_backup": "E09 existing archive retained; keys not regenerated",
+  "bundledContentSha256": "ba94fb218ad63cae250c7d32b32ef16532c4daa5b8ab822685d5b623a8cb563e",
+  "host_validation": "restored source awaiting fresh validation",
+  "python_tests": {
+    "tests": 27,
+    "failures": 0
+  },
+  "pixel_exact_new_map_reconstructions": 56,
+  "memory_regression": {
+    "before": {
+      "heapMiB": 256,
+      "result": "OutOfMemoryError in RecommendationEngine.evaluate"
+    },
+    "after": {
+      "heapMiB": 256,
+      "result": "5 tests passed"
+    },
+    "full_bootstrap_and_upgrade": {
+      "heapMiB": 384,
+      "tests": 2,
+      "result": "passed"
+    }
+  },
+  "offline_content_bytes_unchanged": false,
+  "release_owner_and_source_verified": false,
+  "upgrade_eligibility_from_E10_full_verified": true,
+  "host_tests": {
+    "suites": 53,
+    "tests": 210,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "debug": {
+      "errors": 0,
+      "warnings": 5
+    },
+    "release": {
+      "errors": 0,
+      "warnings": 4
+    }
+  },
+  "bundled_archive_stored_for_streaming": true,
+  "E10_fix1_user_phone_check": {
+    "status": "confirmed_by_user",
+    "versionCode": 16,
+    "statement": "Vše jsem otestoval a funguje to",
+    "scope": "Functional check only; no measured performance or game validation"
+  }
+}

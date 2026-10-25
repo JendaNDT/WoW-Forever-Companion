@@ -1,0 +1,33 @@
+{
+  "stage": "E00",
+  "status": "completed_for_beta_technical_prototype",
+  "checked_on": "2026-10-23",
+  "plan_version": "1.0",
+  "app_code_created": false,
+  "apk_created": false,
+  "map_assets": 4,
+  "sample_counts": {
+    "npcs": 9,
+    "quests": 9,
+    "items": 1,
+    "spells": 1,
+    "relations": 4,
+    "travel": 1
+  },
+  "source_control_points": 8,
+  "calibrated_control_points": 0,
+  "release_confirmed_gameplay_records": 0,
+  "next_stage": "E01",
+  "next_action": "Založit Kotlin a Compose projekt, připojit nativní mapový prohlížeč a tyto skutečné podklady. Prověřit mapové souřadnice a sestavení APK.",
+  "blockers_for_E01": [],
+  "remaining_checks_for_playable_release": [
+    "E00-01",
+    "E00-02",
+    "E00-03",
+    "E00-04",
+    "E00-05",
+    "E00-06",
+    "E00-07",
+    "E00-08"
+  ]
+}

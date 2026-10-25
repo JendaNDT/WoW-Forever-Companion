@@ -1,0 +1,96 @@
+{
+  "stage": "E12",
+  "date": "2026-10-25",
+  "version": "0.12.0-e12",
+  "versionCode": 12,
+  "channel": "pilot",
+  "application_id": "cz.jenda.wowforever.guide",
+  "sourceRevision": "b5db01b48e7c7bd2fa5fa22ac61b17138ef1fc7d",
+  "buildInputsSha256": "063fdb8c774137fad29eaac0d0a280c94ab3a3871e8bf401b81dd88f62361de5",
+  "apk_sha256": "462e17f1ddb3e246307618294d00bd9e7f7ea2cedebe1211cc063ab3587ccb9d",
+  "apk_bytes": 15905619,
+  "clean_build_passed": true,
+  "host_tests_passed": 174,
+  "new_e12_host_tests": 5,
+  "host_tests_failed": 0,
+  "host_tests_skipped": 0,
+  "python_tests_passed": 10,
+  "lint": {
+    "debug": {
+      "errors": 0,
+      "warnings": 3,
+      "issues": [
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of ovh.plrapps:mapcompose than 3.2.0 is available: 3.2.8"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        }
+      ]
+    },
+    "release": {
+      "errors": 0,
+      "warnings": 5,
+      "issues": [
+        {
+          "id": "UnusedAttribute",
+          "severity": "Warning",
+          "message": "Attribute `shell` is only used in API level 29 and higher (current min is 26)"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.8.1 is available: 1.12.0"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of org.robolectric:robolectric than 4.14.1 is available: 4.17"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        }
+      ]
+    }
+  },
+  "release_tool_negative_cases": 3,
+  "missing_owner_release_rejected": true,
+  "release_owner_and_source_verified": true,
+  "same_owner_certificate_as_E09_E11": true,
+  "upgrade_eligibility_from_E11_verified": true,
+  "physical_installation_verified": false,
+  "all_previous_content_assets_unchanged": true,
+  "room_schemas_unchanged": true,
+  "backup_format": 1,
+  "fallback_generation": 2,
+  "optional_content_generation": 4,
+  "optional_content_entries": 139,
+  "optional_content_positions": 62,
+  "optional_content_maps": 5,
+  "physical_phone_acceptance": "pending; no adb target available",
+  "performance_phone_goals_verified": false,
+  "talkback_verified": false,
+  "second_device_restore_verified": false,
+  "M1": "open; last general phone confirmation E05",
+  "M2_M3_content_complete": false,
+  "remote_workflow_executed": false,
+  "public_hosting_or_store_published": false,
+  "private_key_backup": "E09 existing archive retained; keys not regenerated",
+  "E12_implementation_and_private_handover_ready": true
+}

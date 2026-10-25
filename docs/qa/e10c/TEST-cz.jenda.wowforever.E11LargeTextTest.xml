@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E11LargeTextTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-25T14:28:26.831Z" hostname="eb5eafc03222" time="0.575">
+  <properties/>
+  <testcase name="catalogueAtTwoHundredPercentStillAllowsSearchingAndOpeningTheResult" classname="cz.jenda.wowforever.E11LargeTextTest" time="0.292"/>
+  <testcase name="mapSearchAtTwoHundredPercentCanReachTheNpcAndItsMap" classname="cz.jenda.wowforever.E11LargeTextTest" time="0.283"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

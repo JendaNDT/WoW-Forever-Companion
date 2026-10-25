@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "generation": 4,
+  "entries": 139,
+  "locations": 62,
+  "maps": 5,
+  "new_tiles": 17,
+  "complete_distribution_tiles": 85,
+  "new_map_pixel_exact": true,
+  "source_control_records": 5,
+  "independent_game_checks": 0,
+  "old_entries_unchanged": true,
+  "fallback_generation": 2,
+  "verified_transport_edges": 0
+}

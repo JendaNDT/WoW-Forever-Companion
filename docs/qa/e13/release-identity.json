@@ -1,0 +1,38 @@
+{
+  "formatVersion": 1,
+  "apk": "WoW_Forever_E13.apk",
+  "apkSha256": "edc1740c4165835f95824dea34afe23b1df0a774b7243fab40f1e96f5d43dec8",
+  "apkBytes": 25588842,
+  "package": "cz.jenda.wowforever.guide",
+  "versionCode": 13,
+  "versionName": "0.13.0-e13",
+  "certificateSha256": "e422650dc10efbf7074ae880c0cbc0d7e6d09c8d3ba6a1b1e761f99f441c2f6b",
+  "debuggable": false,
+  "sourceRevision": "b98abed9cfb1542806446786c30d0cc21cec0505",
+  "buildInputsSha256": "09bf4b6d9b21955c1a67618e24cf95d1a33d25941fbe3b2fe8efdc0ee8894c6b",
+  "inputFiles": 126,
+  "gitRevisionVerified": true,
+  "fallbackGeneration": 2,
+  "fallbackCatalogSha256": "038ee9dbc4ac67233b5f265a84eec912341ed45396567bf9d2e3a47cfcc79d36",
+  "publisherKeySha256": "7a647e119089a2758c1ca48da711f4c52036b3e0118af6d4bd65e8b0b39a6894",
+  "upgrade": {
+    "fromVersionCode": 12,
+    "certificateAndPackageMatch": true,
+    "physicalInstallationVerified": false
+  },
+  "physicalPhoneAcceptance": "pending",
+  "performancePhoneGoalsVerified": false,
+  "contentMilestonesComplete": false,
+  "bundledContent": {
+    "passed": true,
+    "generation": 5,
+    "files": 86,
+    "maps": 5,
+    "entries": 182,
+    "publisher_signature_verified": true,
+    "positions": 74,
+    "sha256": "27b70643d39c0c832f12da4f4ceac1aa57fda19fbf7fac533d84fb3e73aab725",
+    "tiles": 85,
+    "allPublishedDataUnchanged": true
+  }
+}

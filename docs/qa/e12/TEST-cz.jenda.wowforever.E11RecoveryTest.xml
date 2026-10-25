@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E11RecoveryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-25T10:16:02.758Z" hostname="eb5eafc03222" time="0.178">
+  <properties/>
+  <testcase name="olderSettingsRemainReadableAndInvalidViewportsCannotEnterTheMap" classname="cz.jenda.wowforever.E11RecoveryTest" time="0.019"/>
+  <testcase name="corruptPreferencesRecoverThroughRealDataStoreWithoutChangingPersonalHistory" classname="cz.jenda.wowforever.E11RecoveryTest" time="0.159"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

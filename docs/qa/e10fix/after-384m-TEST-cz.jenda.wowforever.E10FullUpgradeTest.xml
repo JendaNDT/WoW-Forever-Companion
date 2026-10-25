@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E10FullUpgradeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-25T16:24:09.593Z" hostname="eb5eafc03222" time="13.657">
+  <properties/>
+  <testcase name="upgradeFromAcknowledgedSixPreservesProfilesAndRollbackAndNewAreaBackup" classname="cz.jenda.wowforever.E10FullUpgradeTest" time="13.657"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

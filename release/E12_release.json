@@ -1,0 +1,38 @@
+{
+  "formatVersion": 1,
+  "apk": "WoW_Forever_E12.apk",
+  "apkSha256": "462e17f1ddb3e246307618294d00bd9e7f7ea2cedebe1211cc063ab3587ccb9d",
+  "apkBytes": 15905619,
+  "package": "cz.jenda.wowforever.guide",
+  "versionCode": 12,
+  "versionName": "0.12.0-e12",
+  "certificateSha256": "e422650dc10efbf7074ae880c0cbc0d7e6d09c8d3ba6a1b1e761f99f441c2f6b",
+  "debuggable": false,
+  "sourceRevision": "b5db01b48e7c7bd2fa5fa22ac61b17138ef1fc7d",
+  "buildInputsSha256": "063fdb8c774137fad29eaac0d0a280c94ab3a3871e8bf401b81dd88f62361de5",
+  "inputFiles": 125,
+  "gitRevisionVerified": true,
+  "fallbackGeneration": 2,
+  "fallbackCatalogSha256": "038ee9dbc4ac67233b5f265a84eec912341ed45396567bf9d2e3a47cfcc79d36",
+  "publisherKeySha256": "7a647e119089a2758c1ca48da711f4c52036b3e0118af6d4bd65e8b0b39a6894",
+  "upgrade": {
+    "fromVersionCode": 11,
+    "certificateAndPackageMatch": true,
+    "physicalInstallationVerified": false
+  },
+  "physicalPhoneAcceptance": "pending",
+  "performancePhoneGoalsVerified": false,
+  "contentMilestonesComplete": false,
+  "optionalDataPackage": {
+    "file": "WoW_Forever_E10_data_4.wfp",
+    "sha256": "d1098513843d247a418e08619f2afc7309cc945a666ea46627362d2f0f797b6b",
+    "validation": {
+      "passed": true,
+      "generation": 4,
+      "files": 86,
+      "maps": 5,
+      "entries": 139,
+      "publisher_signature_verified": true
+    }
+  }
+}

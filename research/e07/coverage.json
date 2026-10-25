@@ -1,0 +1,56 @@
+{
+  "stage": "E07",
+  "checkedOn": "2026-10-23",
+  "baseGeneration": 1,
+  "generation": 2,
+  "newNpcs": 19,
+  "newQuests": 10,
+  "newItems": 3,
+  "sources": "Warcraft Forever unofficial fan recorder + pinned EverythingQuests Classic reference + Wowhead client record",
+  "independentGameChecks": 0,
+  "releaseVerifiedPrerequisites": 0,
+  "newClassicReferencePrerequisites": [
+    [
+      788,
+      789
+    ],
+    [
+      790,
+      804
+    ],
+    [
+      5441,
+      6394
+    ]
+  ],
+  "remaining": [
+    "Full quest availability and two game-verified prerequisites",
+    "Nartok position",
+    "Imp head count conflict",
+    "Journal and cave objective coordinates",
+    "Actual Android M1 acceptance including backup transfer to second device"
+  ],
+  "candidateChainChecks": [
+    [
+      792,
+      794,
+      805
+    ],
+    [
+      790,
+      804
+    ]
+  ],
+  "m1Accepted": false,
+  "totalEntries": 53,
+  "totalNpcs": 28,
+  "totalQuests": 19,
+  "totalItems": 4,
+  "totalLocations": 27,
+  "totalRelations": 49,
+  "totalSources": 59,
+  "referenceRules": 8,
+  "foreverChangesIntegrated": true,
+  "foreverChangesSpellbookBuild": "1.60.1.70532",
+  "mapBuild": "1.60.1.69893"
+}

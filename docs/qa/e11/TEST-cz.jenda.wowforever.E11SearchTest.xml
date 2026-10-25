@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E11SearchTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-24T23:18:43.362Z" hostname="e6c755ef2603" time="1.842">
+  <properties/>
+  <testcase name="tenThousandSyntheticRowsMatchE10AndRecordComparableHostMeasurements" classname="cz.jenda.wowforever.E11SearchTest" time="1.832"/>
+  <testcase name="replacementIndexNeverKeepsNamesFromAnEarlierGeneration" classname="cz.jenda.wowforever.E11SearchTest" time="0.002"/>
+  <testcase name="indexedSearchKeepsDiacriticsMultiWordRankingAndStableOrderAcrossRealContent" classname="cz.jenda.wowforever.E11SearchTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

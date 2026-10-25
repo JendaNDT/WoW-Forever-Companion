@@ -1,0 +1,295 @@
+{
+  "checkedOn": "2026-10-25",
+  "method": "Direct public-page review; Classic positions explicitly retained as CLASSIC; selected facts only",
+  "gameChecksPerformed": false,
+  "pages": [
+    {
+      "sourceId": "e10c_npc_3203",
+      "url": "https://warcraftforever.games/npcs/3203",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "ce5c94ba2b4d360f02edf963763138f84a5b37ee4409d4004cc281d700452a88"
+    },
+    {
+      "sourceId": "e10c_npc_3208",
+      "url": "https://warcraftforever.games/npcs/3208",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "38a118474e40754e767c989409ad4123ae625fa75e2014f3b1d047158b5b353e"
+    },
+    {
+      "sourceId": "e10c_npc_3204",
+      "url": "https://warcraftforever.games/npcs/3204",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "f54bbf56b34fbd6a3f97dffbed7b1e0941bcb54374e866351a6d7af1f6d19df7"
+    },
+    {
+      "sourceId": "e10c_npc_3189",
+      "url": "https://warcraftforever.games/npcs/3189",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "d82656b4d1725fc4367e2fd37eb5574590dd0cd5e749933ccf81e90bed33c1ae"
+    },
+    {
+      "sourceId": "e10c_npc_3293",
+      "url": "https://foreverchanges.pro/quest/834",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "d6e6a97e6be5f634cdac90c5358d0b04be6f7ccbc2937f63378bc15b3bbc95c5"
+    },
+    {
+      "sourceId": "e10c_npc_3293_identity",
+      "url": "https://theforeverera.com/en/npcs/3293/",
+      "kind": "identity_reference",
+      "build": null,
+      "selectedFactsSha256": "42a3f0dde5ab958cf81596d596a4117d5a304fb391eabe99c1b86cce80a796c2"
+    },
+    {
+      "sourceId": "e10c_npc_3193",
+      "url": "https://foreverchanges.pro/quest/816",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "e0602bb52c4d329892fb03f52a43ba8325417bff3290c21ac01b636abb7aaedf"
+    },
+    {
+      "sourceId": "e10c_npc_3193_identity",
+      "url": "https://questing.wiki/wow-forever/npcs/zones/durotar/",
+      "kind": "identity_reference",
+      "build": null,
+      "selectedFactsSha256": "fc9fb8e1cbb0bc0f0f0515c3f6113292a606d9e5db0ddf4da3594ebfa2d31c3c"
+    },
+    {
+      "sourceId": "e10c_npc_3190",
+      "url": "https://foreverchanges.pro/quest/812",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "8f8913b9f559f68e904c8705663b19069c012236e97e34dc0bea924c4ecc728f"
+    },
+    {
+      "sourceId": "e10c_npc_3190_identity",
+      "url": "https://questing.wiki/wow-forever/npcs/zones/durotar/",
+      "kind": "identity_reference",
+      "build": null,
+      "selectedFactsSha256": "bf765b26c182c49ff2a9699a974fbfe75578cdf3089337dfef1cdb474ee68303"
+    },
+    {
+      "sourceId": "e10c_npc_3294",
+      "url": "https://foreverchanges.pro/quest/1506",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "80ccdcfcb3aba99d6c2e51dac01ac22187d14241713d957974726bf29a563c0e"
+    },
+    {
+      "sourceId": "e10c_npc_3294_identity",
+      "url": "https://www.wowhead.com/classic/npc=3294/ophek",
+      "kind": "identity_reference",
+      "build": null,
+      "selectedFactsSha256": "0fe52b8cf4db4d8e6f498e7188d458a5d06be5f86bad9828e4f2f361af734860"
+    },
+    {
+      "sourceId": "e10c_npc_5875",
+      "url": "https://foreverchanges.pro/quest/1506",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "97459df4d66ccd554ae12723c886445410ced7fa9accaf7b20d1f850b5e55089"
+    },
+    {
+      "sourceId": "e10c_npc_5875_identity",
+      "url": "https://www.wowhead.com/classic/fr/npc=5875/ganrul-bloodeye",
+      "kind": "identity_reference",
+      "build": null,
+      "selectedFactsSha256": "6b1bec9aaaceb319d067007055497470634aa39c7b18c47c1f856bd03704ecde"
+    },
+    {
+      "sourceId": "e10c_npc_3147",
+      "url": "https://foreverchanges.pro/quest/791",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "4a976db19ced3e7be8aac5f7be532696811b138e2d238c9ff3038c5f37293374"
+    },
+    {
+      "sourceId": "e10c_npc_3147_identity",
+      "url": "https://www.wowhead.com/classic/npc=3147/furl-scornbrow",
+      "kind": "identity_reference",
+      "build": null,
+      "selectedFactsSha256": "8b33ea43f39b98393e3536d31508001ca0ffbd92655bab588c80b7188464ceec"
+    },
+    {
+      "sourceId": "e10c_quest_791",
+      "url": "https://foreverchanges.pro/quest/791",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "3352ee07608ec1629f997fdcc56d4917f300f803bd271a6e6bcc3e52b52b6b91"
+    },
+    {
+      "sourceId": "e10c_quest_812",
+      "url": "https://foreverchanges.pro/quest/812",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "2b3b7b4e94a87c2d62885d42467ade2450e1420279ee0d9d57466b72b4a99ce5"
+    },
+    {
+      "sourceId": "e10c_quest_813",
+      "url": "https://foreverchanges.pro/quest/813",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "9b6c43ed4a7ad72f7aa81f084fbcf55c1e1165d9445fa6ec48deb4bd1acdd1d3"
+    },
+    {
+      "sourceId": "e10c_quest_816",
+      "url": "https://foreverchanges.pro/quest/816",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "1be6b93d3a27e971af1e72a7a12daa64ea859f48cb89a59849b00feff19bca44"
+    },
+    {
+      "sourceId": "e10c_quest_834",
+      "url": "https://foreverchanges.pro/quest/834",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "92d97c1da6f86b1e56f7334866462f79247c2da1f3f8eea796bcf517115b808d"
+    },
+    {
+      "sourceId": "e10c_quest_835",
+      "url": "https://foreverchanges.pro/quest/835",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "e0c3a730151c7c6285c899f93b18f3b03fbafbe022785fc57b30f0d3f19b2441"
+    },
+    {
+      "sourceId": "e10c_quest_806",
+      "url": "https://foreverchanges.pro/quest/806",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "a78d874739d7bba7385d77276ac39d4170249b81875919183ee8fde262069aeb"
+    },
+    {
+      "sourceId": "e10c_quest_828",
+      "url": "https://foreverchanges.pro/quest/828",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "897ae8d529613ccb5b19ef2fe75712a694eef502c723ba34ee1afcbc96ae2942"
+    },
+    {
+      "sourceId": "e10c_quest_827",
+      "url": "https://foreverchanges.pro/quest/827",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "30509a9c2ba6cc0f25b296c3f7aea0404aadba4d83d01e9ec0aa05e4e2783658"
+    },
+    {
+      "sourceId": "e10c_quest_829",
+      "url": "https://foreverchanges.pro/quest/829",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "4abb934018e302cb005a25f12eb945c64efb737f7eba2271e948af35dbaa1288"
+    },
+    {
+      "sourceId": "e10c_quest_832",
+      "url": "https://foreverchanges.pro/quest/832",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "96037e351e8ca62ea65a4c789560eacca346992dcbd740831b96169ee75e102c"
+    },
+    {
+      "sourceId": "e10c_quest_1506",
+      "url": "https://foreverchanges.pro/quest/1506",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "e22af477fa1d53dad81b8efd0a82564bdd07d38d9fa723d91473da81b6361b90"
+    },
+    {
+      "sourceId": "e10c_quest_1501",
+      "url": "https://foreverchanges.pro/quest/1501",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "dcd4de7343e8e16b47aa1f3c64470940efe80f3abb4d4f13d63b724f5771c997"
+    },
+    {
+      "sourceId": "e10c_quest_1504",
+      "url": "https://foreverchanges.pro/quest/1504",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "c10f8a123a4255fb262545dec3bbf4d1b8897ec55e9e0aa22debe6f727111c6e"
+    },
+    {
+      "sourceId": "e10c_quest_97281",
+      "url": "https://foreverchanges.pro/quest/97281",
+      "kind": "secondary_reported_beta_database",
+      "build": null,
+      "selectedFactsSha256": "e6d0b989e164b4b8e73b50057f831624decb2d1cb59580563045787c76fe7070"
+    },
+    {
+      "sourceId": "e10c_quest_97282",
+      "url": "https://foreverchanges.pro/quest/97282",
+      "kind": "secondary_reported_beta_database",
+      "build": null,
+      "selectedFactsSha256": "b7da25891b73694adf8a5fe4399cfe992d1ad3f433538889157ad21f59aa8dba"
+    },
+    {
+      "sourceId": "e10c_item_4871",
+      "url": "https://foreverchanges.pro/item/4871",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70532",
+      "selectedFactsSha256": "6c085e1b38b382c19717d9cf8d74d0970c4f42995744af32ca722ba6b21a399e"
+    },
+    {
+      "sourceId": "e10c_item_6658",
+      "url": "https://foreverchanges.pro/item/6658",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70532",
+      "selectedFactsSha256": "2f1f463015cfeb9319d0d71fcab927300516f4169fc4b71fe8e53888765807f3"
+    },
+    {
+      "sourceId": "e10c_item_4903",
+      "url": "https://foreverchanges.pro/item/4903",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70532",
+      "selectedFactsSha256": "0d890a059e5b1a75aae48900c871d0810303ecd5259477f34fc65de2c5c74c54"
+    },
+    {
+      "sourceId": "e10c_item_6535",
+      "url": "https://foreverchanges.pro/item/6535",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70532",
+      "selectedFactsSha256": "1e7282a04455dbe09e970e34170c29923682b877f21e625339d8220898443ec0"
+    },
+    {
+      "sourceId": "e10c_item_7464",
+      "url": "https://foreverchanges.pro/item/7464",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70532",
+      "selectedFactsSha256": "f0255fa88388454081651d8383112617481d9c72531d44991eaf35e848c7e291"
+    },
+    {
+      "sourceId": "e10c_item_4938",
+      "url": "https://foreverchanges.pro/item/4938",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70532",
+      "selectedFactsSha256": "5fefb1c263ccfdce6f6cee6346967807e42e952431bf5530d3167c3594011568"
+    },
+    {
+      "sourceId": "e10c_item_281274",
+      "url": "https://foreverchanges.pro/item/281274",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70532",
+      "selectedFactsSha256": "c25d4627d22e7df6ca06ac33721bd5bb70dcb78e118cbefad5e73c754e05ac7a"
+    },
+    {
+      "sourceId": "e10c_item_11845",
+      "url": "https://foreverchanges.pro/item/11845",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70532",
+      "selectedFactsSha256": "cfb852cb085969dff9a6cee82ade48846ce0e97afff4859b2d8611d72f6aa17d"
+    }
+  ],
+  "limitsCs": [
+    "Polohy šesti NPC jsou explicitní Classic reference na mapě Forever, čtyři pocházejí z beta pozorování ForeverLog.",
+    "Osm tooltipů předmětů je z extrakce ForeverChanges 1.60.1.70532; to samo neověřuje způsob získání.",
+    "Dva nové questy jsou převzaté přes výslovně uvedenou databázi Forever na ForeverChanges, ne nezávislé pozorování ve hře.",
+    "Čtrnáct questů a jejich návaznosti zůstávají CLASSIC. Podmínky vydané hry zůstávají neznámé.",
+    "Pevné odměny se neoznačují vztahem REWARD_CHOICE. Vazba je popsaná v textu a payloadu.",
+    "Vnitřní patra jeskyní a dopravní hrany zůstávají nezpracované."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "phase": "preflight",
+  "devices": [],
+  "selected_serial": null,
+  "device_measurement_completed": false,
+  "status": "pending_no_selected_adb_device"
+}

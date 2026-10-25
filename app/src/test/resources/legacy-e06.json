@@ -1,0 +1,1141 @@
+{
+  "schemaVersion": 1,
+  "packageId": "wow-forever:starter:durotar",
+  "generation": 1,
+  "gameVariant": "wow-forever",
+  "checkedOn": "2026-10-23",
+  "maps": [
+    {
+      "key": "wow-forever:map:947",
+      "uiMapId": 947,
+      "floorId": 0,
+      "name": "Azeroth",
+      "width": 1002,
+      "height": 668,
+      "levels": 3,
+      "build": "1.60.1.69893",
+      "coordinateVersion": "wow-forever:map:947:1.60.1.69893:v1",
+      "sourceId": "recorder_maps",
+      "sourceUrl": "https://warcraftforever.games/maps/azeroth",
+      "transform": {
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "offsetX": 0.0,
+        "offsetY": 0.0
+      }
+    },
+    {
+      "key": "wow-forever:map:1414",
+      "uiMapId": 1414,
+      "floorId": 0,
+      "name": "Kalimdor",
+      "width": 1002,
+      "height": 668,
+      "levels": 3,
+      "build": "1.60.1.69893",
+      "coordinateVersion": "wow-forever:map:1414:1.60.1.69893:v1",
+      "sourceId": "recorder_maps",
+      "sourceUrl": "https://warcraftforever.games/maps/kalimdor",
+      "transform": {
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "offsetX": 0.0,
+        "offsetY": 0.0
+      }
+    },
+    {
+      "key": "wow-forever:map:1411",
+      "uiMapId": 1411,
+      "floorId": 0,
+      "name": "Durotar",
+      "width": 1002,
+      "height": 668,
+      "levels": 3,
+      "build": "1.60.1.69893",
+      "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+      "sourceId": "recorder_maps",
+      "sourceUrl": "https://warcraftforever.games/maps/durotar",
+      "transform": {
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "offsetX": 0.0,
+        "offsetY": 0.0
+      }
+    },
+    {
+      "key": "wow-forever:map:1454",
+      "uiMapId": 1454,
+      "floorId": 0,
+      "name": "Orgrimmar",
+      "width": 1002,
+      "height": 668,
+      "levels": 3,
+      "build": "1.60.1.69893",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "sourceId": "recorder_maps",
+      "sourceUrl": "https://warcraftforever.games/maps/orgrimmar",
+      "transform": {
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "offsetX": 0.0,
+        "offsetY": 0.0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "official_classes",
+      "url": "https://news.blizzard.com/en-us/article/24304075/create-the-hero-you-want-to-be-in-world-of-warcraft-forever",
+      "kind": "official_announcement",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"official_classes\",\"url\":\"https://news.blizzard.com/en-us/article/24304075/create-the-hero-you-want-to-be-in-world-of-warcraft-forever\",\"kind\":\"official_announcement\",\"purpose\":\"Ork může být Warlockem za Hordu.\",\"retrieval\":\"web_read\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "recorder_maps",
+      "url": "https://warcraftforever.games/maps",
+      "kind": "publisher_reported_beta_extraction",
+      "checkedOn": "2026-10-23",
+      "build": "1.60.1.69893",
+      "payload": "{\"id\":\"recorder_maps\",\"url\":\"https://warcraftforever.games/maps\",\"kind\":\"publisher_reported_beta_extraction\",\"purpose\":\"Zdroj map s výslovným označením bety.\",\"reported_build\":\"1.60.1.69893\",\"retrieval\":\"web_read\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "eq_available",
+      "url": "https://github.com/wheelbarrel00/EverythingQuests/blob/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestAvailable_Forever.lua",
+      "kind": "community_classic_reference",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"eq_available\",\"url\":\"https://github.com/wheelbarrel00/EverythingQuests/blob/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestAvailable_Forever.lua\",\"kind\":\"community_classic_reference\",\"commit\":\"9c1ce1e44238d8c6c8ca36d8f49836fde70b564f\",\"purpose\":\"Souřadnice a pravidla dostupnosti; tabulka se jmenuje CLASSIC_QUEST_AVAILABLE. Samotný název souboru nepotvrzuje ověření ve Forever.\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "eq_turnin",
+      "url": "https://github.com/wheelbarrel00/EverythingQuests/blob/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestTurnIn_Forever.lua",
+      "kind": "community_classic_reference",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"eq_turnin\",\"url\":\"https://github.com/wheelbarrel00/EverythingQuests/blob/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestTurnIn_Forever.lua\",\"kind\":\"community_classic_reference\",\"commit\":\"9c1ce1e44238d8c6c8ca36d8f49836fde70b564f\",\"purpose\":\"Referenční místa odevzdání; neověřená v aktuálním klientu.\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "eq_names",
+      "url": "https://github.com/wheelbarrel00/EverythingQuests/blob/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestSources_Forever.lua",
+      "kind": "community_reference",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"eq_names\",\"url\":\"https://github.com/wheelbarrel00/EverythingQuests/blob/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestSources_Forever.lua\",\"kind\":\"community_reference\",\"commit\":\"9c1ce1e44238d8c6c8ca36d8f49836fde70b564f\",\"purpose\":\"Přiřazení jmen k ID NPC.\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "att_durotar",
+      "url": "https://github.com/ATTWoWAddon/AllTheThings/blob/64b17f0be6d062412de564cd20f739c1241a0743/.contrib/.db/forever/zones/kalimdor/durotar.lua",
+      "kind": "community_forever_catalog",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"att_durotar\",\"url\":\"https://github.com/ATTWoWAddon/AllTheThings/blob/64b17f0be6d062412de564cd20f739c1241a0743/.contrib/.db/forever/zones/kalimdor/durotar.lua\",\"kind\":\"community_forever_catalog\",\"commit\":\"64b17f0be6d062412de564cd20f739c1241a0743\",\"purpose\":\"Vazby Warlockových úkolů a zjištěný rozpor v komentáři počtu hlav.\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "wowhead_1485",
+      "url": "https://www.wowhead.com/forever/quest=1485/vile-familiars",
+      "kind": "client_record_published_by_database",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"wowhead_1485\",\"url\":\"https://www.wowhead.com/forever/quest=1485/vile-familiars\",\"kind\":\"client_record_published_by_database\",\"purpose\":\"Úkol 1485, šest hlav a učení Summon Imp. Přístup přes webový výpis; žádné hraní klienta.\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "questing_1499",
+      "url": "https://questing.wiki/wow-forever/quests/1499/",
+      "kind": "mixed_sources_directory",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"questing_1499\",\"url\":\"https://questing.wiki/wow-forever/quests/1499/\",\"kind\":\"mixed_sources_directory\",\"purpose\":\"Rozcestník k připnutým zdrojovým souborům; nikoliv nezávislé ověření souřadnic.\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "foreverera_1499",
+      "url": "https://theforeverera.com/en/quests/1499/",
+      "kind": "explicit_classic_reference",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"foreverera_1499\",\"url\":\"https://theforeverera.com/en/quests/1499/\",\"kind\":\"explicit_classic_reference\",\"purpose\":\"Výslovně přiznává souřadnice a odměny z Classicu.\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "azerpug_durotar",
+      "url": "https://forever.azerpug.com/zones/1411/durotar",
+      "kind": "fan_map_unspecified_build",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"azerpug_durotar\",\"url\":\"https://forever.azerpug.com/zones/1411/durotar\",\"kind\":\"fan_map_unspecified_build\",\"purpose\":\"Alternativní podklad Durotaru; geometrie vizuálně porovnána, verze klienta nedoložená.\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "metaforge",
+      "url": "https://metaforge.app/wow-forever/map/azeroth",
+      "kind": "fan_atlas_candidate",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"metaforge\",\"url\":\"https://metaforge.app/wow-forever/map/azeroth\",\"kind\":\"fan_atlas_candidate\",\"purpose\":\"Existence atlasu ověřena; získání konkrétního exportu dat pro náš balíček neověřeno.\",\"checked_on\":\"2026-10-23\"}"
+    },
+    {
+      "id": "npc_10176",
+      "url": "https://warcraftforever.games/npcs/10176",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"npc_10176\",\"url\":\"https://warcraftforever.games/npcs/10176\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno.\"}"
+    },
+    {
+      "id": "npc_3143",
+      "url": "https://warcraftforever.games/npcs/3143",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"npc_3143\",\"url\":\"https://warcraftforever.games/npcs/3143\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno.\"}"
+    },
+    {
+      "id": "npc_5765",
+      "url": "https://warcraftforever.games/npcs/5765",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"npc_5765\",\"url\":\"https://warcraftforever.games/npcs/5765\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno.\"}"
+    },
+    {
+      "id": "npc_6928",
+      "url": "https://warcraftforever.games/npcs/6928",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"npc_6928\",\"url\":\"https://warcraftforever.games/npcs/6928\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno.\"}"
+    },
+    {
+      "id": "npc_3188",
+      "url": "https://warcraftforever.games/npcs/3188",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"npc_3188\",\"url\":\"https://warcraftforever.games/npcs/3188\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno.\"}"
+    },
+    {
+      "id": "npc_9564",
+      "url": "https://warcraftforever.games/npcs/9564",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"npc_9564\",\"url\":\"https://warcraftforever.games/npcs/9564\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno.\"}"
+    },
+    {
+      "id": "npc_3145",
+      "url": "https://warcraftforever.games/npcs/3145",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"npc_3145\",\"url\":\"https://warcraftforever.games/npcs/3145\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno.\"}"
+    },
+    {
+      "id": "npc_3159",
+      "url": "https://warcraftforever.games/npcs/3159",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"npc_3159\",\"url\":\"https://warcraftforever.games/npcs/3159\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno.\"}"
+    },
+    {
+      "id": "quest_4641",
+      "url": "https://warcraftforever.games/quests/4641",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"quest_4641\",\"url\":\"https://warcraftforever.games/quests/4641\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí.\"}"
+    },
+    {
+      "id": "quest_788",
+      "url": "https://warcraftforever.games/quests/788",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"quest_788\",\"url\":\"https://warcraftforever.games/quests/788\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí.\"}"
+    },
+    {
+      "id": "quest_97279",
+      "url": "https://warcraftforever.games/quests/97279",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"quest_97279\",\"url\":\"https://warcraftforever.games/quests/97279\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí.\"}"
+    },
+    {
+      "id": "quest_792",
+      "url": "https://warcraftforever.games/quests/792",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"quest_792\",\"url\":\"https://warcraftforever.games/quests/792\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí.\"}"
+    },
+    {
+      "id": "quest_794",
+      "url": "https://warcraftforever.games/quests/794",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"quest_794\",\"url\":\"https://warcraftforever.games/quests/794\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí.\"}"
+    },
+    {
+      "id": "quest_805",
+      "url": "https://warcraftforever.games/quests/805",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-23",
+      "build": null,
+      "payload": "{\"id\":\"quest_805\",\"url\":\"https://warcraftforever.games/quests/805\",\"kind\":\"publisher_reported_beta_observation\",\"checked_on\":\"2026-10-23\",\"reported_build\":null,\"purpose\":\"Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí.\"}"
+    },
+    {
+      "id": "item_5778",
+      "url": "https://warcraftforever.games/items/5778",
+      "kind": "publisher_reported_beta_item_record",
+      "checkedOn": "2026-10-23",
+      "build": "1.60.1.70009",
+      "payload": "{\"id\":\"item_5778\",\"url\":\"https://warcraftforever.games/items/5778\",\"kind\":\"publisher_reported_beta_item_record\",\"checked_on\":\"2026-10-23\",\"reported_build\":\"1.60.1.70009\",\"purpose\":\"Předmět a beta vazba na odměnu úkolu.\"}"
+    }
+  ],
+  "entries": [
+    {
+      "key": "wow-forever:npc:10176",
+      "kind": "NPC",
+      "gameId": 10176,
+      "nameOriginal": "Kaltunk",
+      "descriptionCs": "Postava z publikovaných podkladů. Stav ověření a případná poloha jsou vedené samostatně.",
+      "aliases": [
+        "10176"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "npc_10176"
+      ],
+      "payload": "{\"id\":\"wow-forever:npc:10176\",\"game_id\":10176,\"name_original\":\"Kaltunk\",\"services\":[],\"source_ids\":[\"npc_10176\"],\"verification_status\":\"reported_beta_observation\",\"location\":{\"map_key\":\"wow-forever:map:1411\",\"floor_id\":0,\"x_percent\":43.1,\"y_percent\":68.7,\"source_precision_percent\":0.1,\"source_id\":\"npc_10176\",\"calibration_status\":\"pending_E01\"},\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:npc:3143",
+      "kind": "NPC",
+      "gameId": 3143,
+      "nameOriginal": "Gornek",
+      "descriptionCs": "Postava z publikovaných podkladů. Stav ověření a případná poloha jsou vedené samostatně.",
+      "aliases": [
+        "3143"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "npc_3143"
+      ],
+      "payload": "{\"id\":\"wow-forever:npc:3143\",\"game_id\":3143,\"name_original\":\"Gornek\",\"services\":[],\"source_ids\":[\"npc_3143\"],\"verification_status\":\"reported_beta_observation\",\"location\":{\"map_key\":\"wow-forever:map:1411\",\"floor_id\":0,\"x_percent\":42.1,\"y_percent\":68.4,\"source_precision_percent\":0.1,\"source_id\":\"npc_3143\",\"calibration_status\":\"pending_E01\"},\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:npc:5765",
+      "kind": "NPC",
+      "gameId": 5765,
+      "nameOriginal": "Ruzan",
+      "descriptionCs": "Postava z publikovaných podkladů. Stav ověření a případná poloha jsou vedené samostatně.",
+      "aliases": [
+        "5765"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "npc_5765"
+      ],
+      "payload": "{\"id\":\"wow-forever:npc:5765\",\"game_id\":5765,\"name_original\":\"Ruzan\",\"services\":[],\"source_ids\":[\"npc_5765\"],\"verification_status\":\"reported_beta_observation\",\"location\":{\"map_key\":\"wow-forever:map:1411\",\"floor_id\":0,\"x_percent\":42.7,\"y_percent\":69.0,\"source_precision_percent\":0.1,\"source_id\":\"npc_5765\",\"calibration_status\":\"pending_E01\"},\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:npc:6928",
+      "kind": "NPC",
+      "gameId": 6928,
+      "nameOriginal": "Innkeeper Grosk",
+      "descriptionCs": "Postava z publikovaných podkladů. Stav ověření a případná poloha jsou vedené samostatně.",
+      "aliases": [
+        "6928"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "npc_6928"
+      ],
+      "payload": "{\"id\":\"wow-forever:npc:6928\",\"game_id\":6928,\"name_original\":\"Innkeeper Grosk\",\"services\":[\"innkeeper\"],\"source_ids\":[\"npc_6928\"],\"verification_status\":\"reported_beta_observation\",\"location\":{\"map_key\":\"wow-forever:map:1411\",\"floor_id\":0,\"x_percent\":51.6,\"y_percent\":41.7,\"source_precision_percent\":0.1,\"source_id\":\"npc_6928\",\"calibration_status\":\"pending_E01\"},\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:npc:3188",
+      "kind": "NPC",
+      "gameId": 3188,
+      "nameOriginal": "Master Gadrin",
+      "descriptionCs": "Postava z publikovaných podkladů. Stav ověření a případná poloha jsou vedené samostatně.",
+      "aliases": [
+        "3188"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "npc_3188"
+      ],
+      "payload": "{\"id\":\"wow-forever:npc:3188\",\"game_id\":3188,\"name_original\":\"Master Gadrin\",\"services\":[],\"source_ids\":[\"npc_3188\"],\"verification_status\":\"reported_beta_observation\",\"location\":{\"map_key\":\"wow-forever:map:1411\",\"floor_id\":0,\"x_percent\":55.6,\"y_percent\":75.0,\"source_precision_percent\":0.1,\"source_id\":\"npc_3188\",\"calibration_status\":\"pending_E01\"},\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:npc:9564",
+      "kind": "NPC",
+      "gameId": 9564,
+      "nameOriginal": "Frezza",
+      "descriptionCs": "Postava z publikovaných podkladů. Stav ověření a případná poloha jsou vedené samostatně.",
+      "aliases": [
+        "9564"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "npc_9564"
+      ],
+      "payload": "{\"id\":\"wow-forever:npc:9564\",\"game_id\":9564,\"name_original\":\"Frezza\",\"services\":[\"zeppelin_master\"],\"source_ids\":[\"npc_9564\"],\"verification_status\":\"reported_beta_observation\",\"location\":{\"map_key\":\"wow-forever:map:1411\",\"floor_id\":0,\"x_percent\":50.8,\"y_percent\":13.4,\"source_precision_percent\":0.1,\"source_id\":\"npc_9564\",\"calibration_status\":\"pending_E01\"},\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:npc:3145",
+      "kind": "NPC",
+      "gameId": 3145,
+      "nameOriginal": "Zureetha Fargaze",
+      "descriptionCs": "Postava z publikovaných podkladů. Stav ověření a případná poloha jsou vedené samostatně.",
+      "aliases": [
+        "3145"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "npc_3145"
+      ],
+      "payload": "{\"id\":\"wow-forever:npc:3145\",\"game_id\":3145,\"name_original\":\"Zureetha Fargaze\",\"services\":[],\"source_ids\":[\"npc_3145\"],\"verification_status\":\"reported_beta_observation\",\"location\":{\"map_key\":\"wow-forever:map:1411\",\"floor_id\":0,\"x_percent\":43.0,\"y_percent\":69.3,\"source_precision_percent\":0.1,\"source_id\":\"npc_3145\",\"calibration_status\":\"pending_E01\"},\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:npc:3159",
+      "kind": "NPC",
+      "gameId": 3159,
+      "nameOriginal": "Kzan Thornslash",
+      "descriptionCs": "Postava z publikovaných podkladů. Stav ověření a případná poloha jsou vedené samostatně.",
+      "aliases": [
+        "3159"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "npc_3159"
+      ],
+      "payload": "{\"id\":\"wow-forever:npc:3159\",\"game_id\":3159,\"name_original\":\"Kzan Thornslash\",\"services\":[\"weaponsmith_vendor\"],\"source_ids\":[\"npc_3159\"],\"verification_status\":\"reported_beta_observation\",\"location\":{\"map_key\":\"wow-forever:map:1411\",\"floor_id\":0,\"x_percent\":40.5,\"y_percent\":68.0,\"source_precision_percent\":0.1,\"source_id\":\"npc_3159\",\"calibration_status\":\"pending_E01\"},\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:npc:3156",
+      "kind": "NPC",
+      "gameId": 3156,
+      "nameOriginal": "Nartok",
+      "descriptionCs": "Postava z publikovaných podkladů. Stav ověření a případná poloha jsou vedené samostatně.",
+      "aliases": [
+        "3156"
+      ],
+      "verification": "CLASSIC",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "eq_names",
+        "eq_turnin"
+      ],
+      "payload": "{\"id\":\"wow-forever:npc:3156\",\"game_id\":3156,\"name_original\":\"Nartok\",\"services\":[],\"source_ids\":[\"eq_names\",\"eq_turnin\"],\"verification_status\":\"classic_reference_pending_forever_confirmation\",\"location\":null,\"reference_location\":{\"map_key\":\"wow-forever:map:1411\",\"floor_id\":0,\"ui_map_id\":1411,\"source_id\":\"eq_turnin\",\"source_kind\":1,\"x_percent\":40.65,\"y_percent\":68.52,\"packed\":3156140656852},\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:quest:4641",
+      "kind": "QUEST",
+      "gameId": 4641,
+      "nameOriginal": "Your Place in the World",
+      "descriptionCs": "Najdi Gorneka v úvodní oblasti.",
+      "aliases": [
+        "4641"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 1,
+      "sourceIds": [
+        "quest_4641"
+      ],
+      "payload": "{\"id\":\"wow-forever:quest:4641\",\"game_id\":4641,\"name_original\":\"Your Place in the World\",\"summary_cs\":\"Najdi Gorneka v úvodní oblasti.\",\"quest_level_reported\":1,\"minimum_level\":null,\"start_npc_key\":\"wow-forever:npc:10176\",\"end_npc_key\":\"wow-forever:npc:3143\",\"source_ids\":[\"quest_4641\"],\"verification_status\":\"reported_beta_observation\",\"applicability_to_orc_warlock\":\"requires_character_specific_check\",\"release_confirmed\":false,\"eligible_for_release_verified_recommendations\":false}"
+    },
+    {
+      "key": "wow-forever:quest:788",
+      "kind": "QUEST",
+      "gameId": 788,
+      "nameOriginal": "Cutting Teeth",
+      "descriptionCs": "Splň úvodní úkol s divočáky a vrať se ke Gornekovi.",
+      "aliases": [
+        "788"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 2,
+      "sourceIds": [
+        "quest_788"
+      ],
+      "payload": "{\"id\":\"wow-forever:quest:788\",\"game_id\":788,\"name_original\":\"Cutting Teeth\",\"summary_cs\":\"Splň úvodní úkol s divočáky a vrať se ke Gornekovi.\",\"quest_level_reported\":2,\"minimum_level\":null,\"start_npc_key\":\"wow-forever:npc:3143\",\"end_npc_key\":\"wow-forever:npc:3143\",\"source_ids\":[\"quest_788\"],\"verification_status\":\"reported_beta_observation\",\"applicability_to_orc_warlock\":\"requires_character_specific_check\",\"release_confirmed\":false,\"eligible_for_release_verified_recommendations\":false}"
+    },
+    {
+      "key": "wow-forever:quest:97279",
+      "kind": "QUEST",
+      "gameId": 97279,
+      "nameOriginal": "Wayward Weapons",
+      "descriptionCs": "Posbírej odložené cvičné zbraně a odevzdej je Kzanovi.",
+      "aliases": [
+        "97279"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 2,
+      "sourceIds": [
+        "quest_97279"
+      ],
+      "payload": "{\"id\":\"wow-forever:quest:97279\",\"game_id\":97279,\"name_original\":\"Wayward Weapons\",\"summary_cs\":\"Posbírej odložené cvičné zbraně a odevzdej je Kzanovi.\",\"quest_level_reported\":2,\"minimum_level\":null,\"start_npc_key\":\"wow-forever:npc:3143\",\"end_npc_key\":\"wow-forever:npc:3159\",\"source_ids\":[\"quest_97279\"],\"verification_status\":\"reported_beta_observation\",\"applicability_to_orc_warlock\":\"requires_character_specific_check\",\"release_confirmed\":false,\"eligible_for_release_verified_recommendations\":false}"
+    },
+    {
+      "key": "wow-forever:quest:792",
+      "kind": "QUEST",
+      "gameId": 792,
+      "nameOriginal": "Vile Familiars",
+      "descriptionCs": "Zadání od Zureethy k likvidaci nepřátel; samostatné ID oproti Warlockovým úkolům.",
+      "aliases": [
+        "792"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 4,
+      "sourceIds": [
+        "quest_792"
+      ],
+      "payload": "{\"id\":\"wow-forever:quest:792\",\"game_id\":792,\"name_original\":\"Vile Familiars\",\"summary_cs\":\"Zadání od Zureethy k likvidaci nepřátel; samostatné ID oproti Warlockovým úkolům.\",\"quest_level_reported\":4,\"minimum_level\":null,\"start_npc_key\":\"wow-forever:npc:3145\",\"end_npc_key\":\"wow-forever:npc:3145\",\"source_ids\":[\"quest_792\"],\"verification_status\":\"reported_beta_observation\",\"applicability_to_orc_warlock\":\"requires_character_specific_check\",\"release_confirmed\":false,\"eligible_for_release_verified_recommendations\":false}"
+    },
+    {
+      "key": "wow-forever:quest:794",
+      "kind": "QUEST",
+      "gameId": 794,
+      "nameOriginal": "Burning Blade Medallion",
+      "descriptionCs": "Získej medailon a vrať jej Zureethě.",
+      "aliases": [
+        "794"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 5,
+      "sourceIds": [
+        "quest_794"
+      ],
+      "payload": "{\"id\":\"wow-forever:quest:794\",\"game_id\":794,\"name_original\":\"Burning Blade Medallion\",\"summary_cs\":\"Získej medailon a vrať jej Zureethě.\",\"quest_level_reported\":5,\"minimum_level\":null,\"start_npc_key\":\"wow-forever:npc:3145\",\"end_npc_key\":\"wow-forever:npc:3145\",\"source_ids\":[\"quest_794\"],\"verification_status\":\"reported_beta_observation\",\"applicability_to_orc_warlock\":\"requires_character_specific_check\",\"release_confirmed\":false,\"eligible_for_release_verified_recommendations\":false}"
+    },
+    {
+      "key": "wow-forever:quest:805",
+      "kind": "QUEST",
+      "gameId": 805,
+      "nameOriginal": "Report to Sen'jin Village",
+      "descriptionCs": "Promluv s Master Gadrinem ve vesnici Sen'jin.",
+      "aliases": [
+        "805"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 5,
+      "sourceIds": [
+        "quest_805"
+      ],
+      "payload": "{\"id\":\"wow-forever:quest:805\",\"game_id\":805,\"name_original\":\"Report to Sen'jin Village\",\"summary_cs\":\"Promluv s Master Gadrinem ve vesnici Sen'jin.\",\"quest_level_reported\":5,\"minimum_level\":null,\"start_npc_key\":\"wow-forever:npc:3145\",\"end_npc_key\":\"wow-forever:npc:3188\",\"source_ids\":[\"quest_805\"],\"verification_status\":\"reported_beta_observation\",\"applicability_to_orc_warlock\":\"requires_character_specific_check\",\"release_confirmed\":false,\"eligible_for_release_verified_recommendations\":false}"
+    },
+    {
+      "key": "wow-forever:quest:1485",
+      "kind": "QUEST",
+      "gameId": 1485,
+      "nameOriginal": "Vile Familiars",
+      "descriptionCs": "Warlockovo zadání související s naučením Summon Imp. Přesný počet předmětů je sporný.",
+      "aliases": [
+        "1485",
+        "warlock"
+      ],
+      "verification": "CONFLICT",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "wowhead_1485",
+        "att_durotar"
+      ],
+      "payload": "{\"id\":\"wow-forever:quest:1485\",\"game_id\":1485,\"name_original\":\"Vile Familiars\",\"summary_cs\":\"Warlockovo zadání související s naučením Summon Imp. Přesný počet předmětů je sporný.\",\"start_npc_key\":\"wow-forever:npc:5765\",\"end_npc_key\":\"wow-forever:npc:5765\",\"classes\":[\"WARLOCK\"],\"minimum_level\":null,\"learns_spell_key\":\"wow-forever:spell:688\",\"objective_item_name\":\"Vile Familiar Head\",\"objective_count\":null,\"objective_count_claims\":[{\"value\":6,\"source_id\":\"wowhead_1485\",\"evidence_type\":\"published_objective\"},{\"value\":8,\"source_id\":\"att_durotar\",\"evidence_type\":\"code_comment_not_authoritative_counter\"}],\"source_ids\":[\"wowhead_1485\",\"att_durotar\"],\"verification_status\":\"field_conflict_requires_in_game_confirmation\",\"release_confirmed\":false,\"eligible_for_release_verified_recommendations\":false}"
+    },
+    {
+      "key": "wow-forever:quest:1499",
+      "kind": "QUEST",
+      "gameId": 1499,
+      "nameOriginal": "Vile Familiars",
+      "descriptionCs": "Samostatný navazující úkol; nezaměňovat s ID 792 nebo 1485.",
+      "aliases": [
+        "1499",
+        "warlock"
+      ],
+      "verification": "COMMUNITY",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "att_durotar",
+        "eq_available",
+        "eq_turnin"
+      ],
+      "payload": "{\"id\":\"wow-forever:quest:1499\",\"game_id\":1499,\"name_original\":\"Vile Familiars\",\"summary_cs\":\"Samostatný navazující úkol; nezaměňovat s ID 792 nebo 1485.\",\"start_npc_key\":\"wow-forever:npc:5765\",\"end_npc_key\":\"wow-forever:npc:3145\",\"classes\":[\"WARLOCK\"],\"minimum_level\":null,\"source_ids\":[\"att_durotar\",\"eq_available\",\"eq_turnin\"],\"verification_status\":\"community_reference_pending_forever_confirmation\",\"release_confirmed\":false,\"eligible_for_release_verified_recommendations\":false}"
+    },
+    {
+      "key": "wow-forever:quest:3090",
+      "kind": "QUEST",
+      "gameId": 3090,
+      "nameOriginal": "Tainted Parchment",
+      "descriptionCs": "Kandidát úvodního úkolu Warlocka; katalog vede ke spojení Gornek a Nartok.",
+      "aliases": [
+        "3090",
+        "warlock"
+      ],
+      "verification": "COMMUNITY",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "att_durotar",
+        "eq_available",
+        "eq_turnin"
+      ],
+      "payload": "{\"id\":\"wow-forever:quest:3090\",\"game_id\":3090,\"name_original\":\"Tainted Parchment\",\"summary_cs\":\"Kandidát úvodního úkolu Warlocka; katalog vede ke spojení Gornek a Nartok.\",\"start_npc_key\":\"wow-forever:npc:3143\",\"end_npc_key\":\"wow-forever:npc:3156\",\"classes\":[\"WARLOCK\"],\"minimum_level\":null,\"source_ids\":[\"att_durotar\",\"eq_available\",\"eq_turnin\"],\"verification_status\":\"community_reference_pending_forever_confirmation\",\"release_confirmed\":false,\"eligible_for_release_verified_recommendations\":false}"
+    },
+    {
+      "key": "wow-forever:item:5778",
+      "kind": "ITEM",
+      "gameId": 5778,
+      "nameOriginal": "Primitive Walking Stick",
+      "descriptionCs": "Předmět uváděný v beta katalogu; různé způsoby získání mají vlastní zdroje.",
+      "aliases": [
+        "5778",
+        "hůl",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "item_5778"
+      ],
+      "payload": "{\"id\":\"wow-forever:item:5778\",\"game_id\":5778,\"name_original\":\"Primitive Walking Stick\",\"source_ids\":[\"item_5778\"],\"verification_status\":\"reported_beta_item_record\",\"reported_build\":\"1.60.1.70009\",\"acquisition_claims\":[{\"quest_key\":\"wow-forever:quest:792\",\"method\":\"reward_choice\",\"source_id\":\"quest_792\",\"verification_status\":\"reported_beta_observation\"},{\"quest_key\":\"wow-forever:quest:1499\",\"method\":\"reward_choice\",\"source_id\":\"att_durotar\",\"verification_status\":\"community_reference_pending_forever_confirmation\"}],\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:spell:688",
+      "kind": "SPELL",
+      "gameId": 688,
+      "nameOriginal": "Summon Imp",
+      "descriptionCs": "Kouzlo Summon Imp související s Warlockovými úkoly. Dostupnost v aktuální hře čeká na ověření.",
+      "aliases": [
+        "688",
+        "přivolání impa",
+        "warlock"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "wowhead_1485",
+        "att_durotar"
+      ],
+      "payload": "{\"id\":\"wow-forever:spell:688\",\"game_id\":688,\"name_original\":\"Summon Imp\",\"source_ids\":[\"wowhead_1485\",\"att_durotar\"],\"verification_status\":\"reported_forever_database_record\",\"release_confirmed\":false}"
+    },
+    {
+      "key": "wow-forever:travel:durotar-undercity",
+      "kind": "TRAVEL",
+      "gameId": null,
+      "nameOriginal": "Durotar → Undercity",
+      "descriptionCs": "Poloha NPC není automaticky ověřená poloha nástupu. Doložená zmínka cíle; příjezdové místo ani jízdní doba nejsou potvrzené.",
+      "aliases": [],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "npc_9564"
+      ],
+      "payload": "{\"id\":\"wow-forever:travel:durotar-undercity\",\"type\":\"zeppelin_report\",\"origin_map_key\":\"wow-forever:map:1411\",\"origin_npc_key\":\"wow-forever:npc:9564\",\"destination_name\":\"Undercity\",\"destination_coordinates\":null,\"source_ids\":[\"npc_9564\"],\"verification_status\":\"reported_beta_dialogue\",\"routing_enabled\":false,\"note\":\"Poloha NPC není automaticky ověřená poloha nástupu. Doložená zmínka cíle; příjezdové místo ani jízdní doba nejsou potvrzené.\"}"
+    }
+  ],
+  "locations": [
+    {
+      "key": "wow-forever:npc:10176:location:0",
+      "entryKey": "wow-forever:npc:10176",
+      "mapKey": "wow-forever:map:1411",
+      "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 43.1,
+      "yPercent": 68.7,
+      "precisionPercent": 0.1,
+      "sourceId": "npc_10176"
+    },
+    {
+      "key": "wow-forever:npc:3143:location:0",
+      "entryKey": "wow-forever:npc:3143",
+      "mapKey": "wow-forever:map:1411",
+      "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 42.1,
+      "yPercent": 68.4,
+      "precisionPercent": 0.1,
+      "sourceId": "npc_3143"
+    },
+    {
+      "key": "wow-forever:npc:5765:location:0",
+      "entryKey": "wow-forever:npc:5765",
+      "mapKey": "wow-forever:map:1411",
+      "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 42.7,
+      "yPercent": 69.0,
+      "precisionPercent": 0.1,
+      "sourceId": "npc_5765"
+    },
+    {
+      "key": "wow-forever:npc:6928:location:0",
+      "entryKey": "wow-forever:npc:6928",
+      "mapKey": "wow-forever:map:1411",
+      "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 51.6,
+      "yPercent": 41.7,
+      "precisionPercent": 0.1,
+      "sourceId": "npc_6928"
+    },
+    {
+      "key": "wow-forever:npc:3188:location:0",
+      "entryKey": "wow-forever:npc:3188",
+      "mapKey": "wow-forever:map:1411",
+      "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 55.6,
+      "yPercent": 75.0,
+      "precisionPercent": 0.1,
+      "sourceId": "npc_3188"
+    },
+    {
+      "key": "wow-forever:npc:9564:location:0",
+      "entryKey": "wow-forever:npc:9564",
+      "mapKey": "wow-forever:map:1411",
+      "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 50.8,
+      "yPercent": 13.4,
+      "precisionPercent": 0.1,
+      "sourceId": "npc_9564"
+    },
+    {
+      "key": "wow-forever:npc:3145:location:0",
+      "entryKey": "wow-forever:npc:3145",
+      "mapKey": "wow-forever:map:1411",
+      "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 43.0,
+      "yPercent": 69.3,
+      "precisionPercent": 0.1,
+      "sourceId": "npc_3145"
+    },
+    {
+      "key": "wow-forever:npc:3159:location:0",
+      "entryKey": "wow-forever:npc:3159",
+      "mapKey": "wow-forever:map:1411",
+      "coordinateVersion": "wow-forever:map:1411:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 40.5,
+      "yPercent": 68.0,
+      "precisionPercent": 0.1,
+      "sourceId": "npc_3159"
+    }
+  ],
+  "relations": [
+    {
+      "key": "wow-forever:relation:pre:1499",
+      "kind": "PREREQUISITE",
+      "ownerKey": "wow-forever:quest:1499",
+      "targetKeys": [
+        "wow-forever:quest:1485"
+      ],
+      "mode": "ANY",
+      "verification": "CLASSIC",
+      "routingEnabled": false,
+      "sourceIds": [
+        "eq_available"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:pre:794",
+      "kind": "PREREQUISITE",
+      "ownerKey": "wow-forever:quest:794",
+      "targetKeys": [
+        "wow-forever:quest:792",
+        "wow-forever:quest:1499"
+      ],
+      "mode": "ANY",
+      "verification": "CLASSIC",
+      "routingEnabled": false,
+      "sourceIds": [
+        "eq_available"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:pre:805",
+      "kind": "PREREQUISITE",
+      "ownerKey": "wow-forever:quest:805",
+      "targetKeys": [
+        "wow-forever:quest:794"
+      ],
+      "mode": "ANY",
+      "verification": "CLASSIC",
+      "routingEnabled": false,
+      "sourceIds": [
+        "eq_available"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:pre:3090",
+      "kind": "PREREQUISITE",
+      "ownerKey": "wow-forever:quest:3090",
+      "targetKeys": [
+        "wow-forever:quest:788"
+      ],
+      "mode": "ANY",
+      "verification": "CLASSIC",
+      "routingEnabled": false,
+      "sourceIds": [
+        "eq_available"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:start_npc:4641",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:4641",
+      "targetKeys": [
+        "wow-forever:npc:10176"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_4641"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:end_npc:4641",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:4641",
+      "targetKeys": [
+        "wow-forever:npc:3143"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_4641"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:start_npc:788",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:788",
+      "targetKeys": [
+        "wow-forever:npc:3143"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_788"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:end_npc:788",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:788",
+      "targetKeys": [
+        "wow-forever:npc:3143"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_788"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:start_npc:97279",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:97279",
+      "targetKeys": [
+        "wow-forever:npc:3143"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_97279"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:end_npc:97279",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:97279",
+      "targetKeys": [
+        "wow-forever:npc:3159"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_97279"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:start_npc:792",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:792",
+      "targetKeys": [
+        "wow-forever:npc:3145"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_792"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:end_npc:792",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:792",
+      "targetKeys": [
+        "wow-forever:npc:3145"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_792"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:start_npc:794",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:794",
+      "targetKeys": [
+        "wow-forever:npc:3145"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_794"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:end_npc:794",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:794",
+      "targetKeys": [
+        "wow-forever:npc:3145"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_794"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:start_npc:805",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:805",
+      "targetKeys": [
+        "wow-forever:npc:3145"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_805"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:end_npc:805",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:805",
+      "targetKeys": [
+        "wow-forever:npc:3188"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_805"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:start_npc:1485",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:1485",
+      "targetKeys": [
+        "wow-forever:npc:5765"
+      ],
+      "mode": "ALL",
+      "verification": "CONFLICT",
+      "routingEnabled": false,
+      "sourceIds": [
+        "wowhead_1485",
+        "att_durotar"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:end_npc:1485",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:1485",
+      "targetKeys": [
+        "wow-forever:npc:5765"
+      ],
+      "mode": "ALL",
+      "verification": "CONFLICT",
+      "routingEnabled": false,
+      "sourceIds": [
+        "wowhead_1485",
+        "att_durotar"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:learn_spell:1485",
+      "kind": "LEARN_SPELL",
+      "ownerKey": "wow-forever:quest:1485",
+      "targetKeys": [
+        "wow-forever:spell:688"
+      ],
+      "mode": "ALL",
+      "verification": "CONFLICT",
+      "routingEnabled": false,
+      "sourceIds": [
+        "wowhead_1485",
+        "att_durotar"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:start_npc:1499",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:1499",
+      "targetKeys": [
+        "wow-forever:npc:5765"
+      ],
+      "mode": "ALL",
+      "verification": "COMMUNITY",
+      "routingEnabled": false,
+      "sourceIds": [
+        "att_durotar",
+        "eq_available",
+        "eq_turnin"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:end_npc:1499",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:1499",
+      "targetKeys": [
+        "wow-forever:npc:3145"
+      ],
+      "mode": "ALL",
+      "verification": "COMMUNITY",
+      "routingEnabled": false,
+      "sourceIds": [
+        "att_durotar",
+        "eq_available",
+        "eq_turnin"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:start_npc:3090",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:3090",
+      "targetKeys": [
+        "wow-forever:npc:3143"
+      ],
+      "mode": "ALL",
+      "verification": "COMMUNITY",
+      "routingEnabled": false,
+      "sourceIds": [
+        "att_durotar",
+        "eq_available",
+        "eq_turnin"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:end_npc:3090",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:3090",
+      "targetKeys": [
+        "wow-forever:npc:3156"
+      ],
+      "mode": "ALL",
+      "verification": "COMMUNITY",
+      "routingEnabled": false,
+      "sourceIds": [
+        "att_durotar",
+        "eq_available",
+        "eq_turnin"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:reward:5778:0",
+      "kind": "REWARD_CHOICE",
+      "ownerKey": "wow-forever:item:5778",
+      "targetKeys": [
+        "wow-forever:quest:792"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "quest_792"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:reward:5778:1",
+      "kind": "REWARD_CHOICE",
+      "ownerKey": "wow-forever:item:5778",
+      "targetKeys": [
+        "wow-forever:quest:1499"
+      ],
+      "mode": "ALL",
+      "verification": "COMMUNITY",
+      "routingEnabled": false,
+      "sourceIds": [
+        "att_durotar"
+      ]
+    }
+  ]
+}

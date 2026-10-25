@@ -1,0 +1,599 @@
+{
+  "checkedOn": "2026-10-25",
+  "scope": "Orc/Horde/Warlock start 1–10; selected Durotar content and Orgrimmar hand-in reference",
+  "npcs": [
+    {
+      "id": 266940,
+      "name": "Turroc",
+      "uiMapId": 1411,
+      "x": 54.1,
+      "y": 42.3,
+      "subzone": "Razor Hill Barracks",
+      "descriptionCs": "Zadavatel For Honor v kasárnách Razor Hill. Hledej u něj návrat z okolí Tiragarde Keep.",
+      "aliases": [
+        "kasárna",
+        "čest"
+      ]
+    },
+    {
+      "id": 3194,
+      "name": "Vel'rin Fang",
+      "uiMapId": 1411,
+      "x": 55.8,
+      "y": 74.1,
+      "subzone": "Sen'jin Village",
+      "descriptionCs": "Zadává Practical Prey a Legging It. Druhý úkol odevzdáváš u Gar’Thoka v Razor Hill.",
+      "aliases": [
+        "kůže",
+        "pavouci"
+      ]
+    },
+    {
+      "id": 7953,
+      "name": "Xar'Ti",
+      "uiMapId": 1411,
+      "x": 55.2,
+      "y": 75.5,
+      "subzone": "Sen'jin Village",
+      "descriptionCs": "V betě zadává Bloodtalon Matriarch. Titul Raptor Riding Trainer nepotvrzuje dostupnost jezdeckého výcviku pro začínajícího orka.",
+      "aliases": [
+        "vejce",
+        "raptor"
+      ]
+    },
+    {
+      "id": 3140,
+      "name": "Lar Prowltusk",
+      "uiMapId": 1411,
+      "x": 55.3,
+      "y": 74.5,
+      "subzone": "Sen'jin Village",
+      "descriptionCs": "Zadává Thwarting Kolkar Aggression: tři plány v Kolkar Crag.",
+      "aliases": [
+        "kolkar",
+        "plány"
+      ]
+    },
+    {
+      "id": 275811,
+      "name": "Pal'juh",
+      "uiMapId": 1411,
+      "x": 51.2,
+      "y": 79.7,
+      "subzone": "Kolkar Crag",
+      "descriptionCs": "Začátek doprovodu Lost in the Shadows. Bod je zaznamenaná poloha NPC, nikoli trasa doprovodu.",
+      "aliases": [
+        "doprovod",
+        "záchrana"
+      ]
+    },
+    {
+      "id": 3192,
+      "name": "Lieutenant Benedict",
+      "uiMapId": 1411,
+      "x": 59.2,
+      "y": 58.4,
+      "subzone": "Tiragarde Keep",
+      "descriptionCs": "Nepřítel pro Vanquish the Betrayers. Beta zdroj neuvádí doloženou šanci na kořist ani přesné patro pevnosti.",
+      "aliases": [
+        "poručík",
+        "Tiragarde"
+      ]
+    },
+    {
+      "id": 3281,
+      "name": "Sarkoth",
+      "uiMapId": 1411,
+      "x": 42.0,
+      "y": 66.5,
+      "subzone": "Valley of Trials",
+      "descriptionCs": "Nepřítel stejnojmenného úvodního úkolu. Místo pozorování není zárukou živého výskytu.",
+      "aliases": [
+        "škorpion",
+        "klepeto"
+      ]
+    },
+    {
+      "id": 3183,
+      "name": "Yarrog Baneshadow",
+      "uiMapId": 1411,
+      "x": 42.8,
+      "y": 53.1,
+      "subzone": "Burning Blade Coven",
+      "descriptionCs": "Nepřítel zaznamenaný v Burning Blade Coven. Pouze poloha na mapě oblasti; vnitřní patro jeskyně ani cesta nejsou zpracované.",
+      "aliases": [
+        "jeskyně",
+        "Burning Blade"
+      ]
+    },
+    {
+      "id": 3205,
+      "name": "Zalazane",
+      "uiMapId": 1411,
+      "x": 66.0,
+      "y": 86.2,
+      "subzone": "Echo Isles",
+      "descriptionCs": "Cíl úkolu Zalazane od Master Gadrina. Pozorování bety na Echo Isles neudává čas obnovení.",
+      "aliases": [
+        "ostrovy",
+        "Gadrin"
+      ]
+    },
+    {
+      "id": 3101,
+      "name": "Vile Familiar",
+      "uiMapId": 1411,
+      "x": 43.2,
+      "y": 54.6,
+      "subzone": "Burning Blade Coven",
+      "descriptionCs": "Nepřítel pozorovaný v Burning Blade Coven. Nezaměňuj NPC s různými úkoly Vile Familiars. Poloha na mapě oblasti není plán jeskyně.",
+      "aliases": [
+        "imp",
+        "jeskyně"
+      ]
+    },
+    {
+      "id": 3102,
+      "name": "Felstalker",
+      "uiMapId": 1411,
+      "x": 42.7,
+      "y": 54.8,
+      "subzone": "Burning Blade Coven",
+      "descriptionCs": "Démon pozorovaný v Burning Blade Coven. Záznam neřeší rozpor v počtu hlav u úkolu 1485; řiď se aktuálním zadáním ve hře.",
+      "aliases": [
+        "démon",
+        "jeskyně"
+      ]
+    },
+    {
+      "id": 3230,
+      "name": "Nazgrel",
+      "uiMapId": 1454,
+      "x": 33.2,
+      "y": 37.6,
+      "subzone": "Grommash Hold",
+      "descriptionCs": "Thrallův poradce v Orgrimmaru. Návaznost The Admiral’s Orders 831 je samostatná Classic reference; jeho beta poloha ji sama nepotvrzuje.",
+      "aliases": [
+        "Thrall",
+        "rozkazy"
+      ]
+    }
+  ],
+  "quests": [
+    {
+      "id": 96822,
+      "name": "For Honor",
+      "level": 6,
+      "startNpcId": 266940,
+      "endNpcId": 266940,
+      "descriptionCs": "U okraje Tiragarde Keep seber Raider’s Battleaxe, Raider’s Bow a Raider’s Shield. Vrať je Turrocovi v Razor Hill.",
+      "reasonCs": "Nový úkol Forever: při návštěvě okolí pevnosti zkontroluj tři památky padlých.",
+      "aliases": [
+        "čest",
+        "zbraně"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 96821,
+      "name": "Legging It",
+      "level": 6,
+      "startNpcId": 3194,
+      "endNpcId": 3139,
+      "descriptionCs": "Vel’rin Fang žádá zabít šest Ridgeshade Creepers a šest Ridgeshade Lurkers. Úspěch oznam Gar’Thokovi v Razor Hill.",
+      "reasonCs": "Před cestou ze Sen’jinu do Razor Hill zkontroluj tento úkol; zadavatel a odevzdání jsou různí.",
+      "aliases": [
+        "pavouci",
+        "přesun"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 96825,
+      "name": "This Fruit Could Bite Back",
+      "level": 6,
+      "startNpcId": 3191,
+      "endNpcId": 3191,
+      "descriptionCs": "Pro Cook Torku nasbírej osm Prickly Pear Fruit v Razormane Grounds západně od Razor Hill.",
+      "reasonCs": "Nový úkol z Razor Hill pro výpravu do Razormane Grounds.",
+      "aliases": [
+        "ovoce",
+        "vaření"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 97223,
+      "name": "Bloodtalon Matriarch",
+      "level": 8,
+      "startNpcId": 7953,
+      "endNpcId": 7953,
+      "descriptionCs": "Xar’Ti v Sen’jinu žádá Eggs of the Bloodtalon Matriarch. Beta počítadlo má jeden kus.",
+      "reasonCs": "Před výpravou na Echo Isles zkontroluj vejce pro Xar’Ti. Nezaměňuj s Break a Few Eggs.",
+      "aliases": [
+        "matriarcha",
+        "vejce"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 818,
+      "name": "A Solvent Spirit",
+      "level": 7,
+      "startNpcId": 3304,
+      "endNpcId": 3304,
+      "descriptionCs": "Master Vornal potřebuje čtyři Intact Makrura Eyes a osm Crawler Mucus. Vrať se do Sen’jin Village.",
+      "reasonCs": "Před pobřežní výpravou si ověř zadání u Master Vornala.",
+      "aliases": [
+        "oči",
+        "pobřeží"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 823,
+      "name": "Report to Orgnil",
+      "level": 7,
+      "startNpcId": 3188,
+      "endNpcId": 3142,
+      "descriptionCs": "Master Gadrin tě posílá k Orgnil Soulscarovi v Razor Hill.",
+      "reasonCs": "Přechod ze Sen’jinu k dalším úkolům v Razor Hill. Úplné navazující podmínky zůstávají k ověření.",
+      "aliases": [
+        "hlášení",
+        "Orgnil"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 784,
+      "name": "Vanquish the Betrayers",
+      "level": 7,
+      "startNpcId": 3139,
+      "endNpcId": 3139,
+      "descriptionCs": "Gar’Thok požaduje deset Kul Tiras Sailors, osm Kul Tiras Marines a Lieutenant Benedicta. Potom se vrať do Razor Hill.",
+      "reasonCs": "Hlavní výprava k Tiragarde Keep; zkontroluj i další místní úkoly.",
+      "aliases": [
+        "zrádci",
+        "pevnost"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 815,
+      "name": "Break a Few Eggs",
+      "level": 8,
+      "startNpcId": 3191,
+      "endNpcId": 3191,
+      "descriptionCs": "Cook Torka v Razor Hill potřebuje tři Taillasher Eggs.",
+      "reasonCs": "Před cestou na Echo Isles zkontroluj vejce pro kuchaře. Nejde o stejný předmět jako u Bloodtalon Matriarch.",
+      "aliases": [
+        "vejce",
+        "Torka"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 825,
+      "name": "From The Wreckage....",
+      "level": 8,
+      "startNpcId": 3139,
+      "endNpcId": 3139,
+      "descriptionCs": "Pro Gar’Thoka vyzvedni tři Gnomish Tools z pobřežních vraků a vrať se do Razor Hill.",
+      "reasonCs": "Pobřežní úkol s výběrem odměny; porovnej látkovou variantu s vlastní výbavou.",
+      "aliases": [
+        "vraky",
+        "nářadí"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 99123,
+      "name": "Lost in the Shadows",
+      "level": 8,
+      "startNpcId": 275811,
+      "endNpcId": 3304,
+      "descriptionCs": "Doprovoď Pal’juha z Kolkar Crag a zprávu doruč Master Vornalovi v Sen’jinu.",
+      "reasonCs": "Nový doprovodný úkol. Přesná trasa a současné podmínky nejsou doložené.",
+      "aliases": [
+        "doprovod",
+        "stíny"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 817,
+      "name": "Practical Prey",
+      "level": 8,
+      "startNpcId": 3194,
+      "endNpcId": 3194,
+      "descriptionCs": "Vel’rin Fang v Sen’jinu potřebuje čtyři Durotar Tiger Furs.",
+      "reasonCs": "Před návštěvou Echo Isles si ověř úkol na tygří kožešiny.",
+      "aliases": [
+        "tygři",
+        "kožešiny"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 786,
+      "name": "Thwarting Kolkar Aggression",
+      "level": 8,
+      "startNpcId": 3140,
+      "endNpcId": 3140,
+      "descriptionCs": "Znič tři různé plány v Kolkar Crag: Valley of Trials, Sen’jin Village a Orgrimmar. Vrať se k Lar Prowltuskovi.",
+      "reasonCs": "Před vstupem do Kolkar Crag zkontroluj plány a případný doprovod Pal’juha.",
+      "aliases": [
+        "kolkar",
+        "plány"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 97225,
+      "name": "Forgotten Loa Idols",
+      "level": 9,
+      "startNpcId": 3304,
+      "endNpcId": 3188,
+      "descriptionCs": "Master Vornal žádá osm Forgotten Loa Idols z Echo Isles. Odevzdej je Master Gadrinovi.",
+      "reasonCs": "Nový úkol na Echo Isles s jiným NPC při odevzdání.",
+      "aliases": [
+        "idoly",
+        "loa"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 808,
+      "name": "Minshina's Skull",
+      "level": 9,
+      "startNpcId": 3188,
+      "endNpcId": 3188,
+      "descriptionCs": "Vyzvedni Minshina’s Skull z kruhu na Echo Isles a přines ji Master Gadrinovi.",
+      "reasonCs": "Před cestou na ostrovy zkontroluj tento úkol u Gadrina. Přesné místo lebky nemá vlastní bod.",
+      "aliases": [
+        "lebka",
+        "Minshina"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 837,
+      "name": "Encroachment",
+      "level": 10,
+      "startNpcId": 3139,
+      "endNpcId": 3139,
+      "descriptionCs": "Gar’Thok chce po čtyřech Razormane Quilboars, Scouts, Dustrunners a Battleguards.",
+      "reasonCs": "Před výpravou do Razormane Grounds zkontroluj čtyři samostatná počítadla.",
+      "aliases": [
+        "Razormane",
+        "tábory"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 826,
+      "name": "Zalazane",
+      "level": 10,
+      "startNpcId": 3188,
+      "endNpcId": 3188,
+      "descriptionCs": "Zabij osm Voodoo Trolls, osm Hexed Trolls a Zalazaneho. Jeho hlavu přines Master Gadrinovi.",
+      "reasonCs": "Před odchodem ze Sen’jinu zkontroluj hlavní úkol na Echo Isles.",
+      "aliases": [
+        "trollové",
+        "hlava"
+      ],
+      "minimumLevel": null
+    },
+    {
+      "id": 830,
+      "name": "The Admiral's Orders",
+      "level": 7,
+      "startNpcId": null,
+      "endNpcId": 3139,
+      "descriptionCs": "Classic reference: úkol začíná předmětem Aged Envelope. Rozkazy předej Gar’Thokovi v Razor Hill. Nezaměňuj s navazujícím ID 831.",
+      "reasonCs": "Při prohlídce Tiragarde Keep zkontroluj nalezenou obálku. Její poloha a dostupnost ve Forever nejsou potvrzené.",
+      "aliases": [
+        "admirál",
+        "obálka",
+        "první část"
+      ],
+      "minimumLevel": null,
+      "classicReference": true,
+      "referenceMinimumLevel": 1,
+      "startsWithItem": "Aged Envelope"
+    },
+    {
+      "id": 831,
+      "name": "The Admiral's Orders",
+      "level": 7,
+      "startNpcId": 3139,
+      "endNpcId": 3230,
+      "descriptionCs": "Classic reference: po ID 830 vyzvedni další rozkazy u Gar’Thoka a doruč je Nazgrelovi v Orgrimmaru. Přesné podmínky ověř ve hře.",
+      "reasonCs": "Před cestou do Orgrimmaru zkontroluj druhou část rozkazů. Classic návaznost není potvrzené odemčení ve Forever.",
+      "aliases": [
+        "admirál",
+        "rozkazy",
+        "druhá část"
+      ],
+      "minimumLevel": null,
+      "classicReference": true,
+      "referenceMinimumLevel": 1,
+      "previousQuestId": 830
+    }
+  ],
+  "items": [
+    {
+      "id": 4915,
+      "name": "Soft Wool Boots",
+      "slot": "Feet",
+      "armor": 7,
+      "itemLevel": 5,
+      "questId": 788,
+      "descriptionCs": "Látkové boty: beta uvádí 7 Armor a item level 5. Výběrová odměna z Cutting Teeth.",
+      "aliases": [
+        "boty"
+      ],
+      "material": "Cloth",
+      "reportedBuild": "1.60.1.70009",
+      "minimumLevel": null
+    },
+    {
+      "id": 4919,
+      "name": "Soft Wool Belt",
+      "slot": "Waist",
+      "armor": 6,
+      "itemLevel": 5,
+      "questId": 789,
+      "descriptionCs": "Látkový opasek: beta uvádí 6 Armor a item level 5. Výběrová odměna ze Sting of the Scorpid.",
+      "aliases": [
+        "opasek"
+      ],
+      "material": "Cloth",
+      "reportedBuild": "1.60.1.70009",
+      "minimumLevel": null
+    },
+    {
+      "id": 4916,
+      "name": "Soft Wool Vest",
+      "slot": "Chest",
+      "armor": 10,
+      "itemLevel": 5,
+      "questId": 804,
+      "descriptionCs": "Látková vesta: beta uvádí 10 Armor a item level 5. Výběrová odměna z odevzdávací části Sarkoth, ID 804.",
+      "aliases": [
+        "vesta",
+        "Sarkoth"
+      ],
+      "material": "Cloth",
+      "reportedBuild": "1.60.1.70009",
+      "minimumLevel": null
+    },
+    {
+      "id": 6713,
+      "name": "Ripped Pants",
+      "slot": "Legs",
+      "armor": 9,
+      "itemLevel": 5,
+      "questId": 794,
+      "descriptionCs": "Látkové kalhoty: beta uvádí 9 Armor a item level 5. Výběrová odměna z Burning Blade Medallion. Nezaměňuj s koženými Dust-covered Leggings.",
+      "aliases": [
+        "kalhoty"
+      ],
+      "material": "Cloth",
+      "reportedBuild": "1.60.1.70009",
+      "minimumLevel": null
+    },
+    {
+      "id": 6062,
+      "name": "Heavy Cord Bracers",
+      "slot": "Wrist",
+      "armor": 8,
+      "itemLevel": 10,
+      "questId": 786,
+      "descriptionCs": "Látkové nátepníky: beta uvádí 8 Armor a item level 10. Výběrová odměna z Thwarting Kolkar Aggression.",
+      "aliases": [
+        "nátepníky"
+      ],
+      "material": "Cloth",
+      "reportedBuild": "1.60.1.70009",
+      "minimumLevel": null
+    }
+  ],
+  "spells": [
+    {
+      "slug": "demon-skin",
+      "name": "Demon Skin",
+      "firstRankLevel": 1,
+      "descriptionCs": "Základní obranné kouzlo Warlocka.",
+      "aliases": [
+        "kůže",
+        "obrana"
+      ],
+      "fullAccessConditionsUnknown": true
+    },
+    {
+      "slug": "immolate",
+      "name": "Immolate",
+      "firstRankLevel": 1,
+      "descriptionCs": "Ohnivé kouzlo s postupným poškozením.",
+      "aliases": [
+        "oheň"
+      ],
+      "fullAccessConditionsUnknown": true
+    },
+    {
+      "slug": "shadow-bolt",
+      "name": "Shadow Bolt",
+      "firstRankLevel": 1,
+      "descriptionCs": "Základní přímé stínové kouzlo.",
+      "aliases": [
+        "stínový blesk"
+      ],
+      "fullAccessConditionsUnknown": true
+    },
+    {
+      "slug": "corruption",
+      "name": "Corruption",
+      "firstRankLevel": 4,
+      "descriptionCs": "Postupné stínové poškození.",
+      "aliases": [
+        "zkažení",
+        "dot"
+      ],
+      "fullAccessConditionsUnknown": true
+    },
+    {
+      "slug": "curse-of-weakness",
+      "name": "Curse of Weakness",
+      "firstRankLevel": 4,
+      "descriptionCs": "Kletba oslabující protivníka.",
+      "aliases": [
+        "slabost",
+        "kletba"
+      ],
+      "fullAccessConditionsUnknown": true
+    },
+    {
+      "slug": "life-tap",
+      "name": "Life Tap",
+      "firstRankLevel": 6,
+      "descriptionCs": "Výměna části zdraví za manu.",
+      "aliases": [
+        "život",
+        "mana"
+      ],
+      "fullAccessConditionsUnknown": true
+    },
+    {
+      "slug": "bane-of-agony",
+      "name": "Bane of Agony",
+      "firstRankLevel": 8,
+      "descriptionCs": "Kouzlo známé v Classicu jako Curse of Agony; ve Forever hledej i nový název.",
+      "aliases": [
+        "Curse of Agony",
+        "agónie"
+      ],
+      "fullAccessConditionsUnknown": true
+    },
+    {
+      "slug": "fear",
+      "name": "Fear",
+      "firstRankLevel": 8,
+      "descriptionCs": "Kouzlo strachu pro kontrolu protivníka.",
+      "aliases": [
+        "strach"
+      ],
+      "fullAccessConditionsUnknown": true
+    }
+  ],
+  "notesCs": [
+    "Samotná úroveň úkolu není minimální úroveň. Nové beta úkoly mají minimumLevel=null.",
+    "Item level není požadovaná úroveň předmětu.",
+    "Pět nových přátelských NPC a šest nepřátel mají beta polohu v Durotaru, Nazgrel v Orgrimmaru.",
+    "Vnitřní patra jeskyní, živé spawny a dopravní hrany nejsou doplněné.",
+    "The Admiral’s Orders 830→831 je Classic reference z explicitního řetězce ForeverChanges.",
+    "Ruzan / Summon Imp / Vile Familiars 1485 zůstávají v dosavadním stavu, včetně rozporu.",
+    "Použité záznamy pocházejí z přímých stránek pozorovatele ForeverLog a klientské knihy kouzel ForeverChanges.",
+    "Žádný záznam nepřechází do RELEASE. Základní kontrolu E12 na telefonu uživatel potvrdil 25.10.2026; měření výkonu a druhé zařízení potvrzené nejsou."
+  ]
+}

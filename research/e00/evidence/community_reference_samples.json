@@ -1,0 +1,217 @@
+{
+  "checked_on": "2026-10-23",
+  "commit": "9c1ce1e44238d8c6c8ca36d8f49836fde70b564f",
+  "source_table": "CLASSIC_QUEST_AVAILABLE",
+  "rows": [
+    {
+      "quest_game_id": 4641,
+      "start": {
+        "ui_map_id": 1411,
+        "source_id": 10176,
+        "source_kind": 1,
+        "x_percent": 43.29,
+        "y_percent": 68.53,
+        "packed": 10176143296853
+      },
+      "turn_in": {
+        "ui_map_id": 1411,
+        "source_id": 3143,
+        "source_kind": 1,
+        "x_percent": 42.06,
+        "y_percent": 68.33,
+        "packed": 3143142066833
+      },
+      "source_ids": [
+        "eq_available",
+        "eq_turnin"
+      ],
+      "status": "classic_reference_not_forever_pin",
+      "rule_pre": null,
+      "raw_gates": "101001300000"
+    },
+    {
+      "quest_game_id": 788,
+      "start": {
+        "ui_map_id": 1411,
+        "source_id": 3143,
+        "source_kind": 1,
+        "x_percent": 42.06,
+        "y_percent": 68.33,
+        "packed": 3143142066833
+      },
+      "turn_in": {
+        "ui_map_id": 1411,
+        "source_id": 3143,
+        "source_kind": 1,
+        "x_percent": 42.06,
+        "y_percent": 68.33,
+        "packed": 3143142066833
+      },
+      "source_ids": [
+        "eq_available",
+        "eq_turnin"
+      ],
+      "status": "classic_reference_not_forever_pin",
+      "rule_pre": null,
+      "raw_gates": "102001780000"
+    },
+    {
+      "quest_game_id": 792,
+      "start": {
+        "ui_map_id": 1411,
+        "source_id": 3145,
+        "source_kind": 1,
+        "x_percent": 42.85,
+        "y_percent": 69.15,
+        "packed": 3145142856915
+      },
+      "turn_in": {
+        "ui_map_id": 1411,
+        "source_id": 3145,
+        "source_kind": 1,
+        "x_percent": 42.85,
+        "y_percent": 69.15,
+        "packed": 3145142856915
+      },
+      "source_ids": [
+        "eq_available",
+        "eq_turnin"
+      ],
+      "status": "classic_reference_not_forever_pin",
+      "rule_pre": null,
+      "raw_gates": "204001781247"
+    },
+    {
+      "quest_game_id": 794,
+      "start": {
+        "ui_map_id": 1411,
+        "source_id": 3145,
+        "source_kind": 1,
+        "x_percent": 42.85,
+        "y_percent": 69.15,
+        "packed": 3145142856915
+      },
+      "turn_in": {
+        "ui_map_id": 1411,
+        "source_id": 3145,
+        "source_kind": 1,
+        "x_percent": 42.85,
+        "y_percent": 69.15,
+        "packed": 3145142856915
+      },
+      "source_ids": [
+        "eq_available",
+        "eq_turnin"
+      ],
+      "status": "classic_reference_not_forever_pin",
+      "rule_pre": "{792,1499}",
+      "raw_gates": "105001780000"
+    },
+    {
+      "quest_game_id": 805,
+      "start": {
+        "ui_map_id": 1411,
+        "source_id": 3145,
+        "source_kind": 1,
+        "x_percent": 42.85,
+        "y_percent": 69.15,
+        "packed": 3145142856915
+      },
+      "turn_in": {
+        "ui_map_id": 1411,
+        "source_id": 3188,
+        "source_kind": 1,
+        "x_percent": 55.95,
+        "y_percent": 74.72,
+        "packed": 3188155957472
+      },
+      "source_ids": [
+        "eq_available",
+        "eq_turnin"
+      ],
+      "status": "classic_reference_not_forever_pin",
+      "rule_pre": "{794}",
+      "raw_gates": "105001780000"
+    },
+    {
+      "quest_game_id": 1485,
+      "start": {
+        "ui_map_id": 1411,
+        "source_id": 5765,
+        "source_kind": 1,
+        "x_percent": 42.59,
+        "y_percent": 69.0,
+        "packed": 5765142596900
+      },
+      "turn_in": {
+        "ui_map_id": 1411,
+        "source_id": 5765,
+        "source_kind": 1,
+        "x_percent": 42.59,
+        "y_percent": 69.0,
+        "packed": 5765142596900
+      },
+      "source_ids": [
+        "eq_available",
+        "eq_turnin"
+      ],
+      "status": "classic_reference_not_forever_pin",
+      "rule_pre": null,
+      "raw_gates": "104001780256"
+    },
+    {
+      "quest_game_id": 1499,
+      "start": {
+        "ui_map_id": 1411,
+        "source_id": 5765,
+        "source_kind": 1,
+        "x_percent": 42.59,
+        "y_percent": 69.0,
+        "packed": 5765142596900
+      },
+      "turn_in": {
+        "ui_map_id": 1411,
+        "source_id": 3145,
+        "source_kind": 1,
+        "x_percent": 42.85,
+        "y_percent": 69.15,
+        "packed": 3145142856915
+      },
+      "source_ids": [
+        "eq_available",
+        "eq_turnin"
+      ],
+      "status": "classic_reference_not_forever_pin",
+      "rule_pre": "{1485}",
+      "raw_gates": "104001780256"
+    },
+    {
+      "quest_game_id": 3090,
+      "start": {
+        "ui_map_id": 1411,
+        "source_id": 3143,
+        "source_kind": 1,
+        "x_percent": 42.06,
+        "y_percent": 68.33,
+        "packed": 3143142066833
+      },
+      "turn_in": {
+        "ui_map_id": 1411,
+        "source_id": 3156,
+        "source_kind": 1,
+        "x_percent": 40.65,
+        "y_percent": 68.52,
+        "packed": 3156140656852
+      },
+      "source_ids": [
+        "eq_available",
+        "eq_turnin"
+      ],
+      "status": "classic_reference_not_forever_pin",
+      "rule_pre": "{788}",
+      "raw_gates": "101001780256"
+    }
+  ],
+  "packing_description": "srcID*1e9 + kind*1e8 + floor(x*1e4)*1e4 + floor(y*1e4); x a y jsou normalizované souřadnice.",
+  "license_file": "licenses/EverythingQuests_MIT.txt"
+}

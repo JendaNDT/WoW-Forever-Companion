@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "maps_with_valid_checksums": 4,
+  "catalog_record_count": 25,
+  "unique_catalog_keys": 25,
+  "source_count": 26,
+  "records_with_source": 25,
+  "npc_beta_positions": 8,
+  "npc_position_total": 9,
+  "quest_minimum_level_unknown": 9,
+  "quest_count": 9,
+  "release_verified_quests": 0,
+  "native_calibrated_points": 0,
+  "same_name_different_quest_ids": [
+    792,
+    1485,
+    1499
+  ],
+  "interpretation": "Strukturální kontrola a integrita souborů prošla. Neprokazuje kalibraci mapy ani správnost ve vydaném klientu hry."
+}

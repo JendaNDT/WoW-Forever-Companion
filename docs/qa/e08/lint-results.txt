@@ -1,0 +1,19 @@
+/workspace/scratch/499601437674/WoWForeverPruvodce/app/build.gradle.kts:46: Warning: A newer version of ovh.plrapps:mapcompose than 3.2.0 is available: 3.2.8 [NewerVersionAvailable]
+    implementation("ovh.plrapps:mapcompose:3.2.0")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/499601437674/WoWForeverPruvodce/app/build.gradle.kts:51: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.8.1 is available: 1.12.0 [NewerVersionAvailable]
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/499601437674/WoWForeverPruvodce/app/build.gradle.kts:53: Warning: A newer version of org.robolectric:robolectric than 4.14.1 is available: 4.17 [NewerVersionAvailable]
+    testImplementation("org.robolectric:robolectric:4.14.1")
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+0 errors, 3 warnings

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E06ValidationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-23T15:17:54.859Z" hostname="f05490768d7a" time="0.066">
+  <properties/>
+  <testcase name="missingProofMissingTargetDuplicateRuleAndUnknownReferencedQuestAreRejected" classname="cz.jenda.wowforever.E06ValidationTest" time="0.021"/>
+  <testcase name="recursiveConditionSizeAndDepthAndSerializedUnknownTypeAreBounded" classname="cz.jenda.wowforever.E06ValidationTest" time="0.033"/>
+  <testcase name="emptyGroupInvalidRangeBadWindowAndUnprovedRiskAreRejected" classname="cz.jenda.wowforever.E06ValidationTest" time="0.008"/>
+  <testcase name="incompleteReferenceCannotEnterAnActiveConfirmedRule" classname="cz.jenda.wowforever.E06ValidationTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

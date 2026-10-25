@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E12ReleaseFlowTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-25T14:28:30.221Z" hostname="eb5eafc03222" time="1.586">
+  <properties/>
+  <testcase name="coverageCanReturnToHelpAndBothCloseThroughTheirOwnActions" classname="cz.jenda.wowforever.E12ReleaseFlowTest" time="0.272"/>
+  <testcase name="helpUsesActuallyActivatedSignedDataAndOpensItsPackageManager" classname="cz.jenda.wowforever.E12ReleaseFlowTest" time="0.977"/>
+  <testcase name="offlineHelpOpensBackupWithoutChangingQuestHistoryAndSurvivesRecreation" classname="cz.jenda.wowforever.E12ReleaseFlowTest" time="0.337"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

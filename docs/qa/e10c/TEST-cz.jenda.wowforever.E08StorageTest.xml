@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E08StorageTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-25T14:27:56.824Z" hostname="eb5eafc03222" time="0.163">
+  <properties/>
+  <testcase name="orderedDuplicateStopsReopenAndDoNotChangeQuestNotesOrItems" classname="cz.jenda.wowforever.E08StorageTest" time="0.04"/>
+  <testcase name="importedGapsUnknownIdsAndDiscoveriesRoundTripAcrossIndependentProfiles" classname="cz.jenda.wowforever.E08StorageTest" time="0.037"/>
+  <testcase name="failedReorderRollsBackTheWholeListAndInvalidMovesKeepExistingRows" classname="cz.jenda.wowforever.E08StorageTest" time="0.025"/>
+  <testcase name="actualContentSchemaTwoMigratesWithoutLosingRowsThenPersistsValidatedGraph" classname="cz.jenda.wowforever.E08StorageTest" time="0.061"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "version": "0.13.0-e13",
+  "versionCode": 13,
+  "hostTests": {
+    "tests": 192,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "hostSuites": 46,
+  "newE13Tests": 13,
+  "pythonTests": 13,
+  "cleanBuild": "7m 11s",
+  "finalBuild": "7m 11s",
+  "lint": {
+    "debug": {
+      "errors": 0,
+      "warnings": 2,
+      "issues": [
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        }
+      ]
+    },
+    "release": {
+      "errors": 0,
+      "warnings": 4,
+      "issues": [
+        {
+          "id": "UnusedAttribute",
+          "severity": "Warning",
+          "message": "Attribute `shell` is only used in API level 29 and higher (current min is 26)"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of ovh.plrapps:mapcompose than 3.2.0 is available: 3.2.8"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data"
+        }
+      ]
+    }
+  },
+  "bundledGeneration": 5,
+  "entries": 182,
+  "positions": 74,
+  "maps": 5,
+  "tiles": 85,
+  "publishedContentUnchanged": true,
+  "previousApkCertificateAndPackageMatch": true,
+  "E12BasicPhoneCheck": "confirmed by user",
+  "E13PhysicalInstallationVerified": false,
+  "measuredPhonePerformanceGoalsVerified": false,
+  "secondPhysicalDeviceRestoreVerified": false
+}

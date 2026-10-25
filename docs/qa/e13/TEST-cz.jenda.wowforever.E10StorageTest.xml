@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E10StorageTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-25T13:18:00.291Z" hostname="eb5eafc03222" time="2.511">
+  <properties/>
+  <testcase name="realPublisherUpdateFromLegacyGenerationThreeReopensAndRetainsBothFrames" classname="cz.jenda.wowforever.E10StorageTest" time="1.072"/>
+  <testcase name="notesPlansRewardsDiscoveriesAndBackupSurviveRegionalRemovalAndReactivation" classname="cz.jenda.wowforever.E10StorageTest" time="0.678"/>
+  <testcase name="correctlySignedButIncompatibleNewCoordinateFrameIsRejected" classname="cz.jenda.wowforever.E10StorageTest" time="0.433"/>
+  <testcase name="missingNewTileCannotBorrowFallbackAssetsOrSwitchTheActiveCatalog" classname="cz.jenda.wowforever.E10StorageTest" time="0.327"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

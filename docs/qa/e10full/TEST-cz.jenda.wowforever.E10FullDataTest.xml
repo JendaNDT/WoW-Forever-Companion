@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E10FullDataTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-25T15:44:06.539Z" hostname="eb5eafc03222" time="2.026">
+  <properties/>
+  <testcase name="communityPositionsNeedExplicitProvenanceAndCannotProduceVerifiedRoutes" classname="cz.jenda.wowforever.E10FullDataTest" time="0.41"/>
+  <testcase name="fullContractTypedObjectsAndClassicRecordPreservation" classname="cz.jenda.wowforever.E10FullDataTest" time="0.222"/>
+  <testcase name="manifestRequiresNewAppAndNoUnknownFrameIsAccepted" classname="cz.jenda.wowforever.E10FullDataTest" time="0.524"/>
+  <testcase name="largeCatalogRecommendationsAreStillReferencesAndNewMapBackupsRoundTrip" classname="cz.jenda.wowforever.E10FullDataTest" time="0.867"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

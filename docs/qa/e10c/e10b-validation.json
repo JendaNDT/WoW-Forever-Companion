@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "guide_rules": 67,
+  "entries": 182,
+  "maps": 5,
+  "locations": 74,
+  "relations": 147,
+  "sources": 176,
+  "release_verified_entries": 0,
+  "generation": 5,
+  "old_records_unchanged": true,
+  "map_frames_unchanged": true,
+  "new_entries": 43,
+  "new_positions": 12,
+  "new_quest_records": 18,
+  "verified_transport_edges": 0,
+  "independent_in_game_checks": 0
+}

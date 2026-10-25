@@ -1,0 +1,21 @@
+{
+  "parts": [
+    "bundled-data-8.wfp.part000.wfpart",
+    "bundled-data-8.wfp.part001.wfpart",
+    "bundled-data-8.wfp.part002.wfpart",
+    "bundled-data-8.wfp.part003.wfpart",
+    "bundled-data-8.wfp.part004.wfpart",
+    "bundled-data-8.wfp.part005.wfpart",
+    "bundled-data-8.wfp.part006.wfpart",
+    "bundled-data-8.wfp.part007.wfpart",
+    "bundled-data-8.wfp.part008.wfpart",
+    "bundled-data-8.wfp.part009.wfpart",
+    "bundled-data-8.wfp.part010.wfpart",
+    "bundled-data-8.wfp.part011.wfpart",
+    "bundled-data-8.wfp.part012.wfpart",
+    "bundled-data-8.wfp.part013.wfpart",
+    "bundled-data-8.wfp.part014.wfpart"
+  ],
+  "bytes": 120921123,
+  "sha256": "8c805d7f25a7d0e33b760026c32bb82216f153ed27dadfde2e3faa7f47d2b94e"
+}

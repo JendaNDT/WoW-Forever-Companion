@@ -1,0 +1,4529 @@
+{
+  "sources": [
+    {
+      "id": "e10_map_1413",
+      "url": "https://warcraftforever.games/maps/the-barrens",
+      "kind": "beta_client_map_asset",
+      "checkedOn": "2026-10-24",
+      "build": "1.60.1.69893",
+      "payload": "{\"facts\":{\"uiMapId\":1413,\"width\":1002,\"height\":668,\"assetUrl\":\"https://wowforever-media.fly.storage.tigris.dev/maps/1.60.1.69893/zones/1413.webp\",\"assetSha256\":\"c1ec3eb1e55cb944224c989de53c3aba8cefee8880f9eaaa01aa1251c18f6ee6\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\"}"
+    },
+    {
+      "id": "e10_npc_3216",
+      "url": "https://warcraftforever.games/npcs/3216",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Neeru Fireblade\",\"title\":null,\"reportedMapId\":1454,\"positions\":[{\"x\":0.501,\"y\":0.504,\"name\":\"Neeru Fireblade\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"739a043138feecf5f023170208a84df99293b205c5ae7cf8d6cb91d9cdf65dec\"}"
+    },
+    {
+      "id": "e10_npc_3309",
+      "url": "https://warcraftforever.games/npcs/3309",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Karus\",\"title\":\"Banker\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.498,\"y\":0.6970000000000001,\"name\":\"Karus\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"9a1f254e92d3c72da6bfd272377a371a5fe4afd01229c83c95a54a2ad5db3e63\"}"
+    },
+    {
+      "id": "e10_npc_3310",
+      "url": "https://warcraftforever.games/npcs/3310",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Doras\",\"title\":\"Wind Rider Master\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.45299999999999996,\"y\":0.637,\"name\":\"Doras\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"d07604397bb5607f8b07b8ddc74002961d59a08f4851ec2882c991799080fd1a\"}"
+    },
+    {
+      "id": "e10_npc_3337",
+      "url": "https://warcraftforever.games/npcs/3337",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Kargal Battlescar\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.62,\"y\":0.187,\"name\":\"Kargal Battlescar\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"71af8df1a21edd27344edd6208e156d329e0711b1010f1d7a22a8a98fb96de87\"}"
+    },
+    {
+      "id": "e10_npc_3338",
+      "url": "https://warcraftforever.games/npcs/3338",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Sergra Darkthorn\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.517,\"y\":0.303,\"name\":\"Sergra Darkthorn\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"e301a4d4afc22310595848a73f37ce0f7883c90f1ecf83480d48ccc85ab227a4\"}"
+    },
+    {
+      "id": "e10_npc_3345",
+      "url": "https://warcraftforever.games/npcs/3345",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Godan\",\"title\":\"Expert Enchanter\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.537,\"y\":0.379,\"name\":\"Godan\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"5ff082805e9b6cac051e77fdeb9b013f76bce08f0df07bb39aa19696b85e3ccf\"}"
+    },
+    {
+      "id": "e10_npc_3346",
+      "url": "https://warcraftforever.games/npcs/3346",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Kithas\",\"title\":\"Enchanting Supplies\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.5379999999999999,\"y\":0.38299999999999995,\"name\":\"Kithas\",\"kind\":\"vendor\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"96989f47d7fe37b0fd9135e432376b06442487a70b5714d3ae488104d2cd8cfe\"}"
+    },
+    {
+      "id": "e10_npc_3363",
+      "url": "https://warcraftforever.games/npcs/3363",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Magar\",\"title\":\"Expert Tailor\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.637,\"y\":0.503,\"name\":\"Magar\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"accabe37915ce8700e75af822b7b0555be8929454c9bf4dac5fe436e8924716d\"}"
+    },
+    {
+      "id": "e10_npc_3390",
+      "url": "https://warcraftforever.games/npcs/3390",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Apothecary Helbrim\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.518,\"y\":0.303,\"name\":\"Apothecary Helbrim\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"8ea790dcf95f78b2fc34461bea342d8a76927480ddba2ecb77b3d9cadfa281b2\"}"
+    },
+    {
+      "id": "e10_npc_3391",
+      "url": "https://warcraftforever.games/npcs/3391",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Gazlowe\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.627,\"y\":0.363,\"name\":\"Gazlowe\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"14d370766feb1d1135ff01e626b728705ef767903ecde967b8f38a8ab9b01a60\"}"
+    },
+    {
+      "id": "e10_npc_3429",
+      "url": "https://warcraftforever.games/npcs/3429",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Thork\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.52,\"y\":0.304,\"name\":\"Thork\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"4c1c93a11147ad7f60d1be185de9bcbd1ba571600736f8ce379cccf2215f72df\"}"
+    },
+    {
+      "id": "e10_npc_3432",
+      "url": "https://warcraftforever.games/npcs/3432",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Mankrik\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.519,\"y\":0.314,\"name\":\"Mankrik\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"9fde8d66cf136d1d3e3cb501a951ce5551c8e305fafb710feb2655d01f9edc8d\"}"
+    },
+    {
+      "id": "e10_npc_3442",
+      "url": "https://warcraftforever.games/npcs/3442",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Sputtervalve\",\"title\":\"Tinkers' Union\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.63,\"y\":0.371,\"name\":\"Sputtervalve\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"e5ac4d963fd1756e9f1922eff871c48852fcfc316cc978a6ca12345f840bfd86\"}"
+    },
+    {
+      "id": "e10_npc_3446",
+      "url": "https://warcraftforever.games/npcs/3446",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Mebok Mizzyrix\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.624,\"y\":0.377,\"name\":\"Mebok Mizzyrix\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"44887cf1bcc62a94ce659ad9b07118e4750f2ccb9548b8f43b2013c26a92fe54\"}"
+    },
+    {
+      "id": "e10_npc_3448",
+      "url": "https://warcraftforever.games/npcs/3448",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Tonga Runetotem\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.521,\"y\":0.318,\"name\":\"Tonga Runetotem\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"a5a76f548aa2b0b83197beb32844d1ac198956468889b7477a7637efbb2f785f\"}"
+    },
+    {
+      "id": "e10_npc_3453",
+      "url": "https://warcraftforever.games/npcs/3453",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Wharfmaster Dizzywig\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.632,\"y\":0.382,\"name\":\"Wharfmaster Dizzywig\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"312c9c3c53811cbaa4d453682b901b80f8d5988236675a46cec7439cf732b916\"}"
+    },
+    {
+      "id": "e10_npc_3464",
+      "url": "https://warcraftforever.games/npcs/3464",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Gazrog\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.52,\"y\":0.303,\"name\":\"Gazrog\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"386dd123019f6879f1735e57d144866a8e90ef31e50637807c4b9a2d81a6b047\"}"
+    },
+    {
+      "id": "e10_npc_3486",
+      "url": "https://warcraftforever.games/npcs/3486",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Halija Whitestrider\",\"title\":\"Clothier\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.522,\"y\":0.321,\"name\":\"Halija Whitestrider\",\"kind\":\"vendor\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"6f7f367afedab842ea8f1c40b18dc3265cd6d7c294c04b871941e99739eda5cd\"}"
+    },
+    {
+      "id": "e10_npc_3487",
+      "url": "https://warcraftforever.games/npcs/3487",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Kalyimah Stormcloud\",\"title\":\"Bags & Sacks\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.522,\"y\":0.318,\"name\":\"Kalyimah Stormcloud\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"1ef470bf06dc9cfb34b2783fc2259c595dae5c3b3f285c5e7cb74899944fb358\"}"
+    },
+    {
+      "id": "e10_npc_3489",
+      "url": "https://warcraftforever.games/npcs/3489",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Zargh\",\"title\":\"Butcher\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.525,\"y\":0.3,\"name\":\"Zargh\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"640ab8956a1114aac883f0480b1edb4de9b993ec7c3b6c08f6e2c0c5ac89b1a7\"}"
+    },
+    {
+      "id": "e10_npc_3496",
+      "url": "https://warcraftforever.games/npcs/3496",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Fuzruckle\",\"title\":\"Banker\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.627,\"y\":0.375,\"name\":\"Fuzruckle\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"4bc70ad565456da2dcbce8f2199a5e47b6b1aeb250a6fe7dd5d5784a41fffce5\"}"
+    },
+    {
+      "id": "e10_npc_3521",
+      "url": "https://warcraftforever.games/npcs/3521",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Ak'Zeloth\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.624,\"y\":0.201,\"name\":\"Ak'Zeloth\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"16f803c45224ac4cbf0b55b1212e90c2e2051243f04cfd16797fb0c851f600b3\"}"
+    },
+    {
+      "id": "e10_npc_3615",
+      "url": "https://warcraftforever.games/npcs/3615",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Devrak\",\"title\":\"Wind Rider Master\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.516,\"y\":0.304,\"name\":\"Devrak\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"095258f00ffdeeebfeb0d0e333956bab23fa2366c811b739db45d080165a5c12\"}"
+    },
+    {
+      "id": "e10_npc_3665",
+      "url": "https://warcraftforever.games/npcs/3665",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Crane Operator Bigglefuzz\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.631,\"y\":0.376,\"name\":\"Crane Operator Bigglefuzz\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"141d805846c83ff4caeba661e36d18be77e90c18f1acc70f61afa893a4c3a0c4\"}"
+    },
+    {
+      "id": "e10_npc_3934",
+      "url": "https://warcraftforever.games/npcs/3934",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Innkeeper Boorand Plainswind\",\"title\":\"Innkeeper\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.52,\"y\":0.299,\"name\":\"Innkeeper Boorand Plainswind\",\"kind\":\"vendor\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"0727579cfecd29627ab7aa6af9ddadd23adff26e295a937bc03137d0567d153f\"}"
+    },
+    {
+      "id": "e10_npc_4949",
+      "url": "https://warcraftforever.games/npcs/4949",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Thrall\",\"title\":\"Warchief\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.32899999999999996,\"y\":0.37799999999999995,\"name\":\"Thrall\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"fec7dc064f97738a09ff5b644113bbb3ac1c300a934dc855e6d66a3ea281fa56\"}"
+    },
+    {
+      "id": "e10_npc_5767",
+      "url": "https://warcraftforever.games/npcs/5767",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Nalpak\",\"title\":\"Disciple of Naralex\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.465,\"y\":0.368,\"name\":\"Nalpak\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"fa662ea813552c40e1a60950cb6eee181dda0c106289b5bd4939a2d0bb120d68\"}"
+    },
+    {
+      "id": "e10_npc_5768",
+      "url": "https://warcraftforever.games/npcs/5768",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Ebru\",\"title\":\"Disciple of Naralex\",\"reportedMapId\":1414,\"positions\":[{\"x\":0.519,\"y\":0.5539999999999999,\"name\":\"Ebru\",\"kind\":\"quest\"}],\"usesPosition\":false,\"observationBuild\":null,\"positionCaveatCs\":\"Publikovaný bod je pouze v kontinentálním rámci. Do mapy Barrens se nepřevádí a není použit jako přesná místní poloha.\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"5c142e8c29309d61850013ab393284498d407429a0701beaf789649355e3a0cd\"}"
+    },
+    {
+      "id": "e10_npc_5815",
+      "url": "https://warcraftforever.games/npcs/5815",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Kurgul\",\"title\":\"Demon Trainer\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.504,\"y\":0.473,\"name\":\"Kurgul\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"123276c6475fb8e046f67c407c008e1a97f50a494760a94a85fd2631d89273df\"}"
+    },
+    {
+      "id": "e10_npc_6791",
+      "url": "https://warcraftforever.games/npcs/6791",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Innkeeper Wiley\",\"title\":\"Innkeeper\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.621,\"y\":0.39399999999999996,\"name\":\"Innkeeper Wiley\",\"kind\":\"vendor\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"03ac6f8ef9a69cda4c3ff7348ab017086f15b2b95389d8814bb6e9a9d3c0f957\"}"
+    },
+    {
+      "id": "e10_npc_6929",
+      "url": "https://warcraftforever.games/npcs/6929",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Innkeeper Gryshka\",\"title\":\"Innkeeper\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.5429999999999999,\"y\":0.6829999999999999,\"name\":\"Innkeeper Gryshka\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"bb6a525a120e13745cc54b574ebde4909913ce4bfc1e01cc892faec84c751270\"}"
+    },
+    {
+      "id": "e10_npc_8673",
+      "url": "https://warcraftforever.games/npcs/8673",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Auctioneer Thathung\",\"title\":null,\"reportedMapId\":1454,\"positions\":[{\"x\":0.511,\"y\":0.701,\"name\":\"Auctioneer Thathung\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"18a684ecb51f8c20c043a56dff252263ad857cd8434f05cae98ff20d0825b94b\"}"
+    },
+    {
+      "id": "e10_npc_16227",
+      "url": "https://warcraftforever.games/npcs/16227",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"name\":\"Bragok\",\"title\":\"Flight Master\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.631,\"y\":0.371,\"name\":\"Bragok\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"0fda82c0ee9e9a7ab7ca54af0f526d134abb7c9797acaa0e1c96a5aed3fc9c56\"}"
+    },
+    {
+      "id": "e10_quest_809",
+      "url": "https://warcraftforever.games/quests/809",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":13,\"minimumLevel\":null,\"giverId\":3216,\"explicitTurnInId\":3521,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"1b7b01b08ddefc15ca2af6b905b66f27225067084f81122c15c9d12fd8d01084\"}"
+    },
+    {
+      "id": "e10_quest_842",
+      "url": "https://warcraftforever.games/quests/842",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":12,\"minimumLevel\":null,\"giverId\":3337,\"explicitTurnInId\":3338,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"b9021542679e0145e203c4f94523c5a2cba591628edf146d4f56ea98c2a8000f\"}"
+    },
+    {
+      "id": "e10_quest_844",
+      "url": "https://warcraftforever.games/quests/844",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":12,\"minimumLevel\":null,\"giverId\":3338,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"032c288d405ab8451429eb5cc4b9ccde6a22099c88600448efa6867d6eb19ba0\"}"
+    },
+    {
+      "id": "e10_quest_845",
+      "url": "https://warcraftforever.games/quests/845",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":13,\"minimumLevel\":null,\"giverId\":3338,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"24f692668506d539d235b391dcef78a0ed481e6d8a71f7f817d20dad0a59770b\"}"
+    },
+    {
+      "id": "e10_quest_848",
+      "url": "https://warcraftforever.games/quests/848",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":15,\"minimumLevel\":null,\"giverId\":3390,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"b245b748d5fc2c91c385d9ac87211ca6d8b7b9bfcf8a46aaec2feb53c2bf5468\"}"
+    },
+    {
+      "id": "e10_quest_865",
+      "url": "https://warcraftforever.games/quests/865",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3446,\"explicitTurnInId\":null,\"rewardItemIds\":[5342,5343],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"f4a19aa97d1d51645bd8db44c45a6c9f63588a4ea9e39799dbcfc183eac479d0\"}"
+    },
+    {
+      "id": "e10_quest_869",
+      "url": "https://warcraftforever.games/quests/869",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":13,\"minimumLevel\":null,\"giverId\":3464,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"bdb5c5cf03ffee6ba52ec2cfa2b675ecc1894d6e1be9b7e2d8040b74bb2e5577\"}"
+    },
+    {
+      "id": "e10_quest_870",
+      "url": "https://warcraftforever.games/quests/870",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":13,\"minimumLevel\":null,\"giverId\":3448,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"a25298250f3ab6f6be7ccf929f168c87aecf41c44d46bd249e652c62f9052cb0\"}"
+    },
+    {
+      "id": "e10_quest_871",
+      "url": "https://warcraftforever.games/quests/871",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":12,\"minimumLevel\":null,\"giverId\":3429,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"87c2c7a7ba0f9741938d1be7059668c3618a69451141442a22405721a7ec4629\"}"
+    },
+    {
+      "id": "e10_quest_872",
+      "url": "https://warcraftforever.games/quests/872",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":15,\"minimumLevel\":null,\"giverId\":3429,\"explicitTurnInId\":null,\"rewardItemIds\":[5275,5328],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"6cd9af55973d7e28a0cad49edf08aeb39cb501676e2a5caeba03120fe02cd7c1\"}"
+    },
+    {
+      "id": "e10_quest_877",
+      "url": "https://warcraftforever.games/quests/877",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3448,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"9d174b66037ae9cd0230132c8aeafa7d3b3b7fd11f431e86483f5e05c53efa76\"}"
+    },
+    {
+      "id": "e10_quest_880",
+      "url": "https://warcraftforever.games/quests/880",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3448,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"9dc4b04385ec5e871ec796a5360ff70b27c51a4a8aeb7492a7567e2931b0e9c5\"}"
+    },
+    {
+      "id": "e10_quest_881",
+      "url": "https://warcraftforever.games/quests/881",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3338,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"1fe38644ab0c89f9a14b68c0389c2888244089dcda20a787b3a629f472fe9341\"}"
+    },
+    {
+      "id": "e10_quest_887",
+      "url": "https://warcraftforever.games/quests/887",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":14,\"minimumLevel\":null,\"giverId\":3391,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"f852f798b641f0b495e3636c46e57b2807167d6f9a6309f97e756cc6cec9a889\"}"
+    },
+    {
+      "id": "e10_quest_888",
+      "url": "https://warcraftforever.games/quests/888",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3391,\"explicitTurnInId\":null,\"rewardItemIds\":[5337,5320],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"0217d4808f835521c23d868fd5cc538f0043cb746cfa8b72627fae3c3b9ba6cc\"}"
+    },
+    {
+      "id": "e10_quest_890",
+      "url": "https://warcraftforever.games/quests/890",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":14,\"minimumLevel\":null,\"giverId\":3391,\"explicitTurnInId\":3453,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"345c767294b774036ed706dd356c53ce376bbca089e4324e0b48ab6b22a16ccf\"}"
+    },
+    {
+      "id": "e10_quest_892",
+      "url": "https://warcraftforever.games/quests/892",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":14,\"minimumLevel\":null,\"giverId\":3453,\"explicitTurnInId\":3391,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"e45de13877960354d201b92c5bc7b4a3168f01956a37f1669bdbd53853907ea0\"}"
+    },
+    {
+      "id": "e10_quest_895",
+      "url": "https://warcraftforever.games/quests/895",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3972,\"explicitTurnInId\":3391,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"e6bba1d4df473d8e59dd37fd36279e8a22e634305845ddb4c4eab8bb9673db16\"}"
+    },
+    {
+      "id": "e10_quest_896",
+      "url": "https://warcraftforever.games/quests/896",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3453,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"c90b4ccdf55de90fd22296fdd798da1dc3de82b9c3741496cd3450d7bff05276\"}"
+    },
+    {
+      "id": "e10_quest_899",
+      "url": "https://warcraftforever.games/quests/899",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":20,\"minimumLevel\":null,\"giverId\":3432,\"explicitTurnInId\":null,\"rewardItemIds\":[5314,6477],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"7df6286c355a56d58d51ea07e3e3d00ceba1a4a944802fbefb18ec882257ebd7\"}"
+    },
+    {
+      "id": "e10_quest_903",
+      "url": "https://warcraftforever.games/quests/903",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":15,\"minimumLevel\":null,\"giverId\":3338,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"5e4e6c45d7a609fee55e9f872b33813636407532b02e5ce516178f2cc4c2c3f5\"}"
+    },
+    {
+      "id": "e10_quest_924",
+      "url": "https://warcraftforever.games/quests/924",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":14,\"minimumLevel\":null,\"giverId\":3521,\"explicitTurnInId\":null,\"rewardItemIds\":[5420],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"6e055944cfcea45a1d50d084e8212b655a49a6690186b43d929af39ee7ff3ad7\"}"
+    },
+    {
+      "id": "e10_quest_959",
+      "url": "https://warcraftforever.games/quests/959",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3665,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"d38abebe7ed7286e86e78c9d0bee40349aa28c8df69d4fffd4134601e807d31e\"}"
+    },
+    {
+      "id": "e10_quest_1486",
+      "url": "https://warcraftforever.games/quests/1486",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":17,\"minimumLevel\":null,\"giverId\":5767,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"9fd7bee8e3ea99fd0743aad1c9eaea03699aec8b39d4e64013b0168c1a529e0e\"}"
+    },
+    {
+      "id": "e10_quest_1487",
+      "url": "https://warcraftforever.games/quests/1487",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":21,\"minimumLevel\":null,\"giverId\":5768,\"explicitTurnInId\":null,\"rewardItemIds\":[6476,8071,6481],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"f65a1bd0ae9d8c2994971cf2457555f98b991782334ba0e3b70460e510ceba09\"}"
+    },
+    {
+      "id": "e10_quest_1491",
+      "url": "https://warcraftforever.games/quests/1491",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3446,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"aa22efef39649dc7ebf15f82746e8cd23a1d643452350ad8091388607253cac7\"}"
+    },
+    {
+      "id": "e10_quest_3281",
+      "url": "https://warcraftforever.games/quests/3281",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3464,\"explicitTurnInId\":null,\"rewardItemIds\":[11853,2694],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"83cc349b5c87836b3c56bb88f3b84d32dd8831780c594bf4838e1ef28745732c\"}"
+    },
+    {
+      "id": "e10_quest_4921",
+      "url": "https://warcraftforever.games/quests/4921",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":20,\"minimumLevel\":null,\"giverId\":3432,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"237b47c472dd1c8b3580fcd65374e80064426397765c1ba160b417ae997b483b\"}"
+    },
+    {
+      "id": "e10_quest_5727",
+      "url": "https://warcraftforever.games/quests/5727",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":12,\"minimumLevel\":null,\"giverId\":4949,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"29b18e7cb690a28929f29a90abfb94615453519cf6caf80f21f9f5cf36c8005a\"}"
+    },
+    {
+      "id": "e10_quest_5728",
+      "url": "https://warcraftforever.games/quests/5728",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":4949,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"4dd54d42528a631e9ed1bc2c75839e1734cb6d20a76660c83f0e996aa9c8f760\"}"
+    },
+    {
+      "id": "e10_quest_5729",
+      "url": "https://warcraftforever.games/quests/5729",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":15,\"minimumLevel\":null,\"giverId\":4949,\"explicitTurnInId\":3216,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"bc610b1e545bbe8c942fb3464d068216cf472d265618a75d6259c0f1eb66f749\"}"
+    },
+    {
+      "id": "e10_quest_5730",
+      "url": "https://warcraftforever.games/quests/5730",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3216,\"explicitTurnInId\":4949,\"rewardItemIds\":[15443,15445,15424,15444],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"4d52d1d7559e2c3583b56838a99eb218991569852c76002452f43f279ca4281d\"}"
+    },
+    {
+      "id": "e10_quest_5761",
+      "url": "https://warcraftforever.games/quests/5761",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3216,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"3b402f122ce0a8fcd87e8b626c217f55bf24978ce3bf705e3f38cb2dc585642e\"}"
+    },
+    {
+      "id": "e10_quest_6365",
+      "url": "https://warcraftforever.games/quests/6365",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":10,\"minimumLevel\":null,\"giverId\":3489,\"explicitTurnInId\":3615,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"976be1dd3cea644a05e1b37629bfe8d304ff3f553203a27947d7860843569f7e\"}"
+    },
+    {
+      "id": "e10_quest_6384",
+      "url": "https://warcraftforever.games/quests/6384",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":10,\"minimumLevel\":null,\"giverId\":3615,\"explicitTurnInId\":6929,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"17c1a46e770208401f58decacae1e73b370651b9852cfc652f8d7176c8dbe699\"}"
+    },
+    {
+      "id": "e10_quest_6385",
+      "url": "https://warcraftforever.games/quests/6385",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":10,\"minimumLevel\":null,\"giverId\":6929,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"87127b47fb7fe6060eb1722a219f3b924e6ac5987777570d5e1a4241698d6396\"}"
+    },
+    {
+      "id": "e10_quest_95774",
+      "url": "https://warcraftforever.games/quests/95774",
+      "kind": "publisher_reported_beta_observation",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"reportedQuestLevel\":20,\"minimumLevel\":null,\"giverId\":3432,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"92e11965f0b248d948a24d82e4bd6c348e039e602efb18c513635abe461877da\"}"
+    },
+    {
+      "id": "e10_item_5337",
+      "url": "https://warcraftforever.games/items/5337",
+      "kind": "beta_item_tooltip_and_recorded_acquisition",
+      "checkedOn": "2026-10-24",
+      "build": "1.60.1.70009",
+      "payload": "{\"facts\":{\"name\":\"Wayfaring Gloves\",\"stats\":{\"spirit\":3,\"type\":\"cloth hands\"},\"rewardQuestIds\":[888],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"fa783f35c17f05e4cc4f9db27148490bb2bc8a724195ef2f2462400389307b10\"}"
+    },
+    {
+      "id": "e10_item_5343",
+      "url": "https://warcraftforever.games/items/5343",
+      "kind": "beta_item_tooltip_and_recorded_acquisition",
+      "checkedOn": "2026-10-24",
+      "build": "1.60.1.70009",
+      "payload": "{\"facts\":{\"name\":\"Barkeeper's Cloak\",\"stats\":{\"stamina\":3,\"type\":\"cloak\"},\"rewardQuestIds\":[865],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"03f8b7fa49fd83b69938785a4158fbd4f6f404ce0da729a9872110c29133b2e7\"}"
+    },
+    {
+      "id": "e10_item_5420",
+      "url": "https://warcraftforever.games/items/5420",
+      "kind": "beta_item_tooltip_and_recorded_acquisition",
+      "checkedOn": "2026-10-24",
+      "build": "1.60.1.70009",
+      "payload": "{\"facts\":{\"name\":\"Banshee Armor\",\"stats\":{\"stamina\":3,\"type\":\"cloth chest\"},\"rewardQuestIds\":[924],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"5c138400126fefd731cebd790ba1dbb64b4f78d461fe144834224ef271834654\"}"
+    },
+    {
+      "id": "e10_item_6477",
+      "url": "https://warcraftforever.games/items/6477",
+      "kind": "beta_item_tooltip_and_recorded_acquisition",
+      "checkedOn": "2026-10-24",
+      "build": "1.60.1.70009",
+      "payload": "{\"facts\":{\"name\":\"Grassland Sash\",\"stats\":{\"intellect\":3,\"stamina\":3,\"type\":\"cloth waist\"},\"rewardQuestIds\":[899],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"233be8c20a8674f49b114f12efcaa9329dbd76dbe7c1914efaad3d4371eb59d1\"}"
+    },
+    {
+      "id": "e10_item_8071",
+      "url": "https://warcraftforever.games/items/8071",
+      "kind": "beta_item_tooltip_and_recorded_acquisition",
+      "checkedOn": "2026-10-24",
+      "build": "1.60.1.70009",
+      "payload": "{\"facts\":{\"name\":\"Sizzle Stick\",\"stats\":{\"spellPower\":5,\"type\":\"wand\"},\"rewardQuestIds\":[1487],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"4a27fc2ccdee14f8f1ef7b8faf142f91bbb5f5155603a035324df2405dcd1f12\"}"
+    },
+    {
+      "id": "e10_item_15443",
+      "url": "https://warcraftforever.games/items/15443",
+      "kind": "beta_item_tooltip_and_recorded_acquisition",
+      "checkedOn": "2026-10-24",
+      "build": "1.60.1.70009",
+      "payload": "{\"facts\":{\"name\":\"Kris of Orgrimmar\",\"stats\":{\"spellDamage\":11,\"type\":\"dagger\"},\"rewardQuestIds\":[5730],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"b793049dcf9579370d084c2aec7fc17a383539141463a6d17c67ed6f12914151\"}"
+    },
+    {
+      "id": "e10_item_15444",
+      "url": "https://warcraftforever.games/items/15444",
+      "kind": "beta_item_tooltip_and_recorded_acquisition",
+      "checkedOn": "2026-10-24",
+      "build": "1.60.1.70009",
+      "payload": "{\"facts\":{\"name\":\"Staff of Orgrimmar\",\"stats\":{\"intellect\":4,\"spirit\":5,\"spellPower\":18,\"type\":\"staff\"},\"rewardQuestIds\":[5730],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"52cf1ec9c8d75cc54b5fced23de61b90223c5e45579876ee85216bdbd1857543\"}"
+    },
+    {
+      "id": "e10_warlock_book",
+      "url": "https://foreverchanges.pro/spellbook/warlock",
+      "kind": "beta_client_spellbook_reference",
+      "checkedOn": "2026-10-24",
+      "build": "1.60.1.70532",
+      "payload": "{\"facts\":{\"firstRanks\":[{\"name\":\"Summon Voidwalker\",\"level\":10},{\"name\":\"Drain Soul\",\"level\":10},{\"name\":\"Create Healthstone\",\"level\":10},{\"name\":\"Create Soulstone\",\"level\":18},{\"name\":\"Ritual of Summoning\",\"level\":20}],\"class\":\"WARLOCK\",\"clientIdsNotAssigned\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"657e8ebc449808b8e4778e9c601bb8dd8f306eb75508a978955e6363edfdd850\"}"
+    },
+    {
+      "id": "e10_classic_hidden_chain",
+      "url": "https://foreverchanges.pro/quest/5730",
+      "kind": "classic_reference",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"questChain\":[5726,5727,5728,5729,5730],\"classicMinimumLevelNotApplied\":true,\"classicPositionsNotApplied\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\",\"retrievedPageSha256\":\"34827bd069d756a02a86853121a2fe6c3f2e42375d736c7591817526be2af886\"}"
+    },
+    {
+      "id": "e10_classic_wc_prep",
+      "url": "https://foreverchanges.pro/dungeon-quests",
+      "kind": "classic_reference",
+      "checkedOn": "2026-10-24",
+      "build": null,
+      "payload": "{\"facts\":{\"questId\":1491,\"reportedPreviousQuestId\":865,\"notVerifiedInForever\":true},\"retrieval\":\"public_page_review\",\"caveatCs\":\"Podklad není nezávislé ověření vydané hry.\"}"
+    }
+  ],
+  "entries": [
+    {
+      "key": "wow-forever:npc:3216",
+      "kind": "NPC",
+      "gameId": 3216,
+      "nameOriginal": "Neeru Fireblade",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3216",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3216"
+      ],
+      "payload": "{\"name\":\"Neeru Fireblade\",\"title\":null,\"reportedMapId\":1454,\"positions\":[{\"x\":0.501,\"y\":0.504,\"name\":\"Neeru Fireblade\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3309",
+      "kind": "NPC",
+      "gameId": 3309,
+      "nameOriginal": "Karus",
+      "descriptionCs": "Bankéř. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3309",
+        "Bankéř",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3309"
+      ],
+      "payload": "{\"name\":\"Karus\",\"title\":\"Banker\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.498,\"y\":0.6970000000000001,\"name\":\"Karus\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3310",
+      "kind": "NPC",
+      "gameId": 3310,
+      "nameOriginal": "Doras",
+      "descriptionCs": "Letový mistr. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3310",
+        "Letový mistr",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3310"
+      ],
+      "payload": "{\"name\":\"Doras\",\"title\":\"Wind Rider Master\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.45299999999999996,\"y\":0.637,\"name\":\"Doras\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3337",
+      "kind": "NPC",
+      "gameId": 3337,
+      "nameOriginal": "Kargal Battlescar",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3337",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3337"
+      ],
+      "payload": "{\"name\":\"Kargal Battlescar\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.62,\"y\":0.187,\"name\":\"Kargal Battlescar\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3338",
+      "kind": "NPC",
+      "gameId": 3338,
+      "nameOriginal": "Sergra Darkthorn",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3338",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3338"
+      ],
+      "payload": "{\"name\":\"Sergra Darkthorn\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.517,\"y\":0.303,\"name\":\"Sergra Darkthorn\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3345",
+      "kind": "NPC",
+      "gameId": 3345,
+      "nameOriginal": "Godan",
+      "descriptionCs": "Trenér očarování. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3345",
+        "Trenér očarování",
+        "služby",
+        "profese"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3345"
+      ],
+      "payload": "{\"name\":\"Godan\",\"title\":\"Expert Enchanter\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.537,\"y\":0.379,\"name\":\"Godan\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3346",
+      "kind": "NPC",
+      "gameId": 3346,
+      "nameOriginal": "Kithas",
+      "descriptionCs": "Potřeby pro očarování. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3346",
+        "Potřeby pro očarování",
+        "služby",
+        "profese"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3346"
+      ],
+      "payload": "{\"name\":\"Kithas\",\"title\":\"Enchanting Supplies\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.5379999999999999,\"y\":0.38299999999999995,\"name\":\"Kithas\",\"kind\":\"vendor\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3363",
+      "kind": "NPC",
+      "gameId": 3363,
+      "nameOriginal": "Magar",
+      "descriptionCs": "Trenér krejčovství. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3363",
+        "Trenér krejčovství",
+        "služby",
+        "profese"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3363"
+      ],
+      "payload": "{\"name\":\"Magar\",\"title\":\"Expert Tailor\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.637,\"y\":0.503,\"name\":\"Magar\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3390",
+      "kind": "NPC",
+      "gameId": 3390,
+      "nameOriginal": "Apothecary Helbrim",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3390",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3390"
+      ],
+      "payload": "{\"name\":\"Apothecary Helbrim\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.518,\"y\":0.303,\"name\":\"Apothecary Helbrim\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3391",
+      "kind": "NPC",
+      "gameId": 3391,
+      "nameOriginal": "Gazlowe",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3391",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3391"
+      ],
+      "payload": "{\"name\":\"Gazlowe\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.627,\"y\":0.363,\"name\":\"Gazlowe\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3429",
+      "kind": "NPC",
+      "gameId": 3429,
+      "nameOriginal": "Thork",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3429",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3429"
+      ],
+      "payload": "{\"name\":\"Thork\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.52,\"y\":0.304,\"name\":\"Thork\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3432",
+      "kind": "NPC",
+      "gameId": 3432,
+      "nameOriginal": "Mankrik",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3432",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3432"
+      ],
+      "payload": "{\"name\":\"Mankrik\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.519,\"y\":0.314,\"name\":\"Mankrik\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3442",
+      "kind": "NPC",
+      "gameId": 3442,
+      "nameOriginal": "Sputtervalve",
+      "descriptionCs": "Kontaktní postava v Ratchet. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3442",
+        "Kontaktní postava v Ratchet",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3442"
+      ],
+      "payload": "{\"name\":\"Sputtervalve\",\"title\":\"Tinkers' Union\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.63,\"y\":0.371,\"name\":\"Sputtervalve\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3446",
+      "kind": "NPC",
+      "gameId": 3446,
+      "nameOriginal": "Mebok Mizzyrix",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3446",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3446"
+      ],
+      "payload": "{\"name\":\"Mebok Mizzyrix\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.624,\"y\":0.377,\"name\":\"Mebok Mizzyrix\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3448",
+      "kind": "NPC",
+      "gameId": 3448,
+      "nameOriginal": "Tonga Runetotem",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3448",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3448"
+      ],
+      "payload": "{\"name\":\"Tonga Runetotem\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.521,\"y\":0.318,\"name\":\"Tonga Runetotem\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3453",
+      "kind": "NPC",
+      "gameId": 3453,
+      "nameOriginal": "Wharfmaster Dizzywig",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3453",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3453"
+      ],
+      "payload": "{\"name\":\"Wharfmaster Dizzywig\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.632,\"y\":0.382,\"name\":\"Wharfmaster Dizzywig\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3464",
+      "kind": "NPC",
+      "gameId": 3464,
+      "nameOriginal": "Gazrog",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3464",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3464"
+      ],
+      "payload": "{\"name\":\"Gazrog\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.52,\"y\":0.303,\"name\":\"Gazrog\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3486",
+      "kind": "NPC",
+      "gameId": 3486,
+      "nameOriginal": "Halija Whitestrider",
+      "descriptionCs": "Prodejce látkového vybavení. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3486",
+        "Prodejce látkového vybavení",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3486"
+      ],
+      "payload": "{\"name\":\"Halija Whitestrider\",\"title\":\"Clothier\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.522,\"y\":0.321,\"name\":\"Halija Whitestrider\",\"kind\":\"vendor\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3487",
+      "kind": "NPC",
+      "gameId": 3487,
+      "nameOriginal": "Kalyimah Stormcloud",
+      "descriptionCs": "Prodejce brašen. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3487",
+        "Prodejce brašen",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3487"
+      ],
+      "payload": "{\"name\":\"Kalyimah Stormcloud\",\"title\":\"Bags & Sacks\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.522,\"y\":0.318,\"name\":\"Kalyimah Stormcloud\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3489",
+      "kind": "NPC",
+      "gameId": 3489,
+      "nameOriginal": "Zargh",
+      "descriptionCs": "Řezník. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3489",
+        "Řezník",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3489"
+      ],
+      "payload": "{\"name\":\"Zargh\",\"title\":\"Butcher\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.525,\"y\":0.3,\"name\":\"Zargh\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3496",
+      "kind": "NPC",
+      "gameId": 3496,
+      "nameOriginal": "Fuzruckle",
+      "descriptionCs": "Bankéř. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3496",
+        "Bankéř",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3496"
+      ],
+      "payload": "{\"name\":\"Fuzruckle\",\"title\":\"Banker\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.627,\"y\":0.375,\"name\":\"Fuzruckle\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3521",
+      "kind": "NPC",
+      "gameId": 3521,
+      "nameOriginal": "Ak'Zeloth",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3521",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3521"
+      ],
+      "payload": "{\"name\":\"Ak'Zeloth\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.624,\"y\":0.201,\"name\":\"Ak'Zeloth\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3615",
+      "kind": "NPC",
+      "gameId": 3615,
+      "nameOriginal": "Devrak",
+      "descriptionCs": "Letový mistr. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3615",
+        "Letový mistr",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3615"
+      ],
+      "payload": "{\"name\":\"Devrak\",\"title\":\"Wind Rider Master\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.516,\"y\":0.304,\"name\":\"Devrak\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3665",
+      "kind": "NPC",
+      "gameId": 3665,
+      "nameOriginal": "Crane Operator Bigglefuzz",
+      "descriptionCs": "Postava a kontakt pro úkoly. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3665",
+        "Postava a kontakt pro úkoly",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3665"
+      ],
+      "payload": "{\"name\":\"Crane Operator Bigglefuzz\",\"title\":null,\"reportedMapId\":1413,\"positions\":[{\"x\":0.631,\"y\":0.376,\"name\":\"Crane Operator Bigglefuzz\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:3934",
+      "kind": "NPC",
+      "gameId": 3934,
+      "nameOriginal": "Innkeeper Boorand Plainswind",
+      "descriptionCs": "Hostinský. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "3934",
+        "Hostinský",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3934"
+      ],
+      "payload": "{\"name\":\"Innkeeper Boorand Plainswind\",\"title\":\"Innkeeper\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.52,\"y\":0.299,\"name\":\"Innkeeper Boorand Plainswind\",\"kind\":\"vendor\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:4949",
+      "kind": "NPC",
+      "gameId": 4949,
+      "nameOriginal": "Thrall",
+      "descriptionCs": "Náčelník. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "4949",
+        "Náčelník",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_4949"
+      ],
+      "payload": "{\"name\":\"Thrall\",\"title\":\"Warchief\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.32899999999999996,\"y\":0.37799999999999995,\"name\":\"Thrall\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:5767",
+      "kind": "NPC",
+      "gameId": 5767,
+      "nameOriginal": "Nalpak",
+      "descriptionCs": "Zadavatel úkolu u Wailing Caverns. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "5767",
+        "Zadavatel úkolu u Wailing Caverns",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_5767"
+      ],
+      "payload": "{\"name\":\"Nalpak\",\"title\":\"Disciple of Naralex\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.465,\"y\":0.368,\"name\":\"Nalpak\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:5768",
+      "kind": "NPC",
+      "gameId": 5768,
+      "nameOriginal": "Ebru",
+      "descriptionCs": "Zadavatel úkolu u Wailing Caverns. Zveřejněný beta záznam pro Wailing Caverns; přesná místní poloha zatím chybí. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "5768",
+        "Zadavatel úkolu u Wailing Caverns",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_5768"
+      ],
+      "payload": "{\"name\":\"Ebru\",\"title\":\"Disciple of Naralex\",\"reportedMapId\":1414,\"positions\":[{\"x\":0.519,\"y\":0.5539999999999999,\"name\":\"Ebru\",\"kind\":\"quest\"}],\"usesPosition\":false,\"observationBuild\":null,\"positionCaveatCs\":\"Publikovaný bod je pouze v kontinentálním rámci. Do mapy Barrens se nepřevádí a není použit jako přesná místní poloha.\"}"
+    },
+    {
+      "key": "wow-forever:npc:5815",
+      "kind": "NPC",
+      "gameId": 5815,
+      "nameOriginal": "Kurgul",
+      "descriptionCs": "Trenér démonů. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "5815",
+        "Trenér démonů",
+        "služby",
+        "warlock",
+        "trenér démonů"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_5815"
+      ],
+      "payload": "{\"name\":\"Kurgul\",\"title\":\"Demon Trainer\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.504,\"y\":0.473,\"name\":\"Kurgul\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:6791",
+      "kind": "NPC",
+      "gameId": 6791,
+      "nameOriginal": "Innkeeper Wiley",
+      "descriptionCs": "Hostinský. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "6791",
+        "Hostinský",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_6791"
+      ],
+      "payload": "{\"name\":\"Innkeeper Wiley\",\"title\":\"Innkeeper\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.621,\"y\":0.39399999999999996,\"name\":\"Innkeeper Wiley\",\"kind\":\"vendor\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:6929",
+      "kind": "NPC",
+      "gameId": 6929,
+      "nameOriginal": "Innkeeper Gryshka",
+      "descriptionCs": "Hostinský. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "6929",
+        "Hostinský",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_6929"
+      ],
+      "payload": "{\"name\":\"Innkeeper Gryshka\",\"title\":\"Innkeeper\",\"reportedMapId\":1454,\"positions\":[{\"x\":0.5429999999999999,\"y\":0.6829999999999999,\"name\":\"Innkeeper Gryshka\",\"kind\":\"quest\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:8673",
+      "kind": "NPC",
+      "gameId": 8673,
+      "nameOriginal": "Auctioneer Thathung",
+      "descriptionCs": "Dražebník. Zveřejněný beta záznam pro Orgrimmar. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "8673",
+        "Dražebník",
+        "úkoly"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_8673"
+      ],
+      "payload": "{\"name\":\"Auctioneer Thathung\",\"title\":null,\"reportedMapId\":1454,\"positions\":[{\"x\":0.511,\"y\":0.701,\"name\":\"Auctioneer Thathung\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:npc:16227",
+      "kind": "NPC",
+      "gameId": 16227,
+      "nameOriginal": "Bragok",
+      "descriptionCs": "Letový mistr. Zveřejněný beta záznam pro Barrens. Podmínky a aktuální nabídku ověř ve hře.",
+      "aliases": [
+        "16227",
+        "Letový mistr",
+        "služby"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_16227"
+      ],
+      "payload": "{\"name\":\"Bragok\",\"title\":\"Flight Master\",\"reportedMapId\":1413,\"positions\":[{\"x\":0.631,\"y\":0.371,\"name\":\"Bragok\",\"kind\":\"npc\"}],\"usesPosition\":true,\"observationBuild\":null}"
+    },
+    {
+      "key": "wow-forever:quest:809",
+      "kind": "QUEST",
+      "gameId": 809,
+      "nameOriginal": "Ak'Zeloth",
+      "descriptionCs": "Promluv s Ak'Zelothem v Barrens; kontakt dává Neeru Fireblade.",
+      "aliases": [
+        "809",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 13,
+      "sourceIds": [
+        "e10_quest_809"
+      ],
+      "payload": "{\"reportedQuestLevel\":13,\"minimumLevel\":null,\"giverId\":3216,\"explicitTurnInId\":3521,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:842",
+      "kind": "QUEST",
+      "gameId": 842,
+      "nameOriginal": "Crossroads Conscription",
+      "descriptionCs": "Dones náborový dopis od Kargala k Sergře v Crossroads.",
+      "aliases": [
+        "842",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 12,
+      "sourceIds": [
+        "e10_quest_842"
+      ],
+      "payload": "{\"reportedQuestLevel\":12,\"minimumLevel\":null,\"giverId\":3337,\"explicitTurnInId\":3338,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:844",
+      "kind": "QUEST",
+      "gameId": 844,
+      "nameOriginal": "Plainstrider Menace",
+      "descriptionCs": "Sesbírej 7 Plainstrider Beaks a vrať je Sergře.",
+      "aliases": [
+        "844",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 12,
+      "sourceIds": [
+        "e10_quest_844"
+      ],
+      "payload": "{\"reportedQuestLevel\":12,\"minimumLevel\":null,\"giverId\":3338,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:845",
+      "kind": "QUEST",
+      "gameId": 845,
+      "nameOriginal": "The Zhevra",
+      "descriptionCs": "Získej 4 Zhevra Hooves pro Sergru.",
+      "aliases": [
+        "845",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 13,
+      "sourceIds": [
+        "e10_quest_845"
+      ],
+      "payload": "{\"reportedQuestLevel\":13,\"minimumLevel\":null,\"giverId\":3338,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:848",
+      "kind": "QUEST",
+      "gameId": 848,
+      "nameOriginal": "Fungal Spores",
+      "descriptionCs": "Nasbírej 4 Fungal Spores pro Helbrima.",
+      "aliases": [
+        "848",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 15,
+      "sourceIds": [
+        "e10_quest_848"
+      ],
+      "payload": "{\"reportedQuestLevel\":15,\"minimumLevel\":null,\"giverId\":3390,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:865",
+      "kind": "QUEST",
+      "gameId": 865,
+      "nameOriginal": "Raptor Horns",
+      "descriptionCs": "Nasbírej 5 Intact Raptor Horns a dones je Mebokovi v Ratchet.",
+      "aliases": [
+        "865",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 18,
+      "sourceIds": [
+        "e10_quest_865"
+      ],
+      "payload": "{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3446,\"explicitTurnInId\":null,\"rewardItemIds\":[5342,5343],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:869",
+      "kind": "QUEST",
+      "gameId": 869,
+      "nameOriginal": "Raptor Thieves",
+      "descriptionCs": "Dones Gazrogovi 12 Raptor Heads.",
+      "aliases": [
+        "869",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 13,
+      "sourceIds": [
+        "e10_quest_869"
+      ],
+      "payload": "{\"reportedQuestLevel\":13,\"minimumLevel\":null,\"giverId\":3464,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:870",
+      "kind": "QUEST",
+      "gameId": 870,
+      "nameOriginal": "The Forgotten Pools",
+      "descriptionCs": "Prozkoumej Forgotten Pools a informuj Tongu Runetotema.",
+      "aliases": [
+        "870",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 13,
+      "sourceIds": [
+        "e10_quest_870"
+      ],
+      "payload": "{\"reportedQuestLevel\":13,\"minimumLevel\":null,\"giverId\":3448,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:871",
+      "kind": "QUEST",
+      "gameId": 871,
+      "nameOriginal": "Disrupt the Attacks",
+      "descriptionCs": "Pro Thorka poraz 8 Water Seekers, 8 Thornweavers a 3 Hunters kmene Razormane.",
+      "aliases": [
+        "871",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 12,
+      "sourceIds": [
+        "e10_quest_871"
+      ],
+      "payload": "{\"reportedQuestLevel\":12,\"minimumLevel\":null,\"giverId\":3429,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:872",
+      "kind": "QUEST",
+      "gameId": 872,
+      "nameOriginal": "The Disruption Ends",
+      "descriptionCs": "Vyřiď určené bojovníky Razormane a Kreeniga; jeho kel dones Thorkovi.",
+      "aliases": [
+        "872",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 15,
+      "sourceIds": [
+        "e10_quest_872"
+      ],
+      "payload": "{\"reportedQuestLevel\":15,\"minimumLevel\":null,\"giverId\":3429,\"explicitTurnInId\":null,\"rewardItemIds\":[5275,5328],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:877",
+      "kind": "QUEST",
+      "gameId": 877,
+      "nameOriginal": "The Stagnant Oasis",
+      "descriptionCs": "Prozkoumej Stagnant Oasis a vrať se k Tongovi.",
+      "aliases": [
+        "877",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 16,
+      "sourceIds": [
+        "e10_quest_877"
+      ],
+      "payload": "{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3448,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:880",
+      "kind": "QUEST",
+      "gameId": 880,
+      "nameOriginal": "Altered Beings",
+      "descriptionCs": "Dones Tongovi 8 Altered Snapjaw Shells.",
+      "aliases": [
+        "880",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 16,
+      "sourceIds": [
+        "e10_quest_880"
+      ],
+      "payload": "{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3448,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:881",
+      "kind": "QUEST",
+      "gameId": 881,
+      "nameOriginal": "Echeyakee",
+      "descriptionCs": "Získej Echeyakee's Hide pro Sergru. Pokyny k přivolání si ověř v zadání.",
+      "aliases": [
+        "881",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 16,
+      "sourceIds": [
+        "e10_quest_881"
+      ],
+      "payload": "{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3338,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:887",
+      "kind": "QUEST",
+      "gameId": 887,
+      "nameOriginal": "Southsea Freebooters",
+      "descriptionCs": "Pro Gazlowa poraz 12 Southsea Brigands a 6 Southsea Cannoneers.",
+      "aliases": [
+        "887",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 14,
+      "sourceIds": [
+        "e10_quest_887"
+      ],
+      "payload": "{\"reportedQuestLevel\":14,\"minimumLevel\":null,\"giverId\":3391,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:888",
+      "kind": "QUEST",
+      "gameId": 888,
+      "nameOriginal": "Stolen Booty",
+      "descriptionCs": "Vrať Gazlowovi Shipment of Boots a Telescopic Lens.",
+      "aliases": [
+        "888",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 16,
+      "sourceIds": [
+        "e10_quest_888"
+      ],
+      "payload": "{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3391,\"explicitTurnInId\":null,\"rewardItemIds\":[5337,5320],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:890",
+      "kind": "QUEST",
+      "gameId": 890,
+      "nameOriginal": "The Missing Shipment",
+      "descriptionCs": "Dones Gazlow's Ledger přístavnímu Dizzywigovi.",
+      "aliases": [
+        "890",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 14,
+      "sourceIds": [
+        "e10_quest_890"
+      ],
+      "payload": "{\"reportedQuestLevel\":14,\"minimumLevel\":null,\"giverId\":3391,\"explicitTurnInId\":3453,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:892",
+      "kind": "QUEST",
+      "gameId": 892,
+      "nameOriginal": "The Missing Shipment",
+      "descriptionCs": "Vrať Gazlow's Ledger zpět Gazlowovi.",
+      "aliases": [
+        "892",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 14,
+      "sourceIds": [
+        "e10_quest_892"
+      ],
+      "payload": "{\"reportedQuestLevel\":14,\"minimumLevel\":null,\"giverId\":3453,\"explicitTurnInId\":3391,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:895",
+      "kind": "QUEST",
+      "gameId": 895,
+      "nameOriginal": "WANTED: Baron Longshore",
+      "descriptionCs": "Získej hlavu Barona Longshora a dones ji Gazlowovi. Zadání souvisí s vývěskou v Ratchet.",
+      "aliases": [
+        "895",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 16,
+      "sourceIds": [
+        "e10_quest_895"
+      ],
+      "payload": "{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3972,\"explicitTurnInId\":3391,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:896",
+      "kind": "QUEST",
+      "gameId": 896,
+      "nameOriginal": "Miner's Fortune",
+      "descriptionCs": "Získej Cats Eye Emerald od Venture Co. Overseers nebo Enforcers pro Dizzywiga.",
+      "aliases": [
+        "896",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 18,
+      "sourceIds": [
+        "e10_quest_896"
+      ],
+      "payload": "{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3453,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:899",
+      "kind": "QUEST",
+      "gameId": 899,
+      "nameOriginal": "Consumed by Hatred",
+      "descriptionCs": "Dones Mankrikovi 60 Bristleback Quilboar Tusks.",
+      "aliases": [
+        "899",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 20,
+      "sourceIds": [
+        "e10_quest_899"
+      ],
+      "payload": "{\"reportedQuestLevel\":20,\"minimumLevel\":null,\"giverId\":3432,\"explicitTurnInId\":null,\"rewardItemIds\":[5314,6477],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:903",
+      "kind": "QUEST",
+      "gameId": 903,
+      "nameOriginal": "Prowlers of the Barrens",
+      "descriptionCs": "Získej pro Sergru 7 Prowler Claws.",
+      "aliases": [
+        "903",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 15,
+      "sourceIds": [
+        "e10_quest_903"
+      ],
+      "payload": "{\"reportedQuestLevel\":15,\"minimumLevel\":null,\"giverId\":3338,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:924",
+      "kind": "QUEST",
+      "gameId": 924,
+      "nameOriginal": "The Demon Seed",
+      "descriptionCs": "Odnes Flawed Power Stone k Altar of Fire před vypršením jeho platnosti a vrať se k Ak'Zelothovi. Délku platnosti ověř ve hře.",
+      "aliases": [
+        "924",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 14,
+      "sourceIds": [
+        "e10_quest_924"
+      ],
+      "payload": "{\"reportedQuestLevel\":14,\"minimumLevel\":null,\"giverId\":3521,\"explicitTurnInId\":null,\"rewardItemIds\":[5420],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:959",
+      "kind": "QUEST",
+      "gameId": 959,
+      "nameOriginal": "Trouble at the Docks",
+      "descriptionCs": "Před Wailing Caverns vezmi zadání v Ratchet. Bigglefuzz požaduje 99-Year-Old Port od Mad Magglishe.",
+      "aliases": [
+        "959",
+        "úkol",
+        "Wailing Caverns",
+        "dungeon"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 18,
+      "sourceIds": [
+        "e10_quest_959"
+      ],
+      "payload": "{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3665,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:1486",
+      "kind": "QUEST",
+      "gameId": 1486,
+      "nameOriginal": "Deviate Hides",
+      "descriptionCs": "Nalpak požaduje 20 Deviate Hides z Wailing Caverns. Zkontroluj zadání před vstupem.",
+      "aliases": [
+        "1486",
+        "úkol",
+        "Wailing Caverns",
+        "dungeon"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 17,
+      "sourceIds": [
+        "e10_quest_1486"
+      ],
+      "payload": "{\"reportedQuestLevel\":17,\"minimumLevel\":null,\"giverId\":5767,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:1487",
+      "kind": "QUEST",
+      "gameId": 1487,
+      "nameOriginal": "Deviate Eradication",
+      "descriptionCs": "Ebru požaduje po sedmi Deviate Ravagers, Vipers, Shamblers a Dreadfangs. Přesná místní poloha Ebru není doložená.",
+      "aliases": [
+        "1487",
+        "úkol",
+        "Wailing Caverns",
+        "dungeon"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 21,
+      "sourceIds": [
+        "e10_quest_1487"
+      ],
+      "payload": "{\"reportedQuestLevel\":21,\"minimumLevel\":null,\"giverId\":5768,\"explicitTurnInId\":null,\"rewardItemIds\":[6476,8071,6481],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:1491",
+      "kind": "QUEST",
+      "gameId": 1491,
+      "nameOriginal": "Smart Drinks",
+      "descriptionCs": "Před Wailing Caverns zkontroluj zadání u Meboka: potřebuje 6 Wailing Essence.",
+      "aliases": [
+        "1491",
+        "úkol",
+        "Wailing Caverns",
+        "dungeon"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 18,
+      "sourceIds": [
+        "e10_quest_1491"
+      ],
+      "payload": "{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3446,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:3281",
+      "kind": "QUEST",
+      "gameId": 3281,
+      "nameOriginal": "Stolen Silver",
+      "descriptionCs": "Vrať Gazrogovi Stolen Silver.",
+      "aliases": [
+        "3281",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 18,
+      "sourceIds": [
+        "e10_quest_3281"
+      ],
+      "payload": "{\"reportedQuestLevel\":18,\"minimumLevel\":null,\"giverId\":3464,\"explicitTurnInId\":null,\"rewardItemIds\":[11853,2694],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:4921",
+      "kind": "QUEST",
+      "gameId": 4921,
+      "nameOriginal": "Lost in Battle",
+      "descriptionCs": "Najdi Mankrikovu manželku a vrať se k němu. Přesná poloha cíle není v tomto balíčku doložená.",
+      "aliases": [
+        "4921",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 20,
+      "sourceIds": [
+        "e10_quest_4921"
+      ],
+      "payload": "{\"reportedQuestLevel\":20,\"minimumLevel\":null,\"giverId\":3432,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:5727",
+      "kind": "QUEST",
+      "gameId": 5727,
+      "nameOriginal": "Hidden Enemies",
+      "descriptionCs": "Promluv s Neeru Firebladem o Lieutenant's Insignia a pak informuj Thralla.",
+      "aliases": [
+        "5727",
+        "úkol",
+        "Ragefire Chasm",
+        "dungeon"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 12,
+      "sourceIds": [
+        "e10_quest_5727"
+      ],
+      "payload": "{\"reportedQuestLevel\":12,\"minimumLevel\":null,\"giverId\":4949,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:5728",
+      "kind": "QUEST",
+      "gameId": 5728,
+      "nameOriginal": "Hidden Enemies",
+      "descriptionCs": "Před Ragefire Chasm zkontroluj zadání od Thralla: cíli jsou Bazzalan a Jergosh the Invoker.",
+      "aliases": [
+        "5728",
+        "úkol",
+        "Ragefire Chasm",
+        "dungeon"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 16,
+      "sourceIds": [
+        "e10_quest_5728"
+      ],
+      "payload": "{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":4949,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:5729",
+      "kind": "QUEST",
+      "gameId": 5729,
+      "nameOriginal": "Hidden Enemies",
+      "descriptionCs": "Promluv s Neeru Firebladem v Orgrimmaru.",
+      "aliases": [
+        "5729",
+        "úkol",
+        "Ragefire Chasm",
+        "dungeon"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 15,
+      "sourceIds": [
+        "e10_quest_5729"
+      ],
+      "payload": "{\"reportedQuestLevel\":15,\"minimumLevel\":null,\"giverId\":4949,\"explicitTurnInId\":3216,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:5730",
+      "kind": "QUEST",
+      "gameId": 5730,
+      "nameOriginal": "Hidden Enemies",
+      "descriptionCs": "Vrať se k Thrallovi s informacemi od Neeru Fireblada; následuje nabídka odměn.",
+      "aliases": [
+        "5730",
+        "úkol",
+        "Ragefire Chasm",
+        "dungeon"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 16,
+      "sourceIds": [
+        "e10_quest_5730"
+      ],
+      "payload": "{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3216,\"explicitTurnInId\":4949,\"rewardItemIds\":[15443,15445,15424,15444],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:5761",
+      "kind": "QUEST",
+      "gameId": 5761,
+      "nameOriginal": "Slaying the Beast",
+      "descriptionCs": "Před Ragefire Chasm zkontroluj zadání u Neeru Fireblada. Potřebuje srdce Taragamana the Hungerer.",
+      "aliases": [
+        "5761",
+        "úkol",
+        "Ragefire Chasm",
+        "dungeon"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 16,
+      "sourceIds": [
+        "e10_quest_5761"
+      ],
+      "payload": "{\"reportedQuestLevel\":16,\"minimumLevel\":null,\"giverId\":3216,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:6365",
+      "kind": "QUEST",
+      "gameId": 6365,
+      "nameOriginal": "Meats to Orgrimmar",
+      "descriptionCs": "Dones Zargh's Meats letovému mistrovi Devrakovi v Crossroads.",
+      "aliases": [
+        "6365",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 10,
+      "sourceIds": [
+        "e10_quest_6365"
+      ],
+      "payload": "{\"reportedQuestLevel\":10,\"minimumLevel\":null,\"giverId\":3489,\"explicitTurnInId\":3615,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:6384",
+      "kind": "QUEST",
+      "gameId": 6384,
+      "nameOriginal": "Ride to Orgrimmar",
+      "descriptionCs": "Přeprav maso ke Gryshce v Orgrimmaru. Dostupnost letu a objevení obou bodů ověř ručně.",
+      "aliases": [
+        "6384",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 10,
+      "sourceIds": [
+        "e10_quest_6384"
+      ],
+      "payload": "{\"reportedQuestLevel\":10,\"minimumLevel\":null,\"giverId\":3615,\"explicitTurnInId\":6929,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:6385",
+      "kind": "QUEST",
+      "gameId": 6385,
+      "nameOriginal": "Doras the Wind Rider Master",
+      "descriptionCs": "Dones Gryshka's Letter Dorasovi v Orgrimmaru.",
+      "aliases": [
+        "6385",
+        "úkol",
+        "Orgrimmar"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 10,
+      "sourceIds": [
+        "e10_quest_6385"
+      ],
+      "payload": "{\"reportedQuestLevel\":10,\"minimumLevel\":null,\"giverId\":6929,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:quest:95774",
+      "kind": "QUEST",
+      "gameId": 95774,
+      "nameOriginal": "Her Name Is Olgra",
+      "descriptionCs": "Získej pro Mankrikův památník 4 kusy Olgra's Adornments od quilboarů.",
+      "aliases": [
+        "95774",
+        "úkol",
+        "Barrens"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 20,
+      "sourceIds": [
+        "e10_quest_95774"
+      ],
+      "payload": "{\"reportedQuestLevel\":20,\"minimumLevel\":null,\"giverId\":3432,\"explicitTurnInId\":null,\"rewardItemIds\":[],\"recorderAreaIsNotAQuestPosition\":true,\"characterEligibility\":\"needs_in_game_check\"}"
+    },
+    {
+      "key": "wow-forever:item:5337",
+      "kind": "ITEM",
+      "gameId": 5337,
+      "nameOriginal": "Wayfaring Gloves",
+      "descriptionCs": "Látkové rukavice s +3 ducha v beta záznamu. Kandidát z odměny Stolen Booty. Porovnej s vlastní výbavou.",
+      "aliases": [
+        "5337",
+        "výbava",
+        "warlock",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_item_5337"
+      ],
+      "payload": "{\"name\":\"Wayfaring Gloves\",\"stats\":{\"spirit\":3,\"type\":\"cloth hands\"},\"rewardQuestIds\":[888],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true}"
+    },
+    {
+      "key": "wow-forever:item:5343",
+      "kind": "ITEM",
+      "gameId": 5343,
+      "nameOriginal": "Barkeeper's Cloak",
+      "descriptionCs": "Plášť s +3 výdrže v beta záznamu. Souvisí s odměnou Raptor Horns v Ratchet. Porovnej s vlastní výbavou.",
+      "aliases": [
+        "5343",
+        "výbava",
+        "warlock",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_item_5343"
+      ],
+      "payload": "{\"name\":\"Barkeeper's Cloak\",\"stats\":{\"stamina\":3,\"type\":\"cloak\"},\"rewardQuestIds\":[865],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true}"
+    },
+    {
+      "key": "wow-forever:item:5420",
+      "kind": "ITEM",
+      "gameId": 5420,
+      "nameOriginal": "Banshee Armor",
+      "descriptionCs": "Látková zbroj na trup s +3 výdrže v beta záznamu. Odměna The Demon Seed. Porovnej s vlastní výbavou.",
+      "aliases": [
+        "5420",
+        "výbava",
+        "warlock",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_item_5420"
+      ],
+      "payload": "{\"name\":\"Banshee Armor\",\"stats\":{\"stamina\":3,\"type\":\"cloth chest\"},\"rewardQuestIds\":[924],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true}"
+    },
+    {
+      "key": "wow-forever:item:6477",
+      "kind": "ITEM",
+      "gameId": 6477,
+      "nameOriginal": "Grassland Sash",
+      "descriptionCs": "Látkový pás s +3 inteligence a +3 výdrže v beta záznamu. Kandidát z Consumed by Hatred. Porovnej s vlastní výbavou.",
+      "aliases": [
+        "6477",
+        "výbava",
+        "warlock",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_item_6477"
+      ],
+      "payload": "{\"name\":\"Grassland Sash\",\"stats\":{\"intellect\":3,\"stamina\":3,\"type\":\"cloth waist\"},\"rewardQuestIds\":[899],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true}"
+    },
+    {
+      "key": "wow-forever:item:8071",
+      "kind": "ITEM",
+      "gameId": 8071,
+      "nameOriginal": "Sizzle Stick",
+      "descriptionCs": "Hůlka s +5 kouzelnické síly v beta záznamu. Kandidát z odměny Deviate Eradication. Porovnej s vlastní výbavou.",
+      "aliases": [
+        "8071",
+        "výbava",
+        "warlock",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_item_8071"
+      ],
+      "payload": "{\"name\":\"Sizzle Stick\",\"stats\":{\"spellPower\":5,\"type\":\"wand\"},\"rewardQuestIds\":[1487],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true}"
+    },
+    {
+      "key": "wow-forever:item:15443",
+      "kind": "ITEM",
+      "gameId": 15443,
+      "nameOriginal": "Kris of Orgrimmar",
+      "descriptionCs": "Dýka s +11 poškození kouzel v beta záznamu. Alternativa při volbě odměny Hidden Enemies. Porovnej s vlastní výbavou.",
+      "aliases": [
+        "15443",
+        "výbava",
+        "warlock",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_item_15443"
+      ],
+      "payload": "{\"name\":\"Kris of Orgrimmar\",\"stats\":{\"spellDamage\":11,\"type\":\"dagger\"},\"rewardQuestIds\":[5730],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true}"
+    },
+    {
+      "key": "wow-forever:item:15444",
+      "kind": "ITEM",
+      "gameId": 15444,
+      "nameOriginal": "Staff of Orgrimmar",
+      "descriptionCs": "Hůl s +4 inteligence, +5 ducha a +18 kouzelnické síly v betě. Jedna z odměn Hidden Enemies. Porovnej s vlastní výbavou.",
+      "aliases": [
+        "15444",
+        "výbava",
+        "warlock",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_item_15444"
+      ],
+      "payload": "{\"name\":\"Staff of Orgrimmar\",\"stats\":{\"intellect\":4,\"spirit\":5,\"spellPower\":18,\"type\":\"staff\"},\"rewardQuestIds\":[5730],\"minimumEquipLevel\":null,\"notABestInSlotRanking\":true}"
+    },
+    {
+      "key": "wow-forever:spell:book:warlock:summon-voidwalker",
+      "kind": "SPELL",
+      "gameId": null,
+      "nameOriginal": "Summon Voidwalker",
+      "descriptionCs": "Přivolání Voidwalkera; betový přehled uvádí začátek na úrovni 10.",
+      "aliases": [
+        "warlock",
+        "kouzlo",
+        "výcvik"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": 10,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "payload": "{\"firstRankLevel\":10,\"fullAccessConditionsUnknown\":true}"
+    },
+    {
+      "key": "wow-forever:spell:book:warlock:drain-soul",
+      "kind": "SPELL",
+      "gameId": null,
+      "nameOriginal": "Drain Soul",
+      "descriptionCs": "Vysávání duše; betový přehled uvádí první rank od úrovně 10.",
+      "aliases": [
+        "warlock",
+        "kouzlo",
+        "výcvik"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": 10,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "payload": "{\"firstRankLevel\":10,\"fullAccessConditionsUnknown\":true}"
+    },
+    {
+      "key": "wow-forever:spell:book:warlock:create-healthstone",
+      "kind": "SPELL",
+      "gameId": null,
+      "nameOriginal": "Create Healthstone",
+      "descriptionCs": "Tvorba léčivého kamene; betový přehled uvádí začátek na úrovni 10.",
+      "aliases": [
+        "warlock",
+        "kouzlo",
+        "výcvik"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": 10,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "payload": "{\"firstRankLevel\":10,\"fullAccessConditionsUnknown\":true}"
+    },
+    {
+      "key": "wow-forever:spell:book:warlock:create-soulstone",
+      "kind": "SPELL",
+      "gameId": null,
+      "nameOriginal": "Create Soulstone",
+      "descriptionCs": "Tvorba kamene duše; betový přehled uvádí začátek na úrovni 18.",
+      "aliases": [
+        "warlock",
+        "kouzlo",
+        "výcvik"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": 18,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "payload": "{\"firstRankLevel\":18,\"fullAccessConditionsUnknown\":true}"
+    },
+    {
+      "key": "wow-forever:spell:book:warlock:ritual-of-summoning",
+      "kind": "SPELL",
+      "gameId": null,
+      "nameOriginal": "Ritual of Summoning",
+      "descriptionCs": "Přivolávací rituál; betový přehled uvádí začátek na úrovni 20.",
+      "aliases": [
+        "warlock",
+        "kouzlo",
+        "výcvik"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": 20,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "payload": "{\"firstRankLevel\":20,\"fullAccessConditionsUnknown\":true}"
+    },
+    {
+      "key": "wow-forever:quest:5726",
+      "kind": "QUEST",
+      "gameId": 5726,
+      "nameOriginal": "Hidden Enemies",
+      "descriptionCs": "Starší reference prvního kroku řetězce. Ve Forever zatím není samostatně doložená; neodemkne automaticky další úkol.",
+      "aliases": [
+        "5726",
+        "Ragefire Chasm",
+        "reference"
+      ],
+      "verification": "CLASSIC",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": 12,
+      "sourceIds": [
+        "e10_classic_hidden_chain"
+      ],
+      "payload": "{\"origin\":\"Classic-based chain\",\"notVerifiedInForever\":true}"
+    },
+    {
+      "key": "wow-forever:travel:flight-point:3615",
+      "kind": "TRAVEL",
+      "gameId": null,
+      "nameOriginal": "Devrak — letový bod",
+      "descriptionCs": "Osobní evidence objevení beta letového bodu. Samotné označení nepotvrdí spojení s jiným místem.",
+      "aliases": [
+        "letový bod",
+        "doprava",
+        "Devrak"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3615"
+      ],
+      "payload": "{\"npcKey\":\"wow-forever:npc:3615\",\"verifiedConnections\":0}"
+    },
+    {
+      "key": "wow-forever:travel:flight-point:3310",
+      "kind": "TRAVEL",
+      "gameId": null,
+      "nameOriginal": "Doras — letový bod",
+      "descriptionCs": "Osobní evidence objevení beta letového bodu. Samotné označení nepotvrdí spojení s jiným místem.",
+      "aliases": [
+        "letový bod",
+        "doprava",
+        "Doras"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_3310"
+      ],
+      "payload": "{\"npcKey\":\"wow-forever:npc:3310\",\"verifiedConnections\":0}"
+    },
+    {
+      "key": "wow-forever:travel:flight-point:16227",
+      "kind": "TRAVEL",
+      "gameId": null,
+      "nameOriginal": "Bragok — letový bod",
+      "descriptionCs": "Osobní evidence objevení beta letového bodu. Samotné označení nepotvrdí spojení s jiným místem.",
+      "aliases": [
+        "letový bod",
+        "doprava",
+        "Bragok"
+      ],
+      "verification": "BETA",
+      "releaseConfirmed": false,
+      "minimumLevel": null,
+      "reportedLevel": null,
+      "sourceIds": [
+        "e10_npc_16227"
+      ],
+      "payload": "{\"npcKey\":\"wow-forever:npc:16227\",\"verifiedConnections\":0}"
+    }
+  ],
+  "locations": [
+    {
+      "key": "wow-forever:npc:3216:location:0",
+      "entryKey": "wow-forever:npc:3216",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 50.1,
+      "yPercent": 50.4,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3216"
+    },
+    {
+      "key": "wow-forever:npc:3309:location:0",
+      "entryKey": "wow-forever:npc:3309",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 49.8,
+      "yPercent": 69.7,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3309"
+    },
+    {
+      "key": "wow-forever:npc:3310:location:0",
+      "entryKey": "wow-forever:npc:3310",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 45.3,
+      "yPercent": 63.7,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3310"
+    },
+    {
+      "key": "wow-forever:npc:3337:location:0",
+      "entryKey": "wow-forever:npc:3337",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 62.0,
+      "yPercent": 18.7,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3337"
+    },
+    {
+      "key": "wow-forever:npc:3338:location:0",
+      "entryKey": "wow-forever:npc:3338",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 51.7,
+      "yPercent": 30.3,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3338"
+    },
+    {
+      "key": "wow-forever:npc:3345:location:0",
+      "entryKey": "wow-forever:npc:3345",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 53.7,
+      "yPercent": 37.9,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3345"
+    },
+    {
+      "key": "wow-forever:npc:3346:location:0",
+      "entryKey": "wow-forever:npc:3346",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 53.8,
+      "yPercent": 38.3,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3346"
+    },
+    {
+      "key": "wow-forever:npc:3363:location:0",
+      "entryKey": "wow-forever:npc:3363",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 63.7,
+      "yPercent": 50.3,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3363"
+    },
+    {
+      "key": "wow-forever:npc:3390:location:0",
+      "entryKey": "wow-forever:npc:3390",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 51.8,
+      "yPercent": 30.3,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3390"
+    },
+    {
+      "key": "wow-forever:npc:3391:location:0",
+      "entryKey": "wow-forever:npc:3391",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 62.7,
+      "yPercent": 36.3,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3391"
+    },
+    {
+      "key": "wow-forever:npc:3429:location:0",
+      "entryKey": "wow-forever:npc:3429",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 52.0,
+      "yPercent": 30.4,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3429"
+    },
+    {
+      "key": "wow-forever:npc:3432:location:0",
+      "entryKey": "wow-forever:npc:3432",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 51.9,
+      "yPercent": 31.4,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3432"
+    },
+    {
+      "key": "wow-forever:npc:3442:location:0",
+      "entryKey": "wow-forever:npc:3442",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 63.0,
+      "yPercent": 37.1,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3442"
+    },
+    {
+      "key": "wow-forever:npc:3446:location:0",
+      "entryKey": "wow-forever:npc:3446",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 62.4,
+      "yPercent": 37.7,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3446"
+    },
+    {
+      "key": "wow-forever:npc:3448:location:0",
+      "entryKey": "wow-forever:npc:3448",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 52.1,
+      "yPercent": 31.8,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3448"
+    },
+    {
+      "key": "wow-forever:npc:3453:location:0",
+      "entryKey": "wow-forever:npc:3453",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 63.2,
+      "yPercent": 38.2,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3453"
+    },
+    {
+      "key": "wow-forever:npc:3464:location:0",
+      "entryKey": "wow-forever:npc:3464",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 52.0,
+      "yPercent": 30.3,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3464"
+    },
+    {
+      "key": "wow-forever:npc:3486:location:0",
+      "entryKey": "wow-forever:npc:3486",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 52.2,
+      "yPercent": 32.1,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3486"
+    },
+    {
+      "key": "wow-forever:npc:3487:location:0",
+      "entryKey": "wow-forever:npc:3487",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 52.2,
+      "yPercent": 31.8,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3487"
+    },
+    {
+      "key": "wow-forever:npc:3489:location:0",
+      "entryKey": "wow-forever:npc:3489",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 52.5,
+      "yPercent": 30.0,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3489"
+    },
+    {
+      "key": "wow-forever:npc:3496:location:0",
+      "entryKey": "wow-forever:npc:3496",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 62.7,
+      "yPercent": 37.5,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3496"
+    },
+    {
+      "key": "wow-forever:npc:3521:location:0",
+      "entryKey": "wow-forever:npc:3521",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 62.4,
+      "yPercent": 20.1,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3521"
+    },
+    {
+      "key": "wow-forever:npc:3615:location:0",
+      "entryKey": "wow-forever:npc:3615",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 51.6,
+      "yPercent": 30.4,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3615"
+    },
+    {
+      "key": "wow-forever:npc:3665:location:0",
+      "entryKey": "wow-forever:npc:3665",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 63.1,
+      "yPercent": 37.6,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3665"
+    },
+    {
+      "key": "wow-forever:npc:3934:location:0",
+      "entryKey": "wow-forever:npc:3934",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 52.0,
+      "yPercent": 29.9,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3934"
+    },
+    {
+      "key": "wow-forever:npc:4949:location:0",
+      "entryKey": "wow-forever:npc:4949",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 32.9,
+      "yPercent": 37.8,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_4949"
+    },
+    {
+      "key": "wow-forever:npc:5767:location:0",
+      "entryKey": "wow-forever:npc:5767",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 46.5,
+      "yPercent": 36.8,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_5767"
+    },
+    {
+      "key": "wow-forever:npc:5815:location:0",
+      "entryKey": "wow-forever:npc:5815",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 50.4,
+      "yPercent": 47.3,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_5815"
+    },
+    {
+      "key": "wow-forever:npc:6791:location:0",
+      "entryKey": "wow-forever:npc:6791",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 62.1,
+      "yPercent": 39.4,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_6791"
+    },
+    {
+      "key": "wow-forever:npc:6929:location:0",
+      "entryKey": "wow-forever:npc:6929",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 54.3,
+      "yPercent": 68.3,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_6929"
+    },
+    {
+      "key": "wow-forever:npc:8673:location:0",
+      "entryKey": "wow-forever:npc:8673",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 51.1,
+      "yPercent": 70.1,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_8673"
+    },
+    {
+      "key": "wow-forever:npc:16227:location:0",
+      "entryKey": "wow-forever:npc:16227",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 63.1,
+      "yPercent": 37.1,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_16227"
+    },
+    {
+      "key": "wow-forever:travel:flight-point:3615:location:0",
+      "entryKey": "wow-forever:travel:flight-point:3615",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 51.6,
+      "yPercent": 30.4,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3615"
+    },
+    {
+      "key": "wow-forever:travel:flight-point:3310:location:0",
+      "entryKey": "wow-forever:travel:flight-point:3310",
+      "mapKey": "wow-forever:map:1454",
+      "coordinateVersion": "wow-forever:map:1454:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 45.3,
+      "yPercent": 63.7,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_3310"
+    },
+    {
+      "key": "wow-forever:travel:flight-point:16227:location:0",
+      "entryKey": "wow-forever:travel:flight-point:16227",
+      "mapKey": "wow-forever:map:1413",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "floorId": 0,
+      "xPercent": 63.1,
+      "yPercent": 37.1,
+      "precisionPercent": 0.1,
+      "sourceId": "e10_npc_16227"
+    }
+  ],
+  "relations": [
+    {
+      "key": "wow-forever:relation:e10:start:809",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:809",
+      "targetKeys": [
+        "wow-forever:npc:3216"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_809"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:end:809",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:809",
+      "targetKeys": [
+        "wow-forever:npc:3521"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_809"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:842",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:842",
+      "targetKeys": [
+        "wow-forever:npc:3337"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_842"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:end:842",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:842",
+      "targetKeys": [
+        "wow-forever:npc:3338"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_842"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:844",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:844",
+      "targetKeys": [
+        "wow-forever:npc:3338"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_844"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:845",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:845",
+      "targetKeys": [
+        "wow-forever:npc:3338"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_845"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:848",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:848",
+      "targetKeys": [
+        "wow-forever:npc:3390"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_848"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:865",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:865",
+      "targetKeys": [
+        "wow-forever:npc:3446"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_865"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:869",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:869",
+      "targetKeys": [
+        "wow-forever:npc:3464"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_869"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:870",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:870",
+      "targetKeys": [
+        "wow-forever:npc:3448"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_870"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:871",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:871",
+      "targetKeys": [
+        "wow-forever:npc:3429"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_871"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:872",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:872",
+      "targetKeys": [
+        "wow-forever:npc:3429"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_872"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:877",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:877",
+      "targetKeys": [
+        "wow-forever:npc:3448"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_877"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:880",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:880",
+      "targetKeys": [
+        "wow-forever:npc:3448"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_880"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:881",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:881",
+      "targetKeys": [
+        "wow-forever:npc:3338"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_881"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:887",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:887",
+      "targetKeys": [
+        "wow-forever:npc:3391"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_887"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:888",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:888",
+      "targetKeys": [
+        "wow-forever:npc:3391"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_888"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:890",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:890",
+      "targetKeys": [
+        "wow-forever:npc:3391"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_890"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:end:890",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:890",
+      "targetKeys": [
+        "wow-forever:npc:3453"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_890"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:892",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:892",
+      "targetKeys": [
+        "wow-forever:npc:3453"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_892"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:end:892",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:892",
+      "targetKeys": [
+        "wow-forever:npc:3391"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_892"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:end:895",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:895",
+      "targetKeys": [
+        "wow-forever:npc:3391"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_895"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:896",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:896",
+      "targetKeys": [
+        "wow-forever:npc:3453"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_896"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:899",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:899",
+      "targetKeys": [
+        "wow-forever:npc:3432"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_899"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:903",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:903",
+      "targetKeys": [
+        "wow-forever:npc:3338"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_903"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:924",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:924",
+      "targetKeys": [
+        "wow-forever:npc:3521"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_924"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:959",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:959",
+      "targetKeys": [
+        "wow-forever:npc:3665"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_959"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:1486",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:1486",
+      "targetKeys": [
+        "wow-forever:npc:5767"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_1486"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:1487",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:1487",
+      "targetKeys": [
+        "wow-forever:npc:5768"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_1487"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:1491",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:1491",
+      "targetKeys": [
+        "wow-forever:npc:3446"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_1491"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:3281",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:3281",
+      "targetKeys": [
+        "wow-forever:npc:3464"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_3281"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:4921",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:4921",
+      "targetKeys": [
+        "wow-forever:npc:3432"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_4921"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:5727",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:5727",
+      "targetKeys": [
+        "wow-forever:npc:4949"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_5727"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:5728",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:5728",
+      "targetKeys": [
+        "wow-forever:npc:4949"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_5728"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:5729",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:5729",
+      "targetKeys": [
+        "wow-forever:npc:4949"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_5729"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:end:5729",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:5729",
+      "targetKeys": [
+        "wow-forever:npc:3216"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_5729"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:5730",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:5730",
+      "targetKeys": [
+        "wow-forever:npc:3216"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_5730"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:end:5730",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:5730",
+      "targetKeys": [
+        "wow-forever:npc:4949"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_5730"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:5761",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:5761",
+      "targetKeys": [
+        "wow-forever:npc:3216"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_5761"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:6365",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:6365",
+      "targetKeys": [
+        "wow-forever:npc:3489"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_6365"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:end:6365",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:6365",
+      "targetKeys": [
+        "wow-forever:npc:3615"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_6365"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:6384",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:6384",
+      "targetKeys": [
+        "wow-forever:npc:3615"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_6384"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:end:6384",
+      "kind": "END_NPC",
+      "ownerKey": "wow-forever:quest:6384",
+      "targetKeys": [
+        "wow-forever:npc:6929"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_6384"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:6385",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:6385",
+      "targetKeys": [
+        "wow-forever:npc:6929"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_6385"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:start:95774",
+      "kind": "START_NPC",
+      "ownerKey": "wow-forever:quest:95774",
+      "targetKeys": [
+        "wow-forever:npc:3432"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_quest_95774"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:reward:5337:888",
+      "kind": "REWARD_CHOICE",
+      "ownerKey": "wow-forever:item:5337",
+      "targetKeys": [
+        "wow-forever:quest:888"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_item_5337",
+        "e10_quest_888"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:reward:5343:865",
+      "kind": "REWARD_CHOICE",
+      "ownerKey": "wow-forever:item:5343",
+      "targetKeys": [
+        "wow-forever:quest:865"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_item_5343",
+        "e10_quest_865"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:reward:5420:924",
+      "kind": "REWARD_CHOICE",
+      "ownerKey": "wow-forever:item:5420",
+      "targetKeys": [
+        "wow-forever:quest:924"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_item_5420",
+        "e10_quest_924"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:reward:6477:899",
+      "kind": "REWARD_CHOICE",
+      "ownerKey": "wow-forever:item:6477",
+      "targetKeys": [
+        "wow-forever:quest:899"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_item_6477",
+        "e10_quest_899"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:reward:8071:1487",
+      "kind": "REWARD_CHOICE",
+      "ownerKey": "wow-forever:item:8071",
+      "targetKeys": [
+        "wow-forever:quest:1487"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_item_8071",
+        "e10_quest_1487"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:reward:15443:5730",
+      "kind": "REWARD_CHOICE",
+      "ownerKey": "wow-forever:item:15443",
+      "targetKeys": [
+        "wow-forever:quest:5730"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_item_15443",
+        "e10_quest_5730"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:reward:15444:5730",
+      "kind": "REWARD_CHOICE",
+      "ownerKey": "wow-forever:item:15444",
+      "targetKeys": [
+        "wow-forever:quest:5730"
+      ],
+      "mode": "ALL",
+      "verification": "BETA",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_item_15444",
+        "e10_quest_5730"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:classic-hidden:5727",
+      "kind": "PREREQUISITE",
+      "ownerKey": "wow-forever:quest:5727",
+      "targetKeys": [
+        "wow-forever:quest:5726"
+      ],
+      "mode": "ALL",
+      "verification": "CLASSIC",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_classic_hidden_chain"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:classic-hidden:5728",
+      "kind": "PREREQUISITE",
+      "ownerKey": "wow-forever:quest:5728",
+      "targetKeys": [
+        "wow-forever:quest:5727"
+      ],
+      "mode": "ALL",
+      "verification": "CLASSIC",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_classic_hidden_chain"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:classic-hidden:5729",
+      "kind": "PREREQUISITE",
+      "ownerKey": "wow-forever:quest:5729",
+      "targetKeys": [
+        "wow-forever:quest:5728"
+      ],
+      "mode": "ALL",
+      "verification": "CLASSIC",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_classic_hidden_chain"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:classic-hidden:5730",
+      "kind": "PREREQUISITE",
+      "ownerKey": "wow-forever:quest:5730",
+      "targetKeys": [
+        "wow-forever:quest:5729"
+      ],
+      "mode": "ALL",
+      "verification": "CLASSIC",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_classic_hidden_chain"
+      ]
+    },
+    {
+      "key": "wow-forever:relation:e10:classic-drinks",
+      "kind": "PREREQUISITE",
+      "ownerKey": "wow-forever:quest:1491",
+      "targetKeys": [
+        "wow-forever:quest:865"
+      ],
+      "mode": "ALL",
+      "verification": "CLASSIC",
+      "routingEnabled": false,
+      "sourceIds": [
+        "e10_classic_wc_prep"
+      ]
+    }
+  ],
+  "guideRules": [
+    {
+      "key": "wow-forever:rule:e10:quest:842",
+      "entryKey": "wow-forever:quest:842",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DISCOVERY",
+      "reasonCs": "Kontakt nebo krok, který se hodí zkontrolovat při cestě oblastí.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_842"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:924",
+      "entryKey": "wow-forever:quest:924",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DISCOVERY",
+      "reasonCs": "Kontakt nebo krok, který se hodí zkontrolovat při cestě oblastí.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_924"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:959",
+      "entryKey": "wow-forever:quest:959",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DUNGEON",
+      "reasonCs": "Podklad k přípravě před návštěvou dungeonu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_959"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:1486",
+      "entryKey": "wow-forever:quest:1486",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DUNGEON",
+      "reasonCs": "Podklad k přípravě před návštěvou dungeonu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_1486"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:1487",
+      "entryKey": "wow-forever:quest:1487",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DUNGEON",
+      "reasonCs": "Podklad k přípravě před návštěvou dungeonu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_1487"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:1491",
+      "entryKey": "wow-forever:quest:1491",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DUNGEON",
+      "reasonCs": "Podklad k přípravě před návštěvou dungeonu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_1491"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:5727",
+      "entryKey": "wow-forever:quest:5727",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DUNGEON",
+      "reasonCs": "Podklad k přípravě před návštěvou dungeonu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_5727"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:5728",
+      "entryKey": "wow-forever:quest:5728",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DUNGEON",
+      "reasonCs": "Podklad k přípravě před návštěvou dungeonu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_5728"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:5729",
+      "entryKey": "wow-forever:quest:5729",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DUNGEON",
+      "reasonCs": "Podklad k přípravě před návštěvou dungeonu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_5729"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:5730",
+      "entryKey": "wow-forever:quest:5730",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DUNGEON",
+      "reasonCs": "Podklad k přípravě před návštěvou dungeonu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_5730"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:5761",
+      "entryKey": "wow-forever:quest:5761",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "DUNGEON",
+      "reasonCs": "Podklad k přípravě před návštěvou dungeonu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_5761"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:6384",
+      "entryKey": "wow-forever:quest:6384",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413,
+              1454
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "TRAVEL",
+      "reasonCs": "Kontakt nebo krok, který se hodí zkontrolovat při cestě oblastí.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_6384"
+      ],
+      "areaIds": [
+        1413,
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:quest:6385",
+      "entryKey": "wow-forever:quest:6385",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "TRAVEL",
+      "reasonCs": "Kontakt nebo krok, který se hodí zkontrolovat při cestě oblastí.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_quest_6385"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:item:5337",
+      "entryKey": "wow-forever:item:5337",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "REWARD",
+      "reasonCs": "Kandidát na odměnu pro Warlocka; porovnej s vlastní výbavou a aktuálním zadáním.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_item_5337"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:item:5343",
+      "entryKey": "wow-forever:item:5343",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "REWARD",
+      "reasonCs": "Kandidát na odměnu pro Warlocka; porovnej s vlastní výbavou a aktuálním zadáním.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_item_5343"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:item:5420",
+      "entryKey": "wow-forever:item:5420",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "REWARD",
+      "reasonCs": "Kandidát na odměnu pro Warlocka; porovnej s vlastní výbavou a aktuálním zadáním.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_item_5420"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:item:6477",
+      "entryKey": "wow-forever:item:6477",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "REWARD",
+      "reasonCs": "Kandidát na odměnu pro Warlocka; porovnej s vlastní výbavou a aktuálním zadáním.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_item_6477"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:item:8071",
+      "entryKey": "wow-forever:item:8071",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "REWARD",
+      "reasonCs": "Kandidát na odměnu pro Warlocka; porovnej s vlastní výbavou a aktuálním zadáním.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_item_8071"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:item:15443",
+      "entryKey": "wow-forever:item:15443",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "REWARD",
+      "reasonCs": "Kandidát na odměnu pro Warlocka; porovnej s vlastní výbavou a aktuálním zadáním.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_item_15443"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:item:15444",
+      "entryKey": "wow-forever:item:15444",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "REWARD",
+      "reasonCs": "Kandidát na odměnu pro Warlocka; porovnej s vlastní výbavou a aktuálním zadáním.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_item_15444"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:spell:book:warlock:summon-voidwalker",
+      "entryKey": "wow-forever:spell:book:warlock:summon-voidwalker",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "level",
+            "minimum": 10
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "CLASS",
+      "reasonCs": "Při návštěvě města zkontroluj uvedený třídový milník v klientu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:spell:book:warlock:drain-soul",
+      "entryKey": "wow-forever:spell:book:warlock:drain-soul",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "level",
+            "minimum": 10
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "CLASS",
+      "reasonCs": "Při návštěvě města zkontroluj uvedený třídový milník v klientu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:spell:book:warlock:create-healthstone",
+      "entryKey": "wow-forever:spell:book:warlock:create-healthstone",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "level",
+            "minimum": 10
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "CLASS",
+      "reasonCs": "Při návštěvě města zkontroluj uvedený třídový milník v klientu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:spell:book:warlock:create-soulstone",
+      "entryKey": "wow-forever:spell:book:warlock:create-soulstone",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "level",
+            "minimum": 18
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "CLASS",
+      "reasonCs": "Při návštěvě města zkontroluj uvedený třídový milník v klientu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:spell:book:warlock:ritual-of-summoning",
+      "entryKey": "wow-forever:spell:book:warlock:ritual-of-summoning",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "class",
+            "values": [
+              "WARLOCK"
+            ]
+          },
+          {
+            "type": "level",
+            "minimum": 20
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "CLASS",
+      "reasonCs": "Při návštěvě města zkontroluj uvedený třídový milník v klientu.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_warlock_book"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:travel:flight-point:3615",
+      "entryKey": "wow-forever:travel:flight-point:3615",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "TRAVEL",
+      "reasonCs": "Ověř bod ve hře a případné objevení si ulož. Spojení mezi body není doložené.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_npc_3615"
+      ],
+      "areaIds": [
+        1413
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:travel:flight-point:3310",
+      "entryKey": "wow-forever:travel:flight-point:3310",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1454
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "TRAVEL",
+      "reasonCs": "Ověř bod ve hře a případné objevení si ulož. Spojení mezi body není doložené.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_npc_3310"
+      ],
+      "areaIds": [
+        1454
+      ]
+    },
+    {
+      "key": "wow-forever:rule:e10:travel:flight-point:16227",
+      "entryKey": "wow-forever:travel:flight-point:16227",
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "area",
+            "uiMapIds": [
+              1413
+            ]
+          },
+          {
+            "type": "unknown",
+            "reasonCs": "Úplné podmínky pro tvoji postavu a současný klient ještě nejsou ověřené."
+          }
+        ]
+      },
+      "importance": "TRAVEL",
+      "reasonCs": "Ověř bod ve hře a případné objevení si ulož. Spojení mezi body není doložené.",
+      "verification": "BETA",
+      "sourceIds": [
+        "e10_npc_16227"
+      ],
+      "areaIds": [
+        1413
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "key": "wow-forever:map:1413",
+      "uiMapId": 1413,
+      "floorId": 0,
+      "name": "The Barrens",
+      "width": 1002,
+      "height": 668,
+      "levels": 3,
+      "build": "1.60.1.69893",
+      "coordinateVersion": "wow-forever:map:1413:1.60.1.69893:v1",
+      "sourceId": "e10_map_1413",
+      "sourceUrl": "https://warcraftforever.games/maps/the-barrens",
+      "transform": {
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "offsetX": 0.0,
+        "offsetY": 0.0
+      },
+      "scopeCs": "Výběr Crossroads, Ratchet, Far Watch Post a přípravy na Wailing Caverns. Převážně úkoly udané na úrovních 10–20; celý Barrens ani vnitřek dungeonu nejsou zpracované."
+    }
+  ],
+  "mapUpdates": [
+    {
+      "key": "wow-forever:map:1454",
+      "scopeCs": "Vybrané služby v Orgrimmaru, přehled pro Warlocka a příprava Ragefire Chasm. Nejde o úplný katalog města ani průvodce vnitřkem dungeonu."
+    }
+  ],
+  "transportGraph": {
+    "nodes": [
+      {
+        "key": "wow-forever:travel-node:flight:3615",
+        "nameCs": "Devrak",
+        "locationKey": "wow-forever:travel:flight-point:3615:location:0",
+        "sourceIds": [
+          "e10_npc_3615"
+        ],
+        "discoveryKey": "wow-forever:travel:flight-point:3615"
+      },
+      {
+        "key": "wow-forever:travel-node:flight:3310",
+        "nameCs": "Doras",
+        "locationKey": "wow-forever:travel:flight-point:3310:location:0",
+        "sourceIds": [
+          "e10_npc_3310"
+        ],
+        "discoveryKey": "wow-forever:travel:flight-point:3310"
+      },
+      {
+        "key": "wow-forever:travel-node:flight:16227",
+        "nameCs": "Bragok",
+        "locationKey": "wow-forever:travel:flight-point:16227:location:0",
+        "sourceIds": [
+          "e10_npc_16227"
+        ],
+        "discoveryKey": "wow-forever:travel:flight-point:16227"
+      }
+    ],
+    "edges": []
+  }
+}

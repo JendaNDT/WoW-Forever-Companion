@@ -1,0 +1,22 @@
+test_reported_level_cannot_become_minimum_or_classic_chain_become_enabled (test_e10b_data.E10Batch2RegressionTest.test_reported_level_cannot_become_minimum_or_classic_chain_become_enabled) ... ok
+test_reviewed_distribution_preserves_older_ids (test_e10b_data.E10Batch2RegressionTest.test_reviewed_distribution_preserves_older_ids) ... ok
+test_wrong_reward_quest_cannot_silently_attach_vest_to_kill_step (test_e10b_data.E10Batch2RegressionTest.test_wrong_reward_quest_cannot_silently_attach_vest_to_kill_step) ... ok
+test_classic_chain_cannot_unlock_live_content (test_e10c_data.E10Batch3RegressionTest.test_classic_chain_cannot_unlock_live_content) ... ok
+test_classic_position_cannot_silently_become_beta_observation (test_e10c_data.E10Batch3RegressionTest.test_classic_position_cannot_silently_become_beta_observation) ... ok
+test_fixed_reward_cannot_become_an_optional_choice (test_e10c_data.E10Batch3RegressionTest.test_fixed_reward_cannot_become_an_optional_choice) ... ok
+test_reviewed_distribution_retains_published_content (test_e10c_data.E10Batch3RegressionTest.test_reviewed_distribution_retains_published_content) ... ok
+test_frame_statistics_ignore_incomplete_flagged_and_invalid_rows (test_e11_device_capture.DeviceEvidenceParsingTest.test_frame_statistics_ignore_incomplete_flagged_and_invalid_rows) ... ok
+test_memory_supports_both_android_formats_and_missing_is_not_zero (test_e11_device_capture.DeviceEvidenceParsingTest.test_memory_supports_both_android_formats_and_missing_is_not_zero) ... ok
+test_missing_frame_data_stays_unknown (test_e11_device_capture.DeviceEvidenceParsingTest.test_missing_frame_data_stays_unknown) ... ok
+test_archive_state_cannot_claim_a_different_revision (test_release_identity.ReleaseIdentityTest.test_archive_state_cannot_claim_a_different_revision) ... ok
+test_changed_source_cannot_keep_old_apk_identity (test_release_identity.ReleaseIdentityTest.test_changed_source_cannot_keep_old_apk_identity) ... ok
+test_dirty_revision_is_never_a_release (test_release_identity.ReleaseIdentityTest.test_dirty_revision_is_never_a_release) ... ok
+test_exact_archive_matches_and_docs_are_outside_apk_inputs (test_release_identity.ReleaseIdentityTest.test_exact_archive_matches_and_docs_are_outside_apk_inputs) ... ok
+test_git_receipt_is_bound_to_actual_committed_inputs (test_release_identity.ReleaseIdentityTest.test_git_receipt_is_bound_to_actual_committed_inputs) ... ok
+test_unknown_metadata_fields_and_boolean_version_are_rejected (test_release_identity.ReleaseIdentityTest.test_unknown_metadata_fields_and_boolean_version_are_rejected) ... ok
+test_wrong_public_pins_are_rejected_even_when_sources_are_unchanged (test_release_identity.ReleaseIdentityTest.test_wrong_public_pins_are_rejected_even_when_sources_are_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.957s
+
+OK

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E09FlowTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-25T14:27:57.040Z" hostname="eb5eafc03222" time="3.146">
+  <properties/>
+  <testcase name="previewConfirmActualMapSwitchRecreateAndRollbackPreservePersonalProgress" classname="cz.jenda.wowforever.E09FlowTest" time="1.637"/>
+  <testcase name="removedCatalogRecordStaysInPersonalHistoryAndResetRetainsIt" classname="cz.jenda.wowforever.E09FlowTest" time="1.033"/>
+  <testcase name="wrongSignatureShowsAUsefulErrorAndKeepsTheOriginalMapAndPlan" classname="cz.jenda.wowforever.E09FlowTest" time="0.476"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

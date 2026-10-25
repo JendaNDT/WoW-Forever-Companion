@@ -1,0 +1,3 @@
+package: cz.jenda.wowforever
+permission: cz.jenda.wowforever.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='cz.jenda.wowforever.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "apkUnchangedSha256": "462e17f1ddb3e246307618294d00bd9e7f7ea2cedebe1211cc063ab3587ccb9d",
+  "apkCodeIdentity": {
+    "sourceRevision": "b5db01b48e7c7bd2fa5fa22ac61b17138ef1fc7d",
+    "buildInputsSha256": "063fdb8c774137fad29eaac0d0a280c94ab3a3871e8bf401b81dd88f62361de5",
+    "inputFiles": 125,
+    "gitRevisionVerified": true
+  },
+  "dataSha256": "27b70643d39c0c832f12da4f4ceac1aa57fda19fbf7fac533d84fb3e73aab725",
+  "dataBytes": 9684063,
+  "tilesByteIdenticalToGeneration4": 85,
+  "publicTestManifestAndCatalogMatchDistribution": true,
+  "packageValidation": {
+    "passed": true,
+    "generation": 5,
+    "files": 86,
+    "maps": 5,
+    "entries": 182,
+    "publisher_signature_verified": true
+  }
+}

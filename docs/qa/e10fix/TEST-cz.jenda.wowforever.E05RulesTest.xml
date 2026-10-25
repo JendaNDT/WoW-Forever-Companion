@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E05RulesTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-25T16:33:34.725Z" hostname="eb5eafc03222" time="0.011">
+  <properties/>
+  <testcase name="classicAndDisabledRulesNeverPromoteAvailabilityToConfirmed" classname="cz.jenda.wowforever.E05RulesTest" time="0.001"/>
+  <testcase name="anyUnlocksWithOneCompletedAlternativeAndRecomputesAfterUndo" classname="cz.jenda.wowforever.E05RulesTest" time="0.0"/>
+  <testcase name="impactWalkHandlesBranchesCyclesAndSeparateQuestIds" classname="cz.jenda.wowforever.E05RulesTest" time="0.008"/>
+  <testcase name="exclusiveChoiceIsScopedToVerifiedGroupAndCompletion" classname="cz.jenda.wowforever.E05RulesTest" time="0.0"/>
+  <testcase name="allRequiresEveryCompletedStepAndDeferredNeverCounts" classname="cz.jenda.wowforever.E05RulesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

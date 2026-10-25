@@ -1,0 +1,25 @@
+.gradle/
+.kotlin/
+**/build/
+local.properties
+*.jks
+*.keystore
+.idea/
+captures/
+__pycache__/
+*.py[cod]
+.DS_Store
+dist/
+*.apk
+*.aab
+*.p12
+*.pfx
+*.pem
+.env
+.env.*
+!.env.example
+history.bundle
+
+# Exact compressed generated catalogs are tracked.
+content/e10-v7.json
+content/e10-v8.json

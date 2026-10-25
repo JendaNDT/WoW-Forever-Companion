@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "applicationId": "cz.jenda.wowforever.guide",
+  "versionCode": 12,
+  "versionName": "0.12.0-e12",
+  "channel": "pilot",
+  "sourceRevision": "b5db01b48e7c7bd2fa5fa22ac61b17138ef1fc7d",
+  "sourceDirty": false,
+  "buildInputsSha256": "063fdb8c774137fad29eaac0d0a280c94ab3a3871e8bf401b81dd88f62361de5",
+  "fallbackCatalogSha256": "038ee9dbc4ac67233b5f265a84eec912341ed45396567bf9d2e3a47cfcc79d36",
+  "publisherKeySha256": "7a647e119089a2758c1ca48da711f4c52036b3e0118af6d4bd65e8b0b39a6894",
+  "ownerCertificateSha256": "e422650dc10efbf7074ae880c0cbc0d7e6d09c8d3ba6a1b1e761f99f441c2f6b"
+}

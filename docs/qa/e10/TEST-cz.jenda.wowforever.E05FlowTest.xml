@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E05FlowTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-24T22:03:13.257Z" hostname="e6c755ef2603" time="3.358">
+  <properties/>
+  <testcase name="invalidDocumentOnlyShowsErrorAndKeepsPersonalDatabaseUntouched" classname="cz.jenda.wowforever.E05FlowTest" time="0.4"/>
+  <testcase name="systemDocumentContractsExportPreviewAndDefaultNewProfileRestore" classname="cz.jenda.wowforever.E05FlowTest" time="0.483"/>
+  <testcase name="reversingCompletedPredecessorNeedsConfirmationAndKeepsDescendantRecord" classname="cz.jenda.wowforever.E05FlowTest" time="0.444"/>
+  <testcase name="replacementAndSnapshotRecoveryAreReachableInShortLandscapeDialog" classname="cz.jenda.wowforever.E05FlowTest" time="0.555"/>
+  <testcase name="rewardChangeNeedsConfirmationAndAcquisitionStaysIndependent" classname="cz.jenda.wowforever.E05FlowTest" time="0.532"/>
+  <testcase name="questStatesUndoRecreationAndJourneyFilterAreConnected" classname="cz.jenda.wowforever.E05FlowTest" time="0.527"/>
+  <testcase name="verifiedCatalogExclusiveChoiceBlocksOtherBranchUntilPriorStateIsChanged" classname="cz.jenda.wowforever.E05FlowTest" time="0.415"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

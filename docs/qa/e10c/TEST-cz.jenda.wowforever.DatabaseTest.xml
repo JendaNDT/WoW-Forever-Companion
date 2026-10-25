@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.DatabaseTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-25T14:27:39.826Z" hostname="eb5eafc03222" time="3.088">
+  <properties/>
+  <testcase name="conflictingGenerationAndDowngradeAreRefused" classname="cz.jenda.wowforever.DatabaseTest" time="2.043"/>
+  <testcase name="removingEntryRetainsItsPersonalSnapshot" classname="cz.jenda.wowforever.DatabaseTest" time="0.09"/>
+  <testcase name="unsupportedSchemaVersionRefusesToDeletePersonalData" classname="cz.jenda.wowforever.DatabaseTest" time="0.58"/>
+  <testcase name="invalidUpdateDoesNotChangeEitherDatabase" classname="cz.jenda.wowforever.DatabaseTest" time="0.055"/>
+  <testcase name="personalFileReopensWithoutLosingBookmark" classname="cz.jenda.wowforever.DatabaseTest" time="0.087"/>
+  <testcase name="renamingContentPreservesProgressAndPersonalHistory" classname="cz.jenda.wowforever.DatabaseTest" time="0.074"/>
+  <testcase name="importIsIdempotentAndSearchUsesAliasesWithoutAccents" classname="cz.jenda.wowforever.DatabaseTest" time="0.055"/>
+  <testcase name="profilesAndCompletionStatesStaySeparate" classname="cz.jenda.wowforever.DatabaseTest" time="0.052"/>
+  <testcase name="databaseFailureRollsBackTheWholeImport" classname="cz.jenda.wowforever.DatabaseTest" time="0.052"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

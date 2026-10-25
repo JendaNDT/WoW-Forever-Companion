@@ -1,0 +1,210 @@
+{
+  "schema_version": "e00-1",
+  "checked_on": "2026-10-23",
+  "sources": [
+    {
+      "id": "official_classes",
+      "url": "https://news.blizzard.com/en-us/article/24304075/create-the-hero-you-want-to-be-in-world-of-warcraft-forever",
+      "kind": "official_announcement",
+      "purpose": "Ork může být Warlockem za Hordu.",
+      "retrieval": "web_read",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "recorder_maps",
+      "url": "https://warcraftforever.games/maps",
+      "kind": "publisher_reported_beta_extraction",
+      "purpose": "Zdroj map s výslovným označením bety.",
+      "reported_build": "1.60.1.69893",
+      "retrieval": "web_read",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "eq_available",
+      "url": "https://github.com/wheelbarrel00/EverythingQuests/blob/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestAvailable_Forever.lua",
+      "kind": "community_classic_reference",
+      "commit": "9c1ce1e44238d8c6c8ca36d8f49836fde70b564f",
+      "purpose": "Souřadnice a pravidla dostupnosti; tabulka se jmenuje CLASSIC_QUEST_AVAILABLE. Samotný název souboru nepotvrzuje ověření ve Forever.",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "eq_turnin",
+      "url": "https://github.com/wheelbarrel00/EverythingQuests/blob/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestTurnIn_Forever.lua",
+      "kind": "community_classic_reference",
+      "commit": "9c1ce1e44238d8c6c8ca36d8f49836fde70b564f",
+      "purpose": "Referenční místa odevzdání; neověřená v aktuálním klientu.",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "eq_names",
+      "url": "https://github.com/wheelbarrel00/EverythingQuests/blob/9c1ce1e44238d8c6c8ca36d8f49836fde70b564f/Data/QuestSources_Forever.lua",
+      "kind": "community_reference",
+      "commit": "9c1ce1e44238d8c6c8ca36d8f49836fde70b564f",
+      "purpose": "Přiřazení jmen k ID NPC.",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "att_durotar",
+      "url": "https://github.com/ATTWoWAddon/AllTheThings/blob/64b17f0be6d062412de564cd20f739c1241a0743/.contrib/.db/forever/zones/kalimdor/durotar.lua",
+      "kind": "community_forever_catalog",
+      "commit": "64b17f0be6d062412de564cd20f739c1241a0743",
+      "purpose": "Vazby Warlockových úkolů a zjištěný rozpor v komentáři počtu hlav.",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "wowhead_1485",
+      "url": "https://www.wowhead.com/forever/quest=1485/vile-familiars",
+      "kind": "client_record_published_by_database",
+      "purpose": "Úkol 1485, šest hlav a učení Summon Imp. Přístup přes webový výpis; žádné hraní klienta.",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "questing_1499",
+      "url": "https://questing.wiki/wow-forever/quests/1499/",
+      "kind": "mixed_sources_directory",
+      "purpose": "Rozcestník k připnutým zdrojovým souborům; nikoliv nezávislé ověření souřadnic.",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "foreverera_1499",
+      "url": "https://theforeverera.com/en/quests/1499/",
+      "kind": "explicit_classic_reference",
+      "purpose": "Výslovně přiznává souřadnice a odměny z Classicu.",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "azerpug_durotar",
+      "url": "https://forever.azerpug.com/zones/1411/durotar",
+      "kind": "fan_map_unspecified_build",
+      "purpose": "Alternativní podklad Durotaru; geometrie vizuálně porovnána, verze klienta nedoložená.",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "metaforge",
+      "url": "https://metaforge.app/wow-forever/map/azeroth",
+      "kind": "fan_atlas_candidate",
+      "purpose": "Existence atlasu ověřena; získání konkrétního exportu dat pro náš balíček neověřeno.",
+      "checked_on": "2026-10-23"
+    },
+    {
+      "id": "npc_10176",
+      "url": "https://warcraftforever.games/npcs/10176",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno."
+    },
+    {
+      "id": "npc_3143",
+      "url": "https://warcraftforever.games/npcs/3143",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno."
+    },
+    {
+      "id": "npc_5765",
+      "url": "https://warcraftforever.games/npcs/5765",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno."
+    },
+    {
+      "id": "npc_6928",
+      "url": "https://warcraftforever.games/npcs/6928",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno."
+    },
+    {
+      "id": "npc_3188",
+      "url": "https://warcraftforever.games/npcs/3188",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno."
+    },
+    {
+      "id": "npc_9564",
+      "url": "https://warcraftforever.games/npcs/9564",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno."
+    },
+    {
+      "id": "npc_3145",
+      "url": "https://warcraftforever.games/npcs/3145",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno."
+    },
+    {
+      "id": "npc_3159",
+      "url": "https://warcraftforever.games/npcs/3159",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněná pozice NPC a případná služba. Konkrétní sestavení jednotlivého pozorování není uvedeno."
+    },
+    {
+      "id": "quest_4641",
+      "url": "https://warcraftforever.games/quests/4641",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí."
+    },
+    {
+      "id": "quest_788",
+      "url": "https://warcraftforever.games/quests/788",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí."
+    },
+    {
+      "id": "quest_97279",
+      "url": "https://warcraftforever.games/quests/97279",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí."
+    },
+    {
+      "id": "quest_792",
+      "url": "https://warcraftforever.games/quests/792",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí."
+    },
+    {
+      "id": "quest_794",
+      "url": "https://warcraftforever.games/quests/794",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí."
+    },
+    {
+      "id": "quest_805",
+      "url": "https://warcraftforever.games/quests/805",
+      "kind": "publisher_reported_beta_observation",
+      "checked_on": "2026-10-23",
+      "reported_build": null,
+      "purpose": "Zveřejněné zadání a účastníci úkolu. Uvedená úroveň úkolu není ověřené minimum pro přijetí."
+    },
+    {
+      "id": "item_5778",
+      "url": "https://warcraftforever.games/items/5778",
+      "kind": "publisher_reported_beta_item_record",
+      "checked_on": "2026-10-23",
+      "reported_build": "1.60.1.70009",
+      "purpose": "Předmět a beta vazba na odměnu úkolu."
+    }
+  ]
+}

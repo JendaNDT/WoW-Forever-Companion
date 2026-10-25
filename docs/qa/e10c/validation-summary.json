@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "stage": "E10.3",
+  "version": "0.14.0-e10.3",
+  "versionCode": 14,
+  "hostTests": {
+    "tests": 200,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "hostSuites": 49,
+  "newE10CAppTests": 8,
+  "pythonTests": 17,
+  "newPythonTests": 4,
+  "cleanBuild": "7m 15s",
+  "lint": {
+    "debug": {
+      "errors": 0,
+      "warnings": 3,
+      "issues": [
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of ovh.plrapps:mapcompose than 3.2.0 is available: 3.2.8",
+          "category": "Correctness",
+          "priority": "4",
+          "summary": "Newer Library Versions Available",
+          "explanation": "This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the `GradleDependency` check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also **much** slower.",
+          "errorLine1": "    implementation(\"ovh.plrapps:mapcompose:3.2.0\")",
+          "errorLine2": "                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data",
+          "category": "Performance",
+          "priority": "3",
+          "summary": "Using getUsableSpace()",
+          "explanation": "When you need to allocate disk space for large files, consider using the new `allocateBytes(FileDescriptor, long)` API, which will automatically clear cached files belonging to other apps (as needed) to meet your request.\n\nWhen deciding if the device has enough disk space to hold your new data, call `getAllocatableBytes(UUID)` instead of using `getUsableSpace()`, since the former will consider any cached data that the system is willing to clear on your behalf.\n\nNote that these methods require API level 26. If your app is running on older devices, you will probably need to use both APIs, conditionally switching on `Build.VERSION.SDK_INT`. Lint only looks in the same compilation unit to see if you are already using both APIs, so if it warns even though you are already using the new API, consider moving the calls to the same file or suppressing the warning.",
+          "errorLine1": "    private val freeBytes:()->Long={context.filesDir.usableSpace},",
+          "errorLine2": "                                                     ~~~~~~~~~~~"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data",
+          "category": "Performance",
+          "priority": "3",
+          "summary": "Using getUsableSpace()",
+          "explanation": "When you need to allocate disk space for large files, consider using the new `allocateBytes(FileDescriptor, long)` API, which will automatically clear cached files belonging to other apps (as needed) to meet your request.\n\nWhen deciding if the device has enough disk space to hold your new data, call `getAllocatableBytes(UUID)` instead of using `getUsableSpace()`, since the former will consider any cached data that the system is willing to clear on your behalf.\n\nNote that these methods require API level 26. If your app is running on older devices, you will probably need to use both APIs, conditionally switching on `Build.VERSION.SDK_INT`. Lint only looks in the same compilation unit to see if you are already using both APIs, so if it warns even though you are already using the new API, consider moving the calls to the same file or suppressing the warning.",
+          "errorLine1": "    private val freeBytes:()->Long={context.filesDir.usableSpace},",
+          "errorLine2": "                                                     ~~~~~~~~~~~"
+        }
+      ]
+    },
+    "release": {
+      "errors": 0,
+      "warnings": 6,
+      "issues": [
+        {
+          "id": "UnusedAttribute",
+          "severity": "Warning",
+          "message": "Attribute `shell` is only used in API level 29 and higher (current min is 26)",
+          "category": "Correctness",
+          "priority": "6",
+          "summary": "Attribute unused on older versions",
+          "explanation": "This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the `minSdkVersion` attribute).\n\nThis is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance or functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.\n\nNote: This check does not only apply to attributes. For example, some tags can be unused too, such as the new `<tag>` element in layouts introduced in API 21.",
+          "errorLine1": "        <profileable android:shell=\"true\" />",
+          "errorLine2": "                     ~~~~~~~~~~~~~~~~~~~~"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of ovh.plrapps:mapcompose than 3.2.0 is available: 3.2.8",
+          "category": "Correctness",
+          "priority": "4",
+          "summary": "Newer Library Versions Available",
+          "explanation": "This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the `GradleDependency` check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also **much** slower.",
+          "errorLine1": "    implementation(\"ovh.plrapps:mapcompose:3.2.0\")",
+          "errorLine2": "                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.8.1 is available: 1.12.0",
+          "category": "Correctness",
+          "priority": "4",
+          "summary": "Newer Library Versions Available",
+          "explanation": "This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the `GradleDependency` check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also **much** slower.",
+          "errorLine1": "    implementation(\"org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1\")",
+          "errorLine2": "                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        },
+        {
+          "id": "NewerVersionAvailable",
+          "severity": "Warning",
+          "message": "A newer version of org.robolectric:robolectric than 4.14.1 is available: 4.17",
+          "category": "Correctness",
+          "priority": "4",
+          "summary": "Newer Library Versions Available",
+          "explanation": "This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the `GradleDependency` check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also **much** slower.",
+          "errorLine1": "    testImplementation(\"org.robolectric:robolectric:4.14.1\")",
+          "errorLine2": "                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data",
+          "category": "Performance",
+          "priority": "3",
+          "summary": "Using getUsableSpace()",
+          "explanation": "When you need to allocate disk space for large files, consider using the new `allocateBytes(FileDescriptor, long)` API, which will automatically clear cached files belonging to other apps (as needed) to meet your request.\n\nWhen deciding if the device has enough disk space to hold your new data, call `getAllocatableBytes(UUID)` instead of using `getUsableSpace()`, since the former will consider any cached data that the system is willing to clear on your behalf.\n\nNote that these methods require API level 26. If your app is running on older devices, you will probably need to use both APIs, conditionally switching on `Build.VERSION.SDK_INT`. Lint only looks in the same compilation unit to see if you are already using both APIs, so if it warns even though you are already using the new API, consider moving the calls to the same file or suppressing the warning.",
+          "errorLine1": "    private val freeBytes:()->Long={context.filesDir.usableSpace},",
+          "errorLine2": "                                                     ~~~~~~~~~~~"
+        },
+        {
+          "id": "UsableSpace",
+          "severity": "Warning",
+          "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data",
+          "category": "Performance",
+          "priority": "3",
+          "summary": "Using getUsableSpace()",
+          "explanation": "When you need to allocate disk space for large files, consider using the new `allocateBytes(FileDescriptor, long)` API, which will automatically clear cached files belonging to other apps (as needed) to meet your request.\n\nWhen deciding if the device has enough disk space to hold your new data, call `getAllocatableBytes(UUID)` instead of using `getUsableSpace()`, since the former will consider any cached data that the system is willing to clear on your behalf.\n\nNote that these methods require API level 26. If your app is running on older devices, you will probably need to use both APIs, conditionally switching on `Build.VERSION.SDK_INT`. Lint only looks in the same compilation unit to see if you are already using both APIs, so if it warns even though you are already using the new API, consider moving the calls to the same file or suppressing the warning.",
+          "errorLine1": "    private val freeBytes:()->Long={context.filesDir.usableSpace},",
+          "errorLine2": "                                                     ~~~~~~~~~~~"
+        }
+      ]
+    }
+  },
+  "bundledGeneration": 6,
+  "entries": 216,
+  "positions": 84,
+  "maps": 5,
+  "tiles": 85,
+  "newEntries": 34,
+  "newQuestRecords": 16,
+  "newNpcPositions": 10,
+  "newItemRecords": 8,
+  "newClassicPositions": 6,
+  "newBetaObservedPositions": 4,
+  "olderRecordsUnchanged": true,
+  "allMapTilesUnchanged": true,
+  "screenshots": [
+    "e10c-bag.png",
+    "e10c-classic-map.png",
+    "e10c-integrated-coverage.png",
+    "e10c-integrated-help.png",
+    "e10c-preserved-profile.png",
+    "e10c-restored-bundled.png",
+    "e10c-stormcaller.png",
+    "e10c-voidwalker.png"
+  ],
+  "previousE13ApkCertificateAndPackageMatch": true,
+  "E13BasicPhoneCheck": "confirmed by user on 2026-10-25",
+  "E10CPhysicalPhoneInstallationVerified": false,
+  "measuredPhonePerformanceGoalsVerified": false,
+  "talkBackVerified": false,
+  "secondDeviceRestoreVerified": false
+}

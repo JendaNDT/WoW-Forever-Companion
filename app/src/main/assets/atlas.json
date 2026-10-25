@@ -1,0 +1,106 @@
+{
+  "maps": [
+    {
+      "uiMapId": 947,
+      "name": "Azeroth",
+      "width": 1002,
+      "height": 668,
+      "levels": 3,
+      "build": "1.60.1.69893",
+      "sourceUrl": "https://warcraftforever.games/maps/azeroth"
+    },
+    {
+      "uiMapId": 1414,
+      "name": "Kalimdor",
+      "width": 1002,
+      "height": 668,
+      "levels": 3,
+      "build": "1.60.1.69893",
+      "sourceUrl": "https://warcraftforever.games/maps/kalimdor"
+    },
+    {
+      "uiMapId": 1411,
+      "name": "Durotar",
+      "width": 1002,
+      "height": 668,
+      "levels": 3,
+      "build": "1.60.1.69893",
+      "sourceUrl": "https://warcraftforever.games/maps/durotar"
+    },
+    {
+      "uiMapId": 1454,
+      "name": "Orgrimmar",
+      "width": 1002,
+      "height": 668,
+      "levels": 3,
+      "build": "1.60.1.69893",
+      "sourceUrl": "https://warcraftforever.games/maps/orgrimmar"
+    }
+  ],
+  "points": [
+    {
+      "id": "wow-forever:npc:10176",
+      "name": "Kaltunk",
+      "uiMapId": 1411,
+      "xPercent": 43.1,
+      "yPercent": 68.7,
+      "sourceUrl": "https://warcraftforever.games/npcs/10176"
+    },
+    {
+      "id": "wow-forever:npc:3143",
+      "name": "Gornek",
+      "uiMapId": 1411,
+      "xPercent": 42.1,
+      "yPercent": 68.4,
+      "sourceUrl": "https://warcraftforever.games/npcs/3143"
+    },
+    {
+      "id": "wow-forever:npc:5765",
+      "name": "Ruzan",
+      "uiMapId": 1411,
+      "xPercent": 42.7,
+      "yPercent": 69.0,
+      "sourceUrl": "https://warcraftforever.games/npcs/5765"
+    },
+    {
+      "id": "wow-forever:npc:6928",
+      "name": "Innkeeper Grosk",
+      "uiMapId": 1411,
+      "xPercent": 51.6,
+      "yPercent": 41.7,
+      "sourceUrl": "https://warcraftforever.games/npcs/6928"
+    },
+    {
+      "id": "wow-forever:npc:3188",
+      "name": "Master Gadrin",
+      "uiMapId": 1411,
+      "xPercent": 55.6,
+      "yPercent": 75.0,
+      "sourceUrl": "https://warcraftforever.games/npcs/3188"
+    },
+    {
+      "id": "wow-forever:npc:9564",
+      "name": "Frezza",
+      "uiMapId": 1411,
+      "xPercent": 50.8,
+      "yPercent": 13.4,
+      "sourceUrl": "https://warcraftforever.games/npcs/9564"
+    },
+    {
+      "id": "wow-forever:npc:3145",
+      "name": "Zureetha Fargaze",
+      "uiMapId": 1411,
+      "xPercent": 43.0,
+      "yPercent": 69.3,
+      "sourceUrl": "https://warcraftforever.games/npcs/3145"
+    },
+    {
+      "id": "wow-forever:npc:3159",
+      "name": "Kzan Thornslash",
+      "uiMapId": 1411,
+      "xPercent": 40.5,
+      "yPercent": 68.0,
+      "sourceUrl": "https://warcraftforever.games/npcs/3159"
+    }
+  ]
+}

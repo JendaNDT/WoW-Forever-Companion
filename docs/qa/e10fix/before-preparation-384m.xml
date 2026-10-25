@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E10FullUpgradeTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-10-25T16:07:49.297Z" hostname="eb5eafc03222" time="4.565">
+  <properties/>
+  <testcase name="upgradeFromAcknowledgedSixPreservesProfilesAndRollbackAndNewAreaBackup" classname="cz.jenda.wowforever.E10FullUpgradeTest" time="4.565">
+    <failure message="java.lang.OutOfMemoryError: Java heap space" type="java.lang.OutOfMemoryError">java.lang.OutOfMemoryError: Java heap space
+	at org.robolectric.res.android.FileMap.getDataPtr(FileMap.java:412)
+	at org.robolectric.res.android.Asset$_CompressedAsset.getBuffer(Asset.java:1330)
+	at org.robolectric.res.android.Asset$_CompressedAsset.read(Asset.java:1242)
+	at org.robolectric.shadows.ShadowArscAssetManager9.nativeAssetRead(ShadowArscAssetManager9.java:1738)
+	at java.base/java.lang.invoke.LambdaForm$DMH/0x00007f42404ae800.invokeStatic(LambdaForm$DMH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f42404b1000.guardWithCatch(LambdaForm$MH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f4240609800.delegate(LambdaForm$MH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f42404b3000.guard(LambdaForm$MH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f42404b3400.linkToCallSite(LambdaForm$MH)
+	at android.content.res.AssetManager.nativeAssetRead(AssetManager.java)
+	at android.content.res.AssetManager.access$700(AssetManager.java:57)
+	at android.content.res.AssetManager$AssetInputStream.read(AssetManager.java:1095)
+	at java.base/java.lang.invoke.LambdaForm$DMH/0x00007f4240035800.invokeSpecial(LambdaForm$DMH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f424020d800.guardWithCatch(LambdaForm$MH)
+	at java.base/java.lang.invoke.DelegatingMethodHandle$Holder.delegate(DelegatingMethodHandle$Holder)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f424020ec00.guard(LambdaForm$MH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f424020f000.linkToCallSite(LambdaForm$MH)
+	at android.content.res.AssetManager$AssetInputStream.read(AssetManager.java)
+	at cz.jenda.wowforever.packages.PackageManager.copyLimited(PackageManager.kt:150)
+	at cz.jenda.wowforever.packages.PackageManager.stageBundledLocked(PackageManager.kt:101)
+	at cz.jenda.wowforever.packages.PackageManager.stageBundledLocked$default(PackageManager.kt:98)
+	at cz.jenda.wowforever.packages.PackageManager.applyBundledLocked(PackageManager.kt:110)
+	at cz.jenda.wowforever.packages.PackageManager.initialize(PackageManager.kt:88)
+	at cz.jenda.wowforever.data.GuideStore.initialize(GuideStore.kt:23)
+	at cz.jenda.wowforever.data.GuideStore$initialize$1.invokeSuspend(GuideStore.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

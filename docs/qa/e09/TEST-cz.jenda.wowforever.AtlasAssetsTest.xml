@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.AtlasAssetsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-24T18:42:28.446Z" hostname="71ac4b1786b3" time="2.912">
+  <properties/>
+  <testcase name="all four offline pyramids decode and cover every edge" classname="cz.jenda.wowforever.AtlasAssetsTest" time="2.873"/>
+  <testcase name="legacy atlas keeps its original eight sourced locations" classname="cz.jenda.wowforever.AtlasAssetsTest" time="0.039"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

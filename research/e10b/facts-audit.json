@@ -1,0 +1,267 @@
+{
+  "checkedOn": "2026-10-25",
+  "method": "Direct public page review; creator-reported beta observations and explicitly labelled Classic reference",
+  "gameChecksPerformed": false,
+  "pages": [
+    {
+      "sourceId": "e10b_npc_266940",
+      "url": "https://warcraftforever.games/npcs/266940",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "67a5db2b4587eb28c3b0a8c164c9320d3d3cb74794538573e127f5a1bc571a07"
+    },
+    {
+      "sourceId": "e10b_npc_3194",
+      "url": "https://warcraftforever.games/npcs/3194",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "a3e7163eaa47dd7cd1e1ee72ff72107256d09a54c30896f0a8674349278530e1"
+    },
+    {
+      "sourceId": "e10b_npc_7953",
+      "url": "https://warcraftforever.games/npcs/7953",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "43944c144a5bb4f6d0275afa5fa1bb58905f6dcda8bac716afc6871ad6429048"
+    },
+    {
+      "sourceId": "e10b_npc_3140",
+      "url": "https://warcraftforever.games/npcs/3140",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "05cae1a10d6f9d6ac233b212199c5155ce8593997cb6eacd3dd6ae94bba4a245"
+    },
+    {
+      "sourceId": "e10b_npc_275811",
+      "url": "https://warcraftforever.games/npcs/275811",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "91abd09cb4b5be09906410de9e35dc0cba8160b0836324fb42c242a7820d55c9"
+    },
+    {
+      "sourceId": "e10b_npc_3192",
+      "url": "https://warcraftforever.games/npcs/3192",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "a3fb9706225612c66d4149eab2e10f3db4fa9fa12456117542fdd84f0c2def7a"
+    },
+    {
+      "sourceId": "e10b_npc_3281",
+      "url": "https://warcraftforever.games/npcs/3281",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "2b87559afac84eb2cff7d1520c6a5cc009d354b293ae667617ec9cc065283794"
+    },
+    {
+      "sourceId": "e10b_npc_3183",
+      "url": "https://warcraftforever.games/npcs/3183",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "66494d39dd9f984ba9809e0ae2addfbf7752b11d82241507ae0267d87fb259bb"
+    },
+    {
+      "sourceId": "e10b_npc_3205",
+      "url": "https://warcraftforever.games/npcs/3205",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "f3e3b99092a562439f9182030b9fefb98eed2673d4a5fe366f6bd3d7d0680d47"
+    },
+    {
+      "sourceId": "e10b_npc_3101",
+      "url": "https://warcraftforever.games/npcs/3101",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "e02ca17a1c212b9d69ca1618ac025ff6a20d8e1940839388c0d7ac8f765c831d"
+    },
+    {
+      "sourceId": "e10b_npc_3102",
+      "url": "https://warcraftforever.games/npcs/3102",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "ebbebfec41e8b78725683012bf800bfd670e686b0e13aa1c3c998fcd0ae1d46f"
+    },
+    {
+      "sourceId": "e10b_npc_3230",
+      "url": "https://warcraftforever.games/npcs/3230",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "8775b1392d6c2bd2d34dd3c5a4df6e837d279d4f8c47d79d8ee6bf8d1b45df76"
+    },
+    {
+      "sourceId": "e10b_quest_96822",
+      "url": "https://warcraftforever.games/quests/96822",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "46dc68c610efc980e71c0db0e8077b4f9c5ef569e1ae39eb0e2290f4dfb61f17"
+    },
+    {
+      "sourceId": "e10b_quest_96821",
+      "url": "https://warcraftforever.games/quests/96821",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "3eb7c75c7396643ff6d036e0e0dec86958f1da22f4c6a0e7c880957e18a287d8"
+    },
+    {
+      "sourceId": "e10b_quest_96825",
+      "url": "https://warcraftforever.games/quests/96825",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "496dc8a3ab50cfe9d17f982db839941442014b847a28e56b959acefc6a53d14f"
+    },
+    {
+      "sourceId": "e10b_quest_97223",
+      "url": "https://warcraftforever.games/quests/97223",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "6dbc25d3aaad5edbb580d233f55ddd52aff1ee9b315d1410361ea42e5155bd3e"
+    },
+    {
+      "sourceId": "e10b_quest_818",
+      "url": "https://warcraftforever.games/quests/818",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "e39e7d328000fd9b4c459fa7fc801c47dce27086e2f2a824031760cbbe8c6d72"
+    },
+    {
+      "sourceId": "e10b_quest_823",
+      "url": "https://warcraftforever.games/quests/823",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "769a0b415772b7a5bc9293d501fdfb307b95dc73f1157a59e42ca7696233f28f"
+    },
+    {
+      "sourceId": "e10b_quest_784",
+      "url": "https://warcraftforever.games/quests/784",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "8445a6e10eb40a3941ac3bf60ab53291dbf3b9e24ad9989cad3eeae54eef078e"
+    },
+    {
+      "sourceId": "e10b_quest_815",
+      "url": "https://warcraftforever.games/quests/815",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "90d4984655bbb6a7bd40cfe6a96571cd5fdf19386cf4e6c254c2dd3064fe0693"
+    },
+    {
+      "sourceId": "e10b_quest_825",
+      "url": "https://warcraftforever.games/quests/825",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "0d4cd138b1af8560e7775f517af3a70460db5b38eb636374007af4c6c0f19d11"
+    },
+    {
+      "sourceId": "e10b_quest_99123",
+      "url": "https://warcraftforever.games/quests/99123",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "afe938c3b821b4fd4b97fc163f4cf44c89e984000a9ed920fc1aee5f42eae5a5"
+    },
+    {
+      "sourceId": "e10b_quest_817",
+      "url": "https://warcraftforever.games/quests/817",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "b7577a1e2f018188e3360f5ed384d24739e8da083d3a390512dd4f30290a1099"
+    },
+    {
+      "sourceId": "e10b_quest_786",
+      "url": "https://warcraftforever.games/quests/786",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "893020d86a4f0ff217a769bae5411a4e097c261bbdba7729eed1ae11feb5d95c"
+    },
+    {
+      "sourceId": "e10b_quest_97225",
+      "url": "https://warcraftforever.games/quests/97225",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "ff1a63ac2f5484c42908cd8e32fec81e9cd97bf51c824232e3ef554a75d859a3"
+    },
+    {
+      "sourceId": "e10b_quest_808",
+      "url": "https://warcraftforever.games/quests/808",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "91d532b9c4898a57fb872c483e27e1e7e26879cf773f1b4f4a100f3ed15a40b1"
+    },
+    {
+      "sourceId": "e10b_quest_837",
+      "url": "https://warcraftforever.games/quests/837",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "e263822767b95d2a30851c3d3d4e92327d49ee8af64a973cb6778d2df181da59"
+    },
+    {
+      "sourceId": "e10b_quest_826",
+      "url": "https://warcraftforever.games/quests/826",
+      "kind": "publisher_reported_beta_observation",
+      "build": null,
+      "selectedFactsSha256": "d4fa8ffc931f770163511915ddb55cc33f28c480f8924fc4ead52b765b70ca00"
+    },
+    {
+      "sourceId": "e10b_quest_830",
+      "url": "https://foreverchanges.pro/quest/830",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "bb1951e99fe9d04efb5bf7841fa392a8de2bafe7e28661024e1be4717eeb8650"
+    },
+    {
+      "sourceId": "e10b_quest_831",
+      "url": "https://foreverchanges.pro/quest/831",
+      "kind": "classic_reference",
+      "build": null,
+      "selectedFactsSha256": "f0fc51ead9cd24e632c20207a8f5697459c236a27b61c65a515e1ecc62a9fdef"
+    },
+    {
+      "sourceId": "e10b_item_4915",
+      "url": "https://warcraftforever.games/items/4915",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70009",
+      "selectedFactsSha256": "1f36674714d4fe61dae5f912dd8cf86e48fca587d692221bfcb96281daf3052f"
+    },
+    {
+      "sourceId": "e10b_item_4919",
+      "url": "https://warcraftforever.games/items/4919",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70009",
+      "selectedFactsSha256": "814b7f4f449934488d2921cd3c120dad52c26ca24fbd34ba687907f8c38460da"
+    },
+    {
+      "sourceId": "e10b_item_4916",
+      "url": "https://warcraftforever.games/items/4916",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70009",
+      "selectedFactsSha256": "f8c6a21d7bcf655641ed8fd6229ddb1389c1a63df2c4cfb2335c8b68f48fba30"
+    },
+    {
+      "sourceId": "e10b_item_6713",
+      "url": "https://warcraftforever.games/items/6713",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70009",
+      "selectedFactsSha256": "81e9c57f502a8441db4b88bdb467d2db4002072ef83e43209782c380a3f4e3f2"
+    },
+    {
+      "sourceId": "e10b_item_6062",
+      "url": "https://warcraftforever.games/items/6062",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70009",
+      "selectedFactsSha256": "879bd53409b39a4393abb1c2d7451d0897a1b5c76df9bdb2fdd0de4a6e5c04e2"
+    },
+    {
+      "sourceId": "e10b_warlock_book",
+      "url": "https://foreverchanges.pro/spellbook/warlock",
+      "kind": "publisher_reported_beta_extraction",
+      "build": "1.60.1.70532",
+      "selectedFactsSha256": "03297e3bd96576ccca1c1502b97c67b26d9c5c3aed056d3857fac621de48afcb"
+    }
+  ],
+  "limitsCs": [
+    "Otisk se vztahuje k vybraným faktům, ne k HTML celé stránky.",
+    "Minimum úkolu, předchozí kroky a učení u trenéra se bez důkazu nedoplňují.",
+    "Vyřazeno: kožené Dust-covered Leggings 4921 pro tuto látkovou dávku.",
+    "Vyřazeno: nepotvrzené odměny Lost in the Shadows 286728/286729 a Depleted Ritual Band bez vlastních primárních tooltipů.",
+    "Číselná spell ID se neodhadují.",
+    "Aged Envelope nedostává Classic polohu přenesenou do beta mapy."
+  ]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.ContentValidationTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-23T14:24:29.326Z" hostname="f05490768d7a" time="0.186">
+  <properties/>
+  <testcase name="sourceSamplePassesWithoutInventingUnknownLevels" classname="cz.jenda.wowforever.ContentValidationTest" time="0.068"/>
+  <testcase name="mismatchedFrameAndFloorAreRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.012"/>
+  <testcase name="betaReferenceCannotBecomeActiveRouting" classname="cz.jenda.wowforever.ContentValidationTest" time="0.006"/>
+  <testcase name="anyGroupAndConflictingClaimsArePreserved" classname="cz.jenda.wowforever.ContentValidationTest" time="0.005"/>
+  <testcase name="parserRejectsUnknownFieldsAndMalformedInput" classname="cz.jenda.wowforever.ContentValidationTest" time="0.025"/>
+  <testcase name="wrongGameVariantIsRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.005"/>
+  <testcase name="cyclicAnyPrerequisitesAreRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.005"/>
+  <testcase name="wrongTargetKindIsRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.004"/>
+  <testcase name="falseReleaseLabelIsRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.006"/>
+  <testcase name="missingTargetIsRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.006"/>
+  <testcase name="outOfBoundsAndNonfiniteCoordinatesAreRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.007"/>
+  <testcase name="unknownFormatIsRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.004"/>
+  <testcase name="duplicateIdentityIsRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.012"/>
+  <testcase name="missingSourceIsRejected" classname="cz.jenda.wowforever.ContentValidationTest" time="0.005"/>
+  <testcase name="transformedCoordinatesRoundTripWithoutChangingIdentity" classname="cz.jenda.wowforever.ContentValidationTest" time="0.005"/>
+  <testcase name="areaIdCannotReplaceTheMapFrame" classname="cz.jenda.wowforever.ContentValidationTest" time="0.003"/>
+  <testcase name="releaseClaimNeedsAnActualReleaseObservation" classname="cz.jenda.wowforever.ContentValidationTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

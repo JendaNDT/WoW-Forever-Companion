@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E10FlowTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-24T22:03:38.651Z" hostname="e6c755ef2603" time="3.321">
+  <properties/>
+  <testcase name="realSignedDistributionShowsBarrensTerrainItsActualNpcAndNumberedPlan" classname="cz.jenda.wowforever.E10FlowTest" time="1.047"/>
+  <testcase name="rollbackKeepsBarrensNoteCompletedQuestPlanAndMissingAreaDoesNotOverwriteProfile" classname="cz.jenda.wowforever.E10FlowTest" time="1.228"/>
+  <testcase name="coverageUsesActiveAreaScopeAndUnlocatedEbruNeverGetsAFakePin" classname="cz.jenda.wowforever.E10FlowTest" time="1.046"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

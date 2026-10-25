@@ -1,0 +1,68 @@
+{
+  "version": "0.2.0-e02",
+  "version_code": 2,
+  "application_id": "cz.jenda.wowforever",
+  "bytes": 18836896,
+  "sha256": "d48aee31c47bfdf319ad9803b64da0b2f60f626cfef90a9c639e48323a295f70",
+  "upgrade_signature_matches_e01": true,
+  "clean_build_passed": true,
+  "host_tests_passed": 37,
+  "host_tests_failed": 0,
+  "lint_errors": 0,
+  "lint_warnings": 0,
+  "schemas": {
+    "content": 1,
+    "personal": 1
+  },
+  "entries": 21,
+  "relations": 25,
+  "locations": 8,
+  "sources": 26,
+  "device_tested_e02": false,
+  "e01_user_reported_working": true,
+  "independent_game_checks": 0,
+  "suites": [
+    {
+      "name": "cz.jenda.wowforever.AtlasAssetsTest",
+      "tests": 2,
+      "failures": 0,
+      "seconds": 8.98
+    },
+    {
+      "name": "cz.jenda.wowforever.CatalogFlowTest",
+      "tests": 1,
+      "failures": 0,
+      "seconds": 9.552
+    },
+    {
+      "name": "cz.jenda.wowforever.ContentValidationTest",
+      "tests": 17,
+      "failures": 0,
+      "seconds": 0.146
+    },
+    {
+      "name": "cz.jenda.wowforever.CoordinatesTest",
+      "tests": 3,
+      "failures": 0,
+      "seconds": 0.001
+    },
+    {
+      "name": "cz.jenda.wowforever.DatabaseTest",
+      "tests": 9,
+      "failures": 0,
+      "seconds": 6.947
+    },
+    {
+      "name": "cz.jenda.wowforever.NativeMapHostTest",
+      "tests": 2,
+      "failures": 0,
+      "seconds": 2.927
+    },
+    {
+      "name": "cz.jenda.wowforever.NativeSceneTest",
+      "tests": 3,
+      "failures": 0,
+      "seconds": 1.474
+    }
+  ]
+}

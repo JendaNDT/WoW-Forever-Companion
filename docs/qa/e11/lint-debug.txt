@@ -1,0 +1,43 @@
+/workspace/scratch/499601437674/WoWForeverPruvodce/app/build.gradle.kts:56: Warning: A newer version of ovh.plrapps:mapcompose than 3.2.0 is available: 3.2.8 [NewerVersionAvailable]
+    implementation("ovh.plrapps:mapcompose:3.2.0")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/499601437674/WoWForeverPruvodce/app/build.gradle.kts:61: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.8.1 is available: 1.12.0 [NewerVersionAvailable]
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/499601437674/WoWForeverPruvodce/app/build.gradle.kts:63: Warning: A newer version of org.robolectric:robolectric than 4.14.1 is available: 4.17 [NewerVersionAvailable]
+    testImplementation("org.robolectric:robolectric:4.14.1")
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+/workspace/scratch/499601437674/WoWForeverPruvodce/app/src/main/java/cz/jenda/wowforever/packages/PackageManager.kt:28: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
+    private val freeBytes:()->Long={context.filesDir.usableSpace},
+                                                     ~~~~~~~~~~~
+/workspace/scratch/499601437674/WoWForeverPruvodce/app/src/main/java/cz/jenda/wowforever/packages/PackageManager.kt:28: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
+    private val freeBytes:()->Long={context.filesDir.usableSpace},
+                                                     ~~~~~~~~~~~
+
+   Explanation for issues of type "UsableSpace":
+   When you need to allocate disk space for large files, consider using the
+   new allocateBytes(FileDescriptor, long) API, which will automatically clear
+   cached files belonging to other apps (as needed) to meet your request.
+
+   When deciding if the device has enough disk space to hold your new data,
+   call getAllocatableBytes(UUID) instead of using getUsableSpace(), since the
+   former will consider any cached data that the system is willing to clear on
+   your behalf.
+
+   Note that these methods require API level 26. If your app is running on
+   older devices, you will probably need to use both APIs, conditionally
+   switching on Build.VERSION.SDK_INT. Lint only looks in the same compilation
+   unit to see if you are already using both APIs, so if it warns even though
+   you are already using the new API, consider moving the calls to the same
+   file or suppressing the warning.
+
+0 errors, 5 warnings

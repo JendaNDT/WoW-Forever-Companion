@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "generation": 3,
+  "files": 69,
+  "maps": 4,
+  "entries": 53,
+  "publisher_signature_verified": true,
+  "invalid_variants_rejected": [
+    "bad_signature",
+    "bad_hash",
+    "missing_tile",
+    "extra_path",
+    "future_app",
+    "wrong_game",
+    "wrong_size",
+    "changed_frame"
+  ],
+  "java_production_signature_verified": true,
+  "control_catalog_only_generation_differs": true
+}

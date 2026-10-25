@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E08TransportTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-23T16:54:04.701Z" hostname="f05490768d7a" time="0.052">
+  <properties/>
+  <testcase name="directionCyclesBetaAndUnknownConditionsNeverInventAnAccessibleConnection" classname="cz.jenda.wowforever.E08TransportTest" time="0.005"/>
+  <testcase name="flightNeedsBothDiscoveriesAndMatchingLevelEvenWhenShorterThanWalk" classname="cz.jenda.wowforever.E08TransportTest" time="0.002"/>
+  <testcase name="allAnyAndProfileRequirementsRespectCompletionInsteadOfDeferral" classname="cz.jenda.wowforever.E08TransportTest" time="0.001"/>
+  <testcase name="removedAndAmbiguousStopsKeepGlobalNumbersWithoutFakeCoordinates" classname="cz.jenda.wowforever.E08TransportTest" time="0.011"/>
+  <testcase name="flightWithoutEndpointDiscoveryAndWalkAcrossFramesAreRejected" classname="cz.jenda.wowforever.E08TransportTest" time="0.01"/>
+  <testcase name="validatedGraphRoundTripsAndProductionContainsNoSyntheticConnections" classname="cz.jenda.wowforever.E08TransportTest" time="0.014"/>
+  <testcase name="missingTargetsDuplicatesEvidenceAndFalseReleaseClaimsAreRejected" classname="cz.jenda.wowforever.E08TransportTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

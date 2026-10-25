@@ -1,0 +1,5 @@
+{
+  "emulator": "API 30 x86_64, software CPU and SwiftShader",
+  "hardware_acceleration": false,
+  "error": "Software emulator did not finish startup in 420s"
+}

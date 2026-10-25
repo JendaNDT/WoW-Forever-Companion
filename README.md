@@ -1,12 +1,31 @@
 # WoW Forever Companion
 
-Nativní Android průvodce pro Hordu / Warlocka 1–60. Kotlin, Jetpack Compose, Room; kompletní offline obsah je přibalený v APK.
+Nativní Android průvodce Horda / Warlock 1–60. Kotlin, Jetpack Compose, Room; obsah je přímo v APK.
 
-**Aktuální verze: 0.16.0-audit (17), data 8.** Audit veřejných zdrojů je v [docs/E10_AUDIT.md](docs/E10_AUDIT.md). Obsahuje 11 912 položek a 61 map. Žádná položka zatím není označená jako ověřená ve vydané hře. Dva nově nalezené rozpory zůstávají v aplikaci viditelné.
+**Verze 0.16.0-audit (17), data 8.** [Audit a omezení](docs/E10_AUDIT.md): 11 912 položek, 61 map, 115 warlockových úkolů. Herní potvrzení až po vydání.
 
-Velká offline data jsou uložena po částech `.wfpart`; Android je čte přímo. Pro běžné sestavení není nutné je ručně skládat. JDK 17, Android SDK 36 a Gradle wrapper: `./gradlew :app:assembleDebug :app:testDebugUnitTest`. Release vyžaduje původní soukromý podpisový klíč a proměnné popsané níže.
+JDK 17 a Android SDK 36. Sestavení: `./gradlew :app:assembleDebug :app:testDebugUnitTest`. Velké soubory `.wfpart` čte Android přímo; není potřeba ruční skládání ani Python. Release vyžaduje původní podpisový klíč.
 
-Níže jsou zachované historické pokyny k předchozím etapám; aktuální audit a stav mají přednost.
+Následují historické pokyny k předchozím etapám; aktuální audit má přednost.
+
+## GitHub a sestavení APK
+
+Celý projekt byl obnoven z původního archivu `WoW_Forever_Audit_zdroje_checkpoint.zip`.
+Původ, porovnání s opravou 0.15.1 a meze ověření popisuje [záznam obnovy](docs/GITHUB_IMPORT.md).
+
+V záložce **Actions → Android checks** se při každém nahrání změn a také ručně
+sestaví vývojové APK, spustí testy, kontroly map a dat a kontrola aplikace.
+Po úspěšném dokončení je APK v příloze `Warlock-Forever-0.16.0-audit-debug-…`,
+spolu s kontrolním součtem a výsledkem ověření všech přibalených souborů.
+Výsledky testů jsou v samostatné příloze `android-reports-…`; přílohy zůstávají 14 dní.
+
+**Vývojové APK má vývojový podpis a nelze jím aktualizovat původní podepsanou instalaci.**
+Pro aktualizaci bez odinstalování slouží ručně spouštěné **Signed Android pilot**,
+které vyžaduje původní klíč v chráněných nastaveních `android-pilot`
+(`FOREVER_SIGNING_STORE_B64` a `FOREVER_SIGNING_PASSWORD`).
+Soukromé klíče nejsou v repozitáři. Testy na počítači nenahrazují ověření na telefonu.
+
+## Historické pokyny
 
 # Forever průvodce — E10, oprava spouštění
 

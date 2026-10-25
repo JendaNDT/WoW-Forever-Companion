@@ -1,0 +1,22 @@
+{
+  "README.md": "4637d224a8e9234fe7aafa7ad0b865678c3223c6b15d5089e9930dec860ead34",
+  "content/sample_catalog.json": "07960e94ba7798d8ee7fd087f1e1bbddde1712f4c9fc71955b6a54b072433166",
+  "content/sources.json": "37c485382c5ff59cfd45bd786ee9407c90e85188edf073a8d50e92f5cca8708d",
+  "docs/E00_ZPRAVA.md": "25fb3aad0217503771a01f533376b224e8e249864f5ee21c6edb2998c4d38088",
+  "docs/POSTUP.md": "18276a8ed6e8c39ae17925317271685e8a601a691ea53c3b04b16d5b746ce366",
+  "docs/coverage.json": "096f0b7dd8f2fe944c890c0ec085161c8debf1413f9e4cc4a293788d4779c49f",
+  "docs/open_issues.json": "2bb1ce04f97aca5f3fc0dc2416323ce15424ec2a7a569f849b7d79cf7ce2263d",
+  "docs/quality_report.json": "4899f1a5c2d79c1a530165ba8da5f93df391fad9c7d1b916b77cfb133464bc3b",
+  "docs/stage_status.json": "6905dfeca373f727ba9ac8ef3e4ab8de532a6d5eb751c69c85a8942d54875f6c",
+  "evidence/community_reference_samples.json": "778095e4c48b0b9d26de235d5e927a31f030112b705cac09abf07351a63f80de",
+  "evidence/retrieval_manifest.json": "74a98fef12e5bb951c739c984147db024a2920586aa9b479b6b6fdff6ed3d981",
+  "licenses/AllTheThings_MIT.txt": "955281b9174e0f66b08c8e83d31e0f38b2fcaa247ca3af92d1723d81a13cddfb",
+  "licenses/EverythingQuests_MIT.txt": "1792e40a17d56f3f0b12b2600052e16329fb2a283a9890e07370d5c12c4b2aa6",
+  "maps/control_points.json": "9a7d5897766077bd0fe8db0e6e4dcdc51dd75d23977b3aff987955de7ce27b6c",
+  "maps/inventory.json": "062071971cc8301a9837c963aa89815e5e7589f33581cff9126f2e05759a567a",
+  "maps/reference/azeroth_1.60.1.69893.webp": "8838133de22f546b327a3c978eac57dd4597ac092aa075df61e899b67a7fbcff",
+  "maps/reference/durotar_1.60.1.69893.webp": "a998caacadb308e1c5bffbd1f8d31611b789547a1fdd90368d0697cb0fcc0275",
+  "maps/reference/kalimdor_1.60.1.69893.webp": "cc54264bb9d7b89ae1619cc84f60c3912318fad82c6683565248e7b830717ab1",
+  "maps/reference/orgrimmar_1.60.1.69893.webp": "c7c684ce1d1a14540c3d441cdf777381bcdb42a292843fce03ca8c08fafae59e",
+  "tools/verify_e00.py": "6eadb794be485cd284ed87ce3ca34f2bbe14c9c56b37744d8c7734f41817edaf"
+}

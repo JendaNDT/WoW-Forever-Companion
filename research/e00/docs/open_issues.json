@@ -1,0 +1,69 @@
+{
+  "checked_on": "2026-10-23",
+  "issues": [
+    {
+      "id": "E00-01",
+      "severity": "content",
+      "subject": "Počet hlav u questu 1485",
+      "finding": "Wowhead uvádí šest; komentář u objective v připnutém souboru AllTheThings uvádí osm. Komentář není důkaz aktuálního herního počítadla.",
+      "resolution": "Číselný cíl zatím null. Ověřit z aktuálního quest logu nebo současného přímého beta záznamu.",
+      "source_ids": [
+        "wowhead_1485",
+        "att_durotar"
+      ]
+    },
+    {
+      "id": "E00-02",
+      "severity": "release_validation",
+      "subject": "Verze map",
+      "finding": "Vybrané obrázky jsou z bety 1.60.1.69893; aktuálnost vůči vydání není ověřena.",
+      "resolution": "Použít pro E01; před herním vydáním balíčku znovu prověřit geometrii a pět kontrolních míst."
+    },
+    {
+      "id": "E00-03",
+      "severity": "provenance",
+      "subject": "Komunitní pravidla a souřadnice",
+      "finding": "Soubor se jmenuje Forever, ale dostupnost je uvnitř pod CLASSIC_QUEST_AVAILABLE.",
+      "resolution": "Převzaté podmínky a polohy ponechat jako reference k ověření.",
+      "source_ids": [
+        "eq_available",
+        "eq_turnin"
+      ]
+    },
+    {
+      "id": "E00-04",
+      "severity": "prototype_validation",
+      "subject": "Umístění značek",
+      "finding": "Je připraveno osm zdrojovaných poloh. Nativní renderer ani nezávislá herní kalibrace ještě nejsou hotové.",
+      "resolution": "Ověřit v E01 a před použitím v M1."
+    },
+    {
+      "id": "E00-05",
+      "severity": "coverage",
+      "subject": "Warlockovy úvodní podmínky",
+      "finding": "Orčí beta cesta je doložená, ale záznam hráče jiné třídy nedokládá přesné pořadí a dostupnost u Warlocka.",
+      "resolution": "Ověřit 3090, 1485 a 1499 pro orčího Warlocka. Neodvozovat minimální úroveň z úrovně úkolu."
+    },
+    {
+      "id": "E00-06",
+      "severity": "distribution",
+      "subject": "Původ mapových obrázků",
+      "finding": "Obrázky jsou herní grafika Blizzardu; webové zdroje neposkytly samostatnou licenci podkladu.",
+      "resolution": "Balíček označen pro osobní technický prototyp; původ uchovat v inventáři. Publikační podmínky řešit při případné veřejné distribuci."
+    },
+    {
+      "id": "E00-07",
+      "severity": "map_detail",
+      "subject": "Rozlišení map",
+      "finding": "Všechny čtyři vybrané podklady mají 1002 krát 668 bodů.",
+      "resolution": "Zvětšení nevytváří nový detail; omezit zoom podle podkladu nebo později doplnit detailnější vrstvy."
+    },
+    {
+      "id": "E00-08",
+      "severity": "routing",
+      "subject": "Doprava",
+      "finding": "Záznam Frezzy uvádí Undercity, ale neověřili jsme nástupní a výstupní bod a délku cesty.",
+      "resolution": "Zobrazit zatím informační bod dopravy; automatické směrování ponechat vypnuté."
+    }
+  ]
+}

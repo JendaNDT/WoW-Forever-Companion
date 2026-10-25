@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E06RecommendationsTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-10-23T15:17:54.306Z" hostname="f05490768d7a" time="0.13">
+  <properties/>
+  <testcase name="exclusiveGroupBlocksConfirmedOtherBranchAndDeferredDoesNot" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.034"/>
+  <testcase name="unverifiedRuleAndUnverifiedPrerequisiteCannotBecomeConfirmedWarnings" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.008"/>
+  <testcase name="personalWishWithUnknownAreaStaysVisibleWithoutPretendingToBeLocated" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.003"/>
+  <testcase name="missingAllAndAlreadySatisfiedAnyDoNotInflateSuccessorCount" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.008"/>
+  <testcase name="rewardSelectionDoesNotEqualAcquisitionAndOtherRewardExcludesTheVariant" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.009"/>
+  <testcase name="allAndAnyUseOnlyCompletedRecordsAndIgnoreDeferredAsACompletion" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.01"/>
+  <testcase name="lowLevelAndRaceChangeRecomputeAvailabilityWithoutCallingItMissed" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.011"/>
+  <testcase name="exactDeadlineStopsUrgentRecommendationAndTimezoneIsExplicit" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.005"/>
+  <testcase name="shippedBetaAndClassicNeverBecomeAvailableEvenAtLevelSixty" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.002"/>
+  <testcase name="factionClassAndAreaConditionsExplainAConcreteMismatch" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.009"/>
+  <testcase name="nestedAnyWithAnUnknownAlternativeCannotProveMissingAccess" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.006"/>
+  <testcase name="rankingKeepsClassAndRiskBeforeUserPreferenceAndPersistsStableTies" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.005"/>
+  <testcase name="completedAcquiredAndDiscoveredEntriesLeaveTheListsWhileDeferredRemainSeparate" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.003"/>
+  <testcase name="optionalModeAndProfessionMatterOnlyForRulesThatRequireThem" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.013"/>
+  <testcase name="historyWishOutsideTheCatalogKeepsItsNameButNeverBecomesAvailable" classname="cz.jenda.wowforever.E06RecommendationsTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

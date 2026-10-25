@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.NativeSceneTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T13:08:47.764Z" hostname="f05490768d7a" time="2.456">
+  <properties/>
+  <testcase name="zoomAndSelectedPointRemainAfterActivityRecreation" classname="cz.jenda.wowforever.NativeSceneTest" time="0.721"/>
+  <testcase name="landscapeKeepsMapAndAllControlsVisible" classname="cz.jenda.wowforever.NativeSceneTest" time="0.809"/>
+  <testcase name="mapsAndNpcListWorkWithNoNetworkPermission" classname="cz.jenda.wowforever.NativeSceneTest" time="0.924"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

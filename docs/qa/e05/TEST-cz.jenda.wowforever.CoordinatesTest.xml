@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.CoordinatesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T14:24:29.514Z" hostname="f05490768d7a" time="0.002">
+  <properties/>
+  <testcase name="area ID cannot replace UI map ID" classname="cz.jenda.wowforever.CoordinatesTest" time="0.0"/>
+  <testcase name="invalid and nonfinite coordinates are rejected" classname="cz.jenda.wowforever.CoordinatesTest" time="0.001"/>
+  <testcase name="percentage frame uses top left origin and correct dimensions" classname="cz.jenda.wowforever.CoordinatesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

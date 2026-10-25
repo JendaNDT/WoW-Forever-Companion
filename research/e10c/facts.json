@@ -1,0 +1,642 @@
+{
+  "checkedOn": "2026-10-25",
+  "scope": "E10.3: selected northern Durotar and Orc Warlock Voidwalker reference chain; integrated generation 6",
+  "npcs": [
+    {
+      "id": 3203,
+      "name": "Fizzle Darkstorm",
+      "uiMapId": 1411,
+      "x": 42.1,
+      "y": 26.8,
+      "verification": "BETA",
+      "sourceUrl": "https://warcraftforever.games/npcs/3203",
+      "descriptionCs": "Nepřítel pozorovaný v Thunder Ridge. Fizzle’s Claw pro Dark Storms je Classic návaznost; beta poloha nepotvrzuje zadání ani šanci na kořist.",
+      "aliases": [
+        "Fizzle",
+        "Thunder Ridge",
+        "klepeto"
+      ],
+      "build": null
+    },
+    {
+      "id": 3208,
+      "name": "Margoz",
+      "uiMapId": 1411,
+      "x": 56.4,
+      "y": 19.7,
+      "verification": "BETA",
+      "sourceUrl": "https://warcraftforever.games/npcs/3208",
+      "descriptionCs": "Beta poloha Margozova tábora. Classic úkoly ho spojují s Orgnilem, obojky ze Skull Rock a doručením vzorku Neeruovi.",
+      "aliases": [
+        "tábor",
+        "obojky",
+        "Skull Rock"
+      ],
+      "build": null
+    },
+    {
+      "id": 3204,
+      "name": "Gazz'uz",
+      "uiMapId": 1411,
+      "x": 54.8,
+      "y": 9.4,
+      "verification": "BETA",
+      "sourceUrl": "https://warcraftforever.games/npcs/3204",
+      "descriptionCs": "Pozorovaný nepřítel ve Skull Rock. Bod je poloha na mapě Durotaru, nikoli vchod, patro nebo průchozí trasa jeskyní. Původ oka pro Burning Shadows je Classic reference.",
+      "aliases": [
+        "jeskyně",
+        "oko",
+        "Skull Rock"
+      ],
+      "build": null
+    },
+    {
+      "id": 3189,
+      "name": "Kor'ghan",
+      "uiMapId": 1454,
+      "x": 46.2,
+      "y": 53.0,
+      "verification": "BETA",
+      "sourceUrl": "https://warcraftforever.games/npcs/3189",
+      "descriptionCs": "Beta poloha v Cleft of Shadow. Classic reference Finding the Antidote žádá čtyři jedové váčky; hotový protijed patří Rhinagovi.",
+      "aliases": [
+        "protijed",
+        "jed",
+        "Orgrimmar"
+      ],
+      "build": null
+    },
+    {
+      "id": 3293,
+      "name": "Rezlak",
+      "uiMapId": 1411,
+      "x": 46.4,
+      "y": 22.9,
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/834",
+      "descriptionCs": "Classic poloha u cesty severně od kaňonů. Úkoly Winds in the Desert a Securing the Lines i nová dvojice kolem bouřkové koule se vracejí k Rezlakovi. Jeho poloha ve Forever není touto referencí potvrzená.",
+      "aliases": [
+        "zásoby",
+        "harpyje",
+        "bouře"
+      ],
+      "build": null,
+      "identitySourceUrl": "https://theforeverera.com/en/npcs/3293/"
+    },
+    {
+      "id": 3193,
+      "name": "Misha Tor'kren",
+      "uiMapId": 1411,
+      "x": 43.1,
+      "y": 30.2,
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/816",
+      "descriptionCs": "Classic poloha u farmy severozápadně od Razor Hill. Při úkolu Lost But Not Forgotten se k ní vrací Kron’s Amulet.",
+      "aliases": [
+        "Kron",
+        "amulet",
+        "farma"
+      ],
+      "build": null,
+      "identitySourceUrl": "https://questing.wiki/wow-forever/npcs/zones/durotar/"
+    },
+    {
+      "id": 3190,
+      "name": "Rhinag",
+      "uiMapId": 1411,
+      "x": 41.5,
+      "y": 18.6,
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/812",
+      "descriptionCs": "Classic poloha u severozápadní hranice Durotaru. Need for a Cure vede přes Kor’ghana pro protijed a zpět sem. Ověř současné zadání a případný časovač v klientu.",
+      "aliases": [
+        "protijed",
+        "záchrana"
+      ],
+      "build": null,
+      "identitySourceUrl": "https://questing.wiki/wow-forever/npcs/zones/durotar/"
+    },
+    {
+      "id": 3294,
+      "name": "Ophek",
+      "uiMapId": 1411,
+      "x": 54.4,
+      "y": 41.3,
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/1506",
+      "descriptionCs": "Classic poloha v Razor Hill pro Gan’rul’s Summons. Warlockova reference od úrovně 10 vede do Cleft of Shadow v Orgrimmaru.",
+      "aliases": [
+        "warlock",
+        "Voidwalker",
+        "Razor Hill"
+      ],
+      "build": null,
+      "identitySourceUrl": "https://www.wowhead.com/classic/npc=3294/ophek"
+    },
+    {
+      "id": 5875,
+      "name": "Gan'rul Bloodeye",
+      "uiMapId": 1454,
+      "x": 48.2,
+      "y": 45.3,
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/1506",
+      "descriptionCs": "Classic poloha v Cleft of Shadow pro cestu k Voidwalkerovi: Gan’rul’s Summons → Creature of the Void → The Binding. Aktuální podmínky ověř ve Forever.",
+      "aliases": [
+        "warlock",
+        "Voidwalker",
+        "démon",
+        "Orgrimmar"
+      ],
+      "build": null,
+      "identitySourceUrl": "https://www.wowhead.com/classic/fr/npc=5875/ganrul-bloodeye"
+    },
+    {
+      "id": 3147,
+      "name": "Furl Scornbrow",
+      "uiMapId": 1411,
+      "x": 49.9,
+      "y": 40.4,
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/791",
+      "descriptionCs": "Classic poloha ve strážní věži Razor Hill. Carry Your Weight je úkol na osm Canvas Scraps; beta tooltip odměnové brašny uvádí šest míst.",
+      "aliases": [
+        "brašna",
+        "batoh",
+        "věž"
+      ],
+      "build": null,
+      "identitySourceUrl": "https://www.wowhead.com/classic/npc=3147/furl-scornbrow"
+    }
+  ],
+  "quests": [
+    {
+      "id": 791,
+      "name": "Carry Your Weight",
+      "level": 7,
+      "referenceMinimumLevel": 4,
+      "minimumLevel": null,
+      "startNpcId": 3147,
+      "endNpcId": 3147,
+      "descriptionCs": "Přines Furl Scornbrowovi ve věži Razor Hill osm Canvas Scraps. Classic reference uvádí pevnou odměnu Handmade Leather Bag; beta tooltip brašny už má šest míst.",
+      "reasonCs": "Při návratu k Razor Hill zkontroluj úkol na rozšíření místa v batohu.",
+      "aliases": [
+        "batoh",
+        "brašna",
+        "plátno"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/791",
+      "warlock": false
+    },
+    {
+      "id": 812,
+      "name": "Need for a Cure",
+      "level": 9,
+      "referenceMinimumLevel": 7,
+      "minimumLevel": null,
+      "startNpcId": 3190,
+      "endNpcId": 3190,
+      "descriptionCs": "Rhinag potřebuje Venomtail Antidote od Kor’ghana v Orgrimmaru. Hotový protijed přines zpět Rhinagovi. Classic zdroj uvádí limit 45 minut; současný časovač ověř ve hře.",
+      "reasonCs": "Před přijetím zkontroluj zadání a časový limit; cesta vede do města a zpět.",
+      "aliases": [
+        "protijed",
+        "časový limit",
+        "Rhinag"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/812",
+      "warlock": false
+    },
+    {
+      "id": 813,
+      "name": "Finding the Antidote",
+      "level": 9,
+      "referenceMinimumLevel": 7,
+      "minimumLevel": null,
+      "startNpcId": 3189,
+      "endNpcId": 3189,
+      "descriptionCs": "Kor’ghan v Orgrimmaru podle Classic reference žádá čtyři Venomtail Poison Sacs a připraví protijed pro Rhinaga. Nejde o odevzdání hotového léku Rhinagovi.",
+      "reasonCs": "Rozlišuj přípravu protijedu u Kor’ghana a návrat k Rhinagovi.",
+      "aliases": [
+        "protijed",
+        "jedové váčky",
+        "Korghan"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/813",
+      "warlock": false
+    },
+    {
+      "id": 816,
+      "name": "Lost But Not Forgotten",
+      "level": 11,
+      "referenceMinimumLevel": 8,
+      "minimumLevel": null,
+      "startNpcId": 3193,
+      "endNpcId": 3193,
+      "descriptionCs": "Pro Mishu Tor’kren hledej Kron’s Amulet u krokolisků podél Southfury River. Classic reference nepotvrzuje současnou šanci na kořist.",
+      "reasonCs": "Před výpravou k řece zkontroluj úkol na Kronův amulet.",
+      "aliases": [
+        "Kron",
+        "amulet",
+        "řeka"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/816",
+      "warlock": false
+    },
+    {
+      "id": 834,
+      "name": "Winds in the Desert",
+      "level": 9,
+      "referenceMinimumLevel": 7,
+      "minimumLevel": null,
+      "startNpcId": 3293,
+      "endNpcId": 3293,
+      "descriptionCs": "Rezlak podle Classic reference potřebuje pět Sacks of Supplies z Razorwind Canyon. Vrať je k němu.",
+      "reasonCs": "Před sestupem do kaňonu zkontroluj zásoby pro Rezlaka.",
+      "aliases": [
+        "zásoby",
+        "pytle",
+        "harpyje"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/834",
+      "warlock": false
+    },
+    {
+      "id": 835,
+      "name": "Securing the Lines",
+      "level": 11,
+      "referenceMinimumLevel": 7,
+      "minimumLevel": null,
+      "startNpcId": 3293,
+      "endNpcId": 3293,
+      "descriptionCs": "Pro Rezlaka zabij dvanáct Dustwind Savages a osm Dustwind Storm Witches v Drygulch Ravine. Classic návaznost vede z Winds in the Desert; podmínky ověř ve hře.",
+      "reasonCs": "Po návratu se zásobami zkontroluj další Rezlakův úkol a výběr odměny.",
+      "aliases": [
+        "harpyje",
+        "kaňon"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/835",
+      "warlock": false,
+      "previousQuestId": 834
+    },
+    {
+      "id": 806,
+      "name": "Dark Storms",
+      "level": 12,
+      "referenceMinimumLevel": 4,
+      "minimumLevel": null,
+      "startNpcId": 3142,
+      "endNpcId": 3142,
+      "descriptionCs": "Orgnil Soulscar v Razor Hill podle Classic reference žádá Fizzle’s Claw od Fizzle Darkstorma v Thunder Ridge. Vrať se nejdřív k Orgnilovi.",
+      "reasonCs": "Před severní výpravou zkontroluj úkol u Orgnila.",
+      "aliases": [
+        "Fizzle",
+        "klepeto"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/806",
+      "warlock": false,
+      "previousQuestId": 823
+    },
+    {
+      "id": 828,
+      "name": "Margoz",
+      "level": 12,
+      "referenceMinimumLevel": 4,
+      "minimumLevel": null,
+      "startNpcId": 3142,
+      "endNpcId": 3208,
+      "descriptionCs": "Po Dark Storms tě Classic řada posílá od Orgnila k Margozovi u severovýchodního pobřeží. Před výpravou do Skull Rock zkontroluj Margozovo zadání.",
+      "reasonCs": "Zastav se u Margozova tábora před sběrem obojků.",
+      "aliases": [
+        "Margoz",
+        "tábor"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/828",
+      "warlock": false,
+      "previousQuestId": 806
+    },
+    {
+      "id": 827,
+      "name": "Skull Rock",
+      "level": 12,
+      "referenceMinimumLevel": 4,
+      "minimumLevel": null,
+      "startNpcId": 3208,
+      "endNpcId": 3208,
+      "descriptionCs": "Margoz podle Classic reference žádá šest Searing Collars od kultistů ve Skull Rock. Přines je k němu; neodevzdávají se rovnou Neeruovi.",
+      "reasonCs": "Před jeskyní zkontroluj šest obojků a Warlockův samostatný úkol na tabulku.",
+      "aliases": [
+        "obojky",
+        "jeskyně"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/827",
+      "warlock": false,
+      "previousQuestId": 828
+    },
+    {
+      "id": 829,
+      "name": "Neeru Fireblade",
+      "level": 12,
+      "referenceMinimumLevel": 4,
+      "minimumLevel": null,
+      "startNpcId": 3208,
+      "endNpcId": 3216,
+      "descriptionCs": "Po Skull Rock neseš podle Classic řady jeden Example Collar od Margoze Neeru Firebladeovi v Orgrimmaru. Je to jiný předmět než šest Searing Collars.",
+      "reasonCs": "Před cestou do Orgrimmaru zkontroluj vzorový obojek.",
+      "aliases": [
+        "vzorek",
+        "obojek",
+        "Orgrimmar"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/829",
+      "warlock": false,
+      "previousQuestId": 827
+    },
+    {
+      "id": 832,
+      "name": "Burning Shadows",
+      "level": 12,
+      "referenceMinimumLevel": 4,
+      "minimumLevel": null,
+      "startNpcId": null,
+      "endNpcId": 3216,
+      "descriptionCs": "Classic reference začíná nalezeným Eye of Burning Shadow a končí u Neeru Firebladea v Orgrimmaru. Oko není Example Collar; dostupnost ani kořist z Gazz’uze nejsou pro vydanou hru potvrzené.",
+      "reasonCs": "Při nalezení oka zkontroluj jeho samostatný úkol. Není potvrzenou podmínkou dokončení obojků.",
+      "aliases": [
+        "oko",
+        "Gazzuz",
+        "Orgrimmar"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/832",
+      "warlock": false,
+      "startsWithItem": "Eye of Burning Shadow"
+    },
+    {
+      "id": 1506,
+      "name": "Gan'rul's Summons",
+      "level": 10,
+      "referenceMinimumLevel": 10,
+      "minimumLevel": null,
+      "startNpcId": 3294,
+      "endNpcId": 5875,
+      "descriptionCs": "Warlockova Classic řada začíná u Opheka v Razor Hill a vede ke Gan’rul Bloodeyeovi v Orgrimmaru. Potom zkontroluj Creature of the Void 1501.",
+      "reasonCs": "Od úrovně 10 zkontroluj začátek své cesty k Voidwalkerovi.",
+      "aliases": [
+        "warlock",
+        "Voidwalker",
+        "vyvolání"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/1506",
+      "warlock": true
+    },
+    {
+      "id": 1501,
+      "name": "Creature of the Void",
+      "level": 11,
+      "referenceMinimumLevel": 10,
+      "minimumLevel": null,
+      "startNpcId": 5875,
+      "endNpcId": 5875,
+      "descriptionCs": "V orčí Classic řadě vyzvedni Tablet of Verga ze Skull Rock a vrať ji Gan’rul Bloodeyeovi. Návaznost: Gan’rul’s Summons 1506 → tento úkol → The Binding 1504. Nejde o stejnojmenný úkol v Undercity.",
+      "reasonCs": "Před návštěvou Skull Rock ověř Warlockův úkol na tabulku.",
+      "aliases": [
+        "warlock",
+        "Voidwalker",
+        "tabulka",
+        "Skull Rock"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/1501",
+      "warlock": true,
+      "previousQuestId": 1506
+    },
+    {
+      "id": 1504,
+      "name": "The Binding",
+      "level": 11,
+      "referenceMinimumLevel": 10,
+      "minimumLevel": null,
+      "startNpcId": 5875,
+      "endNpcId": 5875,
+      "descriptionCs": "Po Creature of the Void použij přidělené Glyphs of Summoning v kruhu v Neeruově stanu v Orgrimmaru. Podle Classic reference poraz vyvolaného Voidwalkera a vrať se ke Gan’rulovi. Současné podmínky učení ověř ve hře.",
+      "reasonCs": "Závěr orčí cesty k Voidwalkerovi; glyfy nejsou Runes of Summoning z Undercity.",
+      "aliases": [
+        "warlock",
+        "Voidwalker",
+        "glyfy",
+        "kruh"
+      ],
+      "verification": "CLASSIC",
+      "sourceUrl": "https://foreverchanges.pro/quest/1504",
+      "warlock": true,
+      "previousQuestId": 1501
+    },
+    {
+      "id": 97281,
+      "name": "A Simmering Storm",
+      "level": 11,
+      "referenceMinimumLevel": 7,
+      "minimumLevel": null,
+      "startNpcId": null,
+      "endNpcId": 3293,
+      "descriptionCs": "ForeverChanges podle databáze Forever uvádí začátek předmětem Dull Storm Orb. Cíl popisuje jako Dull Stormy Orb; předej jej Rezlakovi. Oba zápisy ponecháváme pro hledání. Přesná poloha ani způsob získání nejsou doložené.",
+      "reasonCs": "Při nalezení podivné koule zkontroluj nový úkol pro Rezlaka.",
+      "aliases": [
+        "koule",
+        "Dull Storm Orb",
+        "Dull Stormy Orb"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/quest/97281",
+      "warlock": false,
+      "startsWithItem": "Dull Storm Orb"
+    },
+    {
+      "id": 97282,
+      "name": "Stormy Potential",
+      "level": 11,
+      "referenceMinimumLevel": 7,
+      "minimumLevel": null,
+      "startNpcId": 3293,
+      "endNpcId": 3293,
+      "descriptionCs": "Navazující Forever záznam žádá pět Charged Thunder Lizard Organs pro Rezlaka. Uvádí pevnou odměnu Makeshift Stormcaller. Aktuální dostupnost ověř ve hře.",
+      "reasonCs": "Po odevzdání bouřkové koule zkontroluj pokračování a hůl s Intellect a Spell Power.",
+      "aliases": [
+        "bouře",
+        "orgány",
+        "hůl",
+        "ještěři"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/quest/97282",
+      "warlock": false,
+      "previousQuestId": 97281
+    }
+  ],
+  "items": [
+    {
+      "id": 4871,
+      "name": "Searing Collar",
+      "descriptionCs": "Úkolový obojek. Classic Skull Rock 827 žádá šest kusů pro Margoze. Není to vzorový Example Collar pro Neerua.",
+      "aliases": [
+        "obojek",
+        "Skull Rock"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/item/4871",
+      "build": "1.60.1.70532",
+      "minimumLevel": null,
+      "questId": 827,
+      "role": "OBJECTIVE",
+      "quantity": 6
+    },
+    {
+      "id": 6658,
+      "name": "Example Collar",
+      "descriptionCs": "Samostatný vzorový obojek pro Neeru Fireblade 829. Classic zadání jej poskytuje pro doručení; nezaměňuj se šesti Searing Collars.",
+      "aliases": [
+        "vzorek",
+        "obojek"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/item/6658",
+      "build": "1.60.1.70532",
+      "minimumLevel": null,
+      "questId": 829,
+      "role": "PROVIDED_OBJECTIVE",
+      "quantity": 1
+    },
+    {
+      "id": 4903,
+      "name": "Eye of Burning Shadow",
+      "descriptionCs": "Beta tooltip označuje předmět jako začátek úkolu a vyžaduje úroveň 4. Classic vazba vede na Burning Shadows 832 pro Neerua. Nejde o obojek z Margozovy řady.",
+      "aliases": [
+        "oko",
+        "Gazzuz"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/item/4903",
+      "build": "1.60.1.70532",
+      "minimumLevel": null,
+      "questId": 832,
+      "role": "QUEST_STARTER",
+      "requiredLevel": 4
+    },
+    {
+      "id": 6535,
+      "name": "Tablet of Verga",
+      "descriptionCs": "Tabulka pro orčí Creature of the Void 1501. Classic popis ji umisťuje do Burning Blade Stash ve Skull Rock; přesné vnitřní místo nemá vlastní mapový bod.",
+      "aliases": [
+        "tabulka",
+        "warlock",
+        "Voidwalker"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/item/6535",
+      "build": "1.60.1.70532",
+      "minimumLevel": null,
+      "questId": 1501,
+      "role": "OBJECTIVE",
+      "warlock": true
+    },
+    {
+      "id": 7464,
+      "name": "Glyphs of Summoning",
+      "descriptionCs": "Glyfy pro orčí The Binding 1504. Beta tooltip uvádí vyvolání Voidwalkera u přivolávacího kruhu; Classic zadání vede ke kruhu v Neeruově stanu. Nezaměňuj s runami z Undercity.",
+      "aliases": [
+        "glyfy",
+        "warlock",
+        "Voidwalker"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/item/7464",
+      "build": "1.60.1.70532",
+      "minimumLevel": null,
+      "questId": 1504,
+      "role": "PROVIDED_OBJECTIVE",
+      "warlock": true
+    },
+    {
+      "id": 4938,
+      "name": "Blemished Wooden Staff",
+      "descriptionCs": "Obouruční hůl, beta item level 11. Classic reference ji nabízí jako volitelnou odměnu ze Securing the Lines 835. Porovnej vlastní výbavu a potřebný výcvik zbraně.",
+      "aliases": [
+        "hůl",
+        "výbava",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/item/4938",
+      "build": "1.60.1.70532",
+      "minimumLevel": null,
+      "questId": 835,
+      "role": "CHOICE_REWARD",
+      "slot": "Two-Hand",
+      "weaponType": "Staff",
+      "itemLevel": 11,
+      "warlock": true
+    },
+    {
+      "id": 281274,
+      "name": "Makeshift Stormcaller",
+      "descriptionCs": "Nová obouruční hůl Forever: beta tooltip uvádí item level 11, +2 Intellect a +4 Spell Power. Zdroj ji uvádí jako pevnou odměnu Stormy Potential 97282. Porovnej svou výbavu a výcvik zbraně.",
+      "aliases": [
+        "hůl",
+        "intellect",
+        "spell power",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/item/281274",
+      "build": "1.60.1.70532",
+      "minimumLevel": null,
+      "questId": 97282,
+      "role": "FIXED_REWARD",
+      "slot": "Two-Hand",
+      "weaponType": "Staff",
+      "itemLevel": 11,
+      "intellect": 2,
+      "spellPower": 4,
+      "warlock": true
+    },
+    {
+      "id": 11845,
+      "name": "Handmade Leather Bag",
+      "descriptionCs": "Brašna má v beta tooltipu šest míst; v Classicu měla čtyři. Classic úkol Carry Your Weight 791 ji uvádí jako pevnou odměnu, nikoli volbu. Současnou podobu odměny ověř při odevzdání.",
+      "aliases": [
+        "batoh",
+        "brašna",
+        "šest míst",
+        "odměna"
+      ],
+      "verification": "BETA",
+      "sourceUrl": "https://foreverchanges.pro/item/11845",
+      "build": "1.60.1.70532",
+      "minimumLevel": null,
+      "questId": 791,
+      "role": "FIXED_REWARD",
+      "slots": 6,
+      "classicSlots": 4,
+      "itemLevel": 1
+    }
+  ],
+  "notesCs": [
+    "Polohy šesti NPC jsou explicitní Classic reference na mapě Forever, čtyři pocházejí z beta pozorování ForeverLog.",
+    "Osm tooltipů předmětů je z extrakce ForeverChanges 1.60.1.70532; to samo neověřuje způsob získání.",
+    "Dva nové questy jsou převzaté přes výslovně uvedenou databázi Forever na ForeverChanges, ne nezávislé pozorování ve hře.",
+    "Čtrnáct questů a jejich návaznosti zůstávají CLASSIC. Podmínky vydané hry zůstávají neznámé.",
+    "Pevné odměny se neoznačují vztahem REWARD_CHOICE. Vazba je popsaná v textu a payloadu.",
+    "Vnitřní patra jeskyní a dopravní hrany zůstávají nezpracované."
+  ]
+}

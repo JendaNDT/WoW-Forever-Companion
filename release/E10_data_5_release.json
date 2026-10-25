@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "hostTests": {
+    "tests": 179,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "hostSuites": 44,
+  "newE10Batch2Tests": 5,
+  "pythonTests": 13,
+  "sourceInputsUnchangedSinceE12": true,
+  "newApkBuilt": false,
+  "dataGeneration": 5,
+  "dataSha256": "27b70643d39c0c832f12da4f4ceac1aa57fda19fbf7fac533d84fb3e73aab725",
+  "dataBytes": 9684063,
+  "basicE12PhoneCheck": "confirmed by user on 2026-10-25",
+  "generation5PhoneImport": "pending",
+  "measuredAndroidPerformanceGoals": "pending",
+  "gameClientVerification": "not performed",
+  "secondDeviceRestore": "not confirmed",
+  "apkVersion": "0.12.0-e12",
+  "minimumAppCode": 10,
+  "sourceRevisionOfApk": "b5db01b48e7c7bd2fa5fa22ac61b17138ef1fc7d",
+  "filename": "WoW_Forever_E10_data_5.wfp",
+  "packageId": "wow-forever:starter:durotar",
+  "entries": 182,
+  "positions": 74,
+  "maps": 5,
+  "files": 86
+}

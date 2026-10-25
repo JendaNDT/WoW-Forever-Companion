@@ -1,0 +1,1208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wow-forever:content-schema:1",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "packageId": {
+      "const": "wow-forever:starter:durotar"
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "gameVariant": {
+      "const": "wow-forever"
+    },
+    "checkedOn": {
+      "type": "string",
+      "format": "date"
+    },
+    "maps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/map"
+      },
+      "minItems": 4,
+      "maxItems": 80
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      },
+      "minItems": 1,
+      "maxItems": 60000
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      },
+      "minItems": 1,
+      "maxItems": 60000
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/location"
+      },
+      "minItems": 0,
+      "maxItems": 60000
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relation"
+      },
+      "minItems": 0,
+      "maxItems": 60000
+    },
+    "guideRules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/guideRule"
+      },
+      "maxItems": 6000
+    },
+    "transportGraph": {
+      "$ref": "#/$defs/transportGraph"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "packageId",
+    "generation",
+    "gameVariant",
+    "checkedOn",
+    "maps",
+    "sources",
+    "entries",
+    "locations",
+    "relations"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "transform": {
+      "type": "object",
+      "properties": {
+        "scaleX": {
+          "type": "number"
+        },
+        "scaleY": {
+          "type": "number"
+        },
+        "offsetX": {
+          "type": "number"
+        },
+        "offsetY": {
+          "type": "number"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "map": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uiMapId": {
+          "enum": [
+            947,
+            1414,
+            1411,
+            1454,
+            1413,
+            1412,
+            1416,
+            1417,
+            1418,
+            1419,
+            1420,
+            1421,
+            1422,
+            1423,
+            1424,
+            1425,
+            1426,
+            1427,
+            1428,
+            1429,
+            1430,
+            1431,
+            1432,
+            1433,
+            1434,
+            1435,
+            1436,
+            1437,
+            1438,
+            1439,
+            1440,
+            1441,
+            1442,
+            1443,
+            1444,
+            1445,
+            1446,
+            1447,
+            1448,
+            1449,
+            1450,
+            1451,
+            1452,
+            1453,
+            1455,
+            1456,
+            1457,
+            1458,
+            1459,
+            1460,
+            1461,
+            1415,
+            2548,
+            2482,
+            2652,
+            2521,
+            902959,
+            902998,
+            902999,
+            903065,
+            903002
+          ]
+        },
+        "floorId": {
+          "const": 0
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 256,
+          "maximum": 2048
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 256,
+          "maximum": 2048
+        },
+        "levels": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "build": {
+          "const": "1.60.1.69893"
+        },
+        "coordinateVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "transform": {
+          "$ref": "#/$defs/transform"
+        },
+        "scopeCs": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "key",
+        "uiMapId",
+        "floorId",
+        "name",
+        "width",
+        "height",
+        "levels",
+        "build",
+        "coordinateVersion",
+        "sourceId",
+        "sourceUrl"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checkedOn": {
+          "type": "string",
+          "format": "date"
+        },
+        "build": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "payload": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "url",
+        "kind",
+        "checkedOn",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "entry": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "NPC",
+            "QUEST",
+            "ITEM",
+            "SPELL",
+            "TRAVEL",
+            "OBJECT"
+          ]
+        },
+        "gameId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "nameOriginal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "descriptionCs": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "maxItems": 20000
+        },
+        "verification": {
+          "enum": [
+            "BETA",
+            "COMMUNITY",
+            "CLASSIC",
+            "CONFLICT",
+            "UNVERIFIED",
+            "RELEASE"
+          ]
+        },
+        "releaseConfirmed": {
+          "type": "boolean"
+        },
+        "minimumLevel": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 60
+        },
+        "reportedLevel": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 60
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 20000
+        },
+        "payload": {
+          "type": "string",
+          "minLength": 1
+        },
+        "referencePosition": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "key",
+        "kind",
+        "nameOriginal",
+        "descriptionCs",
+        "verification",
+        "sourceIds",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entryKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mapKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coordinateVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "floorId": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "xPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "yPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "precisionPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "key",
+        "entryKey",
+        "mapKey",
+        "coordinateVersion",
+        "floorId",
+        "xPercent",
+        "yPercent",
+        "precisionPercent",
+        "sourceId"
+      ],
+      "additionalProperties": false
+    },
+    "relation": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "PREREQUISITE",
+            "START_NPC",
+            "END_NPC",
+            "LEARN_SPELL",
+            "REWARD_CHOICE",
+            "EXCLUSIVE_QUESTS",
+            "START_OBJECT",
+            "END_OBJECT",
+            "START_ITEM",
+            "OBJECTIVE_NPC",
+            "OBJECTIVE_OBJECT",
+            "OBJECTIVE_ITEM",
+            "ITEM_SOURCE_NPC",
+            "ITEM_SOURCE_OBJECT",
+            "DUNGEON_QUEST",
+            "QUEST_REWARD"
+          ]
+        },
+        "ownerKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetKeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 20000
+        },
+        "mode": {
+          "enum": [
+            "ALL",
+            "ANY"
+          ]
+        },
+        "verification": {
+          "enum": [
+            "BETA",
+            "COMMUNITY",
+            "CLASSIC",
+            "CONFLICT",
+            "UNVERIFIED",
+            "RELEASE"
+          ]
+        },
+        "routingEnabled": {
+          "type": "boolean"
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 20000
+        }
+      },
+      "required": [
+        "key",
+        "kind",
+        "ownerKey",
+        "targetKeys",
+        "mode",
+        "verification",
+        "sourceIds"
+      ],
+      "additionalProperties": false
+    },
+    "guideCondition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "always"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "unknown"
+            },
+            "reasonCs": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            }
+          },
+          "required": [
+            "type",
+            "reasonCs"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "all"
+            },
+            "conditions": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 200,
+              "items": {
+                "$ref": "#/$defs/guideCondition"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "conditions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "any"
+            },
+            "conditions": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 200,
+              "items": {
+                "$ref": "#/$defs/guideCondition"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "conditions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "faction"
+            },
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "minItems": 1,
+              "maxItems": 50,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "values"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "class"
+            },
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "minItems": 1,
+              "maxItems": 50,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "values"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "race"
+            },
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "minItems": 1,
+              "maxItems": 50,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "values"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "mode"
+            },
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "minItems": 1,
+              "maxItems": 50,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "values"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "profession"
+            },
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "minItems": 1,
+              "maxItems": 50,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "values"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "level"
+            },
+            "minimum": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 60
+            },
+            "maximum": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 60
+            }
+          },
+          "required": [
+            "type",
+            "minimum"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "area"
+            },
+            "uiMapIds": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "enum": [
+                  947,
+                  1414,
+                  1411,
+                  1454,
+                  1413,
+                  1412,
+                  1416,
+                  1417,
+                  1418,
+                  1419,
+                  1420,
+                  1421,
+                  1422,
+                  1423,
+                  1424,
+                  1425,
+                  1426,
+                  1427,
+                  1428,
+                  1429,
+                  1430,
+                  1431,
+                  1432,
+                  1433,
+                  1434,
+                  1435,
+                  1436,
+                  1437,
+                  1438,
+                  1439,
+                  1440,
+                  1441,
+                  1442,
+                  1443,
+                  1444,
+                  1445,
+                  1446,
+                  1447,
+                  1448,
+                  1449,
+                  1450,
+                  1451,
+                  1452,
+                  1453,
+                  1455,
+                  1456,
+                  1457,
+                  1458,
+                  1459,
+                  1460,
+                  1461,
+                  1415,
+                  2548,
+                  2482,
+                  2652,
+                  2521,
+                  902959,
+                  902998,
+                  902999,
+                  903065,
+                  903002
+                ]
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "type",
+            "uiMapIds"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "quest_completed"
+            },
+            "questKey": {
+              "type": "string",
+              "pattern": "^wow-forever:quest:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+              "maxLength": 200
+            }
+          },
+          "required": [
+            "type",
+            "questKey"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "item_acquired"
+            },
+            "itemKey": {
+              "type": "string",
+              "pattern": "^wow-forever:item:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+              "maxLength": 200
+            }
+          },
+          "required": [
+            "type",
+            "itemKey"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "reward_selected"
+            },
+            "questKey": {
+              "type": "string",
+              "pattern": "^wow-forever:quest:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+              "maxLength": 200
+            },
+            "itemKey": {
+              "type": "string",
+              "pattern": "^wow-forever:item:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+              "maxLength": 200
+            }
+          },
+          "required": [
+            "type",
+            "questKey",
+            "itemKey"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "guideWindow": {
+      "type": "object",
+      "properties": {
+        "fromEpochMillis": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "untilEpochMillis": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "timeZone": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "fromEpochMillis",
+        "untilEpochMillis",
+        "timeZone"
+      ],
+      "additionalProperties": false
+    },
+    "guideRule": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^wow-forever:rule:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "maxLength": 200
+        },
+        "entryKey": {
+          "type": "string",
+          "minLength": 1
+        },
+        "condition": {
+          "$ref": "#/$defs/guideCondition"
+        },
+        "importance": {
+          "enum": [
+            "CLASS",
+            "UNLOCK",
+            "REWARD",
+            "DUNGEON",
+            "TRAVEL",
+            "DISCOVERY"
+          ]
+        },
+        "reasonCs": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "verification": {
+          "enum": [
+            "BETA",
+            "COMMUNITY",
+            "CLASSIC",
+            "CONFLICT",
+            "UNVERIFIED",
+            "RELEASE"
+          ]
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "minItems": 1,
+          "maxItems": 50,
+          "uniqueItems": true
+        },
+        "areaIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "enum": [
+              947,
+              1414,
+              1411,
+              1454,
+              1413,
+              1412,
+              1416,
+              1417,
+              1418,
+              1419,
+              1420,
+              1421,
+              1422,
+              1423,
+              1424,
+              1425,
+              1426,
+              1427,
+              1428,
+              1429,
+              1430,
+              1431,
+              1432,
+              1433,
+              1434,
+              1435,
+              1436,
+              1437,
+              1438,
+              1439,
+              1440,
+              1441,
+              1442,
+              1443,
+              1444,
+              1445,
+              1446,
+              1447,
+              1448,
+              1449,
+              1450,
+              1451,
+              1452,
+              1453,
+              1455,
+              1456,
+              1457,
+              1458,
+              1459,
+              1460,
+              1461,
+              1415,
+              2548,
+              2482,
+              2652,
+              2521,
+              902959,
+              902998,
+              902999,
+              903065,
+              903002
+            ]
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "window": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/guideWindow"
+            }
+          ]
+        },
+        "exclusiveRelationKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "key",
+        "entryKey",
+        "condition",
+        "importance",
+        "reasonCs",
+        "verification",
+        "sourceIds"
+      ],
+      "additionalProperties": false
+    },
+    "travelNode": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^wow-forever:travel-node:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "maxLength": 200
+        },
+        "nameCs": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "locationKey": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 250
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "minItems": 1,
+          "maxItems": 50,
+          "uniqueItems": true
+        },
+        "discoveryKey": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^wow-forever:travel:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+              "maxLength": 200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "key",
+        "nameCs",
+        "locationKey",
+        "sourceIds"
+      ],
+      "additionalProperties": false
+    },
+    "travelEdge": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^wow-forever:travel-edge:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "maxLength": 200
+        },
+        "entryKey": {
+          "type": "string",
+          "pattern": "^wow-forever:travel:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "maxLength": 200
+        },
+        "from": {
+          "type": "string",
+          "pattern": "^wow-forever:travel-node:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "maxLength": 200
+        },
+        "to": {
+          "type": "string",
+          "pattern": "^wow-forever:travel-node:[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "maxLength": 200
+        },
+        "mode": {
+          "enum": [
+            "WALK",
+            "FLIGHT",
+            "BOAT",
+            "ZEPPELIN",
+            "PORTAL",
+            "ENTRANCE"
+          ]
+        },
+        "condition": {
+          "$ref": "#/$defs/guideCondition"
+        },
+        "verification": {
+          "enum": [
+            "BETA",
+            "COMMUNITY",
+            "CLASSIC",
+            "CONFLICT",
+            "UNVERIFIED",
+            "RELEASE"
+          ]
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "minItems": 1,
+          "maxItems": 50,
+          "uniqueItems": true
+        },
+        "estimatedSeconds": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 86400
+        }
+      },
+      "required": [
+        "key",
+        "entryKey",
+        "from",
+        "to",
+        "mode",
+        "condition",
+        "verification",
+        "sourceIds"
+      ],
+      "additionalProperties": false
+    },
+    "transportGraph": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/travelNode"
+          },
+          "maxItems": 1000
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/travelEdge"
+          },
+          "maxItems": 1000
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

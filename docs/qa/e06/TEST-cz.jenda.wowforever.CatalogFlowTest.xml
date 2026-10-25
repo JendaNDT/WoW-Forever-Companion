@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.CatalogFlowTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-23T15:17:25.700Z" hostname="f05490768d7a" time="6.682">
+  <properties/>
+  <testcase name="addingBookmarkAndRecreatingActivityKeepsTheBookmark" classname="cz.jenda.wowforever.CatalogFlowTest" time="6.682"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

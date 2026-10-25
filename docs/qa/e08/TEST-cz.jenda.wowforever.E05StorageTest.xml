@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E05StorageTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-23T16:53:55.998Z" hostname="f05490768d7a" time="0.706">
+  <properties/>
+  <testcase name="replacementFailureRollsBackProfileEveryTableAndThePreRestoreSnapshot" classname="cz.jenda.wowforever.E05StorageTest" time="0.106"/>
+  <testcase name="exportFileMovesAllTablesAndTwoProfilesToIndependentDatabaseWithoutCollisions" classname="cz.jenda.wowforever.E05StorageTest" time="0.12"/>
+  <testcase name="replacementCreatesReversibleSnapshotKeepsOtherProfileAndTrimsToThree" classname="cz.jenda.wowforever.E05StorageTest" time="0.133"/>
+  <testcase name="progressAndUndoReopenFromDiskAndUndoKeepsUnrelatedNoteEdit" classname="cz.jenda.wowforever.E05StorageTest" time="0.064"/>
+  <testcase name="actualVersionOneFileMigratesWithoutDeletingAnyOldTable" classname="cz.jenda.wowforever.E05StorageTest" time="0.086"/>
+  <testcase name="invalidBackupAndProfileLimitLeaveExistingDataIntact" classname="cz.jenda.wowforever.E05StorageTest" time="0.151"/>
+  <testcase name="rewardChoiceAcquisitionWishAndQuestStateAreIndependentAndUndoable" classname="cz.jenda.wowforever.E05StorageTest" time="0.045"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

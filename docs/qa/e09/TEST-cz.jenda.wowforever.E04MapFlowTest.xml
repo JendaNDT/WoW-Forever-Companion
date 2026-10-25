@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E04MapFlowTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-24T18:42:37.382Z" hostname="71ac4b1786b3" time="2.303">
+  <properties/>
+  <testcase name="longPressNoteDraftSurvivesRotationAndSavedNoteCanBeEditedAndDeleted" classname="cz.jenda.wowforever.E04MapFlowTest" time="1.215"/>
+  <testcase name="globalSearchOpensTheCorrectMapAndLinksToCatalog" classname="cz.jenda.wowforever.E04MapFlowTest" time="0.51"/>
+  <testcase name="layersRemoveMarkersAndBookmarkFilterContainsOnlyTheSavedEntry" classname="cz.jenda.wowforever.E04MapFlowTest" time="0.577"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

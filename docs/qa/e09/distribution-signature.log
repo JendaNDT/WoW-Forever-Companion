@@ -1,0 +1,2 @@
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+Production bundle verified using Java SHA256withRSA and the APK publisher public key.

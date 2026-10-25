@@ -1,0 +1,39 @@
+{
+  "formatVersion": 1,
+  "apk": "WoW_Forever_E10_celek.apk",
+  "apkSha256": "41dc2122d61ff3940b5a820261b0147164048b7407628c940b13bbd96d55d33e",
+  "apkBytes": 146680214,
+  "package": "cz.jenda.wowforever.guide",
+  "versionCode": 15,
+  "versionName": "0.15.0-e10-full",
+  "certificateSha256": "e422650dc10efbf7074ae880c0cbc0d7e6d09c8d3ba6a1b1e761f99f441c2f6b",
+  "debuggable": false,
+  "sourceRevision": "c24720b011e37dec0cfb3a4b65002379273da7d1",
+  "buildInputsSha256": "120215610f3bfc027d01fea735a418e3596a5f1137b0add1ba782739c5bb4b3b",
+  "inputFiles": 134,
+  "gitRevisionVerified": true,
+  "fallbackGeneration": 2,
+  "fallbackCatalogSha256": "038ee9dbc4ac67233b5f265a84eec912341ed45396567bf9d2e3a47cfcc79d36",
+  "publisherKeySha256": "7a647e119089a2758c1ca48da711f4c52036b3e0118af6d4bd65e8b0b39a6894",
+  "upgrade": {
+    "fromVersionCode": 14,
+    "certificateAndPackageMatch": true,
+    "physicalInstallationVerified": false
+  },
+  "physicalPhoneAcceptance": "pending",
+  "performancePhoneGoalsVerified": false,
+  "contentMilestonesComplete": false,
+  "bundledContent": {
+    "passed": true,
+    "generation": 7,
+    "files": 1104,
+    "maps": 61,
+    "entries": 12352,
+    "publisher_signature_verified": true,
+    "positions": 18441,
+    "sha256": "ba94fb218ad63cae250c7d32b32ef16532c4daa5b8ab822685d5b623a8cb563e",
+    "tiles": 1103,
+    "allPublishedMapTilesUnchanged": true,
+    "pixelExactNewMapReconstructions": 56
+  }
+}

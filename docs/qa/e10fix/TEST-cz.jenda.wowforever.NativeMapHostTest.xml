@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.NativeMapHostTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-25T16:34:45.909Z" hostname="eb5eafc03222" time="0.559">
+  <properties/>
+  <testcase name="fiveHundredMarkersAllowRepeatedMapOperations" classname="cz.jenda.wowforever.NativeMapHostTest" time="0.468"/>
+  <testcase name="allEightBetaAnchorsRenderAtTheirExpectedScreenPosition" classname="cz.jenda.wowforever.NativeMapHostTest" time="0.09"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

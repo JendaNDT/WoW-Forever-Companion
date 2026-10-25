@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E10Batch3DataTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-25T16:34:01.429Z" hostname="eb5eafc03222" time="0.077">
+  <properties/>
+  <testcase name="newReferencesCannotClaimConfirmedAvailabilityOrCompleteDurotar" classname="cz.jenda.wowforever.E10Batch3DataTest" time="0.016"/>
+  <testcase name="onlyExplicitClassicReferencesCanJoinBetaAndReleaseMapPositions" classname="cz.jenda.wowforever.E10Batch3DataTest" time="0.009"/>
+  <testcase name="classicPositionPackageRequiresTheAppThatCanDisplayItsProvenance" classname="cz.jenda.wowforever.E10Batch3DataTest" time="0.032"/>
+  <testcase name="distinctQuestItemsReferencePositionsAndFixedRewardsRemainHonestAfterDecoding" classname="cz.jenda.wowforever.E10Batch3DataTest" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E05ExclusiveTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-25T10:15:24.336Z" hostname="eb5eafc03222" time="0.095">
+  <properties/>
+  <testcase name="installedExclusiveRelationSurvivesRoomAndIsEvaluatedSymmetrically" classname="cz.jenda.wowforever.E05ExclusiveTest" time="0.062"/>
+  <testcase name="unsupportedOrUnprovedExclusiveGroupIsRejectedAtImportBoundary" classname="cz.jenda.wowforever.E05ExclusiveTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

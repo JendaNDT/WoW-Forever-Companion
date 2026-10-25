@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E11CleanupFlowTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-25T15:44:36.803Z" hostname="eb5eafc03222" time="0.898">
+  <properties/>
+  <testcase name="cleanupFailureAfterCommitCannotRollBackDiskWhileKeepingNewContentOnScreen" classname="cz.jenda.wowforever.E11CleanupFlowTest" time="0.898"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

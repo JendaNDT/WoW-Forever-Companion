@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E10Batch2StorageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-25T14:28:13.314Z" hostname="eb5eafc03222" time="2.186">
+  <properties/>
+  <testcase name="signedFourToFiveUpdateAndRollbackKeepBothProfilesNewQuestRewardNoteAndExport" classname="cz.jenda.wowforever.E10Batch2StorageTest" time="1.369"/>
+  <testcase name="modifiedSignedCatalogDoesNotSwitchActiveGenerationOrTouchPersonalData" classname="cz.jenda.wowforever.E10Batch2StorageTest" time="0.817"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

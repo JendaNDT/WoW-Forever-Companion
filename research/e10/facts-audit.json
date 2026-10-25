@@ -1,0 +1,580 @@
+{
+  "checkedOn": "2026-10-24",
+  "included": [
+    {
+      "kind": "NPC",
+      "gameId": 3216,
+      "source": "https://warcraftforever.games/npcs/3216",
+      "pageSha256": "739a043138feecf5f023170208a84df99293b205c5ae7cf8d6cb91d9cdf65dec",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3309,
+      "source": "https://warcraftforever.games/npcs/3309",
+      "pageSha256": "9a1f254e92d3c72da6bfd272377a371a5fe4afd01229c83c95a54a2ad5db3e63",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3310,
+      "source": "https://warcraftforever.games/npcs/3310",
+      "pageSha256": "d07604397bb5607f8b07b8ddc74002961d59a08f4851ec2882c991799080fd1a",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3337,
+      "source": "https://warcraftforever.games/npcs/3337",
+      "pageSha256": "71af8df1a21edd27344edd6208e156d329e0711b1010f1d7a22a8a98fb96de87",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3338,
+      "source": "https://warcraftforever.games/npcs/3338",
+      "pageSha256": "e301a4d4afc22310595848a73f37ce0f7883c90f1ecf83480d48ccc85ab227a4",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3345,
+      "source": "https://warcraftforever.games/npcs/3345",
+      "pageSha256": "5ff082805e9b6cac051e77fdeb9b013f76bce08f0df07bb39aa19696b85e3ccf",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3346,
+      "source": "https://warcraftforever.games/npcs/3346",
+      "pageSha256": "96989f47d7fe37b0fd9135e432376b06442487a70b5714d3ae488104d2cd8cfe",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3363,
+      "source": "https://warcraftforever.games/npcs/3363",
+      "pageSha256": "accabe37915ce8700e75af822b7b0555be8929454c9bf4dac5fe436e8924716d",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3390,
+      "source": "https://warcraftforever.games/npcs/3390",
+      "pageSha256": "8ea790dcf95f78b2fc34461bea342d8a76927480ddba2ecb77b3d9cadfa281b2",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3391,
+      "source": "https://warcraftforever.games/npcs/3391",
+      "pageSha256": "14d370766feb1d1135ff01e626b728705ef767903ecde967b8f38a8ab9b01a60",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3429,
+      "source": "https://warcraftforever.games/npcs/3429",
+      "pageSha256": "4c1c93a11147ad7f60d1be185de9bcbd1ba571600736f8ce379cccf2215f72df",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3432,
+      "source": "https://warcraftforever.games/npcs/3432",
+      "pageSha256": "9fde8d66cf136d1d3e3cb501a951ce5551c8e305fafb710feb2655d01f9edc8d",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3442,
+      "source": "https://warcraftforever.games/npcs/3442",
+      "pageSha256": "e5ac4d963fd1756e9f1922eff871c48852fcfc316cc978a6ca12345f840bfd86",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3446,
+      "source": "https://warcraftforever.games/npcs/3446",
+      "pageSha256": "44887cf1bcc62a94ce659ad9b07118e4750f2ccb9548b8f43b2013c26a92fe54",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3448,
+      "source": "https://warcraftforever.games/npcs/3448",
+      "pageSha256": "a5a76f548aa2b0b83197beb32844d1ac198956468889b7477a7637efbb2f785f",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3453,
+      "source": "https://warcraftforever.games/npcs/3453",
+      "pageSha256": "312c9c3c53811cbaa4d453682b901b80f8d5988236675a46cec7439cf732b916",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3464,
+      "source": "https://warcraftforever.games/npcs/3464",
+      "pageSha256": "386dd123019f6879f1735e57d144866a8e90ef31e50637807c4b9a2d81a6b047",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3486,
+      "source": "https://warcraftforever.games/npcs/3486",
+      "pageSha256": "6f7f367afedab842ea8f1c40b18dc3265cd6d7c294c04b871941e99739eda5cd",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3487,
+      "source": "https://warcraftforever.games/npcs/3487",
+      "pageSha256": "1ef470bf06dc9cfb34b2783fc2259c595dae5c3b3f285c5e7cb74899944fb358",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3489,
+      "source": "https://warcraftforever.games/npcs/3489",
+      "pageSha256": "640ab8956a1114aac883f0480b1edb4de9b993ec7c3b6c08f6e2c0c5ac89b1a7",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3496,
+      "source": "https://warcraftforever.games/npcs/3496",
+      "pageSha256": "4bc70ad565456da2dcbce8f2199a5e47b6b1aeb250a6fe7dd5d5784a41fffce5",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3521,
+      "source": "https://warcraftforever.games/npcs/3521",
+      "pageSha256": "16f803c45224ac4cbf0b55b1212e90c2e2051243f04cfd16797fb0c851f600b3",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3615,
+      "source": "https://warcraftforever.games/npcs/3615",
+      "pageSha256": "095258f00ffdeeebfeb0d0e333956bab23fa2366c811b739db45d080165a5c12",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3665,
+      "source": "https://warcraftforever.games/npcs/3665",
+      "pageSha256": "141d805846c83ff4caeba661e36d18be77e90c18f1acc70f61afa893a4c3a0c4",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 3934,
+      "source": "https://warcraftforever.games/npcs/3934",
+      "pageSha256": "0727579cfecd29627ab7aa6af9ddadd23adff26e295a937bc03137d0567d153f",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 4949,
+      "source": "https://warcraftforever.games/npcs/4949",
+      "pageSha256": "fec7dc064f97738a09ff5b644113bbb3ac1c300a934dc855e6d66a3ea281fa56",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 5767,
+      "source": "https://warcraftforever.games/npcs/5767",
+      "pageSha256": "fa662ea813552c40e1a60950cb6eee181dda0c106289b5bd4939a2d0bb120d68",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 5768,
+      "source": "https://warcraftforever.games/npcs/5768",
+      "pageSha256": "5c142e8c29309d61850013ab393284498d407429a0701beaf789649355e3a0cd",
+      "includedPosition": false,
+      "mapId": 1414
+    },
+    {
+      "kind": "NPC",
+      "gameId": 5815,
+      "source": "https://warcraftforever.games/npcs/5815",
+      "pageSha256": "123276c6475fb8e046f67c407c008e1a97f50a494760a94a85fd2631d89273df",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 6791,
+      "source": "https://warcraftforever.games/npcs/6791",
+      "pageSha256": "03ac6f8ef9a69cda4c3ff7348ab017086f15b2b95389d8814bb6e9a9d3c0f957",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "NPC",
+      "gameId": 6929,
+      "source": "https://warcraftforever.games/npcs/6929",
+      "pageSha256": "bb6a525a120e13745cc54b574ebde4909913ce4bfc1e01cc892faec84c751270",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 8673,
+      "source": "https://warcraftforever.games/npcs/8673",
+      "pageSha256": "18a684ecb51f8c20c043a56dff252263ad857cd8434f05cae98ff20d0825b94b",
+      "includedPosition": true,
+      "mapId": 1454
+    },
+    {
+      "kind": "NPC",
+      "gameId": 16227,
+      "source": "https://warcraftforever.games/npcs/16227",
+      "pageSha256": "0fda82c0ee9e9a7ab7ca54af0f526d134abb7c9797acaa0e1c96a5aed3fc9c56",
+      "includedPosition": true,
+      "mapId": 1413
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 809,
+      "source": "https://warcraftforever.games/quests/809",
+      "pageSha256": "1b7b01b08ddefc15ca2af6b905b66f27225067084f81122c15c9d12fd8d01084",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 842,
+      "source": "https://warcraftforever.games/quests/842",
+      "pageSha256": "b9021542679e0145e203c4f94523c5a2cba591628edf146d4f56ea98c2a8000f",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 844,
+      "source": "https://warcraftforever.games/quests/844",
+      "pageSha256": "032c288d405ab8451429eb5cc4b9ccde6a22099c88600448efa6867d6eb19ba0",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 845,
+      "source": "https://warcraftforever.games/quests/845",
+      "pageSha256": "24f692668506d539d235b391dcef78a0ed481e6d8a71f7f817d20dad0a59770b",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 848,
+      "source": "https://warcraftforever.games/quests/848",
+      "pageSha256": "b245b748d5fc2c91c385d9ac87211ca6d8b7b9bfcf8a46aaec2feb53c2bf5468",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 865,
+      "source": "https://warcraftforever.games/quests/865",
+      "pageSha256": "f4a19aa97d1d51645bd8db44c45a6c9f63588a4ea9e39799dbcfc183eac479d0",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 869,
+      "source": "https://warcraftforever.games/quests/869",
+      "pageSha256": "bdb5c5cf03ffee6ba52ec2cfa2b675ecc1894d6e1be9b7e2d8040b74bb2e5577",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 870,
+      "source": "https://warcraftforever.games/quests/870",
+      "pageSha256": "a25298250f3ab6f6be7ccf929f168c87aecf41c44d46bd249e652c62f9052cb0",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 871,
+      "source": "https://warcraftforever.games/quests/871",
+      "pageSha256": "87c2c7a7ba0f9741938d1be7059668c3618a69451141442a22405721a7ec4629",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 872,
+      "source": "https://warcraftforever.games/quests/872",
+      "pageSha256": "6cd9af55973d7e28a0cad49edf08aeb39cb501676e2a5caeba03120fe02cd7c1",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 877,
+      "source": "https://warcraftforever.games/quests/877",
+      "pageSha256": "9d174b66037ae9cd0230132c8aeafa7d3b3b7fd11f431e86483f5e05c53efa76",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 880,
+      "source": "https://warcraftforever.games/quests/880",
+      "pageSha256": "9dc4b04385ec5e871ec796a5360ff70b27c51a4a8aeb7492a7567e2931b0e9c5",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 881,
+      "source": "https://warcraftforever.games/quests/881",
+      "pageSha256": "1fe38644ab0c89f9a14b68c0389c2888244089dcda20a787b3a629f472fe9341",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 887,
+      "source": "https://warcraftforever.games/quests/887",
+      "pageSha256": "f852f798b641f0b495e3636c46e57b2807167d6f9a6309f97e756cc6cec9a889",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 888,
+      "source": "https://warcraftforever.games/quests/888",
+      "pageSha256": "0217d4808f835521c23d868fd5cc538f0043cb746cfa8b72627fae3c3b9ba6cc",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 890,
+      "source": "https://warcraftforever.games/quests/890",
+      "pageSha256": "345c767294b774036ed706dd356c53ce376bbca089e4324e0b48ab6b22a16ccf",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 892,
+      "source": "https://warcraftforever.games/quests/892",
+      "pageSha256": "e45de13877960354d201b92c5bc7b4a3168f01956a37f1669bdbd53853907ea0",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 895,
+      "source": "https://warcraftforever.games/quests/895",
+      "pageSha256": "e6bba1d4df473d8e59dd37fd36279e8a22e634305845ddb4c4eab8bb9673db16",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 896,
+      "source": "https://warcraftforever.games/quests/896",
+      "pageSha256": "c90b4ccdf55de90fd22296fdd798da1dc3de82b9c3741496cd3450d7bff05276",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 899,
+      "source": "https://warcraftforever.games/quests/899",
+      "pageSha256": "7df6286c355a56d58d51ea07e3e3d00ceba1a4a944802fbefb18ec882257ebd7",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 903,
+      "source": "https://warcraftforever.games/quests/903",
+      "pageSha256": "5e4e6c45d7a609fee55e9f872b33813636407532b02e5ce516178f2cc4c2c3f5",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 924,
+      "source": "https://warcraftforever.games/quests/924",
+      "pageSha256": "6e055944cfcea45a1d50d084e8212b655a49a6690186b43d929af39ee7ff3ad7",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 959,
+      "source": "https://warcraftforever.games/quests/959",
+      "pageSha256": "d38abebe7ed7286e86e78c9d0bee40349aa28c8df69d4fffd4134601e807d31e",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 1486,
+      "source": "https://warcraftforever.games/quests/1486",
+      "pageSha256": "9fd7bee8e3ea99fd0743aad1c9eaea03699aec8b39d4e64013b0168c1a529e0e",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 1487,
+      "source": "https://warcraftforever.games/quests/1487",
+      "pageSha256": "f65a1bd0ae9d8c2994971cf2457555f98b991782334ba0e3b70460e510ceba09",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 1491,
+      "source": "https://warcraftforever.games/quests/1491",
+      "pageSha256": "aa22efef39649dc7ebf15f82746e8cd23a1d643452350ad8091388607253cac7",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 3281,
+      "source": "https://warcraftforever.games/quests/3281",
+      "pageSha256": "83cc349b5c87836b3c56bb88f3b84d32dd8831780c594bf4838e1ef28745732c",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 4921,
+      "source": "https://warcraftforever.games/quests/4921",
+      "pageSha256": "237b47c472dd1c8b3580fcd65374e80064426397765c1ba160b417ae997b483b",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 5727,
+      "source": "https://warcraftforever.games/quests/5727",
+      "pageSha256": "29b18e7cb690a28929f29a90abfb94615453519cf6caf80f21f9f5cf36c8005a",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 5728,
+      "source": "https://warcraftforever.games/quests/5728",
+      "pageSha256": "4dd54d42528a631e9ed1bc2c75839e1734cb6d20a76660c83f0e996aa9c8f760",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 5729,
+      "source": "https://warcraftforever.games/quests/5729",
+      "pageSha256": "bc610b1e545bbe8c942fb3464d068216cf472d265618a75d6259c0f1eb66f749",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 5730,
+      "source": "https://warcraftforever.games/quests/5730",
+      "pageSha256": "4d52d1d7559e2c3583b56838a99eb218991569852c76002452f43f279ca4281d",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 5761,
+      "source": "https://warcraftforever.games/quests/5761",
+      "pageSha256": "3b402f122ce0a8fcd87e8b626c217f55bf24978ce3bf705e3f38cb2dc585642e",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 6365,
+      "source": "https://warcraftforever.games/quests/6365",
+      "pageSha256": "976be1dd3cea644a05e1b37629bfe8d304ff3f553203a27947d7860843569f7e",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 6384,
+      "source": "https://warcraftforever.games/quests/6384",
+      "pageSha256": "17c1a46e770208401f58decacae1e73b370651b9852cfc652f8d7176c8dbe699",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 6385,
+      "source": "https://warcraftforever.games/quests/6385",
+      "pageSha256": "87127b47fb7fe6060eb1722a219f3b924e6ac5987777570d5e1a4241698d6396",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    },
+    {
+      "kind": "QUEST",
+      "gameId": 95774,
+      "source": "https://warcraftforever.games/quests/95774",
+      "pageSha256": "92e11965f0b248d948a24d82e4bd6c348e039e602efb18c513635abe461877da",
+      "minimumLevelUnknown": true,
+      "directPositionImported": false
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Gest",
+      "reasonCs": "Zdroj uvádí Rogue Trainer; není přidán jako trenér Warlocka."
+    },
+    {
+      "id": 2916,
+      "reasonCs": "Nesprávný odhad identity; odstraněn, správný doložený Ak'Zeloth je 3521."
+    },
+    {
+      "name": "Ebru precise zone pin",
+      "reasonCs": "Doložený bod má rámec Kalimdor 1414; nepoužit pro Barrens 1413."
+    }
+  ],
+  "independentGameChecks": 0
+}

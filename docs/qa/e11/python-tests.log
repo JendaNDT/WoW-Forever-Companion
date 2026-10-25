@@ -1,0 +1,8 @@
+test_frame_statistics_ignore_incomplete_flagged_and_invalid_rows (test_e11_device_capture.DeviceEvidenceParsingTest.test_frame_statistics_ignore_incomplete_flagged_and_invalid_rows) ... ok
+test_memory_supports_both_android_formats_and_missing_is_not_zero (test_e11_device_capture.DeviceEvidenceParsingTest.test_memory_supports_both_android_formats_and_missing_is_not_zero) ... ok
+test_missing_frame_data_stays_unknown (test_e11_device_capture.DeviceEvidenceParsingTest.test_missing_frame_data_stays_unknown) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

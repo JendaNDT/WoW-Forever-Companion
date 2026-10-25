@@ -1,0 +1,42 @@
+{
+  "application_id": "cz.jenda.wowforever",
+  "version_name": "0.1.0-e01",
+  "min_sdk": 26,
+  "target_sdk": 36,
+  "bytes": 18333695,
+  "sha256": "83d976846915fe62b508c55e1e49466a4e75caa221595e36b2b159354f4e7ce5",
+  "signature": "Android debug, APK v2, verified with apksigner",
+  "tests": [
+    {
+      "suite": "cz.jenda.wowforever.AtlasAssetsTest",
+      "tests": 2,
+      "failures": 0,
+      "seconds": 5.63
+    },
+    {
+      "suite": "cz.jenda.wowforever.CoordinatesTest",
+      "tests": 3,
+      "failures": 0,
+      "seconds": 0.031
+    },
+    {
+      "suite": "cz.jenda.wowforever.NativeMapHostTest",
+      "tests": 2,
+      "failures": 0,
+      "seconds": 5.835
+    },
+    {
+      "suite": "cz.jenda.wowforever.NativeSceneTest",
+      "tests": 3,
+      "failures": 0,
+      "seconds": 2.435
+    }
+  ],
+  "tests_total": 10,
+  "test_failures": 0,
+  "lint_errors": 0,
+  "lint_warnings": 0,
+  "clean_build": true,
+  "device_tested": false,
+  "independent_game_checks": 0
+}

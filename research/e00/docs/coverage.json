@@ -1,0 +1,49 @@
+{
+  "checked_on": "2026-10-23",
+  "area": "Durotar plus world/continent overview and Orgrimmar map",
+  "coverage_measure": "Počet prověřených vzorků, nikoliv podíl všeho existujícího obsahu.",
+  "categories": [
+    {
+      "category": "map_assets",
+      "checked_sample_count": 4,
+      "status": "downloaded_beta_assets",
+      "complete_for_zone": false
+    },
+    {
+      "category": "npc_positions",
+      "checked_sample_count": 8,
+      "status": "beta_source_positions_native_calibration_pending",
+      "complete_for_zone": false
+    },
+    {
+      "category": "quests",
+      "checked_sample_count": 9,
+      "status": "6_beta_records_and_3_mixed_or_reference_records",
+      "complete_for_zone": false
+    },
+    {
+      "category": "warlock_progression",
+      "checked_sample_count": 3,
+      "status": "candidate_records_with_unresolved_requirements",
+      "complete_for_zone": false
+    },
+    {
+      "category": "items",
+      "checked_sample_count": 1,
+      "status": "beta_record_and_source_links",
+      "complete_for_zone": false
+    },
+    {
+      "category": "travel",
+      "checked_sample_count": 1,
+      "status": "beta_dialogue_no_route_geometry",
+      "complete_for_zone": false
+    },
+    {
+      "category": "dungeons_professions_rares",
+      "checked_sample_count": 0,
+      "status": "outside_E00_sample",
+      "complete_for_zone": false
+    }
+  ]
+}

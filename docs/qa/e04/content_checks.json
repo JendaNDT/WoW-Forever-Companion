@@ -1,0 +1,19 @@
+{
+  "catalog": {
+    "passed": true,
+    "entries": 21,
+    "maps": 4,
+    "locations": 8,
+    "relations": 25,
+    "sources": 26,
+    "release_verified_entries": 0
+  },
+  "assets": {
+    "tile_checksums": 68,
+    "decoded_tiles": 68,
+    "pixel_exact_map_reconstructions": 4,
+    "preserved_source_points": 8,
+    "independent_in_game_checks": 0,
+    "passed": true
+  }
+}

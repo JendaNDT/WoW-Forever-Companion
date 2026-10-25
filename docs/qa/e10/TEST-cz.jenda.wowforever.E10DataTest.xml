@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E10DataTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-24T22:03:38.591Z" hostname="e6c755ef2603" time="0.056">
+  <properties/>
+  <testcase name="reportedQuestLevelsNeverBecomeInventedMinimumsAndDuplicateChainNamesKeepDistinctIds" classname="cz.jenda.wowforever.E10DataTest" time="0.004"/>
+  <testcase name="actualPublisherManifestVerifiesOnE10ButRejectsE09BeforeCatalogDecoding" classname="cz.jenda.wowforever.E10DataTest" time="0.014"/>
+  <testcase name="expandedDistributionHasRealScopedContentAndPreservesEveryExistingEntry" classname="cz.jenda.wowforever.E10DataTest" time="0.016"/>
+  <testcase name="questRecorderZoneIsNotMistakenForGiverLocationAndNoQuestPinIsGuessed" classname="cz.jenda.wowforever.E10DataTest" time="0.007"/>
+  <testcase name="betaAndClassicStillCannotProduceConfirmedAdviceOrUnlockedFlightRoutes" classname="cz.jenda.wowforever.E10DataTest" time="0.007"/>
+  <testcase name="newLocalCoordinatesStayInTheirOwnFramesAndEbruIsNotInventedOnBarrensMap" classname="cz.jenda.wowforever.E10DataTest" time="0.004"/>
+  <testcase name="warlockMilestonesAndRewardChoicesKeepTheirEvidenceAndDoNotClaimBestGear" classname="cz.jenda.wowforever.E10DataTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

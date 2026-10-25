@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "tampered",
+      "rejected": true,
+      "receipt_created": false
+    },
+    {
+      "case": "old-without-identity",
+      "rejected": true,
+      "receipt_created": false
+    },
+    {
+      "case": "development-build",
+      "rejected": true,
+      "receipt_created": false
+    }
+  ]
+}

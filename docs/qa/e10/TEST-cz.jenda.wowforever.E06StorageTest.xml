@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.E06StorageTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-24T22:03:20.258Z" hostname="e6c755ef2603" time="0.206">
+  <properties/>
+  <testcase name="guideRulesSurviveInstallationAndReopenAndKeepRecursiveGroups" classname="cz.jenda.wowforever.E06StorageTest" time="0.08"/>
+  <testcase name="originalE05SessionGetsBalancedFocusWithoutLosingActiveProfile" classname="cz.jenda.wowforever.E06StorageTest" time="0.02"/>
+  <testcase name="actualVersionOneCatalogMigratesWithAllOriginalRowsAndMetadata" classname="cz.jenda.wowforever.E06StorageTest" time="0.059"/>
+  <testcase name="invalidUpdateAndMidTransactionFailureLeaveOldCatalogWhole" classname="cz.jenda.wowforever.E06StorageTest" time="0.047"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

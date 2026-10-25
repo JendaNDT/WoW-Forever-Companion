@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "package": "cz.jenda.wowforever.guide",
+  "versionCode": 10,
+  "versionName": "0.10.0-e10",
+  "same_owner_certificate_as_E09": true,
+  "apk_sha256": "4d4eb6ad3217381440c9598c56f9a0ca604515575cb4e33aacf8a7da0169d0d4",
+  "apk_bytes": 19731580,
+  "fallback_bytes_identical_to_E09": true,
+  "old_tiles_identical": 68,
+  "new_barrens_tiles_inside_apk": 0,
+  "approved_map_registry": 5,
+  "room_schemas_identical": true,
+  "permissions_unchanged": true,
+  "test_fixtures_or_private_key_files_inside_apk": false
+}

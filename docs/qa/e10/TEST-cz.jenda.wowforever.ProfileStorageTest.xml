@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.jenda.wowforever.ProfileStorageTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-24T22:03:47.435Z" hostname="e6c755ef2603" time="0.071">
+  <properties/>
+  <testcase name="sessionSurvivesDataStoreDestructionAndReconstruction" classname="cz.jenda.wowforever.ProfileStorageTest" time="0.043"/>
+  <testcase name="editingExistingProfileKeepsChildrenAndReopensWithOptionalFieldsEmpty" classname="cz.jenda.wowforever.ProfileStorageTest" time="0.028"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
