@@ -20,9 +20,9 @@
     "statement": "Zatím vše otestováno bez problémů",
     "scope": "basic preceding build check; not new full stage or measured performance"
   },
-  "stage": "UI-phase-2-user-confirmed",
-  "version": "0.18.0-ui2",
-  "versionCode": 19,
+  "stage": "UI-phase-3-automated-complete-phone-pending",
+  "version": "0.19.0-ui3",
+  "versionCode": 20,
   "room_schemas_unchanged": true,
   "backup_format": 1,
   "fallback_generation": 2,
@@ -43,12 +43,12 @@
   "implementation_delivery_complete": true,
   "reference_1_60_catalog_delivered": true,
   "M2_M3_game_acceptance_complete": false,
-  "M1": "UI phase 2 version 19 automated checks passed and basic functional phone acceptance confirmed by user on 2026-10-26. Game acceptance remains pending.",
+  "M1": "UI phase 3 version 20 implemented; 241 host app tests, 35 Python tests and Android 26/36 emulator reliability passed. Current phone acceptance pending; game acceptance remains pending.",
   "release_verified_entries": 0,
   "verified_transport_edges": 0,
   "physical_E10_3_basic_check_verified": true,
-  "physical_installation_verified": true,
-  "physical_phone_acceptance": "User confirmed version 19 works after APK handover on 2026-10-26. Basic functional acceptance only; per-scenario results, installation mode, backup restore, measured performance, TalkBack, second-device restore and game accuracy not independently reported.",
+  "physical_installation_verified": false,
+  "physical_phone_acceptance": "Version 20 not yet accepted on a physical phone. Version 19 basic functional confirmation remains recorded under UI_phase_2.",
   "performance_phone_goals_verified": false,
   "talkback_verified": false,
   "second_device_restore_verified": false,
@@ -56,7 +56,7 @@
   "public_hosting_or_store_published": false,
   "private_key_backup": "E09 existing archive retained; keys not regenerated",
   "bundledContentSha256": "8c805d7f25a7d0e33b760026c32bb82216f153ed27dadfde2e3faa7f47d2b94e",
-  "host_validation": "Passed: Android checks 40346572619, 228 app tests and 35 Python tests without failures or skipped tests; native Android 26 and 36 reliability run 40346573124 passed. Current version 19 basic functional phone check confirmed by user.",
+  "host_validation": "Passed: Android checks 40358040776, 241 app tests and 35 Python tests without failures or skipped tests; native Android 26 and 36 run 40358041033 passed. Version 20 phone acceptance pending.",
   "python_tests": {
     "tests": 35,
     "failures": 0
@@ -81,8 +81,8 @@
   "release_owner_and_source_verified": false,
   "upgrade_eligibility_from_E10_full_verified": false,
   "host_tests": {
-    "suites": 59,
-    "tests": 228,
+    "suites": 62,
+    "tests": 241,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -117,18 +117,18 @@
     "scope": "Basic functional phone confirmation after clean-install APK handover and first-launch/offline-map check recommendation. Individual scenarios were not reported separately; measured performance, TalkBack, backup restore and game accuracy remain unconfirmed."
   },
   "remote_validation": {
-    "run_id": 40346572619,
-    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40346572619",
-    "sourceRevision": "e2193db6e75fed937d85f897fbff8449e7e48acb",
+    "run_id": 40358040776,
+    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40358040776",
+    "sourceRevision": "891372daaec42b515cd6e0ab15d004a6fa32e1d4",
     "status": "success",
-    "productionInputsSha256": "81c30e1da0d47a37e45773965c9ca579b5e98dc62a680bc0df5d605d5e99d58c",
+    "productionInputsSha256": "79bc42102d38a1b6ea943206325cbaf73e77b36e73a92339c16d12fcd6fd14ff",
     "python_tests": {
       "tests": 35,
       "failures": 0
     },
     "host_tests": {
-      "suites": 59,
-      "tests": 228,
+      "suites": 62,
+      "tests": 241,
       "failures": 0,
       "errors": 0,
       "skipped": 0
@@ -200,7 +200,7 @@
     "new_apk_installation_required": false,
     "report": "docs/E11_AKTUALNI_OVERENI.md"
   },
-  "next_recommended_step": "UI phase 3: map markers by role, hide completed quests, area panel and in-game convenience per NAVRH_UI.md. Phase 3 implementation not started; game acceptance after release.",
+  "next_recommended_step": "Export backup, clean-install version 20, restore backup and check all Phase 3 features on phone: map roles and completed filter, area panel and I am here, five-second undo, before leaving, welcome, backup reminder and keep map awake. Game acceptance remains after release.",
   "E11_previous_remote_validation": {
     "run_id": 40291857619,
     "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40291857619",
@@ -306,5 +306,56 @@
       "installationMode": "not_reported",
       "scope": "General functional confirmation after APK delivery; individual scenarios, installation mode, backup restore, on-device APK checksum, measured performance, TalkBack, second-device restore and game accuracy not independently reported."
     }
+  },
+  "UI_phase_3": {
+    "implementation_complete": true,
+    "phone_acceptance_complete": false,
+    "sourceRevision": "891372daaec42b515cd6e0ab15d004a6fa32e1d4",
+    "apkSha256": "85341e92b50213bcb8a5c81323fbf75b58014c1357f9a802a581a26a19e2f118",
+    "apkBytes": 150520870,
+    "productionInputsSha256": "79bc42102d38a1b6ea943206325cbaf73e77b36e73a92339c16d12fcd6fd14ff",
+    "ownerSignedUpdate": false,
+    "different_debug_certificate_from_phase_2": true,
+    "requires_backup_before_clean_install": true,
+    "native_run_id": 40358041033,
+    "native_runs": [
+      {
+        "api": 26,
+        "job_id": 121696080042,
+        "tests": 5,
+        "force_stops": 2,
+        "maps": 61,
+        "points": 17330,
+        "area_changes": 915,
+        "complete_cycles": 15,
+        "peak_retained_frames": 2,
+        "tile_streams_opened": 3690,
+        "duration_ms": 318614,
+        "scope": "emulator stability, all bundled frames, state retention and memory trim; not physical-phone FPS/PSS acceptance",
+        "environment": "Android emulator / debug APK",
+        "physical_phone_performance_verified": false
+      },
+      {
+        "api": 36,
+        "job_id": 121696079537,
+        "tests": 5,
+        "force_stops": 2,
+        "maps": 61,
+        "points": 17330,
+        "area_changes": 854,
+        "complete_cycles": 14,
+        "peak_retained_frames": 2,
+        "tile_streams_opened": 3444,
+        "duration_ms": 320384,
+        "scope": "emulator stability, all bundled frames, state retention and memory trim; not physical-phone FPS/PSS acceptance",
+        "environment": "Android emulator / debug APK",
+        "physical_phone_performance_verified": false
+      }
+    ],
+    "new_app_tests": 13,
+    "game_data_changed": false,
+    "backup_format_changed": false,
+    "room_schemas_changed": false,
+    "report": "docs/UI_FAZE_3.md"
   }
 }

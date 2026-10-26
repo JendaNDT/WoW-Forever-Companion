@@ -2,7 +2,7 @@
 
 Nativní Android průvodce Horda / Warlock 1–60. Kotlin, Jetpack Compose, Room; obsah je přímo v APK.
 
-**Verze 0.18.0-ui2 (19), data 8.** [Jednodušší ovládání — Fáze 2](docs/UI_FAZE_2.md). [Audit a omezení](docs/E10_AUDIT.md): 11 912 položek, 61 map, 115 warlockových úkolů. Herní potvrzení až po vydání.
+**Verze 0.19.0-ui3 (20), data 8.** [Mapa a pohodlí při hraní — Fáze 3](docs/UI_FAZE_3.md). [Audit a omezení](docs/E10_AUDIT.md): 11 912 položek, 61 map, 115 warlockových úkolů. Herní potvrzení až po vydání.
 
 JDK 17 a Android SDK 36. Sestavení: `./gradlew :app:assembleDebug :app:testDebugUnitTest`. Velké soubory `.wfpart` čte Android přímo; není potřeba ruční skládání ani Python. Release vyžaduje původní podpisový klíč.
 
@@ -15,7 +15,7 @@ Původ, porovnání s opravou 0.15.1 a meze ověření popisuje [záznam obnovy]
 
 V záložce **Actions → Android checks** se při každém nahrání změn a také ručně
 sestaví vývojové APK, spustí testy, kontroly map a dat a kontrola aplikace.
-Po úspěšném dokončení je APK v příloze `Warlock-Forever-0.18.0-ui2-debug-…`,
+Po úspěšném dokončení je APK v příloze `Warlock-Forever-0.19.0-ui3-debug-…`,
 spolu s kontrolním součtem a výsledkem ověření všech přibalených souborů.
 Výsledky testů jsou v samostatné příloze `android-reports-…`; přílohy zůstávají 14 dní.
 

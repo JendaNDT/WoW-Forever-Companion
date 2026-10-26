@@ -180,10 +180,12 @@ Implementace: [UI_FAZE_2.md](UI_FAZE_2.md), verze 0.18.0-ui2 (19). Automatické 
 
 **Fáze 3 – mapa a pohodlí:**
 
-- [ ] Značky podle role, skrytí hotových úkolů.
-- [ ] Panel „V této oblasti“ a čip Jsem tady.
-- [ ] Lišta Vrátit a seznam Než odejdeš.
-- [ ] První spuštění, připomínka zálohy, nezhasínat displej.
+- [x] Značky podle role, skrytí hotových úkolů.
+- [x] Panel „V této oblasti“ a čip Jsem tady.
+- [x] Lišta Vrátit a seznam Než odejdeš.
+- [x] První spuštění, připomínka zálohy, nezhasínat displej.
+
+Implementace: [UI_FAZE_3.md](UI_FAZE_3.md), verze 0.19.0-ui3 (20). Automatické kontroly prošly; telefonní přejímka nové verze čeká.
 
 ## Co zachovat a na co dát pozor
 
