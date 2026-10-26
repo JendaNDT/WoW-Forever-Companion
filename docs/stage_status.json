@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "channel": "pilot",
   "application_id": "cz.jenda.wowforever.guide",
   "E12_user_basic_phone_check": {
@@ -43,20 +43,20 @@
   "implementation_delivery_complete": true,
   "reference_1_60_catalog_delivered": true,
   "M2_M3_game_acceptance_complete": false,
-  "M1": "Version 16 functional phone check confirmed; release game acceptance pending",
+  "M1": "Version 17 clean-install basic functional phone check confirmed by user on 2026-10-26; release game acceptance pending",
   "release_verified_entries": 0,
   "verified_transport_edges": 0,
   "physical_E10_3_basic_check_verified": true,
-  "physical_installation_verified": false,
-  "physical_phone_acceptance": "User confirmed complete functional check of version 16; version 17 is not phone-tested",
+  "physical_installation_verified": true,
+  "physical_phone_acceptance": "User confirmed version 17 works after receiving the clean-install debug APK; no measured performance, second-device restore, TalkBack or game acceptance asserted",
   "performance_phone_goals_verified": false,
   "talkback_verified": false,
   "second_device_restore_verified": false,
-  "remote_workflow_executed": false,
+  "remote_workflow_executed": true,
   "public_hosting_or_store_published": false,
   "private_key_backup": "E09 existing archive retained; keys not regenerated",
   "bundledContentSha256": "ba94fb218ad63cae250c7d32b32ef16532c4daa5b8ab822685d5b623a8cb563e",
-  "host_validation": "restored source awaiting fresh validation",
+  "host_validation": "GitHub Actions Android checks passed for d99734dea435c517553d13442f1e0f89fd0b250e; see remote_validation. Historical host_tests and lint figures are retained and are not a new phone measurement.",
   "python_tests": {
     "tests": 27,
     "failures": 0
@@ -103,5 +103,39 @@
     "versionCode": 16,
     "statement": "Vše jsem otestoval a funguje to",
     "scope": "Functional check only; no measured performance or game validation"
+  },
+  "E10_audit_user_basic_phone_check": {
+    "status": "confirmed_by_user",
+    "reportedOn": "2026-10-26",
+    "version": "0.16.0-audit",
+    "versionCode": 17,
+    "contentGeneration": 8,
+    "statement": "Ok, funguje to",
+    "installationMode": "clean_install",
+    "apkSha256": "cc4776e0fde062985c62233fce65336d5575876a6f5625700e98fc00dcb86fa4",
+    "sourceRevision": "d99734dea435c517553d13442f1e0f89fd0b250e",
+    "scope": "Basic functional phone confirmation after clean-install APK handover and first-launch/offline-map check recommendation. Individual scenarios were not reported separately; measured performance, TalkBack, backup restore and game accuracy remain unconfirmed."
+  },
+  "remote_validation": {
+    "run_id": 40231787304,
+    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40231787304",
+    "sourceRevision": "d99734dea435c517553d13442f1e0f89fd0b250e",
+    "status": "success",
+    "completedAt": "2026-10-25T20:50:58Z",
+    "checks": [
+      "data_validation",
+      "python_tests",
+      "debug_build",
+      "android_test_apk_build",
+      "unit_tests",
+      "lint_debug",
+      "lint_release",
+      "apk_identity_and_bundled_assets"
+    ],
+    "python_tests": {
+      "tests": 32,
+      "failures": 0
+    },
+    "physical_instrumentation_executed": false
   }
 }
