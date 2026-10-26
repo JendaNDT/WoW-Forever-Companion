@@ -15,7 +15,13 @@ Navigace má nadále čtyři záložky. Herní katalog, balíčky, databázové 
 
 ## Ověření
 
-Probíhá úplný Android checks a E11 reliability ve větvi codex/ui-faze-1. Přidané regresní scénáře ověřují reference v datech 8, hranice úrovní, neznámé údaje, rychlá klepnutí, uložení oblasti, zachování dalších polí, rekreaci obrazovky a dokončení úkolu přímo ze seznamu. Telefonní přejímka nové verze zatím neproběhla.
+[Android checks 40331668550](https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40331668550) prošel: **221 aplikačních a 35 Python testů, 0 chyb a 0 vynechaných testů**, Lint debug i release bez chyb, sestavení obou testovacích APK a ověření všech 93 přibalených souborů. [E11 reliability 40331668566](https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40331668566) prošel na Androidu 8 / API 26 i Androidu 16 / API 36: na každém 5 nativních testů, 2 skutečná ukončení procesu, obnova osobních dat a pětiminutový průchod všemi 61 mapami. Výsledek neprokazuje fyzický telefon ani skutečně vypnutá rádia emulátoru.
+
+Sestavení pochází z revize `546da51a899810fe6a5822055cacdddd326ef209`, otisk produkčních vstupů `14f59d50e4ea3a57874a50e473e81467b1deeca512aae7c6aeaa44be2fdff92a`. APK má SHA-256 `eb31185fc5002e7dbcacf82fd1a2a0d49aa1987536eae8e06017559de164fb7c`, velikost 150 471 718 B a vývojový podpis. Podpis se nemusí shodovat s předchozí instalací; před čistou instalací vyexportovat JSON zálohu. Souhrny důkazů jsou v [qa/ui1](qa/ui1).
+
+Regresní test nad skutečnými daty 8 má pro Orka úrovně 1 v Durotaru 13 návrhů v běžném seznamu, 28 v Brzy a 2 s neznámými údaji. Dostupnost zůstává UNVERIFIED. Snímky mapy, detailu a seznamu z testů byly vizuálně zkontrolované.
+
+ Přidané regresní scénáře ověřují reference v datech 8, hranice úrovní, neznámé údaje, rychlá klepnutí, uložení oblasti, zachování dalších polí, rekreaci obrazovky a dokončení úkolu přímo ze seznamu. Telefonní přejímka nové verze zatím neproběhla.
 
 ## Vyzkoušení na telefonu
 

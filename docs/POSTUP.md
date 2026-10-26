@@ -1,6 +1,10 @@
 # Aktuální stav projektu
 
-Aktualizováno **26. 10. 2026**. Automatické ověření spolehlivosti **E11 dokončeno**; [výsledky a meze ověření](E11_AKTUALNI_OVERENI.md). Aktuální aplikace je **0.16.0-audit / kód 17**, přibalená data **8**. Celý sestavitelný projekt je ve větvi `main` repozitáře [JendaNDT/WoW-Forever-Companion](https://github.com/JendaNDT/WoW-Forever-Companion). Původ a obnovu popisuje [GITHUB_IMPORT.md](GITHUB_IMPORT.md).
+Aktualizováno **26. 10. 2026**. První fáze jednoduššího ovládání z [NAVRH_UI.md](NAVRH_UI.md) je implementovaná ve větvi `codex/ui-faze-1`: **0.17.0-ui1 / kód 18**, přibalená data **8**. Popis změn a přejímka: [UI_FAZE_1.md](UI_FAZE_1.md). Telefonní kontrola nové verze zatím neproběhla; Fáze 2 nezačala.
+
+Celý sestavitelný projekt je v repozitáři [JendaNDT/WoW-Forever-Companion](https://github.com/JendaNDT/WoW-Forever-Companion), návrh změn [PR #1](https://github.com/JendaNDT/WoW-Forever-Companion/pull/1). Původ a obnovu popisuje [GITHUB_IMPORT.md](GITHUB_IMPORT.md).
+
+Následující výsledky E11 a potvrzení na telefonu se vztahují k předchozí verzi **17**; výsledky nové verze jsou v UI_FAZE_1.md.
 
 ## Potvrzeno na telefonu
 
@@ -26,6 +30,8 @@ Dlouhý běh Androidu 16 přerušilo vypnutí runneru; nepočítá se jako dokon
 
 ## Další nejvhodnější krok
 
-Pokračovat herní přejímkou: ověřit návaznosti a podmínky úkolů v úvodní trase Hordy / Warlocka, zejména třídní úkoly a dopravu. Postupně doplňovat doložené herní výsledky a otevřené rozpory zdrojů. Technická spolehlivost sama správnost herních údajů nepotvrzuje.
+Vyzkoušet celou Fázi 1 na telefonu: rychlé změny úrovně a oblasti, přetrvání po restartu, úkoly podle úrovně a tlačítka Beru / Hotovo. Po potvrzení pokračovat Fází 2 (Mapa / Úkoly / Hledat a společné Nastavení).
+
+Herní přejímka návazností, třídních úkolů a dopravy se provede až po vydání hry. Technická spolehlivost sama správnost herních údajů nepotvrzuje.
 
 Skutečné telefonní měření výkonu a přístupnosti zůstává samostatně popsané v [E11_TELEFON.md](E11_TELEFON.md); jeho neprovedené části se neoznačují za splněné.
