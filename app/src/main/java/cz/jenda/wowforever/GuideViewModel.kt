@@ -274,6 +274,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         revealedPointId=null;syncPoints();persist()
     }
     private fun markPersonalChanged() {
+        undoNotice=null
         session=session.copy(personalRevision=session.personalRevision+1,
             unbackedSince=if(session.personalRevision==session.backedUpRevision)System.currentTimeMillis() else session.unbackedSince)
         backupState=session;persist()
@@ -305,7 +306,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                     profile=updated;personalState=personalState.copy(profile=updated)
                     markPersonalChanged()
                     if(quickProfileEdit==edit)quickProfileEdit=null
-                    if(changedArea)chooseMap(updated.currentUiMapId)
+                    if(changedArea && mapId!=updated.currentUiMapId)chooseMap(updated.currentUiMapId)
                     refreshRecommendations();profileSaved=quickProfileEdit==null
                     savingProfile=false;quickProfileWriting=false
                 }
@@ -328,7 +329,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                 check(withContext(Dispatchers.IO) { store.personal.personal().updateProfile(updated) } == 1)
                 profile = updated;personalState=personalState.copy(profile=updated);refreshRecommendations()
                 markPersonalChanged()
-                if (changedArea) chooseMap(updated.currentUiMapId)
+                if (changedArea && mapId!=updated.currentUiMapId) chooseMap(updated.currentUiMapId)
                 profileSaved = true
             } catch (e: CancellationException) { throw e }
             catch (_: Exception) { dataError = "Profil se nepodařilo uložit. Zkus to znovu." }

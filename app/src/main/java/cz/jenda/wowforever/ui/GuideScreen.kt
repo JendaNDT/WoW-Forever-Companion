@@ -103,12 +103,12 @@ import java.util.Locale
                         }
                     }
                 }
+                if(detailKey==null && detailPoint==null && overlay==null)PersonalUndoBar(model)
                 if(!wide)NavigationBar(windowInsets=WindowInsets(0,0,0,0),modifier=Modifier.testTag("navigation_bar")) {
                     Destination.tabs.forEach { target->NavigationBarItem(selected=model.destination==target,onClick={model.navigate(target)},icon={NavigationIcon(target)},label={Text(target.label)},modifier=Modifier.testTag("nav_${target.name}")) }
                 }
             }
         }
-        if(detailKey==null && detailPoint==null && overlay==null)Box(Modifier.align(Alignment.BottomCenter).navigationBarsPadding().padding(bottom=if(wide)0.dp else 80.dp)) { PersonalUndoBar(model) }
         }
     }
     when {

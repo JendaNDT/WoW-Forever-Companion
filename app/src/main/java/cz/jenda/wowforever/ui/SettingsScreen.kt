@@ -10,6 +10,9 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import cz.jenda.wowforever.GuideViewModel
 import cz.jenda.wowforever.data.Spoilers
 import cz.jenda.wowforever.domain.GuideFocus
@@ -19,6 +22,13 @@ import cz.jenda.wowforever.domain.lastBackupDays
 @OptIn(ExperimentalLayoutApi::class)
 @Composable fun SettingsScreen(model:GuideViewModel,onOverlay:(String)->Unit) {
     val page=model.settingsPage
+    var now by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    val lifecycle=LocalLifecycleOwner.current.lifecycle
+    DisposableEffect(lifecycle) {
+        val observer=LifecycleEventObserver { _,event->if(event==Lifecycle.Event.ON_RESUME)now=System.currentTimeMillis() }
+        lifecycle.addObserver(observer)
+        onDispose { lifecycle.removeObserver(observer) }
+    }
     BackHandler(enabled=page!="MENU") { model.chooseSettingsPage("MENU") }
     Column(Modifier.fillMaxSize()) {
         Row(Modifier.fillMaxWidth().padding(horizontal=12.dp)) {
@@ -40,8 +50,7 @@ import cz.jenda.wowforever.domain.lastBackupDays
             } else {
                 SettingsAction("Postava", "Jméno a rasa", "settings_character") { model.chooseSettingsPage("CHARACTER") }
                 SettingsAction("Profily a záloha", "Uložit, obnovit nebo přepnout profil", "backup") { onOverlay("BACKUP") }
-                val now=System.currentTimeMillis()
-                Text(model.backupState.lastBackupDays(now)?.let { if(it==0L)"Poslední záloha: dnes" else "Poslední záloha: před $it dny" } ?: "Poslední záloha: dosud neuložená",modifier=Modifier.testTag("last_backup"),style=MaterialTheme.typography.bodySmall)
+                Text(model.backupState.lastBackupDays(now)?.let { when(it) { 0L->"Poslední záloha: dnes";1L->"Poslední záloha: včera";else->"Poslední záloha: před $it dny" } } ?: "Poslední záloha: dosud neuložená",modifier=Modifier.testTag("last_backup"),style=MaterialTheme.typography.bodySmall)
                 if(model.backupState.backupReminderDue(now))OutlinedCard(modifier=Modifier.fillMaxWidth().testTag("backup_reminder")) {
                     Column(Modifier.padding(12.dp)) {
                         Text("Máš nové změny. Ulož si zálohu také mimo telefon.")

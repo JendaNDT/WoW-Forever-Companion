@@ -18,6 +18,9 @@ import org.robolectric.shadows.ShadowSystemClock
 import java.io.File
 import java.time.Duration
 
+class Ui3WelcomeApplication:GuideApplication() {
+    override val store by lazy { cz.jenda.wowforever.data.GuideStore(this) }
+}
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk=[28])
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
@@ -26,11 +29,18 @@ class UiPhase3FlowTest {
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
     private val store get()=(rule.activity.application as GuideApplication).store
     private fun settled(check:()->Boolean) { rule.waitUntil(30_000) { rule.waitForIdle();!model.isBusy && check() } }
+    private fun ready() {
+        rule.finishWelcomeIfShown()
+        rule.runOnIdle { model.navigate(Destination.MAP);model.changeCurrentArea(1411) }
+        settled { model.profile.currentUiMapId==1411 }
+        rule.runOnIdle { model.chooseMap(1411);model.dismissMapHint() }
+    }
     private fun shot(name:String,sheet:Boolean=false) { rule.runOnIdle {
         val view=if(sheet)ShadowDialog.getShownDialogs().last { it.isShowing }.window!!.decorView else rule.activity.window.decorView
         val image=captureView(view);File("build/reports/ui3-$name.png").apply { parentFile.mkdirs();outputStream().use { image.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it) } };image.recycle()
     } }
-    @Test fun welcomeValidatesAndSavesTheChosenCharacterOnceAcrossRecreation() {
+    @Test @Config(sdk=[28],application=Ui3WelcomeApplication::class)
+    fun welcomeValidatesAndSavesTheChosenCharacterOnceAcrossRecreation() {
         rule.waitUntil(30_000) { rule.onAllNodesWithTag("welcome_start").fetchSemanticsNodes().isNotEmpty() }
         rule.onNodeWithTag("welcome_race_ORC").assertIsSelected()
         rule.onNodeWithTag("welcome_race_UNDEAD").performClick()
@@ -47,7 +57,7 @@ class UiPhase3FlowTest {
         assertTrue(runBlocking { store.session.read().welcomeComplete })
     }
     @Test fun browsingMapDoesNotMoveTheCharacterUntilIAmHereAndAreaPanelOpensOneDetail() {
-        rule.finishWelcomeIfShown();rule.chooseMap(1454)
+        ready();rule.chooseMap(1454)
         rule.runOnIdle { assertEquals(1411,model.profile.currentUiMapId) }
         rule.onNodeWithTag("i_am_here").performClick();settled { model.profile.currentUiMapId==1454 }
         rule.chooseMap(1411);rule.onNodeWithTag("i_am_here").assertIsDisplayed()
@@ -60,7 +70,7 @@ class UiPhase3FlowTest {
         rule.onNodeWithTag("detail_back").performClick();shot("map")
     }
     @Test fun undoBarReturnsTheExactChangeAndOldOrExpiredActionsDoNotUndoANewerOne() {
-        rule.finishWelcomeIfShown()
+        ready()
         rule.runOnIdle { model.requestQuest(E6_A,QuestState.IN_PROGRESS) };settled { model.undoNotice!=null }
         val first=model.undoNotice!!.token
         rule.onNodeWithTag("undo_personal").performClick();settled { model.questStates[E6_A]==null }
@@ -74,7 +84,7 @@ class UiPhase3FlowTest {
         rule.runOnIdle { assertEquals(QuestState.COMPLETED,model.questStates[E6_A]) }
     }
     @Test fun keepAwakePreferenceOnlyAppliesOnMapAndSurvivesActivityRecreation() {
-        rule.finishWelcomeIfShown()
+        ready()
         fun awake():Boolean {
             fun has(view:android.view.View):Boolean=view.keepScreenOn || (view is android.view.ViewGroup && (0 until view.childCount).any { has(view.getChildAt(it)) })
             return has(rule.activity.window.decorView)
@@ -87,7 +97,7 @@ class UiPhase3FlowTest {
         assertTrue(runBlocking { store.session.read().keepMapScreenOn })
     }
     @Test fun successfulBackupRecordsItsDateAndFailedExportDoesNotReplaceIt() {
-        rule.finishWelcomeIfShown()
+        ready()
         rule.runOnIdle { model.requestQuest(E6_A,QuestState.IN_PROGRESS) };settled { model.questStates[E6_A]==QuestState.IN_PROGRESS }
         val output=File(rule.activity.cacheDir,"ui3-backup.json")
         rule.runOnIdle { model.exportBackup(Uri.fromFile(output)) };settled { model.backupState.lastBackupAt>0 }
@@ -101,7 +111,7 @@ class UiPhase3FlowTest {
         assertTrue(model.backupState.personalRevision>model.backupState.backedUpRevision)
     }
     @Test fun beforeLeavingReturnsThroughSharedDetailAndDoesNotMarkDataVerified() {
-        rule.finishWelcomeIfShown()
+        ready()
         rule.runOnIdle { model.requestQuest(E6_A,QuestState.IN_PROGRESS) };settled { model.questStates[E6_A]==QuestState.IN_PROGRESS && model.recommendations.all.any { it.entry.key==E6_A && it.inProgress } }
         rule.openSuggestions();rule.onNodeWithTag("advice_list").performScrollToNode(hasTestTag("before_leaving"))
         rule.onNodeWithTag("before_leaving").performClick();rule.onNodeWithTag("leaving_$E6_A").performScrollTo().performClick()

@@ -29,7 +29,6 @@ import kotlinx.coroutines.launch
     var showLayers by rememberSaveable { mutableStateOf(false) }
     val map=model.atlas.map(model.mapId,model.floorId)
     val points=model.pointsOnMap()
-    val large=LocalDensity.current.fontScale>=1.5f
     BackHandler(enabled=model.selectedPoint!=null && !showArea && !showLayers && !showMapSelector && model.noteDraft==null) { model.select(null) }
     LaunchedEffect(model.focusTarget,map.frameKey) {
         val id=model.focusTarget
@@ -93,15 +92,15 @@ import kotlinx.coroutines.launch
     when {
         showMapSelector->MapSelectorDialog(model.atlas.maps,model.mapId,{model.chooseMap(it)},onClose={showMapSelector=false})
         showLayers->LayerDialog(model){showLayers=false}
-        showArea->AreaPointsSheet(model,large,onClose={showArea=false},onPoint={id->showArea=false;onPoint(id)})
+        showArea->AreaPointsSheet(model,onClose={showArea=false},onPoint={id->showArea=false;onPoint(id)})
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Composable private fun AreaPointsSheet(model:GuideViewModel,large:Boolean,onClose:()->Unit,onPoint:(String)->Unit) {
+@Composable private fun AreaPointsSheet(model:GuideViewModel,onClose:()->Unit,onPoint:(String)->Unit) {
     val map=model.atlas.map(model.mapId,model.floorId)
     val points=model.pointsOnMap()
-    ModalBottomSheet(onDismissRequest=onClose,sheetState=rememberModalBottomSheetState(skipPartiallyExpanded=large),modifier=Modifier.testTag("area_points_sheet")) {
+    ModalBottomSheet(onDismissRequest=onClose,sheetState=rememberModalBottomSheetState(skipPartiallyExpanded=true),modifier=Modifier.testTag("area_points_sheet")) {
         Column(Modifier.fillMaxWidth().fillMaxHeight(.92f).navigationBarsPadding()) {
             TextButton(onClick=onClose,modifier=Modifier.testTag("area_points_close")){Text("Zpět na mapu")}
             Text("V této oblasti · ${map.name}",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(horizontal=20.dp))

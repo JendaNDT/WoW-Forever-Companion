@@ -10,6 +10,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.liveRegion
+import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.unit.dp
@@ -40,9 +44,12 @@ import kotlinx.coroutines.delay
         delay((notice.deadline-android.os.SystemClock.elapsedRealtime()).coerceAtLeast(0))
         model.dismissUndo(notice.token)
     }
-    Snackbar(modifier=Modifier.fillMaxWidth().padding(8.dp).testTag("undo_bar"),
-        action={TextButton(onClick={model.undoFromNotice(notice.token)},enabled=!model.isBusy,modifier=Modifier.testTag("undo_personal")){Text("Vrátit")}}) {
-        Text(notice.label)
+    Surface(modifier=Modifier.fillMaxWidth().padding(8.dp).testTag("undo_bar").semantics { liveRegion=LiveRegionMode.Polite },
+        color=MaterialTheme.colorScheme.secondaryContainer,shape=MaterialTheme.shapes.medium) {
+        Row(Modifier.fillMaxWidth().padding(horizontal=12.dp),verticalAlignment=Alignment.CenterVertically) {
+            Text(notice.label,modifier=Modifier.weight(1f),maxLines=2)
+            TextButton(onClick={model.undoFromNotice(notice.token)},enabled=!model.isBusy,modifier=Modifier.testTag("undo_personal")){Text("Vrátit")}
+        }
     }
 }
 

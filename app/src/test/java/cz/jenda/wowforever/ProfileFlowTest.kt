@@ -96,7 +96,9 @@ class ProfileFlowTest {
     @Test @Config(sdk=[28],qualifiers="w800dp-h400dp-land")
     fun wideLayoutUsesRailAndNewViewModelReadsPersistedSession() {
         rule.onNodeWithTag("navigation_rail").assertIsDisplayed()
-        rule.chooseMap(1454)
+        // Robolectric #8460: a Dialog TextField under explicit w/h qualifiers oscillates.
+        // Map selection itself is exercised through the real picker in normal phone tests.
+        rule.runOnIdle { ViewModelProvider(rule.activity)[GuideViewModel::class.java].chooseMap(1454) }
         rule.openCharacter()
         rule.onNodeWithTag("save_profile").performScrollTo().assertIsDisplayed()
         rule.openJournal()
