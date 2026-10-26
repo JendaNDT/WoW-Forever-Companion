@@ -20,9 +20,9 @@ abstract class TabletLayoutChecks {
         println("Tablet test configuration: "+rule.activity.resources.configuration)
         shot("initial-tablet")
     }
-    protected fun shot(name:String) { rule.runOnIdle {
+    protected open fun shot(name:String) { rule.runOnIdle {
         val image=captureView(rule.activity.window.decorView)
-        outputDirectory().resolve("$name.png").apply { parentFile.mkdirs();outputStream().use { image.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it) } }
+        outputDirectory().resolve("$name.png").apply { parentFile!!.mkdirs();outputStream().use { image.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it) } }
         image.recycle()
     } }
     protected fun openRuzanFromArea() {
@@ -72,6 +72,8 @@ abstract class TabletLayoutChecks {
         rule.onNodeWithTag("nav_QUESTS").performClick()
         rule.onNodeWithTag("entry_side_pane").assertDoesNotExist()
         rule.openCharacter()
+        rule.runOnIdle { assertEquals(Destination.SETTINGS,model.destination) }
+        shot("landscape-character-open")
         rule.onNodeWithTag("companion_pane").assertDoesNotExist()
         rule.onNodeWithTag("profile_name").assertIsDisplayed()
         val density=rule.activity.resources.displayMetrics.density

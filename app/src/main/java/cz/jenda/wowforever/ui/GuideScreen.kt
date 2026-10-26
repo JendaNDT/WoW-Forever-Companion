@@ -54,7 +54,8 @@ import java.util.Locale
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable private fun GuideReadyScreen(model:GuideViewModel) {
-    KeepMapAwake(model.keepMapScreenOn && model.destination==Destination.MAP)
+    val currentDestination=model.destination
+    KeepMapAwake(model.keepMapScreenOn && currentDestination==Destination.MAP)
     BoxWithConstraints(Modifier.fillMaxSize()) {
     val density=LocalDensity.current
     val padding=WindowInsets.safeDrawing.asPaddingValues()
@@ -62,7 +63,7 @@ import java.util.Locale
     val height=maxHeight-padding.calculateTopPadding()-maxOf(padding.calculateBottomPadding(),with(density){WindowInsets.ime.getBottom(density).toDp()})
     val wide=width>=600.dp || (width>=480.dp && height<480.dp)
     val contentWidth=width-if(wide)80.dp else 0.dp
-    val sidePaneEnabled=model.destination!=Destination.SETTINGS && supportsCompanionPane(contentWidth.value,(height-56.dp).value,density.fontScale)
+    val sidePaneEnabled=currentDestination!=Destination.SETTINGS && supportsCompanionPane(contentWidth.value,(height-56.dp).value,density.fontScale)
     val compactHeader=LocalDensity.current.fontScale>=1.5f
     var showQuickArea by rememberSaveable { mutableStateOf(false) }
     var overlay by rememberSaveable { mutableStateOf<String?>(null) }
