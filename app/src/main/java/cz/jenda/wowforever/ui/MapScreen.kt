@@ -110,29 +110,29 @@ import kotlinx.coroutines.launch
 @Composable internal fun AreaPointsPanel(model:GuideViewModel,onPoint:(String)->Unit,onClose:(()->Unit)?=null,listState:LazyListState=rememberLazyListState()) {
     val map=model.atlas.map(model.mapId,model.floorId)
     val points=model.pointsOnMap()
-        Column(Modifier.fillMaxSize().testTag("area_points_panel")) {
-            if(onClose!=null)TextButton(onClick=onClose,modifier=Modifier.testTag("area_points_close")){Text("Zpět na mapu")}
-            Text("V této oblasti · ${map.name}",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(horizontal=20.dp,vertical=12.dp))
-            LazyColumn(Modifier.weight(1f).fillMaxWidth().testTag("points_list"),state=listState,contentPadding=PaddingValues(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
-                item {
-                    Text("! zadání · ? odevzdání · ◆ cíl nebo zdroj · ✎ poznámka · čísla výpravy",style=MaterialTheme.typography.bodySmall)
-                    FilterChip(selected=model.showCompletedQuests,onClick=model::toggleCompletedQuests,label={Text("Zobrazit hotové úkoly")},modifier=Modifier.testTag("show_completed_quests"))
-                    if(points.isEmpty())Text(if(model.allPoints.none { it.position.uiMapId==map.uiMapId && it.position.floorId==map.floorId })"V této mapě zatím nejsou doložené body. Mapu můžeš prohlížet offline." else "Filtr skrývá všechny body. Uprav vrstvy mapy.")
-                }
-                items(points,key={it.id}) { p->
-                    OutlinedCard(Modifier.fillMaxWidth()) {
-                        Column(Modifier.padding(horizontal=8.dp)) {
-                            TextButton(onClick={model.showPoint(p.id);onClose?.invoke()},modifier=Modifier.fillMaxWidth().testTag("point_${p.id.substringAfterLast(':')}")) {
-                                Column(Modifier.fillMaxWidth()) {
-                                    Text(p.name)
-                                    Text((if(p.planNumbers.isNotEmpty())p.planNumbers.joinToString("·") else p.markerRole.symbol)+" · "+p.markerRole.label,style=MaterialTheme.typography.labelSmall)
-                                    Text(pointCoordinates(model,p),style=MaterialTheme.typography.labelSmall)
-                                }
+    Column(Modifier.fillMaxSize().testTag("area_points_panel")) {
+        if(onClose!=null)TextButton(onClick=onClose,modifier=Modifier.testTag("area_points_close")){Text("Zpět na mapu")}
+        Text("V této oblasti · ${map.name}",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(horizontal=20.dp,vertical=12.dp))
+        LazyColumn(Modifier.weight(1f).fillMaxWidth().testTag("points_list"),state=listState,contentPadding=PaddingValues(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
+            item {
+                Text("! zadání · ? odevzdání · ◆ cíl nebo zdroj · ✎ poznámka · čísla výpravy",style=MaterialTheme.typography.bodySmall)
+                FilterChip(selected=model.showCompletedQuests,onClick=model::toggleCompletedQuests,label={Text("Zobrazit hotové úkoly")},modifier=Modifier.testTag("show_completed_quests"))
+                if(points.isEmpty())Text(if(model.allPoints.none { it.position.uiMapId==map.uiMapId && it.position.floorId==map.floorId })"V této mapě zatím nejsou doložené body. Mapu můžeš prohlížet offline." else "Filtr skrývá všechny body. Uprav vrstvy mapy.")
+            }
+            items(points,key={it.id}) { p->
+                OutlinedCard(Modifier.fillMaxWidth()) {
+                    Column(Modifier.padding(horizontal=8.dp)) {
+                        TextButton(onClick={model.showPoint(p.id);onClose?.invoke()},modifier=Modifier.fillMaxWidth().testTag("point_${p.id.substringAfterLast(':')}")) {
+                            Column(Modifier.fillMaxWidth()) {
+                                Text(p.name)
+                                Text((if(p.planNumbers.isNotEmpty())p.planNumbers.joinToString("·") else p.markerRole.symbol)+" · "+p.markerRole.label,style=MaterialTheme.typography.labelSmall)
+                                Text(pointCoordinates(model,p),style=MaterialTheme.typography.labelSmall)
                             }
-                            TextButton(onClick={onPoint(p.id)},modifier=Modifier.testTag("area_detail_${p.id}")){Text("Detail")}
                         }
+                        TextButton(onClick={onPoint(p.id)},modifier=Modifier.testTag("area_detail_${p.id}")){Text("Detail")}
                     }
                 }
             }
         }
+    }
 }
