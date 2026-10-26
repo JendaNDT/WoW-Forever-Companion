@@ -22,7 +22,7 @@ class E10FlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
     private val store get()=(rule.activity.application as GuideApplication).store
-    @Before fun ready(){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}}
+    @Before fun ready(){rule.finishWelcomeIfShown();rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}}
     private fun settled(check:()->Boolean){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes();!model.isBusy && check()}}
     private fun openPackages(){rule.openSettings();rule.onNodeWithTag("packages").performScrollTo();rule.onNodeWithTag("packages").performClick()}
     private fun scroll(tag:String){rule.onNodeWithTag("packages_list").performScrollToNode(hasTestTag(tag))}
@@ -43,7 +43,7 @@ class E10FlowTest {
         rule.onNodeWithText("Zavřít balíčky").performClick()
         rule.runOnIdle{model.addPlanStop("wow-forever:npc:3338")};settled{model.personalState.stops.size==1}
         rule.runOnIdle{model.showPoint("wow-forever:npc:3338")}
-        rule.onNodeWithTag("map_1413").assertIsSelected()
+        rule.onNodeWithTag("current_map_1413").assertExists()
         rule.waitUntil(15_000){rule.onAllNodesWithContentDescription("Sergra Darkthorn · zastávky 1",useUnmergedTree=true).fetchSemanticsNodes().isNotEmpty()}
         rule.waitUntil(15_000){
             val bounds=rule.onNodeWithTag("native_map").fetchSemanticsNode().boundsInRoot;var brown=0
@@ -59,7 +59,7 @@ class E10FlowTest {
         }
         shot("barrens-map",false)
         rule.runOnIdle{assertEquals(139,model.catalogEntries.size);assertEquals(5,model.atlas.maps.size);assertEquals(1413,model.selectedPoint!!.position.uiMapId)}
-        rule.activityRule.scenario.recreate();rule.onNodeWithTag("map_1413").assertIsSelected()
+        rule.activityRule.scenario.recreate();rule.onNodeWithTag("current_map_1413").assertExists()
         rule.runOnIdle{assertEquals("wow-forever:npc:3338",model.selectedPoint!!.entryKey);assertEquals(1,model.expeditionStops.size)}
     }
     @Test fun rollbackKeepsBarrensNoteCompletedQuestPlanAndMissingAreaDoesNotOverwriteProfile(){

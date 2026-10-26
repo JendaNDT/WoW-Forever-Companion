@@ -21,7 +21,7 @@ abstract class E11LargeTextChecks {
         override fun after(){RuntimeEnvironment.setFontScale(1f)}
     }
     @get:Rule(order=1) val rule=createAndroidComposeRule<MainActivity>()
-    @Before fun ready(){
+    @Before fun ready(){rule.finishWelcomeIfShown();
         rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}
         rule.runOnIdle { ViewModelProvider(rule.activity)[GuideViewModel::class.java].navigate(Destination.MAP) }
     }

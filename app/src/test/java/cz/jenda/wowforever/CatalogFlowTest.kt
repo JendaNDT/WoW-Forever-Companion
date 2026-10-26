@@ -14,7 +14,7 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class CatalogFlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
-    @Before fun ready() {
+    @Before fun ready() {rule.finishWelcomeIfShown();
         rule.waitUntil(20_000) { rule.onAllNodesWithTag("native_map").fetchSemanticsNodes().isNotEmpty() }
     }
     @Test fun addingBookmarkAndRecreatingActivityKeepsTheBookmark() {

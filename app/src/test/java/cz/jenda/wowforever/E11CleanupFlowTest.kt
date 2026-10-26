@@ -23,6 +23,7 @@ class E11CleanupFailureApplication:GuideApplication() {
 class E11CleanupFlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     @Test fun cleanupFailureAfterCommitCannotRollBackDiskWhileKeepingNewContentOnScreen() {
+        rule.finishWelcomeIfShown()
         rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}
         val model=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
         val store=(rule.activity.application as GuideApplication).store

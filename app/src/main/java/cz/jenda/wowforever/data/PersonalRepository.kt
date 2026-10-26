@@ -57,8 +57,9 @@ class PersonalRepository(private val db:PersonalDatabase) {
     private suspend fun saveUndo(profile:String,label:String,change:PersonalChange) {
         dao.saveUndo(UndoEntity(profile,label,BackupJson.encodeToString(change),System.currentTimeMillis()))
     }
-    suspend fun undo(profile:String) = db.withTransaction {
+    suspend fun undo(profile:String,expectedCreatedAt:Long?=null,expectedPayload:String?=null) = db.withTransaction {
         val row=dao.undo(profile) ?: return@withTransaction
+        require(expectedCreatedAt==null || (row.createdAt==expectedCreatedAt && row.payloadJson==expectedPayload)){"Mezitím vznikla jiná změna. Tuto už nelze vrátit."}
         val change=BackupJson.decodeFromString<PersonalChange>(row.payloadJson)
         change.questKey?.let { key ->
             require(dao.progress(profile,key)==change.afterQuest){"Úkol se mezitím změnil. Starou změnu už nelze vrátit."}

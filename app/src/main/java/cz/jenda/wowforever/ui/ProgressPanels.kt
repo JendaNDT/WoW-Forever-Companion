@@ -71,9 +71,7 @@ fun stateLabel(value:QuestState)=when(value) {
         Text("Jde o získání předmětu, nikoli o aktuálně nasazenou výbavu. Záložka u předmětu slouží také jako přání.",style=MaterialTheme.typography.bodySmall)
         TextButton(onClick={model.showJournal();onClose()},modifier=Modifier.testTag("entry_journey")){Text("Otevřít deník")}
     }
-    if(model.undoAction!=null && entry.kind in setOf(EntryKind.ITEM,EntryKind.QUEST)) {
-        TextButton(onClick=model::undoPersonal,enabled=!model.isBusy,modifier=Modifier.testTag("undo_personal")){Text("Vrátit poslední změnu")}
-    }
+
 }
 
 @Composable fun RelatedEntryLinks(model:GuideViewModel,entry:EntryRecord,onRelated:(String)->Unit) {

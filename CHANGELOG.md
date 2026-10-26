@@ -1,6 +1,10 @@
 # E10.3 · 0.14.0-e10.3 · 2026-10-25
 
-## 0.18.0-ui2 (19)
+## 0.19.0-ui3 (20)
++
++Celá Fáze 3: mapa přes plochu, značky podle role a skrytí hotových úkolů, panel V této oblasti, Jsem tady, pětisekundové Vrátit, Než odejdeš, krátké první spuštění, připomínka zálohy a volba nezhasínat displej na mapě. Herní data a formát zálohy beze změny.
++
++## 0.18.0-ui2 (19)
 
 Celá druhá fáze jednoduššího ovládání: Mapa / Úkoly / Hledat, Co dál / Deník, společný vytahovací detail s historií souvisejících položek a jedno Nastavení. Sjednocené hledání má filtry a pět posledních dotazů. Staré názvy navigace se bezpečně převádějí. Herní data 8, databázové schéma a zálohy se nemění. Podrobnosti: docs/UI_FAZE_2.md.
 

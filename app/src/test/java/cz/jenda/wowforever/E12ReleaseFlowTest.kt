@@ -22,7 +22,7 @@ class E12ReleaseFlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
     private val store get()=(rule.activity.application as GuideApplication).store
-    @Before fun ready(){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}}
+    @Before fun ready(){rule.finishWelcomeIfShown();rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}}
     private fun settled(check:()->Boolean){rule.waitUntil(30_000){rule.waitForIdle();!model.isBusy && check()}}
     private fun help(){rule.openSettings();rule.onNodeWithTag("open_help").performScrollTo().performClick()}
     private fun scroll(tag:String){rule.onNodeWithTag("help_list").performScrollToNode(hasTestTag(tag))}

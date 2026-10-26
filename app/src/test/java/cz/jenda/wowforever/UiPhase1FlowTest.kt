@@ -22,7 +22,7 @@ class UiPhase1FlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
     private val store get()=(rule.activity.application as GuideApplication).store
-    @Before fun ready() {
+    @Before fun ready() {rule.finishWelcomeIfShown();
         rule.waitUntil(30_000) { rule.onAllNodesWithTag("quick_level_up").fetchSemanticsNodes().isNotEmpty() }
         rule.runOnIdle { model.navigate(Destination.MAP);model.chooseSpoilers(Spoilers.FULL) }
     }

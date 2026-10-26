@@ -46,11 +46,21 @@ enum class Spoilers(val label: String) { HINTS("Jen názvy a místa"), FULL("Pod
     val guideFocus:String = "BALANCED",
     val questTab:String = "NEXT",
     val recentSearches:List<String> = emptyList(),
+    // Missing in older saved sessions means an existing installation, not a new welcome flow.
+    val welcomeComplete:Boolean = true,
+    val mapHintDismissed:Boolean = false,
+    val showCompletedQuests:Boolean = false,
+    val keepMapScreenOn:Boolean = false,
+    val backupTrackingStarted:Boolean = false,
+    val personalRevision:Long = 0,
+    val backedUpRevision:Long = 0,
+    val unbackedSince:Long = 0,
+    val lastBackupAt:Long = 0,
     val settingsRecovered:Boolean = false,
 )
 object SessionSerializer : Serializer<Session> {
     private val json = Json { ignoreUnknownKeys = true; encodeDefaults = true }
-    override val defaultValue = Session()
+    override val defaultValue = Session(welcomeComplete=false)
     override suspend fun readFrom(input: InputStream): Session = try {
         json.decodeFromString<Session>(input.readBytes().decodeToString())
     } catch (e: SerializationException) { throw CorruptionException("Neplatná uložená nastavení", e) }

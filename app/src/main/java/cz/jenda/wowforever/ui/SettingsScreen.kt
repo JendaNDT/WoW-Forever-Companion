@@ -10,13 +10,25 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import cz.jenda.wowforever.GuideViewModel
 import cz.jenda.wowforever.data.Spoilers
 import cz.jenda.wowforever.domain.GuideFocus
+import cz.jenda.wowforever.domain.backupReminderDue
+import cz.jenda.wowforever.domain.lastBackupDays
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable fun SettingsScreen(model:GuideViewModel,onOverlay:(String)->Unit) {
     val page=model.settingsPage
+    var now by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    val lifecycle=LocalLifecycleOwner.current.lifecycle
+    DisposableEffect(lifecycle) {
+        val observer=LifecycleEventObserver { _,event->if(event==Lifecycle.Event.ON_RESUME)now=System.currentTimeMillis() }
+        lifecycle.addObserver(observer)
+        onDispose { lifecycle.removeObserver(observer) }
+    }
     BackHandler(enabled=page!="MENU") { model.chooseSettingsPage("MENU") }
     Column(Modifier.fillMaxSize()) {
         Row(Modifier.fillMaxWidth().padding(horizontal=12.dp)) {
@@ -30,10 +42,21 @@ import cz.jenda.wowforever.domain.GuideFocus
                 Spoilers.entries.forEach { choice->FilterChip(selected=model.spoilers==choice,onClick={model.chooseSpoilers(choice)},label={Text(choice.label)},modifier=Modifier.testTag("spoilers_${choice.name}")) }
                 Text("Řazení doporučení",style=MaterialTheme.typography.titleMedium)
                 GuideFocus.entries.forEach { focus->FilterChip(selected=model.guideFocus==focus,onClick={model.chooseGuideFocus(focus)},label={Text(focus.label)},modifier=Modifier.testTag("focus_${focus.name}")) }
+                Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
+                    Text("Nezhasínat displej na mapě",modifier=Modifier.weight(1f))
+                    Switch(checked=model.keepMapScreenOn,onCheckedChange=model::chooseKeepScreenOn,modifier=Modifier.testTag("keep_map_awake"))
+                }
                 Text("Nastavení se ukládá ihned.",style=MaterialTheme.typography.bodySmall)
             } else {
                 SettingsAction("Postava", "Jméno a rasa", "settings_character") { model.chooseSettingsPage("CHARACTER") }
                 SettingsAction("Profily a záloha", "Uložit, obnovit nebo přepnout profil", "backup") { onOverlay("BACKUP") }
+                Text(model.backupState.lastBackupDays(now)?.let { when(it) { 0L->"Poslední záloha: dnes";1L->"Poslední záloha: včera";else->"Poslední záloha: před $it dny" } } ?: "Poslední záloha: dosud neuložená",modifier=Modifier.testTag("last_backup"),style=MaterialTheme.typography.bodySmall)
+                if(model.backupState.backupReminderDue(now))OutlinedCard(modifier=Modifier.fillMaxWidth().testTag("backup_reminder")) {
+                    Column(Modifier.padding(12.dp)) {
+                        Text("Máš nové změny. Ulož si zálohu také mimo telefon.")
+                        TextButton(onClick={onOverlay("BACKUP")}){Text("Uložit zálohu")}
+                    }
+                }
                 SettingsAction("Zobrazení", "Popisy a řazení doporučení", "focus_settings") { model.chooseSettingsPage("DISPLAY") }
                 SettingsAction("Balíčky a mapy", "Obsah a návrat k předchozím datům", "packages") { onOverlay("PACKAGES") }
                 SettingsAction("Pokrytí", "Rozsah, zdroje a nejisté údaje", "content_coverage") { onOverlay("COVERAGE") }
@@ -60,7 +83,7 @@ import cz.jenda.wowforever.domain.GuideFocus
         Box(Modifier.weight(1f)) {
             holder.SaveableStateProvider(model.questTab) {
                 if(model.questTab=="JOURNAL") JourneyScreen(model,onSearch,onPlan={onOverlay("EXPEDITION")},onPoint=onPoint,onEntry=onEntry)
-                else NowScreen(model,onSearch,onEntry,onCoverage={onOverlay("COVERAGE")})
+                else NowScreen(model,onSearch,onEntry,onCoverage={onOverlay("COVERAGE")},onLeave={onOverlay("LEAVING")})
             }
         }
     }

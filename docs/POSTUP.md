@@ -1,16 +1,18 @@
 # Aktuální stav projektu
 
-Aktualizováno **26. 10. 2026**. Celá Fáze 2 jednoduššího ovládání z [NAVRH_UI.md](NAVRH_UI.md) je dokončená a funkčně potvrzená uživatelem: **0.18.0-ui2 / kód 19**, přibalená data **8**. Tři záložky Mapa / Úkoly / Hledat, společný detail a jedno Nastavení. Popis a výsledky jsou v [UI_FAZE_2.md](UI_FAZE_2.md). Jenda po předání APK potvrdil **„Ok, funguje to“**; Fáze 3 nezačala.
+Aktualizováno **26. 10. 2026**. Celá Fáze 3 z [NAVRH_UI.md](NAVRH_UI.md) je dokončená a funkčně potvrzená uživatelem: **0.19.0-ui3 / kód 20**, přibalená data **8**. Značky podle role, panel V této oblasti, Jsem tady, krátké Vrátit, Než odejdeš a pohodlí při hraní. Popis a výsledky jsou v [UI_FAZE_3.md](UI_FAZE_3.md). Jenda po předání APK potvrdil **„ok, funguje to“**.
 
-Fázi 1 (verze 18) Jenda po předání APK funkčně potvrdil slovy **„Vše funguje jak má“** a je sloučená v hlavní větvi. Toto potvrzení se automaticky nepřenáší na nové vydání.
+Fáze 1 (verze 18) a Fáze 2 (verze 19) jsou funkčně potvrzené uživatelem a sloučené do hlavní větve. Jenda po předání verze 19 uvedl **„Ok, funguje to“**. Toto potvrzení se automaticky nepřenáší na nové vydání.
 
-Celý sestavitelný projekt je v repozitáři [JendaNDT/WoW-Forever-Companion](https://github.com/JendaNDT/WoW-Forever-Companion), změny Fáze 2 v [PR #2](https://github.com/JendaNDT/WoW-Forever-Companion/pull/2); Fáze 1 byla sloučená přes [PR #1](https://github.com/JendaNDT/WoW-Forever-Companion/pull/1). Původ a obnovu popisuje [GITHUB_IMPORT.md](GITHUB_IMPORT.md).
+Celý sestavitelný projekt je v repozitáři [JendaNDT/WoW-Forever-Companion](https://github.com/JendaNDT/WoW-Forever-Companion), Fáze 3 v [PR #3](https://github.com/JendaNDT/WoW-Forever-Companion/pull/3), Fáze 2 v [PR #2](https://github.com/JendaNDT/WoW-Forever-Companion/pull/2); Fáze 1 byla sloučená přes [PR #1](https://github.com/JendaNDT/WoW-Forever-Companion/pull/1). Původ a obnovu popisuje [GITHUB_IMPORT.md](GITHUB_IMPORT.md).
 
-Podrobné historické výsledky E11 níže se vztahují k předchozí verzi **17**; výsledky verze **18** a její potvrzení jsou v UI_FAZE_1.md. Aktuální verze **19** má 228 aplikačních a 35 Python testů bez chyb a úspěšné nativní běhy na Androidu 8 a 16; podrobnosti jsou v UI_FAZE_2.md.
+Podrobné historické výsledky E11 níže se vztahují k předchozí verzi **17**; výsledky verze **18** a její potvrzení jsou v UI_FAZE_1.md. Předchozí verze **19** má 228 aplikačních a 35 Python testů bez chyb a úspěšné nativní běhy na Androidu 8 a 16; podrobnosti jsou v UI_FAZE_2.md.
 
 ## Potvrzeno na telefonu
 
-**Aktuální verze 19:** po předání APK `Warlock_Forever_0.18.0_UI2.apk` Jenda dne 26. 10. 2026 uvedl **„Ok, funguje to“**. Jde o základní funkční potvrzení Fáze 2. Jednotlivé scénáře, způsob instalace a obnova zálohy nebyly samostatně popsány. Výkon, TalkBack, druhé zařízení a herní údaje tím nejsou samostatně ověřené.
+**Aktuální verze 20:** Jenda dne 26. 10. 2026 po předání APK `Warlock_Forever_0.19.0_UI3.apk` uvedl **„ok, funguje to“**. Základní funkčnost Fáze 3 je přijatá. Jednotlivé scénáře, způsob instalace, obnova zálohy, měřený výkon, TalkBack, druhé zařízení a herní údaje nebyly samostatně potvrzené.
+
+**Předchozí verze 19:** po předání APK `Warlock_Forever_0.18.0_UI2.apk` Jenda dne 26. 10. 2026 uvedl **„Ok, funguje to“**. Jde o základní funkční potvrzení Fáze 2. Jednotlivé scénáře, způsob instalace a obnova zálohy nebyly samostatně popsány. Výkon, TalkBack, druhé zařízení a herní údaje tím nejsou samostatně ověřené.
 
 **Předchozí verze 18:** po předání APK `Warlock_Forever_0.17.0_UI1.apk` uživatel uvedl **„Vše funguje jak má“**. Jde o základní funkční potvrzení celé Fáze 1; podrobný průběh jednotlivých scénářů, výkon, přístupnost a herní údaje tím nejsou samostatně ověřené.
 
@@ -36,7 +38,7 @@ Dlouhý běh Androidu 16 přerušilo vypnutí runneru; nepočítá se jako dokon
 
 ## Další nejvhodnější krok
 
-Pokračovat Fází 3: značky mapy podle významu, skrytí hotových úkolů, panel V této oblasti a pohodlí při hraní podle NAVRH_UI.md. Fáze 2 je funkčně potvrzená; implementace Fáze 3 zatím nezačala.
+Ponechat verzi 0.19.0-ui3 jako stabilní základ pro hraní. Fáze 1–3 jednoduššího ovládání jsou dokončené a základně funkčně potvrzené uživatelem. Po vydání hry ověřit herní údaje, návaznosti, třídní úkoly a dopravu. Automatické výsledky a přesná identita APK jsou v UI_FAZE_3.md.
 
 Herní přejímka návazností, třídních úkolů a dopravy se provede až po vydání hry. Technická spolehlivost sama správnost herních údajů nepotvrzuje.
 

@@ -31,7 +31,7 @@ class E06FlowTest {
     private val extras=ViewModelStore()
     private val model get()=custom ?: ViewModelProvider(rule.activity)[GuideViewModel::class.java]
     private val store get()=(rule.activity.application as GuideApplication).store
-    @Before fun ready(){
+    @Before fun ready(){rule.finishWelcomeIfShown();
         rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_QUESTS").fetchSemanticsNodes().isNotEmpty()}
         rule.runOnIdle{model.showSuggestions();model.chooseSpoilers(Spoilers.FULL);model.chooseGuideFocus(GuideFocus.BALANCED)}
     }
@@ -115,7 +115,7 @@ class E06FlowTest {
         rule.onNodeWithTag("journey_list").performScrollToNode(hasTestTag("journey_$E6_NPC"))
         rule.onNodeWithTag("journey_$E6_NPC").performClick()
         rule.onNodeWithTag("entry_location_0").performScrollTo().performClick()
-        rule.onNodeWithTag("map_1411").assertIsSelected()
+        rule.onNodeWithTag("current_map_1411").assertExists()
         rule.waitUntil(10_000){rule.onAllNodesWithContentDescription("Ruzan",useUnmergedTree=true).fetchSemanticsNodes().isNotEmpty()}
     }
     @Test @Config(sdk=[28],qualifiers="w560dp-h360dp-land")

@@ -21,7 +21,7 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class ProfileFlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
-    @Before fun ready() {
+    @Before fun ready() {rule.finishWelcomeIfShown();
         rule.waitUntil(20_000) { rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty() }
         rule.runOnIdle {
             val model=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
@@ -61,7 +61,7 @@ class ProfileFlowTest {
         rule.onNodeWithTag("quick_level").assertTextEquals("12")
         rule.onNodeWithTag("quick_area").assertTextContains("Orgrimmar",substring=true)
         rule.onNodeWithTag("nav_MAP").performClick()
-        rule.onNodeWithTag("map_1454").assertIsSelected()
+        rule.onNodeWithTag("current_map_1454").assertExists()
     }
     @Test fun spoilerChoiceHidesDescriptionAndBookmarkOpensFromJourney() {
         rule.openDisplay()
@@ -90,13 +90,15 @@ class ProfileFlowTest {
         rule.onNodeWithTag("points").performClick()
         rule.onNodeWithTag("points_list").performScrollToNode(hasTestTag("point_5765"))
         rule.onNodeWithTag("point_5765").performClick()
-        listOf("native_map","zoom_in","zoom_out","fit","focus","settings").forEach { rule.onNodeWithTag(it).assertIsDisplayed() }
+        listOf("native_map","fit","focus","settings").forEach { rule.onNodeWithTag(it).assertIsDisplayed() }
         shot("small-landscape")
     }
     @Test @Config(sdk=[28],qualifiers="w800dp-h400dp-land")
     fun wideLayoutUsesRailAndNewViewModelReadsPersistedSession() {
         rule.onNodeWithTag("navigation_rail").assertIsDisplayed()
-        rule.onNodeWithTag("map_1454").performClick()
+        // Robolectric #8460: a Dialog TextField under explicit w/h qualifiers oscillates.
+        // Map selection itself is exercised through the real picker in normal phone tests.
+        rule.runOnIdle { ViewModelProvider(rule.activity)[GuideViewModel::class.java].chooseMap(1454) }
         rule.openCharacter()
         rule.onNodeWithTag("save_profile").performScrollTo().assertIsDisplayed()
         rule.openJournal()
@@ -118,7 +120,7 @@ class ProfileFlowTest {
         rule.runOnIdle { assertEquals(Destination.QUESTS,restored.destination);assertEquals(1454,restored.mapId) }
         rule.onNodeWithTag("nav_QUESTS").assertIsSelected()
         rule.onNodeWithTag("nav_MAP").performClick()
-        rule.onNodeWithTag("map_1454").assertIsSelected()
+        rule.onNodeWithTag("current_map_1454").assertExists()
     }
 }
 private fun MainActivity.setContentForTest(model:GuideViewModel) {

@@ -28,6 +28,7 @@ data class PendingPersonalChange(val profileId:String,val quest:String,val state
 
 data class NoteDraft(val position: MapPosition, val id: String? = null)
 private data class QuickProfileEdit(val profileId:String,val level:Int,val area:Int)
+data class UndoNotice(val token:String,val profileId:String,val createdAt:Long,val payload:String,val label:String,val deadline:Long)
 
 class GuideViewModel(application: Application, private val saved: SavedStateHandle) : AndroidViewModel(application) {
     private val store = (application as GuideApplication).store
@@ -77,6 +78,14 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         private set
     var recentSearches by mutableStateOf<List<String>>(emptyList())
         private set
+    var welcomeRequired by mutableStateOf(false);private set
+    var mapHintDismissed by mutableStateOf(false);private set
+    var showCompletedQuests by mutableStateOf(false);private set
+    var keepMapScreenOn by mutableStateOf(false);private set
+    var backupState by mutableStateOf(Session());private set
+    var undoNotice by mutableStateOf<UndoNotice?>(null);private set
+    private var revealedPointId by mutableStateOf<String?>(null)
+    private var mapRoleIndex=MapRoleIndex(emptyList())
     var spoilers by mutableStateOf(Spoilers.FULL)
         private set
     var floorId by mutableIntStateOf(0)
@@ -151,9 +160,10 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         MapPoint(note.id,note.text.lineSequence().first().take(80),MapPosition(map.uiMapId,note.xPercent!!,note.yPercent!!,map.floorId),
             "",null,PointKind.NOTE,0.0,cz.jenda.wowforever.content.Verification.UNVERIFIED)
     }
-    val filteredPoints get():List<MapPoint> {
+    val filteredPoints:List<MapPoint> by derivedStateOf {
+        contentEpoch // A replaced atlas must invalidate this projection even with no personal changes.
         val numbers=expeditionStops.filter { it.location!=null }.groupBy { it.stored.entryKey }.mapValues { (_,rows)->rows.map { it.number } }
-        return filterPoints(allPoints,visibleKinds,onlyBookmarks,bookmarks).map { point -> point.copy(planNumbers=numbers[point.entryKey].orEmpty()) }
+        mapRoleIndex.project(allPoints,visibleKinds,onlyBookmarks,bookmarks,questStates,showCompletedQuests,numbers,revealedPointId)
     }
     fun pointsOnMap() = filteredPoints.filter { it.position.uiMapId == mapId && it.position.floorId == floorId }
     fun pointsForEntry(key: String) = pointsByEntry[key].orEmpty()
@@ -184,6 +194,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                 val active=withContext(Dispatchers.IO) { store.personal.personal().profile(session.activeProfileId) ?: store.personal.personal().profile()!! }
                 applyPersonal(withContext(Dispatchers.IO) { store.journal.profileBackup(active.id) })
                 relations=withContext(Dispatchers.IO) { store.relations() }
+                mapRoleIndex=MapRoleIndex(relations)
                 guideRules=withContext(Dispatchers.IO) { store.guideRules() }
                 transportGraph=withContext(Dispatchers.IO) { store.transportGraph() }
                 contentLocations=withContext(Dispatchers.IO) { store.locations() }
@@ -197,6 +208,18 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                     if(kinds.containsAll(PointKind.entries.filter { it!=PointKind.OBJECT }.map { it.name }))kinds+PointKind.OBJECT.name else kinds
                 }
                 onlyBookmarks = session.onlyBookmarks
+                showCompletedQuests=session.showCompletedQuests
+                keepMapScreenOn=session.keepMapScreenOn
+                mapHintDismissed=session.mapHintDismissed
+                val hasExistingData=withContext(Dispatchers.IO) {
+                    store.personal.personal().profiles().any { p->p!=ProfileEntity() || store.journal.profileBackup(p.id).rowCount>0 }
+                }
+                welcomeRequired=!session.welcomeComplete && !hasExistingData
+                if(!welcomeRequired)session=session.copy(welcomeComplete=true)
+                if(!session.backupTrackingStarted) {
+                    session=session.copy(backupTrackingStarted=true,personalRevision=if(hasExistingData)1 else 0,unbackedSince=if(hasExistingData)System.currentTimeMillis() else 0)
+                }
+                backupState=session
 
                 selectedId = (if (saved.contains("pointId")) saved.get<String>("pointId") else session.selectedId)?.takeIf { id -> pointsOnMap().any { it.id == id } }
                 val rawHistory=saved.get<ArrayList<String>>("history") ?: session.history
@@ -210,6 +233,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                 packageStatus=withContext(Dispatchers.IO){store.packages.status()}
                 packageMessage=packageStatus?.recoveryMessage
                 ready = true
+                persist()
                 syncPoints()
                 saved.get<DoubleArray>("noteDraftPosition")?.takeIf { it.size == 4 && it.all(Double::isFinite) }?.let { v ->
                     if (atlas.maps.any { it.uiMapId == v[0].toInt() && it.floorId == v[1].toInt() } && v[2] in 0.0..100.0 && v[3] in 0.0..100.0)
@@ -227,6 +251,34 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         }
     }
     fun toggleBookmark(entry: EntryRecord) { mutatePersonal { id -> store.toggleBookmark(entry,id) } }
+    fun completeWelcome(race:String,level:Int,area:Int) {
+        if(!welcomeRequired || isBusy || race !in listOf("ORC","TROLL","UNDEAD") || level !in 1..60 || atlas.maps.none { it.uiMapId==area })return
+        savingProfile=true
+        viewModelScope.launch {
+            try {
+                val updated=profile.copy(race=race,level=level,currentUiMapId=area)
+                check(withContext(Dispatchers.IO){store.personal.personal().updateProfile(updated)}==1)
+                applyPersonal(personalState.copy(profile=updated));markPersonalChanged()
+                session=session.copy(welcomeComplete=true);welcomeRequired=false;chooseMap(area);persist()
+            } catch(e:CancellationException){throw e}
+            catch(_:Exception){dataError="Postavu se nepodařilo uložit. Zkus Začít znovu."}
+            finally{savingProfile=false}
+        }
+    }
+    fun dismissMapHint() { mapHintDismissed=true;persist() }
+    fun chooseKeepScreenOn(value:Boolean) { keepMapScreenOn=value;persist() }
+    fun toggleCompletedQuests() { showCompletedQuests=!showCompletedQuests;syncPoints();persist() }
+    fun toggleMapGroup(kinds:Set<PointKind>) {
+        val names=kinds.map { it.name }.toSet()
+        visibleKinds=if(visibleKinds.containsAll(names))visibleKinds-names else visibleKinds+names
+        revealedPointId=null;syncPoints();persist()
+    }
+    private fun markPersonalChanged() {
+        undoNotice=null
+        session=session.copy(personalRevision=session.personalRevision+1,
+            unbackedSince=if(session.personalRevision==session.backedUpRevision)System.currentTimeMillis() else session.unbackedSince)
+        backupState=session;persist()
+    }
     fun changeLevel(delta:Int) { queueQuickProfile((headerLevel+delta).coerceIn(1,60),headerArea) }
     fun changeCurrentArea(id:Int) {
         if(atlas.maps.any { it.uiMapId==id })queueQuickProfile(headerLevel,id)
@@ -252,8 +304,9 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                         current.copy(level=edit.level,currentUiMapId=edit.area).also { check(dao.updateProfile(it)==1) }
                     }
                     profile=updated;personalState=personalState.copy(profile=updated)
+                    markPersonalChanged()
                     if(quickProfileEdit==edit)quickProfileEdit=null
-                    if(changedArea)chooseMap(updated.currentUiMapId)
+                    if(changedArea && mapId!=updated.currentUiMapId)chooseMap(updated.currentUiMapId)
                     refreshRecommendations();profileSaved=quickProfileEdit==null
                     savingProfile=false;quickProfileWriting=false
                 }
@@ -275,7 +328,8 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
             try {
                 check(withContext(Dispatchers.IO) { store.personal.personal().updateProfile(updated) } == 1)
                 profile = updated;personalState=personalState.copy(profile=updated);refreshRecommendations()
-                if (changedArea) chooseMap(updated.currentUiMapId)
+                markPersonalChanged()
+                if (changedArea && mapId!=updated.currentUiMapId) chooseMap(updated.currentUiMapId)
                 profileSaved = true
             } catch (e: CancellationException) { throw e }
             catch (_: Exception) { dataError = "Profil se nepodařilo uložit. Zkus to znovu." }
@@ -337,15 +391,17 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         checkpoint(); mapId = id; floorId = selected.floorId; select(null)
     }
     fun select(id: String?) {
+        if(id==null)revealedPointId=null
         selectedId = id?.takeIf { key -> pointsOnMap().any { it.id == key } }
+        syncPoints()
         persist()
     }
     fun showPoint(id: String) {
         val point = allPoints.firstOrNull { it.id == id } ?: return
         visibleKinds = visibleKinds + point.kind.name
         if (point.entryKey !in bookmarks) onlyBookmarks = false
-        syncPoints()
         if (point.position.uiMapId != mapId || point.position.floorId != floorId) chooseMap(point.position.uiMapId,point.position.floorId)
+        revealedPointId=id;syncPoints()
         navigate(Destination.MAP); select(id); focusTarget = id
     }
     fun consumedFocus(id: String) { if (focusTarget == id) focusTarget = null }
@@ -354,7 +410,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         syncPoints(); persist()
     }
     fun toggleBookmarkFilter() { onlyBookmarks = !onlyBookmarks; syncPoints(); persist() }
-    fun resetLayers() { visibleKinds = PointKind.entries.map { it.name }.toSet(); onlyBookmarks = false; syncPoints(); persist() }
+    fun resetLayers() { visibleKinds = PointKind.entries.map { it.name }.toSet(); onlyBookmarks = false; showCompletedQuests=true; syncPoints(); persist() }
     private fun syncPoints() {
         if (!::engine.isInitialized) return
         engine.updatePoints(filteredPoints)
@@ -380,6 +436,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
             try {
                 notes = withContext(Dispatchers.IO) { store.personal.personal().saveNote(row); store.personal.personal().notes(profile.id) }
                 cancelNote(); syncPoints(); showPoint(row.id)
+                markPersonalChanged()
             } catch (e: CancellationException) { throw e }
             catch (_: Exception) { dataError = "Poznámku se nepodařilo uložit. Zkus to znovu." }
             finally { savingNote = false }
@@ -392,6 +449,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
             try {
                 notes = withContext(Dispatchers.IO) { store.personal.personal().deleteNote(id,profile.id); store.personal.personal().notes(profile.id) }
                 cancelNote(); syncPoints()
+                markPersonalChanged()
             } catch (e: CancellationException) { throw e }
             catch (_: Exception) { dataError = "Poznámku se nepodařilo smazat. Zkus to znovu." }
             finally { savingNote = false }
@@ -402,7 +460,8 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
     private fun persist() {
         if (!ready) return
         session = session.copy(mapId = mapId,floorId = floorId,selectedId = selectedId,spoilers = spoilers.name,
-            visibleKinds = visibleKinds.toList(),onlyBookmarks = onlyBookmarks,activeProfileId = profile.id,guideFocus = guideFocus.name,questTab=questTab,recentSearches=recentSearches)
+            visibleKinds = visibleKinds.toList(),onlyBookmarks = onlyBookmarks,activeProfileId = profile.id,guideFocus = guideFocus.name,questTab=questTab,recentSearches=recentSearches,
+            showCompletedQuests=showCompletedQuests,keepMapScreenOn=keepMapScreenOn,mapHintDismissed=mapHintDismissed)
         saved["mapId"] = mapId; saved["floorId"] = floorId; saved["pointId"] = selectedId
         saved["history"] = ArrayList(session.history)
         store.session.save(session)
@@ -438,13 +497,18 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
             catch(_:Exception) { dataError="Osobní záznamy se nepodařilo znovu načíst. Zavři a otevři aplikaci." }
         }
     }
-    private fun mutatePersonal(action:suspend (String)->Unit) {
+    private fun mutatePersonal(undoLabel:String?=null,action:suspend (String)->Unit) {
         if(isBusy)return
-        val id=profile.id;personalBusy=true
+        val id=profile.id;personalBusy=true;undoNotice=null
         viewModelScope.launch {
             try {
                 withContext(Dispatchers.IO) { action(id) }
-                if(profile.id==id)applyPersonal(withContext(Dispatchers.IO) { store.journal.profileBackup(id) })
+                if(profile.id==id) {
+                    applyPersonal(withContext(Dispatchers.IO) { store.journal.profileBackup(id) });markPersonalChanged()
+                    if(undoLabel!=null)withContext(Dispatchers.IO){store.personal.personal().undo(id)}?.let { row->
+                        undoNotice=UndoNotice(UUID.randomUUID().toString(),id,row.createdAt,row.payloadJson,undoLabel,android.os.SystemClock.elapsedRealtime()+5000)
+                    }
+                }
             } catch(e:CancellationException) { throw e }
             catch(_:Exception) { dataError="Změnu se nepodařilo uložit. Původní záznamy zůstaly zachované." }
             finally { personalBusy=false }
@@ -468,7 +532,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         val affected=if(questStates[key]==QuestState.COMPLETED && state!=QuestState.COMPLETED)questRules.descendants(key).filter { questStates[it] in setOf(QuestState.COMPLETED,QuestState.IN_PROGRESS) } else emptyList()
         if(affected.isNotEmpty()) {
             pendingChange=PendingPersonalChange(profile.id,key,state=state,message="Změní se splnění předchůdce. ${affected.size} navazujících záznamů zůstane uložených a jejich podmínky se přepočítají. Pokračovat?")
-        } else mutatePersonal { store.journal.setQuest(it,key,entry.nameOriginal,state) }
+        } else mutatePersonal(questNotice(state)) { store.journal.setQuest(it,key,entry.nameOriginal,state) }
     }
     fun requestReward(quest:String,item:String?) {
         val q=historyEntry(quest)?.takeIf { it.kind==EntryKind.QUEST } ?: return
@@ -476,7 +540,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         if(item!=null && questRules.rewardCandidates(quest).none { it.ownerKey==item })return
         if(rewardChoices[quest]!=null) pendingChange=PendingPersonalChange(profile.id,quest,rewardItem=item,rewardChange=true,
             message="Změnit zaznamenanou volbu odměny u ${q.nameOriginal}? Evidence získaných předmětů se tím nemění.")
-        else mutatePersonal { store.journal.chooseReward(it,quest,q.nameOriginal,item,item?.let { k -> historyEntry(k)?.nameOriginal }) }
+        else mutatePersonal("Odměna uložená") { store.journal.chooseReward(it,quest,q.nameOriginal,item,item?.let { k -> historyEntry(k)?.nameOriginal }) }
     }
     fun cancelChange() { pendingChange=null }
     fun confirmChange() {
@@ -485,15 +549,21 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         pendingChange=null
         if(change.rewardChange) {
             val quest=historyEntry(change.quest) ?: return
-            mutatePersonal { store.journal.chooseReward(it,change.quest,quest.nameOriginal,change.rewardItem,change.rewardItem?.let { k -> historyEntry(k)?.nameOriginal }) }
-        } else { val entry=historyEntry(change.quest) ?: return;mutatePersonal { store.journal.setQuest(it,entry.key,entry.nameOriginal,change.state!!) } }
+            mutatePersonal("Odměna uložená") { store.journal.chooseReward(it,change.quest,quest.nameOriginal,change.rewardItem,change.rewardItem?.let { k -> historyEntry(k)?.nameOriginal }) }
+        } else { val entry=historyEntry(change.quest) ?: return;mutatePersonal(questNotice(change.state!!)) { store.journal.setQuest(it,entry.key,entry.nameOriginal,change.state!!) } }
     }
     fun setAcquired(key:String,value:Boolean) {
         val item=historyEntry(key)?.takeIf { it.kind==EntryKind.ITEM } ?: return
         if((key in acquiredItems)==value)return
-        mutatePersonal { store.journal.setItem(it,key,item.nameOriginal,value) }
+        mutatePersonal(if(value)"Předmět získaný" else "Získání zrušené") { store.journal.setItem(it,key,item.nameOriginal,value) }
     }
     fun undoPersonal() { mutatePersonal { store.journal.undo(it) } }
+    private fun questNotice(state:QuestState)=when(state) { QuestState.COMPLETED->"Hotovo";QuestState.IN_PROGRESS->"Beru";QuestState.DEFERRED->"Odloženo";QuestState.NOT_STARTED->"Nezahájeno" }
+    fun dismissUndo(token:String) { if(undoNotice?.token==token)undoNotice=null }
+    fun undoFromNotice(token:String) {
+        val notice=undoNotice?.takeIf { it.token==token && it.profileId==profile.id && android.os.SystemClock.elapsedRealtime()<it.deadline } ?: return
+        mutatePersonal { store.journal.undo(it,notice.createdAt,notice.payload) }
+    }
     fun addPlanStop(key:String) {
         val entry=historyEntry(key) ?: return
         if(personalState.stops.size>=200) { dataError="Výprava už má 200 cílů. Nejdřív některý odeber.";return }
@@ -522,7 +592,8 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
     }
     private suspend fun activateProfile(id:String) {
         val value=withContext(Dispatchers.IO) { store.journal.profileBackup(id) }
-        personalJob?.cancel();cancelNote();pendingChange=null;selectedId=null;focusTarget=null;undoAction=null
+        personalJob?.cancel();cancelNote();pendingChange=null;selectedId=null;revealedPointId=null;focusTarget=null;undoAction=null;undoNotice=null
+        session=session.copy(welcomeComplete=true);welcomeRequired=false
         applyPersonal(value)
         chooseMap(profile.currentUiMapId);profileSaved=false;watchPersonal();persist()
         snapshots=withContext(Dispatchers.IO) { store.personal.personal().snapshots(id) }
@@ -546,7 +617,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
     }
     fun exportBackup(uri:Uri) {
         if(isBusy)return
-        val id=profile.id;backupBusy=true;backupMessage=null
+        val id=profile.id;val revision=session.personalRevision;backupBusy=true;backupMessage=null
         viewModelScope.launch {
             try {
                 val count=withContext(Dispatchers.IO) {
@@ -555,6 +626,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                     out.use { it.write(bytes);it.flush() };bytes.size
                 }
                 backupMessage="Záloha uložená (${count/1024+1} kB). Obsahuje všechny uložené profily."
+                session=session.copy(lastBackupAt=System.currentTimeMillis(),backedUpRevision=revision,unbackedSince=0);backupState=session;persist()
             } catch(e:CancellationException){throw e}
             catch(_:Exception){dataError="Zálohu se nepodařilo uložit. Zvol soubor znovu; případný nedokončený soubor nepoužívej k obnově."}
             finally { backupBusy=false }
@@ -570,7 +642,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                 val imported=withContext(Dispatchers.IO) {
                     if(replace) { store.journal.replace(target,file.profiles.first { it.profile.id==sourceId });target } else store.journal.importNew(file)
                 }
-                committed=true;backupPreview=null;activateProfile(imported);backupMessage=if(replace) "Profil obnovený. Předchozí stav najdeš v místních snímcích." else "Záloha načtená do nových profilů. Původní profily zůstaly zachované."
+                committed=true;markPersonalChanged();backupPreview=null;activateProfile(imported);backupMessage=if(replace) "Profil obnovený. Předchozí stav najdeš v místních snímcích." else "Záloha načtená do nových profilů. Původní profily zůstaly zachované."
             } catch(e:CancellationException){throw e}
             catch(_:Exception){dataError=if(committed) "Data zálohy jsou uložená. Obnovený profil se nepodařilo znovu načíst; zavři a otevři aplikaci." else "Obnova se nepodařila. Všechny změny byly vráceny a původní profily zůstaly zachované."}
             finally { backupBusy=false }
@@ -581,7 +653,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         val target=profile.id;backupBusy=true
         viewModelScope.launch {
             var committed=false
-            try { withContext(Dispatchers.IO) { store.journal.recover(target,id) };committed=true;activateProfile(target);backupMessage="Místní snímek obnovený." }
+            try { withContext(Dispatchers.IO) { store.journal.recover(target,id) };committed=true;markPersonalChanged();activateProfile(target);backupMessage="Místní snímek obnovený." }
             catch(e:CancellationException){throw e}
             catch(_:Exception){dataError=if(committed) "Snímek je uložený, ale profil se nepodařilo znovu načíst. Zavři a otevři aplikaci." else "Snímek se nepodařilo obnovit. Původní profil zůstal zachovaný."}
             finally { backupBusy=false }
@@ -655,7 +727,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                     val sources=withContext(Dispatchers.IO){store.content.catalog().sourceLinks().associate{it.id to it.url}}
                     val status=withContext(Dispatchers.IO){store.packages.status()}
                     val newSearch=withContext(Dispatchers.Default){CatalogSearchIndex(entries)}
-                    engine.close();atlas=newAtlas;catalogEntries=entries;relations=newRelations;guideRules=rules;transportGraph=graph;contentLocations=locations
+                    engine.close();atlas=newAtlas;catalogEntries=entries;relations=newRelations;mapRoleIndex=MapRoleIndex(newRelations);revealedPointId=null;guideRules=rules;transportGraph=graph;contentLocations=locations
                     pointsByEntry=atlas.points.filter { it.entryKey!=null }.groupBy { it.entryKey!! };catalogSearchIndex=newSearch
                     contentMetadata=metadata;sourceUrls=sources;packageStatus=status
                     engine=MapComposeEngine(appAssets,atlas,::restore,::save,store.packages.tileOpener());contentEpoch++

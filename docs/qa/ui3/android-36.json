@@ -1,0 +1,76 @@
+{
+  "run_id": 40358041033,
+  "job_id": 121696079537,
+  "sourceRevision": "891372daaec42b515cd6e0ab15d004a6fa32e1d4",
+  "summary": {
+    "serial": "emulator-5554",
+    "physical_phone_tested": false,
+    "scope": "disposable emulator / debug APK; no physical-phone FPS or latency claim",
+    "passed": true,
+    "android_api": "36",
+    "radio_disable_requests": {
+      "wifi": {
+        "returncode": 0,
+        "output": ""
+      },
+      "data": {
+        "returncode": 0,
+        "output": ""
+      }
+    },
+    "offline_radio_state_verified": false,
+    "phases": [
+      {
+        "phase": "01-prepare",
+        "tests": 1,
+        "passed": true
+      },
+      {
+        "phase": "02-first-force-stop",
+        "process_before": "4270",
+        "process_stopped": true
+      },
+      {
+        "phase": "03-restore",
+        "tests": 1,
+        "passed": true
+      },
+      {
+        "phase": "04-second-force-stop",
+        "process_before": "4628",
+        "process_stopped": true
+      },
+      {
+        "phase": "05-restart-restored",
+        "tests": 1,
+        "passed": true
+      },
+      {
+        "phase": "06-full-catalog-and-map-soak",
+        "tests": 2,
+        "passed": true
+      }
+    ]
+  },
+  "search": {
+    "entries": 11912,
+    "queries": 200,
+    "p50_ms": 22.810103,
+    "max_ms": 31.376644,
+    "scope": "stable search results and emulator search kernel only; not phone UI latency",
+    "environment": "Android emulator / debug APK",
+    "physical_phone_performance_verified": false
+  },
+  "map_soak": {
+    "maps": 61,
+    "points": 17330,
+    "area_changes": 854,
+    "complete_cycles": 14,
+    "peak_retained_frames": 2,
+    "tile_streams_opened": 3444,
+    "duration_ms": 320384,
+    "scope": "emulator stability, all bundled frames, state retention and memory trim; not physical-phone FPS/PSS acceptance",
+    "environment": "Android emulator / debug APK",
+    "physical_phone_performance_verified": false
+  }
+}

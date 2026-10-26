@@ -29,7 +29,7 @@ class E05FlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
     private val store get()=(rule.activity.application as GuideApplication).store
-    @Before fun ready() {
+    @Before fun ready() {rule.finishWelcomeIfShown();
         rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}
         rule.runOnIdle {model.navigate(Destination.MAP);model.chooseMap(1411);model.resetLayers();model.chooseSpoilers(Spoilers.FULL)}
     }
@@ -51,7 +51,7 @@ class E05FlowTest {
         rule.activityRule.scenario.recreate()
         rule.onNodeWithTag("quest_state_IN_PROGRESS").assertIsSelected()
         rule.onNodeWithTag("quest_state_COMPLETED").performScrollTo().performClick();awaitState(key,QuestState.COMPLETED)
-        rule.onNodeWithTag("undo_personal").performScrollTo().performClick();awaitState(key,QuestState.IN_PROGRESS)
+        rule.onNodeWithTag("undo_personal").performClick();awaitState(key,QuestState.IN_PROGRESS)
         rule.onNodeWithTag("quest_state_DEFERRED").performScrollTo().performClick();awaitState(key,QuestState.DEFERRED)
         rule.onNodeWithTag("quest_state_DEFERRED").performScrollTo();shot("quest")
         rule.onNodeWithTag("entry_journey").performScrollTo().performClick()
@@ -72,7 +72,7 @@ class E05FlowTest {
         rule.onNodeWithTag("reward_none").performScrollTo().performClick()
         rule.onNodeWithTag("confirm_personal_change").performClick()
         rule.waitUntil(10_000){rule.onAllNodesWithTag("reward_none").fetchSemanticsNodes();!model.isBusy && model.rewardChoices[key]==null}
-        rule.onNodeWithTag("undo_personal").performScrollTo().performClick()
+        rule.onNodeWithTag("undo_personal").performClick()
         rule.waitUntil(10_000){rule.onAllNodesWithTag("reward_none").fetchSemanticsNodes();!model.isBusy && model.rewardChoices[key]!=null}
         rule.onNodeWithText("Otevřít předmět").performScrollTo().performClick()
         rule.onNodeWithTag("item_acquired").performScrollTo().performClick()
