@@ -38,7 +38,7 @@ class E04MapFlowTest {
         rule.onNodeWithTag("map_1454").performClick()
         rule.onNodeWithTag("map_search").performClick()
         rule.onNodeWithTag("catalog_query").performTextReplacement("ruzan")
-        rule.onNodeWithTag("result_map_wow-forever:npc:5765").performClick()
+        rule.onNodeWithTag("result_map_wow-forever:npc:5765").performScrollTo().performClick()
         rule.onNodeWithTag("map_1411").assertIsSelected()
         rule.onNodeWithTag("point_catalog").performClick()
         rule.onNodeWithTag("entry_location_0").performScrollTo().assertExists()

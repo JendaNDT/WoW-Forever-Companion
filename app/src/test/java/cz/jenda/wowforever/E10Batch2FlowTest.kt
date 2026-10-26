@@ -36,7 +36,7 @@ class E10Batch2FlowTest {
         rule.runOnIdle{model.activateContentPackage()};settled{model.contentMetadata?.generation==5}
         file.delete();assertEquals(before,runBlocking{store.journal.profileBackup(model.profile.id)})
         rule.onNodeWithTag("nav_MAP").performClick()
-        rule.openSearch();rule.onNodeWithTag("content_coverage").performClick()
+        rule.openSearch();rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("content_coverage"));rule.onNodeWithTag("content_coverage").performClick()
         rule.onNodeWithTag("coverage_counts").assertTextContains("182 položek · 74 přímých poloh · 5 offline map");shot("coverage")
         rule.onNodeWithTag("coverage_scope_1411").performScrollTo().assertTextContains("Startovní výběr 1–10",substring=true)
         rule.onNodeWithText("Zavřít pokrytí").performClick()

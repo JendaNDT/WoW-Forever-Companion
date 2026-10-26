@@ -46,14 +46,14 @@ class E11LargeTextTest:E11LargeTextChecks() {
         rule.onNodeWithTag("catalog_query").performTextReplacement("Ruzan")
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("catalog_wow-forever:npc:5765"))
         rule.onNodeWithTag("catalog_wow-forever:npc:5765").assertIsDisplayed().performClick()
-        rule.onNodeWithText("Ruzan").assertExists();shot("large-text-detail",true)
+        rule.onNodeWithTag("detail_title").assertTextEquals("Ruzan");shot("large-text-detail",true)
     }
     @Test fun mapSearchAtTwoHundredPercentCanReachTheNpcAndItsMap() {
         rule.onNodeWithTag("map_search").performClick()
         rule.onNodeWithTag("catalog_query").performTextReplacement("Ruzan")
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("result_map_wow-forever:npc:5765"))
         rule.onNodeWithTag("result_map_wow-forever:npc:5765").assertIsDisplayed();shot("large-text-search")
-        rule.onNodeWithTag("result_map_wow-forever:npc:5765").performClick()
+        rule.onNodeWithTag("result_map_wow-forever:npc:5765").performScrollTo().performClick()
         rule.onNodeWithText("Ruzan").assertExists();rule.onNodeWithTag("native_map").assertIsDisplayed()
         shot("large-text-map")
         rule.onNodeWithTag("selected_point_detail").performClick()

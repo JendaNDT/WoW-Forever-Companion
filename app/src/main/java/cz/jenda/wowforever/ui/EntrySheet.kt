@@ -6,6 +6,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.LocalDensity
@@ -27,6 +28,7 @@ import kotlinx.coroutines.launch
     val window=LocalWindowInfo.current.containerSize
     val expandedOnly=density.fontScale>=1.5f || with(density) { window.height.toDp()<480.dp }
     val sheet=rememberModalBottomSheetState(skipPartiallyExpanded=expandedOnly)
+    val detailStates=rememberSaveableStateHolder()
     val scope=rememberCoroutineScope()
     val uri=LocalUriHandler.current
     var sourceError by remember(entryKey,pointId) { mutableStateOf(false) }
@@ -37,6 +39,7 @@ import kotlinx.coroutines.launch
                 Spacer(Modifier.weight(1f))
                 if(!expandedOnly)TextButton(onClick={scope.launch { if(sheet.currentValue==SheetValue.Expanded && sheet.hasPartiallyExpandedState)sheet.partialExpand() else sheet.expand() }},modifier=Modifier.testTag("detail_expand")) { Text(if(sheet.currentValue==SheetValue.Expanded)"Zmenšit" else "Celý detail") }
             }
+            detailStates.SaveableStateProvider(entryKey ?: pointId ?: "missing") {
             Column(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal=20.dp),verticalArrangement=Arrangement.spacedBy(10.dp)) {
                 Text(entry?.nameOriginal ?: note?.text?.lineSequence()?.first()?.take(80) ?: point?.name ?: "Detail",style=MaterialTheme.typography.titleLarge,modifier=Modifier.testTag("detail_title"))
                 if(entry!=null)key(entry.key) {
@@ -85,6 +88,7 @@ import kotlinx.coroutines.launch
                     }
                 }
                 Spacer(Modifier.height(16.dp))
+            }
             }
         }
     }

@@ -31,7 +31,7 @@ class E10FullFlowTest {
         rule.onNodeWithTag("select_map_1452").performClick();rule.onNodeWithTag("map_1452").assertIsSelected();shot("winterspring")
         rule.openSearch();rule.onNodeWithTag("catalog_query").performTextReplacement("Dreadsteed of Xoroth")
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("catalog_filters"));rule.onNodeWithTag("catalog_filters").performClick()
-        rule.onNodeWithTag("catalog_category_CLASS").performScrollTo().performClick();rule.onNodeWithTag("apply_catalog_filters").performClick()
+        rule.onNodeWithTag("catalog_category_CLASS").performScrollTo().performClick();rule.onNodeWithTag("apply_catalog_filters").performScrollTo().performClick()
         val target=model.catalogEntries.first { it.nameOriginal=="Dreadsteed of Xoroth" }.key
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("catalog_$target"));rule.onNodeWithTag("catalog_$target").performClick()
         rule.onNodeWithTag("entry_description").assertTextContains("Warlock",substring=true);shot("warlock60")

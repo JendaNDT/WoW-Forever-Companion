@@ -51,10 +51,12 @@ class UiPhase2FlowTest {
         assertEquals(before,runBlocking { store.journal.profileBackup(model.profile.id) })
         shot("settings")
     }
-    @Test fun oneSheetNavigatesRelatedEntriesAndRestoresTheSearchAfterRotation() {
+    @Test @Config(sdk=[28],qualifiers="w400dp-h800dp")
+    fun oneSheetNavigatesRelatedEntriesAndRestoresTheSearchAfterRotation() {
         search("Ruzan","wow-forever:npc:5765")
         rule.onNodeWithTag("entry_sheet").assertExists();rule.onNodeWithTag("detail_expand").performClick()
         rule.onNodeWithTag("related_wow-forever:quest:1485").performScrollTo().performClick()
+        rule.onNodeWithTag("detail_title").assertIsDisplayed()
         rule.runOnIdle { assertEquals(1,ShadowDialog.getShownDialogs().count { it.isShowing }) }
         rule.activityRule.scenario.recreate()
         rule.onNodeWithTag("detail_back").assertTextContains("Zpět na předchozí").performClick()
@@ -63,7 +65,7 @@ class UiPhase2FlowTest {
         rule.onNodeWithTag("detail_back").performClick()
         rule.onNodeWithTag("catalog_query").assertTextContains("Ruzan")
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("result_map_wow-forever:npc:5765"))
-        rule.onNodeWithTag("result_map_wow-forever:npc:5765").performClick()
+        rule.onNodeWithTag("result_map_wow-forever:npc:5765").performScrollTo().performClick()
         rule.onNodeWithTag("map_1411").assertIsSelected()
         rule.onNodeWithTag("selected_point_detail").performClick()
         rule.onNodeWithTag("detail_title").assertTextEquals("Ruzan")

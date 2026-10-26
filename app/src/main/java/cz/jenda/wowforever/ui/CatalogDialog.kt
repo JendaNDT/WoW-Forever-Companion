@@ -31,12 +31,13 @@ import cz.jenda.wowforever.content.*
     var myLevel by rememberSaveable { mutableStateOf(false) }
     var onlyBookmarks by rememberSaveable { mutableStateOf(false) }
     val classKeys=remember(model.guideRules) { model.guideRules.filter { it.importance==Importance.CLASS }.map { it.entryKey }.toSet()+WarlockQuestIndex.keys }
+    val adviceByEntry=remember(model.recommendations) { model.recommendations.all.associateBy { it.entry.key } }
     val areaKeys=remember(model.recommendations,model.profile.currentUiMapId) { model.recommendations.all.filter { model.profile.currentUiMapId in it.areaIds }.map { it.entry.key }.toSet() }
     val listState=rememberLazyListState()
     val requester=remember { FocusRequester() }
     val keyboard=LocalSoftwareKeyboardController.current
     LaunchedEffect(Unit) { requester.requestFocus() }
-    val filterSignature=listOf(query,onlyBookmarks.toString(),category,levelBand.toString(),onlyArea.toString(),myLevel.toString()).joinToString("\u0000")
+    val filterSignature=query
     var previousFilters by rememberSaveable { mutableStateOf(filterSignature) }
     LaunchedEffect(filterSignature) { if(previousFilters!=filterSignature){listState.scrollToItem(0);previousFilters=filterSignature} }
     val entries=remember(model.catalogSearchIndex,query,onlyBookmarks,model.bookmarks,category,levelBand,onlyArea,myLevel,model.profile.level,classKeys,areaKeys) {
@@ -103,7 +104,9 @@ import cz.jenda.wowforever.content.*
                     val level=listOfNotNull(e.reportedLevel,e.minimumLevel).filter { it>0 }.maxOrNull()
                     Text(entryLabel(e)+(level?.let { " · úroveň $it" } ?: ""),style=MaterialTheme.typography.labelMedium)
                     val points=model.pointsForEntry(e.key)
-                    if(points.isNotEmpty())Text(points.map { model.atlas.map(it.position.uiMapId,it.position.floorId).name }.distinct().joinToString(),style=MaterialTheme.typography.bodySmall)
+                    val areaNames=if(points.isNotEmpty())points.map { model.atlas.map(it.position.uiMapId,it.position.floorId).name }.distinct()
+                        else adviceByEntry[e.key]?.areaIds.orEmpty().mapNotNull { id->model.atlas.maps.firstOrNull { it.uiMapId==id }?.name }.distinct()
+                    if(areaNames.isNotEmpty())Text(areaNames.joinToString(),style=MaterialTheme.typography.bodySmall)
                     if(points.isNotEmpty())TextButton(onClick={keyboard?.hide();model.rememberSearch(query);if(points.size==1){model.showPoint(points.single().id)}else onEntry(e.key)},modifier=Modifier.testTag("result_map_${e.key}")) { Text("Na mapě") }
                 }
             }

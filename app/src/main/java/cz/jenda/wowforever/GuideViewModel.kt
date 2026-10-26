@@ -269,11 +269,11 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         require(updated.race in listOf("ORC", "TROLL", "UNDEAD") && updated.displayName.length <= 60)
         require(atlas.maps.any { it.uiMapId == updated.currentUiMapId })
         if (isBusy) return
+        val changedArea = profile.currentUiMapId != updated.currentUiMapId
         savingProfile = true; profileSaved = false
         viewModelScope.launch {
             try {
                 check(withContext(Dispatchers.IO) { store.personal.personal().updateProfile(updated) } == 1)
-                val changedArea = profile.currentUiMapId != updated.currentUiMapId
                 profile = updated;personalState=personalState.copy(profile=updated);refreshRecommendations()
                 if (changedArea) chooseMap(updated.currentUiMapId)
                 profileSaved = true

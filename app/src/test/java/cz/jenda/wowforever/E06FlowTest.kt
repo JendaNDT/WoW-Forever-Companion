@@ -56,7 +56,7 @@ class E06FlowTest {
     @Test fun realCatalogShowsUncertaintyAndCoverageWithoutInventedAvailableQuests() {
         rule.runOnIdle{assertTrue(model.recommendations.now.isEmpty());assertTrue(model.recommendations.uncertain.isNotEmpty())}
         scroll("reference_notice");rule.onNodeWithTag("reference_notice").assertExists()
-        scroll("advice_$E6_A");rule.onNodeWithTag("availability_$E6_A").assertDoesNotExist();shot("now")
+        scroll("advice_$E6_A");rule.onNodeWithTag("availability_$E6_A",useUnmergedTree=true).assertDoesNotExist();shot("now")
         rule.onNodeWithTag("advice_open_$E6_A").performScrollTo().performClick()
         rule.onNodeWithTag("advice_explanation").assertExists();shot("why-reference",true)
         rule.onNodeWithTag("detail_back").performClick()
@@ -71,7 +71,7 @@ class E06FlowTest {
         rule.onNodeWithTag("profile_level").performScrollTo().performTextReplacement("5")
         rule.onNodeWithTag("save_profile").performScrollTo().performClick();settled{model.profile.level==5}
         rule.openSuggestions();scroll("advice_$E6_A")
-        rule.onNodeWithTag("availability_$E6_A").assertTextContains("Dostupné",substring=true)
+        rule.onNodeWithTag("availability_$E6_A",useUnmergedTree=true).assertTextContains("Dostupné",substring=true)
         shot("fixture-available")
         rule.openCharacter();rule.onNodeWithTag("race_UNDEAD").performScrollTo().performClick()
         rule.onNodeWithTag("save_profile").performScrollTo().performClick();settled{model.profile.race=="UNDEAD"}
@@ -111,7 +111,8 @@ class E06FlowTest {
         rule.onNodeWithTag("item_acquired").performScrollTo().performClick();settled{E6_ITEM in model.acquiredItems}
         rule.onNodeWithText("Zpět").performClick();rule.runOnIdle{assertTrue(model.recommendations.leave.none{it.entry.key==E6_ITEM})}
         rule.runOnIdle{model.toggleBookmark(model.historyEntry(E6_NPC)!!)};settled{E6_NPC in model.bookmarks}
-        rule.onNodeWithTag("journey_$E6_NPC").performScrollTo().performClick()
+        rule.onNodeWithTag("journey_list").performScrollToNode(hasTestTag("journey_$E6_NPC"))
+        rule.onNodeWithTag("journey_$E6_NPC").performClick()
         rule.onNodeWithTag("entry_location_0").performScrollTo().performClick()
         rule.onNodeWithTag("map_1411").assertIsSelected()
         rule.waitUntil(10_000){rule.onAllNodesWithContentDescription("Ruzan",useUnmergedTree=true).fetchSemanticsNodes().isNotEmpty()}

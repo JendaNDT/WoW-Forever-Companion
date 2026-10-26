@@ -86,22 +86,10 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
     }
     LazyColumn(Modifier.fillMaxSize().padding(horizontal = 20.dp).testTag("journey_list"), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         item {
-            Text("Moje záložky (${model.bookmarks.size})", style = MaterialTheme.typography.headlineSmall)
+            Text("Deník", style = MaterialTheme.typography.headlineSmall)
             OutlinedButton(onClick=onPlan,modifier=Modifier.testTag("journey_plan")){Text("Plán výpravy (${model.personalState.stops.size})")}
-            Text("Místa a položky, ke kterým se chceš vrátit. Záložka neoznačuje úkol za splněný.", Modifier.padding(vertical = 12.dp))
-            Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-                OutlinedButton(onClick = onCatalog) { Text("Otevřít katalog") }
-            }
             if(model.undoAction!=null) TextButton(onClick=model::undoPersonal,enabled=!model.isBusy,modifier=Modifier.testTag("undo_personal")){Text("Vrátit poslední změnu")}
 
-        }
-        if (entries.isEmpty()) item { Text("První záložku si přidej v detailu položky v katalogu.", Modifier.padding(vertical = 16.dp)) }
-        items(entries, key = { it.key }) { entry ->
-            OutlinedButton(onClick = { onEntry(entry.key) }, modifier = Modifier.fillMaxWidth().testTag("journey_${entry.key}")) { Text("★  ${entry.nameOriginal}") }
-        }
-        item { Text("Moje poznámky (${model.notes.size})",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(top=16.dp)) }
-        items(model.allPoints.filter { it.kind == cz.jenda.wowforever.model.PointKind.NOTE },key={it.id}) { point ->
-            OutlinedButton(onClick={onPoint(point.id)},modifier=Modifier.fillMaxWidth().testTag("journey_${point.id}")) { Text("✎ ${point.name}") }
         }
         item { Text("Úkoly",style=MaterialTheme.typography.headlineSmall,modifier=Modifier.padding(top=16.dp)) }
         item {
@@ -118,12 +106,18 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
                     Text(stateLabel(model.questStates[entry.key] ?: cz.jenda.wowforever.data.db.QuestState.NOT_STARTED),style=MaterialTheme.typography.labelMedium) }
             }
         }
-        item { Text("Přání a získané předměty",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(top=16.dp)) }
+        item { Text("Záložky a přání (${model.bookmarks.size})",style=MaterialTheme.typography.titleLarge) }
+        if (entries.isEmpty()) item { Text("První záložku si přidej v detailu položky v katalogu.", Modifier.padding(vertical = 16.dp)) }
+        items(entries, key = { it.key }) { entry ->
+            OutlinedButton(onClick = { onEntry(entry.key) }, modifier = Modifier.fillMaxWidth().testTag("journey_${entry.key}")) { Text((if(entry.kind==cz.jenda.wowforever.content.EntryKind.ITEM && entry.key !in model.acquiredItems)"☆ Chci · " else "★  ")+entry.nameOriginal) }
+        }
+        item { Text("Moje poznámky (${model.notes.size})",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(top=16.dp)) }
+        items(model.allPoints.filter { it.kind == cz.jenda.wowforever.model.PointKind.NOTE },key={it.id}) { point ->
+            OutlinedButton(onClick={onPoint(point.id)},modifier=Modifier.fillMaxWidth().testTag("journey_${point.id}")) { Text("✎ ${point.name}") }
+        }
+        item { Text("Získané předměty",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(top=16.dp)) }
         items(model.personalState.items,key={"item:"+it.itemKey}) { item ->
             TextButton(onClick={onEntry(item.itemKey)},modifier=Modifier.fillMaxWidth().testTag("journal_${item.itemKey}")){Text("✓ ${item.nameSnapshot} · získáno")}
-        }
-        items(model.catalogEntries.filter { it.kind==cz.jenda.wowforever.content.EntryKind.ITEM && it.key in model.bookmarks && it.key !in model.acquiredItems },key={"wish:"+it.key}) { item ->
-            TextButton(onClick={onEntry(item.key)},modifier=Modifier.fillMaxWidth()){Text("☆ ${item.nameOriginal} · chci získat")}
         }
         items(model.personalState.bookmarks.filter { b -> model.catalogEntries.none { it.key==b.entryKey } },key={"history:"+it.entryKey}) { item ->
             TextButton(onClick={onEntry(item.entryKey)}){Text("★ ${item.nameSnapshot} · momentálně mimo katalog")}

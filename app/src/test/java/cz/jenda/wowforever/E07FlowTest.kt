@@ -29,7 +29,7 @@ class E07FlowTest {
         File("build/reports/e07-$name.png").also { it.parentFile!!.mkdirs();it.outputStream().use { stream->bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,stream) } }
     }
     @Test fun pilotCoverageDisclosesActualScopeAndNewDemonTrainerOpensCorrectMap() {
-        rule.openSearch();rule.onNodeWithTag("content_coverage").performClick()
+        rule.openSearch();rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("content_coverage"));rule.onNodeWithTag("content_coverage").performClick()
         rule.onNodeWithTag("coverage_counts").assertTextContains("53 položek · 27 přímých poloh · 4 offline map")
         shot("coverage")
         rule.onNodeWithTag("coverage_release").performScrollTo().assertTextContains("0 položek a 0 návazností",substring=true)
