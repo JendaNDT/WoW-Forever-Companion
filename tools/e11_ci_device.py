@@ -35,7 +35,10 @@ def main():
     completed = []
 
     def run(*command, timeout=90, check=True):
-        return subprocess.run([*adb, *command], capture_output=True, text=True, timeout=timeout, check=check)
+        result = subprocess.run([*adb, *command], capture_output=True, text=True, timeout=timeout, check=False)
+        if check and result.returncode:
+            raise RuntimeError(f"adb {' '.join(command)} failed: {result.stdout[-3000:]} {result.stderr[-3000:]}")
+        return result
 
     def instrument(test, count, name, soak=False):
         options = ["shell", "am", "instrument", "-w", "-r", "-e", "class", TEST_PACKAGE + test]
@@ -88,7 +91,10 @@ def main():
         run("install", "-t", "-r", "app/build/outputs/apk/debug/app-debug.apk", timeout=180)
         run("install", "-t", "-r", "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk", timeout=180)
         run("shell", "pm", "clear", PACKAGE)
-        run("logcat", "-c")
+        # Some old system images refuse clearing a log buffer. Collection is diagnostic;
+        # the instrumentation results and persisted-data assertions remain mandatory.
+        clear_logs = run("logcat", "-c", check=False)
+        (args.output / "logcat-clear.txt").write_text(clear_logs.stdout + clear_logs.stderr)
         run("shell", "svc", "wifi", "disable")
         run("shell", "svc", "data", "disable")
         instrument("E11ProcessReliabilityDeviceTest#prepareState", 1, "01-prepare")
