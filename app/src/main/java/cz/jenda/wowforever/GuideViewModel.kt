@@ -27,6 +27,7 @@ import cz.jenda.wowforever.packages.PackageStatus
 data class PendingPersonalChange(val profileId:String,val quest:String,val state:QuestState?=null,val rewardItem:String?=null,val rewardChange:Boolean=false,val message:String)
 
 data class NoteDraft(val position: MapPosition, val id: String? = null)
+private data class QuickProfileEdit(val profileId:String,val level:Int,val area:Int)
 
 class GuideViewModel(application: Application, private val saved: SavedStateHandle) : AndroidViewModel(application) {
     private val store = (application as GuideApplication).store
@@ -54,6 +55,12 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         private set
     var profileSaved by mutableStateOf(false)
         private set
+    private var quickProfileEdit by mutableStateOf<QuickProfileEdit?>(null)
+    private var quickProfileJob:Job?=null
+    private var quickProfileWriting=false
+    val headerLevel get()=quickProfileEdit?.level ?: profile.level
+    val headerArea get()=quickProfileEdit?.area ?: profile.currentUiMapId
+    val canQuickEdit get()=ready && (!operationBusy || quickProfileWriting)
     var contentMetadata by mutableStateOf<PackageEntity?>(null)
         private set
     var sourceUrls by mutableStateOf<Map<String,String>>(emptyMap())
@@ -131,7 +138,8 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
     var packageAffectedRecords by mutableIntStateOf(0);private set
     var contentEpoch by mutableIntStateOf(0);private set
     private var packageJob:Job?=null
-    val isBusy get()=savingProfile || savingNote || personalBusy || backupBusy || packageBusy
+    private val operationBusy get()=savingProfile || savingNote || personalBusy || backupBusy || packageBusy
+    val isBusy get()=operationBusy || quickProfileEdit!=null
     val allPoints get() = if (!::atlas.isInitialized) emptyList() else atlas.points + notes.mapNotNull { note ->
         val map = atlas.maps.firstOrNull { it.uiMapId == note.uiMapId && it.floorId == note.floorId } ?: return@mapNotNull null
         MapPoint(note.id,note.text.lineSequence().first().take(80),MapPosition(map.uiMapId,note.xPercent!!,note.yPercent!!,map.floorId),
@@ -210,6 +218,43 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         }
     }
     fun toggleBookmark(entry: EntryRecord) { mutatePersonal { id -> store.toggleBookmark(entry,id) } }
+    fun changeLevel(delta:Int) { queueQuickProfile((headerLevel+delta).coerceIn(1,60),headerArea) }
+    fun changeCurrentArea(id:Int) {
+        if(atlas.maps.any { it.uiMapId==id })queueQuickProfile(headerLevel,id)
+    }
+    private fun queueQuickProfile(level:Int,area:Int) {
+        if(!canQuickEdit || (level==headerLevel && area==headerArea))return
+        quickProfileEdit=QuickProfileEdit(profile.id,level,area)
+        profileSaved=false
+        if(quickProfileJob?.isActive==true)return
+        quickProfileJob=viewModelScope.launch {
+            try {
+                while(quickProfileEdit!=null) {
+                    val edit=quickProfileEdit!!
+                    delay(300)
+                    if(quickProfileEdit!=edit)continue
+                    // Other writes cannot start while a quick edit is pending. Read the latest
+                    // profile so changing level/area never overwrites its name, race or extras.
+                    savingProfile=true;quickProfileWriting=true
+                    val changedArea=profile.currentUiMapId!=edit.area
+                    val updated=withContext(Dispatchers.IO) {
+                        val dao=store.personal.personal()
+                        val current=checkNotNull(dao.profile(edit.profileId))
+                        current.copy(level=edit.level,currentUiMapId=edit.area).also { check(dao.updateProfile(it)==1) }
+                    }
+                    profile=updated;personalState=personalState.copy(profile=updated)
+                    if(quickProfileEdit==edit)quickProfileEdit=null
+                    if(changedArea)chooseMap(updated.currentUiMapId)
+                    refreshRecommendations();profileSaved=quickProfileEdit==null
+                    savingProfile=false;quickProfileWriting=false
+                }
+            } catch(e:CancellationException) { throw e }
+            catch(_:Exception) {
+                quickProfileEdit=null
+                dataError="Úroveň nebo oblast se nepodařila uložit. Zkus změnu zopakovat."
+            } finally { savingProfile=false;quickProfileWriting=false }
+        }
+    }
     fun saveProfile(updated: ProfileEntity) {
         require(updated.id == profile.id && updated.faction == "HORDE" && updated.playerClass == "WARLOCK")
         require(updated.race in listOf("ORC", "TROLL", "UNDEAD") && updated.displayName.length <= 60)

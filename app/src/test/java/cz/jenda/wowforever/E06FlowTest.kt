@@ -58,7 +58,9 @@ class E06FlowTest {
         rule.runOnIdle{assertTrue(model.recommendations.now.isEmpty());assertTrue(model.recommendations.uncertain.isNotEmpty())}
         shot("now")
         tab("UNCERTAIN");scroll("advice_$E6_A")
-        rule.onNodeWithTag("availability_$E6_A").assertTextContains("K ověření")
+        rule.onNodeWithTag("availability_$E6_A").assertDoesNotExist()
+        scroll("reference_notice");rule.onNodeWithTag("reference_notice").assertExists()
+        scroll("advice_$E6_A")
         shot("uncertain")
         rule.onNodeWithTag("why_$E6_A").performScrollTo().performClick()
         rule.onNodeWithTag("advice_explanation").assertExists();shot("why-reference",true)
@@ -105,11 +107,12 @@ class E06FlowTest {
     }
     @Test fun acquiredWishDisappearsAndRelatedNpcStillOpensRealMap() {
         fixture();rule.runOnIdle{model.toggleBookmark(model.historyEntry(E6_ITEM)!!)};settled{E6_ITEM in model.bookmarks}
-        tab("LEAVE");scroll("advice_open_$E6_ITEM");rule.onNodeWithTag("advice_open_$E6_ITEM").performClick()
+        rule.onNodeWithTag("nav_JOURNEY").performClick()
+        rule.onNodeWithTag("journey_$E6_ITEM").performScrollTo().performClick()
         rule.onNodeWithTag("item_acquired").performScrollTo().performClick();settled{E6_ITEM in model.acquiredItems}
         rule.onNodeWithText("Zpět").performClick();rule.runOnIdle{assertTrue(model.recommendations.leave.none{it.entry.key==E6_ITEM})}
         rule.runOnIdle{model.toggleBookmark(model.historyEntry(E6_NPC)!!)};settled{E6_NPC in model.bookmarks}
-        scroll("advice_open_$E6_NPC");rule.onNodeWithTag("advice_open_$E6_NPC").performClick()
+        rule.onNodeWithTag("journey_$E6_NPC").performScrollTo().performClick()
         rule.onNodeWithTag("entry_location_0").performScrollTo().performClick()
         rule.onNodeWithTag("map_1411").assertIsSelected()
         rule.waitUntil(10_000){rule.onAllNodesWithContentDescription("Ruzan",useUnmergedTree=true).fetchSemanticsNodes().isNotEmpty()}

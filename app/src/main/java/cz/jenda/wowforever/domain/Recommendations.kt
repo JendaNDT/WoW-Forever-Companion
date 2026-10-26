@@ -12,8 +12,31 @@ enum class Availability(val label:String) { AVAILABLE("Dostupné podle podkladů
 enum class GuideFocus(val label:String) { BALANCED("Vyváženě"), EXPLORATION("Objevování"), EQUIPMENT("Vybavení") }
 data class Advice(val entry:EntryRecord,val availability:Availability,val explanation:List<String>,val ruleReason:String?,
     val importance:Importance,val areaIds:Set<Int>,val sourceIds:Set<String>,val relatedKeys:Set<String>,
-    val inProgress:Boolean,val wish:Boolean,val deferred:Boolean,val riskLabel:String?,val unlockCount:Int,val ruleVerification:Verification?=null) {
+    val inProgress:Boolean,val wish:Boolean,val deferred:Boolean,val riskLabel:String?,val unlockCount:Int,val ruleVerification:Verification?=null,
+    val referenceEligible:Boolean=true,val ruleMinimumLevel:Int?=null) {
     val personal get()=inProgress || wish
+    val suggestedLevel get()=listOfNotNull(entry.reportedLevel,entry.minimumLevel,ruleMinimumLevel).filter { it>0 }.maxOrNull()
+}
+data class QuestSuggestions(val personal:List<Advice>,val current:List<Advice>,val soon:List<Advice>,val unknown:List<Advice>)
+/** A useful reference list is separate from confirmed availability. Never changes verification. */
+fun AdviceReport.questSuggestions(level:Int):QuestSuggestions {
+    val quests=all.filter { it.entry.kind in setOf(EntryKind.QUEST,EntryKind.SPELL) && !it.deferred }
+    val personal=quests.filter { it.personal }
+    val candidates=quests.filter { !it.personal && it.referenceEligible && it.availability in setOf(Availability.AVAILABLE,Availability.UNVERIFIED) }
+    val here=candidates.filter { currentArea in it.areaIds }
+    val sorted=compareBy<Advice> { if(it.importance==Importance.CLASS)0 else 1 }
+        .thenBy { it.suggestedLevel ?: Int.MAX_VALUE }.thenBy { normalizeSearch(it.entry.nameOriginal) }.thenBy { it.entry.key }
+    return QuestSuggestions(personal,
+        here.filter { it.suggestedLevel?.let { n->n<=level+2 }==true }.sortedWith(sorted),
+        here.filter { it.suggestedLevel?.let { n->n in (level+3)..(level+5) }==true }.sortedWith(sorted),
+        candidates.filter { (it.suggestedLevel==null && (it.areaIds.isEmpty() || currentArea in it.areaIds)) ||
+            (it.areaIds.isEmpty() && it.suggestedLevel?.let { n->n<=level+2 }==true) }.sortedWith(sorted))
+}
+private fun GuideCondition.levelHint():Int?=when(this) {
+    is GuideCondition.Level->minimum
+    is GuideCondition.All->conditions.mapNotNull { it.levelHint() }.maxOrNull()
+    is GuideCondition.AnyOf->if(conditions.any { it.levelHint()==null })null else conditions.mapNotNull { it.levelHint() }.minOrNull()
+    else->null
 }
 data class AdviceReport(val all:List<Advice> = emptyList(),val currentArea:Int=1411,val nextRefreshAtMillis:Long?=null) {
     private val here get()=all.filter { it.areaIds.isEmpty() || currentArea in it.areaIds }
@@ -129,7 +152,8 @@ class RecommendationEngine(entries:List<EntryRecord>,private val relations:List<
                 byOwner[e.key].orEmpty().flatMap { it.targetKeys }+
                 byTarget[e.key].orEmpty().map { it.ownerKey }).filter { it!=e.key }.toSet()
             Advice(e,status,(if(!known)listOf("Úplné pravidlo doporučení není potvrzené pro vydanou Forever; podmínky níže jsou jen reference.") else emptyList())+checks.flatMap { it.lines }.distinct(),r?.reasonCs,r?.importance ?: if(e.kind==EntryKind.TRAVEL)Importance.TRAVEL else Importance.DISCOVERY,
-                areas(e.key),e.sourceIds.toSet()+r?.sourceIds.orEmpty()+entryRelations.flatMap { it.sourceIds },related,states[e.key]==QuestState.IN_PROGRESS,e.key in bookmarks,states[e.key]==QuestState.DEFERRED,risk,unlocks,r?.verification)
+                areas(e.key),e.sourceIds.toSet()+r?.sourceIds.orEmpty()+entryRelations.flatMap { it.sourceIds },related,states[e.key]==QuestState.IN_PROGRESS,e.key in bookmarks,states[e.key]==QuestState.DEFERRED,risk,unlocks,r?.verification,
+                referenceEligible=checks.none { it.status==Availability.EXCLUDED },ruleMinimumLevel=r?.condition?.levelHint())
         }
         fun preference(a:Advice)=when(focus) { GuideFocus.BALANCED->1;GuideFocus.EXPLORATION->if(a.importance in setOf(Importance.DISCOVERY,Importance.TRAVEL))0 else 1;GuideFocus.EQUIPMENT->if(a.importance==Importance.REWARD || a.entry.kind==EntryKind.ITEM)0 else 1 }
         val names=advice.associate { it.entry.key to normalizeSearch(it.entry.nameOriginal) }

@@ -14,7 +14,7 @@ import cz.jenda.wowforever.model.MapDescriptor
 
 @Composable fun MapSelectorDialog(maps:List<MapDescriptor>,selected:Int,onChoose:(Int)->Unit,onClose:()->Unit) {
     var query by rememberSaveable { mutableStateOf("") }
-    val shown=remember(maps,query) { maps.filter { normalizeSearch(query.trim()) in normalizeSearch(it.name) } }
+    val shown=remember(maps,query) { maps.distinctBy { it.uiMapId }.filter { normalizeSearch(query.trim()) in normalizeSearch(it.name) } }
     AlertDialog(onDismissRequest=onClose,title={Text("Oblasti a mapy (${maps.size})")},text={
         Column {
             OutlinedTextField(query,{query=it.take(80)},label={Text("Najít oblast")},singleLine=true,modifier=Modifier.fillMaxWidth().testTag("map_selector_query"))

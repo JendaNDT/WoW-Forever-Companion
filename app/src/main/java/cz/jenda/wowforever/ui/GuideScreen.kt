@@ -55,6 +55,7 @@ import java.util.Locale
     val window = LocalWindowInfo.current.containerSize
     val wide = with(LocalDensity.current) { window.width.toDp() >= 600.dp || (window.width.toDp() >= 480.dp && window.height.toDp() < 480.dp) }
     val compactHeader=LocalDensity.current.fontScale>=1.5f && with(LocalDensity.current){window.height.toDp()<600.dp}
+    var showQuickArea by rememberSaveable { mutableStateOf(false) }
     var showBackup by rememberSaveable { mutableStateOf(false) }
     var showAbout by rememberSaveable { mutableStateOf(false) }
     var showHelp by rememberSaveable { mutableStateOf(false) }
@@ -79,21 +80,26 @@ import java.util.Locale
                 }
             }
             Column(Modifier.weight(1f).fillMaxHeight()) {
-                Row(Modifier.fillMaxWidth().padding(start = 20.dp, end = 8.dp, top = 6.dp, bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-                    Column(Modifier.weight(1f)) {
-                        Text(if (model.destination == Destination.MAP && !compactHeader) "Cesta Warlocka" else model.destination.label,
-                            style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
-                        if(!compactHeader)Text("Horda  /  ${raceLabel(model.profile.race)}  /  úroveň ${model.profile.level}",
-                            style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
+                Row(Modifier.fillMaxWidth().padding(horizontal=8.dp), verticalAlignment=Alignment.CenterVertically) {
+                    Row(Modifier.weight(1f).horizontalScroll(rememberScrollState()),verticalAlignment=Alignment.CenterVertically) {
+                    if(!compactHeader)Text(raceLabel(model.profile.race),style=MaterialTheme.typography.labelMedium,modifier=Modifier.padding(horizontal=8.dp))
+                    IconButton(onClick={model.changeLevel(-1)},enabled=model.canQuickEdit && model.headerLevel>1,
+                        modifier=Modifier.size(48.dp).testTag("quick_level_down").semantics { contentDescription="Snížit úroveň" }) { Text("−",fontSize=24.sp) }
+                    Text("${model.headerLevel}",style=MaterialTheme.typography.titleMedium,
+                        modifier=Modifier.testTag("quick_level").semantics { contentDescription="Úroveň ${model.headerLevel}" })
+                    IconButton(onClick={model.changeLevel(1)},enabled=model.canQuickEdit && model.headerLevel<60,
+                        modifier=Modifier.size(48.dp).testTag("quick_level_up").semantics { contentDescription="Zvýšit úroveň" }) { Text("+",fontSize=24.sp) }
+                    TextButton(onClick={showQuickArea=true},enabled=model.canQuickEdit,modifier=Modifier.testTag("quick_area")) {
+                        Text((model.atlas.maps.firstOrNull { it.uiMapId==model.headerArea }?.name ?: "Vybrat oblast")+" ▾",maxLines=1)
                     }
-                    if(compactHeader)IconButton(onClick={showAbout=true},modifier=Modifier.size(48.dp).testTag("about").semantics { contentDescription="O aplikaci" }){Text("i")}
-                    else TextButton(onClick = { showAbout = true }, modifier = Modifier.testTag("about")) { Text("O aplikaci") }
+                    }
+                    IconButton(onClick={showAbout=true},modifier=Modifier.size(48.dp).testTag("about").semantics { contentDescription="O aplikaci" }) { Text("i") }
                 }
                 Box(Modifier.weight(1f).fillMaxWidth()) {
                     holder.SaveableStateProvider(model.destination.name) {
                         when (model.destination) {
                             Destination.MAP -> MapScreen(model, wide, openCatalog,onPlan={showExpedition=true}) { key -> catalogKey = key; showCatalog = true }
-                            Destination.NOW -> NowScreen(model, openCatalog) { key -> catalogKey=key;showCatalog=true }
+                            Destination.NOW -> NowScreen(model, openCatalog, onEntry={ key -> catalogKey=key;showCatalog=true },onCoverage={showCoverage=true})
                             Destination.JOURNEY -> JourneyScreen(model, openCatalog, onBackup={showBackup=true},onPlan={showExpedition=true}) { key -> catalogKey = key; showCatalog = true }
                             Destination.CHARACTER -> CharacterScreen(model,onBackup={showBackup=true},onPackages={showPackages=true})
                         }
@@ -109,6 +115,7 @@ import java.util.Locale
             }
         }
     }
+    if(showQuickArea) MapSelectorDialog(model.atlas.maps,model.headerArea,model::changeCurrentArea,onClose={showQuickArea=false})
     if (model.noteDraft != null) NoteEditorDialog(model)
     if (showAbout) AboutDialog(model,onHelp={showAbout=false;showHelp=true}) { showAbout = false }
     if (showHelp) HelpDialog(model,onClose={showHelp=false},onBackup={showHelp=false;showBackup=true},onPackages={showHelp=false;showPackages=true},onCoverage={showHelp=false;showCoverage=true})
@@ -183,7 +190,6 @@ import java.util.Locale
                         val controls: @Composable () -> Unit = {
                             MapButton("+", "Přiblížit", "zoom_in") { scope.launch { model.engine.zoom(model.mapId, 1.7, model.floorId) } }
                             MapButton("−", "Oddálit", "zoom_out") { scope.launch { model.engine.zoom(model.mapId, 1.0 / 1.7, model.floorId) } }
-                            MapButton("N", "Sever nahoru", "north") { scope.launch { model.engine.north(model.mapId,model.floorId) } }
                             MapButton("↔", "Celá mapa", "fit") { scope.launch { model.engine.fit(model.mapId,model.floorId) } }
                         }
                         if (compactControls) {
@@ -216,10 +222,6 @@ import java.util.Locale
                 // A short card works in portrait and in short landscape windows.
                 PointDetail(model, selected, Modifier.fillMaxWidth().heightIn(max = 210.dp), compact = compactDetail,
                     onClose = { model.select(null) }, onEntry = onEntry, onFocus = { scope.launch { model.engine.focus(selected) } })
-            } else if(!compactMap) {
-                Text("Podrž volné místo na mapě pro vlastní poznámku.",
-                    Modifier.padding(horizontal = 20.dp, vertical = 6.dp), style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             if (!compactMap && (!compactDetail || selected == null)) Text("Mapy © Blizzard Entertainment • beta ${map.build}", Modifier.padding(horizontal = 20.dp, vertical = 6.dp),
                 style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -257,9 +259,9 @@ import java.util.Locale
 @Composable private fun AboutDialog(model: GuideViewModel, onHelp:()->Unit, onClose: () -> Unit) {
     AlertDialog(onDismissRequest = onClose, title = { Text("Forever průvodce") }, text = {
         Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            Text("Verze ${BuildConfig.VERSION_NAME} • testovací vydání E13")
+            Text("Verze ${BuildConfig.VERSION_NAME} • data ${model.contentMetadata?.generation ?: 2}")
             OutlinedButton(onClick=onHelp,modifier=Modifier.testTag("open_help")){Text("Návod a obnova postupu")}
-            Text("Osobní průvodce pro Warlocka za Hordu od první úrovně. Úroveň, rasu a oblast si upravíš v části Postava.")
+            Text("Osobní průvodce pro Warlocka za Hordu od první úrovně. Úroveň a oblast měníš přímo v horní liště; rasu a jméno v části Postava.")
             Text("${model.atlas.maps.size} mapy, ${model.atlas.points.size} poloh, vlastní poznámky a ${model.catalogEntries.size} položek katalogu fungují bez internetu. Záložky se ukládají do tvého profilu. Stavy úkolů, získané předměty a zálohu najdeš v katalogu a v části Moje cesta. Rozsah a mezery otevři v katalogu přes Co průvodce pokrývá.")
             Text("Obsah: generace ${model.contentMetadata?.generation ?: 1}, kontrola ${model.contentMetadata?.checkedOn ?: "2026-10-23"}.")
             Text("Polohy pocházejí z veřejných záznamů bety. Nejsou potvrzené ve vydané hře. Přiblížení nezvyšuje rozlišení podkladu 1002 × 668.")

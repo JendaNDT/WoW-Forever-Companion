@@ -48,6 +48,7 @@ import cz.jenda.wowforever.content.*
         val detailScroll=key(entry.key) { rememberScrollState() }
         AlertDialog(onDismissRequest = backEntry, title = { Text(entry.nameOriginal) }, text = {
             Column(Modifier.verticalScroll(detailScroll), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                if(entry.kind==EntryKind.QUEST) QuestStateActions(model,entry)
                 Text(entryLabel(entry))
                 var revealed by rememberSaveable(entry.key, model.spoilers) { mutableStateOf(false) }
                 if (model.spoilers == Spoilers.FULL || revealed) Text(entry.descriptionCs, modifier = Modifier.testTag("entry_description"))

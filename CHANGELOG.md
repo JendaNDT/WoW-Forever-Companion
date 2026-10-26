@@ -1,5 +1,9 @@
 # E10.3 · 0.14.0-e10.3 · 2026-10-25
 
+## 0.17.0-ui1 (18)
+
+První fáze jednoduššího ovládání: rychlá úroveň a oblast s automatickým uložením, doporučení podle úrovně a oblasti i pro neověřené reference, stav úkolu nahoře a v seznamu, mapa severem nahoru a aktuální návod. Data 8 a zálohy se nemění. Podrobnosti: docs/UI_FAZE_1.md.
+
 ## 2026-10-25 — Oprava pádu E10 / 0.15.1-e10-fix1 / kód 16
 
 - Oprava paměťové chyby doporučení: sdílené dropy nepropojují každé NPC se všemi ostatními zdroji téhož předmětu.

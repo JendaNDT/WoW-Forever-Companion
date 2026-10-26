@@ -16,16 +16,17 @@ fun stateLabel(value:QuestState)=when(value) {
     QuestState.NOT_STARTED->"Nezahájeno";QuestState.IN_PROGRESS->"Rozpracováno";QuestState.COMPLETED->"Hotovo";QuestState.DEFERRED->"Odloženo"
 }
 @OptIn(ExperimentalLayoutApi::class)
-@Composable fun ProgressPanel(model:GuideViewModel,entry:EntryRecord,onClose:()->Unit,onRelated:(String)->Unit) {
-    if(entry.kind==EntryKind.QUEST) {
-        HorizontalDivider()
-        Text("Tvůj záznam úkolu",style=MaterialTheme.typography.titleMedium)
-        Text("Zapisuješ ručně podle hry. Odložení se nepočítá jako splnění.",style=MaterialTheme.typography.bodySmall)
+@Composable fun QuestStateActions(model:GuideViewModel,entry:EntryRecord) {
         val state=model.questStates[entry.key] ?: QuestState.NOT_STARTED
         FlowRow(horizontalArrangement=Arrangement.spacedBy(6.dp)) {
             QuestState.entries.forEach { choice -> FilterChip(selected=state==choice,onClick={model.requestQuest(entry.key,choice)},enabled=!model.isBusy,
-                label={Text(stateLabel(choice))},modifier=Modifier.testTag("quest_state_${choice.name}")) }
+                label={Text(when(choice) { QuestState.IN_PROGRESS->"Beru";QuestState.COMPLETED->"Hotovo";QuestState.DEFERRED->"Později";else->"Nezahájeno" })},modifier=Modifier.testTag("quest_state_${choice.name}")) }
         }
+ }
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable fun ProgressPanel(model:GuideViewModel,entry:EntryRecord,onClose:()->Unit,onRelated:(String)->Unit) {
+    if(entry.kind==EntryKind.QUEST) {
         when(model.questRules.status(entry.key,model.questStates)) {
             PrerequisiteStatus.SATISFIED -> Text("Doložené předchozí kroky jsou splněné. Další podmínky dostupnosti ověř ve hře.")
             PrerequisiteStatus.MISSING -> Text("Chybí dokončený předchozí krok.")
