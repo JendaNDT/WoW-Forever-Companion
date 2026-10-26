@@ -125,7 +125,7 @@ import java.util.Locale
                         }
                     }
                     }
-                    if(sidePaneEnabled) {
+                    if(sidePaneEnabled && model.destination!=Destination.SETTINGS) {
                         VerticalDivider()
                         Box(Modifier.width(companionPaneWidth(contentWidth.value,density.fontScale).dp).fillMaxHeight().testTag("companion_pane")) {
                             when {
