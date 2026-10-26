@@ -7,6 +7,12 @@ on:
       - 'tools/e11_ci_device.py'
       - 'tools/test_e11_ci_device.py'
   workflow_dispatch:
+    inputs:
+      soak_seconds:
+        description: Map soak duration; 1200 for the full twenty-minute scenario
+        type: choice
+        options: ['300', '1200']
+        default: '1200'
 permissions:
   contents: read
 concurrency:
@@ -55,7 +61,7 @@ jobs:
           disk-size: 8192M
           emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: python3 tools/e11_ci_device.py --serial emulator-5554 --output app/build/reports/e11-device-${{ matrix.api }} --soak-seconds 1200
+          script: python3 tools/e11_ci_device.py --serial emulator-5554 --output app/build/reports/e11-device-${{ matrix.api }} --soak-seconds ${{ github.event.inputs.soak_seconds || '300' }}
       - name: Upload reliability evidence
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
