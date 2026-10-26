@@ -1,5 +1,9 @@
 # Aktuální stav projektu
 
+Nová pracovní verze **0.20.0-tablet / kód 21** přidává rozložení pro Lenovo IdeaTab 11 5G a připravený místní postup pro USB vývoj. APK je sestavené, 248 aplikačních a 39 Python testů prošlo, včetně tabletového Androidu 15. Zátěžové kontroly Androidu 8 a 16 také prošly. Fyzické připojení a instalace této verze agentem **nebyly ověřené**. Výsledky a identita APK: [TABLET.md](TABLET.md); přímá práce na Macu: [VYVOJ_TABLET_USB.md](VYVOJ_TABLET_USB.md).
+
+**Předchozí přijatý základ:**
+
 Aktualizováno **26. 10. 2026**. Celá Fáze 3 z [NAVRH_UI.md](NAVRH_UI.md) je dokončená a funkčně potvrzená uživatelem: **0.19.0-ui3 / kód 20**, přibalená data **8**. Značky podle role, panel V této oblasti, Jsem tady, krátké Vrátit, Než odejdeš a pohodlí při hraní. Popis a výsledky jsou v [UI_FAZE_3.md](UI_FAZE_3.md). Jenda po předání APK potvrdil **„ok, funguje to“**.
 
 Fáze 1 (verze 18) a Fáze 2 (verze 19) jsou funkčně potvrzené uživatelem a sloučené do hlavní větve. Jenda po předání verze 19 uvedl **„Ok, funguje to“**. Toto potvrzení se automaticky nepřenáší na nové vydání.
@@ -38,8 +42,9 @@ Dlouhý běh Androidu 16 přerušilo vypnutí runneru; nepočítá se jako dokon
 
 ## Další nejvhodnější krok
 
-Ponechat verzi 0.19.0-ui3 jako stabilní základ pro hraní. Fáze 1–3 jednoduššího ovládání jsou dokončené a základně funkčně potvrzené uživatelem. Po vydání hry ověřit herní údaje, návaznosti, třídní úkoly a dopravu. Automatické výsledky a přesná identita APK jsou v UI_FAZE_3.md.
+Otevřít větev `codex/lenovo-tablet` jako místní projekt v Codexu na Macu, ke kterému je připojený tablet. Spustit `python3 tools/tablet_dev.py doctor`, ověřit skutečné parametry, pak aplikaci nainstalovat, spustit a projít tabletové scénáře. Cloudová relace se svým linuxovým terminálem nemá přístup k USB tohoto Macu. Dosavadní přijetí verze 20 se na novou verzi 21 nepřenáší. Herní údaje se budou ověřovat po vydání hry.
 
 Herní přejímka návazností, třídních úkolů a dopravy se provede až po vydání hry. Technická spolehlivost sama správnost herních údajů nepotvrzuje.
 
 Skutečné telefonní měření výkonu a přístupnosti zůstává samostatně popsané v [E11_TELEFON.md](E11_TELEFON.md); jeho neprovedené části se neoznačují za splněné.
+

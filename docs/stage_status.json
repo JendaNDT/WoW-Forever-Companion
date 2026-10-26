@@ -20,9 +20,9 @@
     "statement": "Zatím vše otestováno bez problémů",
     "scope": "basic preceding build check; not new full stage or measured performance"
   },
-  "stage": "UI-phase-3-user-confirmed",
-  "version": "0.19.0-ui3",
-  "versionCode": 20,
+  "stage": "tablet-automation-passed-local-usb-pending",
+  "version": "0.20.0-tablet",
+  "versionCode": 21,
   "room_schemas_unchanged": true,
   "backup_format": 1,
   "fallback_generation": 2,
@@ -43,12 +43,12 @@
   "implementation_delivery_complete": true,
   "reference_1_60_catalog_delivered": true,
   "M2_M3_game_acceptance_complete": false,
-  "M1": "UI phases 1-3 implemented; version 20 automated checks passed and basic functional phone acceptance confirmed by user on 2026-10-26. Game acceptance remains pending until release.",
+  "M1": "UI phases 1-3 previously accepted on phone. Tablet version 21 implementation, APK and automated checks complete; local USB connection and physical Lenovo acceptance pending.",
   "release_verified_entries": 0,
   "verified_transport_edges": 0,
   "physical_E10_3_basic_check_verified": true,
-  "physical_installation_verified": true,
-  "physical_phone_acceptance": "User confirmed version 20 works after APK handover on 2026-10-26. Basic functional acceptance only; per-scenario results, installation mode, backup restore, on-device APK checksum, measured performance, TalkBack, second-device restore and game accuracy not independently reported.",
+  "physical_installation_verified": false,
+  "physical_phone_acceptance": "Version 21 physical acceptance pending. Version 20 general phone confirmation remains recorded under UI_phase_3. User reports the Lenovo is visible as device from local Mac adb; this cloud agent has no local Mac terminal or USB access.",
   "performance_phone_goals_verified": false,
   "talkback_verified": false,
   "second_device_restore_verified": false,
@@ -56,9 +56,9 @@
   "public_hosting_or_store_published": false,
   "private_key_backup": "E09 existing archive retained; keys not regenerated",
   "bundledContentSha256": "8c805d7f25a7d0e33b760026c32bb82216f153ed27dadfde2e3faa7f47d2b94e",
-  "host_validation": "Passed: Android checks 40358040776, 241 app tests and 35 Python tests without failures or skipped tests; native Android 26 and 36 run 40358041033 passed. Current version 20 basic functional phone check confirmed by user.",
+  "host_validation": "Passed Android checks 40390993795: 248 app tests, 39 Python tests and both lint variants. Tablet API 35 run 40390993822 passed 3 tests. Native API 26/36 run 40390993758 passed 5 tests each and two force-stops each. Physical Lenovo connection and acceptance remain unverified by agent.",
   "python_tests": {
-    "tests": 35,
+    "tests": 39,
     "failures": 0
   },
   "pixel_exact_new_map_reconstructions": 56,
@@ -81,8 +81,8 @@
   "release_owner_and_source_verified": false,
   "upgrade_eligibility_from_E10_full_verified": false,
   "host_tests": {
-    "suites": 62,
-    "tests": 241,
+    "suites": 65,
+    "tests": 248,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -117,18 +117,18 @@
     "scope": "Basic functional phone confirmation after clean-install APK handover and first-launch/offline-map check recommendation. Individual scenarios were not reported separately; measured performance, TalkBack, backup restore and game accuracy remain unconfirmed."
   },
   "remote_validation": {
-    "run_id": 40358040776,
-    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40358040776",
-    "sourceRevision": "891372daaec42b515cd6e0ab15d004a6fa32e1d4",
+    "run_id": 40390993795,
+    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40390993795",
+    "sourceRevision": "19669d4c3543da6ced5f1324b83bfe62bbb85da0",
+    "productionInputsSha256": "396333465b27f8937e537bda1d4166e2c3fe1dff1115b401f78b6a27d0b621dd",
     "status": "success",
-    "productionInputsSha256": "79bc42102d38a1b6ea943206325cbaf73e77b36e73a92339c16d12fcd6fd14ff",
     "python_tests": {
-      "tests": 35,
+      "tests": 39,
       "failures": 0
     },
     "host_tests": {
-      "suites": 62,
-      "tests": 241,
+      "suites": 65,
+      "tests": 248,
       "failures": 0,
       "errors": 0,
       "skipped": 0
@@ -200,7 +200,7 @@
     "new_apk_installation_required": false,
     "report": "docs/E11_AKTUALNI_OVERENI.md"
   },
-  "next_recommended_step": "Keep version 0.19.0-ui3 as the stable app baseline. UI phases 1-3 are implemented and basic phone functionality accepted. After game release verify game data, quest chains, class quests and travel.",
+  "next_recommended_step": "Open codex/lenovo-tablet as a local Codex project on the Mac connected to the Lenovo. Run tools/tablet_dev.py doctor, then install, run and test on the physical tablet. Game accuracy remains for after game release.",
   "E11_previous_remote_validation": {
     "run_id": 40291857619,
     "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40291857619",
@@ -366,5 +366,95 @@
       "installationMode": "not_reported",
       "scope": "General functional confirmation after APK delivery; individual scenarios, installation mode, backup restore, on-device APK checksum, measured performance, TalkBack, second-device restore and game accuracy not independently reported."
     }
+  },
+  "UI_phase_3_remote_validation": {
+    "run_id": 40358040776,
+    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40358040776",
+    "sourceRevision": "891372daaec42b515cd6e0ab15d004a6fa32e1d4",
+    "status": "success",
+    "productionInputsSha256": "79bc42102d38a1b6ea943206325cbaf73e77b36e73a92339c16d12fcd6fd14ff",
+    "python_tests": {
+      "tests": 35,
+      "failures": 0
+    },
+    "host_tests": {
+      "suites": 62,
+      "tests": 241,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "physical_instrumentation_executed": false
+  },
+  "Tablet": {
+    "implementation_complete": true,
+    "delivery_complete": true,
+    "physical_acceptance_complete": false,
+    "reference_device": "Lenovo IdeaTab 11 5G 8/256 GB, identified from user context; current Android/density not read from physical unit",
+    "sourceRevision": "19669d4c3543da6ced5f1324b83bfe62bbb85da0",
+    "apkSha256": "f5abab4d6924d2653397ba193370cc8f2e4b824c20089025047b58887f67415a",
+    "apkBytes": 150553650,
+    "productionInputsSha256": "396333465b27f8937e537bda1d4166e2c3fe1dff1115b401f78b6a27d0b621dd",
+    "ownerSignedUpdate": false,
+    "different_debug_certificate_from_phase_3": true,
+    "requires_backup_before_clean_install": true,
+    "native_tablet_run_id": 40390993822,
+    "native_tablet_tests": 3,
+    "native_tablet_api": 35,
+    "physical_connection_agent_verified": false,
+    "user_reports_local_adb_state": "device",
+    "direct_physical_installation_executed": false,
+    "local_development_tool": "tools/tablet_dev.py",
+    "local_development_guide": "docs/VYVOJ_TABLET_USB.md",
+    "local_tool_tests": 4,
+    "local_tool_test_scope": "mocked command tests, included in 39 Python tests; not a physical connection check",
+    "game_data_changed": false,
+    "backup_format_changed": false,
+    "room_schemas_changed": false,
+    "report": "docs/TABLET.md",
+    "native_stability_status": "passed",
+    "native_run_id": 40390993758,
+    "native_runs": [
+      {
+        "sourceRevision": "19669d4c3543da6ced5f1324b83bfe62bbb85da0",
+        "run_id": 40390993758,
+        "job_id": 121812026937,
+        "api": 26,
+        "status": "passed",
+        "tests": 5,
+        "force_stops": 2,
+        "maps": 61,
+        "points": 17330,
+        "area_changes": 915,
+        "complete_cycles": 15,
+        "peak_retained_frames": 2,
+        "tile_streams_opened": 3690,
+        "duration_ms": 316201,
+        "scope": "emulator stability, all bundled frames, state retention and memory trim; not physical-phone FPS/PSS acceptance",
+        "environment": "Android emulator / debug APK",
+        "physical_phone_performance_verified": false,
+        "offline_radio_state_verified": false
+      },
+      {
+        "sourceRevision": "19669d4c3543da6ced5f1324b83bfe62bbb85da0",
+        "run_id": 40390993758,
+        "job_id": 121812026858,
+        "api": 36,
+        "status": "passed",
+        "tests": 5,
+        "force_stops": 2,
+        "maps": 61,
+        "points": 17330,
+        "area_changes": 793,
+        "complete_cycles": 13,
+        "peak_retained_frames": 2,
+        "tile_streams_opened": 3198,
+        "duration_ms": 305001,
+        "scope": "emulator stability, all bundled frames, state retention and memory trim; not physical-phone FPS/PSS acceptance",
+        "environment": "Android emulator / debug APK",
+        "physical_phone_performance_verified": false,
+        "offline_radio_state_verified": false
+      }
+    ]
   }
 }

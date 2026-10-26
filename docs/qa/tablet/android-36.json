@@ -1,0 +1,20 @@
+{
+  "sourceRevision": "19669d4c3543da6ced5f1324b83bfe62bbb85da0",
+  "run_id": 40390993758,
+  "job_id": 121812026858,
+  "api": 36,
+  "status": "passed",
+  "tests": 5,
+  "force_stops": 2,
+  "maps": 61,
+  "points": 17330,
+  "area_changes": 793,
+  "complete_cycles": 13,
+  "peak_retained_frames": 2,
+  "tile_streams_opened": 3198,
+  "duration_ms": 305001,
+  "scope": "emulator stability, all bundled frames, state retention and memory trim; not physical-phone FPS/PSS acceptance",
+  "environment": "Android emulator / debug APK",
+  "physical_phone_performance_verified": false,
+  "offline_radio_state_verified": false
+}
