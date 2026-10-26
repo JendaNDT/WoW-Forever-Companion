@@ -88,7 +88,6 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
         item {
             Text("Deník", style = MaterialTheme.typography.headlineSmall)
             OutlinedButton(onClick=onPlan,modifier=Modifier.testTag("journey_plan")){Text("Plán výpravy (${model.personalState.stops.size})")}
-            if(model.undoAction!=null) TextButton(onClick=model::undoPersonal,enabled=!model.isBusy,modifier=Modifier.testTag("undo_personal")){Text("Vrátit poslední změnu")}
 
         }
         item { Text("Úkoly",style=MaterialTheme.typography.headlineSmall,modifier=Modifier.padding(top=16.dp)) }

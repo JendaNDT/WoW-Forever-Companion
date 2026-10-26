@@ -29,7 +29,8 @@ fun precisionLabel(point: MapPoint) = if (point.kind == PointKind.NOTE) "Vlastn�
 @Composable fun LayerDialog(model: GuideViewModel, onClose: () -> Unit) {
     AlertDialog(onDismissRequest=onClose,title={Text("Vrstvy mapy")},text={
         Column(Modifier.verticalScroll(rememberScrollState()),verticalArrangement=Arrangement.spacedBy(8.dp)) {
-            Text("${model.pointsOnMap().size} viditelných bodů v oblasti. Filtr platí i pro seznam Body.")
+            Text("${model.pointsOnMap().size} viditelných bodů v oblasti. Filtr platí i pro panel V této oblasti.")
+            FilterChip(selected=model.showCompletedQuests,onClick=model::toggleCompletedQuests,label={Text("Zobrazit hotové úkoly")},modifier=Modifier.testTag("show_completed_quests"))
             PointKind.entries.filter { kind -> kind == PointKind.NOTE || model.allPoints.any { it.kind == kind } }.forEach { kind ->
                 val count=model.allPoints.count { it.kind == kind && it.position.uiMapId == model.mapId && it.position.floorId == model.floorId }
                 FilterChip(selected=kind.name in model.visibleKinds,onClick={model.toggleLayer(kind)},
@@ -37,7 +38,7 @@ fun precisionLabel(point: MapPoint) = if (point.kind == PointKind.NOTE) "Vlastn�
             }
             FilterChip(selected=model.onlyBookmarks,onClick=model::toggleBookmarkFilter,
                 label={Text("Jen záložky katalogu")},modifier=Modifier.testTag("layer_bookmarks"))
-            Text("Červená značka: katalog. Zelená: tvoje poznámka. Symbol ≈ označuje přibližnou polohu.",style=MaterialTheme.typography.bodySmall)
+            Text("! zadání · ? odevzdání · ◆ cíl nebo zdroj · ✎ poznámka · čísla výpravy. Postavy zahrnují i předměty a objekty. Původ a přesnost jsou v detailu.",style=MaterialTheme.typography.bodySmall)
             Text("Poloha z bety zůstává nepotvrzená ve vydané hře bez ohledu na přesnost souřadnic.",style=MaterialTheme.typography.bodySmall)
         }
     },confirmButton={TextButton(onClick=onClose){Text("Hotovo")}},

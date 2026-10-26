@@ -17,7 +17,7 @@ import java.io.File
 class E10FullFlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
-    private fun ready(){rule.waitUntil(180_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()};rule.onNodeWithTag("nav_MAP").performClick()}
+    private fun ready(){rule.finishWelcomeIfShown();rule.waitUntil(180_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()};rule.onNodeWithTag("nav_MAP").performClick()}
     private fun shot(name:String){rule.runOnIdle{
         val dialog=org.robolectric.shadows.ShadowDialog.getShownDialogs().lastOrNull{it.isShowing}
         val bitmap=captureView(dialog?.window?.decorView ?: rule.activity.window.decorView)
@@ -26,9 +26,9 @@ class E10FullFlowTest {
     @Test fun actualBundledAppSupportsLateWarlockContentAndSearchableSurfaceAndDungeonMaps(){
         ready();rule.runOnIdle{assertEquals(8,model.contentMetadata!!.generation);assertEquals(11912,model.catalogEntries.size)}
         rule.onNodeWithTag("choose_map").performClick();rule.onNodeWithTag("map_selector_query").performTextInput("Dalaran")
-        rule.onNodeWithTag("select_map_902959").performClick();rule.onNodeWithTag("map_902959").assertIsSelected();shot("dalaran")
+        rule.onNodeWithTag("select_map_902959").performClick();rule.onNodeWithTag("current_map_902959").assertExists();shot("dalaran")
         rule.onNodeWithTag("choose_map").performClick();rule.onNodeWithTag("map_selector_query").performTextInput("Winterspring")
-        rule.onNodeWithTag("select_map_1452").performClick();rule.onNodeWithTag("map_1452").assertIsSelected();shot("winterspring")
+        rule.onNodeWithTag("select_map_1452").performClick();rule.onNodeWithTag("current_map_1452").assertExists();shot("winterspring")
         rule.openSearch();rule.onNodeWithTag("catalog_query").performTextReplacement("Dreadsteed of Xoroth")
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("catalog_filters"));rule.onNodeWithTag("catalog_filters").performClick()
         rule.onNodeWithTag("catalog_category_CLASS").performScrollTo().performClick();rule.onNodeWithTag("apply_catalog_filters").performScrollTo().performClick()

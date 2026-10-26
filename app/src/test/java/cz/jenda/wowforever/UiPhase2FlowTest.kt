@@ -27,7 +27,7 @@ class UiPhase2FlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
     private val store get()=(rule.activity.application as GuideApplication).store
-    @Before fun ready() {
+    @Before fun ready() {rule.finishWelcomeIfShown();
         rule.waitUntil(30_000) { rule.onAllNodesWithTag("nav_SEARCH").fetchSemanticsNodes().isNotEmpty() }
         rule.runOnIdle { model.navigate(Destination.MAP);model.chooseSpoilers(Spoilers.FULL) }
     }
@@ -66,7 +66,7 @@ class UiPhase2FlowTest {
         rule.onNodeWithTag("catalog_query").assertTextContains("Ruzan")
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("result_map_wow-forever:npc:5765"))
         rule.onNodeWithTag("result_map_wow-forever:npc:5765").performScrollTo().performClick()
-        rule.onNodeWithTag("map_1411").assertIsSelected()
+        rule.onNodeWithTag("current_map_1411").assertExists()
         rule.onNodeWithTag("selected_point_detail").performClick()
         rule.onNodeWithTag("detail_title").assertTextEquals("Ruzan")
     }

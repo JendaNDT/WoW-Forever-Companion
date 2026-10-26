@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -74,9 +75,9 @@ class MapComposeEngine(
             val (x,y) = point.position.normalized(map)
             state.addMarker(id,x,y,relativeOffset=Offset(-0.5f,-0.5f),renderingStrategy=RenderingStrategy.Clustering("npcs")) {
                 val label=if(point.planNumbers.size==1)point.planNumbers.single().toString() else if(point.planNumbers.size==2)point.planNumbers.joinToString("·") else point.planNumbers.firstOrNull()?.let { "$it+" }
-                Pin(label ?: if (point.kind == PointKind.NOTE) "✎" else if(point.verification==cz.jenda.wowforever.content.Verification.CLASSIC) "C" else if(point.verification==cz.jenda.wowforever.content.Verification.COMMUNITY) "?" else if (point.approximate) "≈" else if (point.name == "Ruzan") "W" else "•",
+                Pin(label ?: point.markerRole.symbol,
                     if(point.planNumbers.isEmpty())point.name else "${point.name} · zastávky ${point.planNumbers.joinToString()}",
-                    point.kind == PointKind.NOTE, point.approximate,point.planNumbers.isNotEmpty())
+                    point.kind == PointKind.NOTE, point.approximate,point.planNumbers.isNotEmpty(),point.markerRole.label)
             }
         } }
         installed[map.frameKey] = wanted
@@ -150,11 +151,13 @@ class MapComposeEngine(
     override fun close() { states.values.forEach { it.shutdown() }; states.clear(); installed.clear();focused.clear() }
 }
 
-@Composable private fun Pin(label: String, description: String, note: Boolean = false, approximate: Boolean = false,planned:Boolean=false) {
+@Composable private fun Pin(label: String, description: String, note: Boolean = false, approximate: Boolean = false,planned:Boolean=false,role:String?=null) {
     val shape = if (note || planned) RoundedCornerShape(8.dp) else CircleShape
-    Box(Modifier.size(48.dp).semantics { contentDescription = description }
-        .background(if(planned)Color(0xFF244B76) else if (note) Color(0xFF245A50) else Color(0xFF742A38), shape).border(if (approximate) 4.dp else 2.dp, Color(0xFFF4D398), shape),
+    Box(Modifier.size(48.dp).semantics { contentDescription = description;role?.let { stateDescription=it } },contentAlignment=Alignment.Center) {
+    Box(Modifier.size(32.dp)
+        .background(if(planned)Color(0xFF244B76) else if (note) Color(0xFF245A50) else Color(0xFF742A38), shape).border(if (approximate) 3.dp else 2.dp, Color(0xFFF4D398), shape),
         contentAlignment = Alignment.Center) {
         Text(label, color = Color(0xFFFFF3D9), fontSize = if(label.length>3)10.sp else 17.sp, maxLines=1, softWrap=false)
+    }
     }
 }

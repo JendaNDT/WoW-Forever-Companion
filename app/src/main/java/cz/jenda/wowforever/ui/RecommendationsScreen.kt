@@ -26,7 +26,7 @@ import cz.jenda.wowforever.content.Verification
 import cz.jenda.wowforever.data.db.QuestState
 
 @OptIn(ExperimentalLayoutApi::class)
-@Composable fun NowScreen(model:GuideViewModel,onCatalog:()->Unit,onEntry:(String)->Unit,onCoverage:()->Unit = {}) {
+@Composable fun NowScreen(model:GuideViewModel,onCatalog:()->Unit,onEntry:(String)->Unit,onCoverage:()->Unit = {},onLeave:()->Unit = {}) {
     val p=model.profile
     val report=remember(model.recommendations) {
         model.recommendations.copy(all=model.recommendations.all.filter { it.entry.kind in setOf(EntryKind.QUEST,EntryKind.SPELL) })
@@ -63,6 +63,9 @@ import cz.jenda.wowforever.data.db.QuestState
         if(showSoon)adviceRows(suggestions.soon,model,onEntry,onEntry)
         item { TextButton(onClick={showUnknown=!showUnknown},modifier=Modifier.testTag("advice_unknown")) { Text("Bez známé úrovně nebo oblasti (${suggestions.unknown.size})") } }
         if(showUnknown)adviceRows(suggestions.unknown,model,onEntry,onEntry)
+        item {
+            OutlinedButton(onClick=onLeave,modifier=Modifier.testTag("before_leaving")) { Text("Než odejdeš z "+(model.atlas.maps.firstOrNull { it.uiMapId==p.currentUiMapId }?.name ?: "oblasti")) }
+        }
         item {
             Text("${model.catalogEntries.size} položek v katalogu. Seznam není úplný přehled hry. Položky s nedoloženou oblastí mohou být uvedené i zde.",style=MaterialTheme.typography.bodySmall)
             OutlinedButton(onClick=onCatalog){Text("Hledat další úkol")}

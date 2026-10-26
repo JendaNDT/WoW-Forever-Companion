@@ -25,7 +25,7 @@ class E08FlowTest {
     private var custom:GuideViewModel?=null
     private val extra=ViewModelStore()
     private val model get()=custom ?: ViewModelProvider(rule.activity)[GuideViewModel::class.java]
-    @Before fun ready() {
+    @Before fun ready() {rule.finishWelcomeIfShown();
         rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}
         rule.runOnIdle { model.navigate(Destination.MAP);model.chooseMap(1411);model.resetLayers() }
     }

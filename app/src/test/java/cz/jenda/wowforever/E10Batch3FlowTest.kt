@@ -17,7 +17,7 @@ import java.io.File
 class E10Batch3FlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
-    private fun ready(){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()};rule.onNodeWithTag("nav_MAP").performClick()}
+    private fun ready(){rule.finishWelcomeIfShown();rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()};rule.onNodeWithTag("nav_MAP").performClick()}
     private fun find(query:String,key:String){rule.onNodeWithTag("catalog_query").performTextReplacement(query);rule.onNodeWithTag("catalog_$key").performClick()}
     private fun shot(name:String){rule.runOnIdle{
         val dialog=org.robolectric.shadows.ShadowDialog.getShownDialogs().lastOrNull{it.isShowing}
@@ -40,7 +40,7 @@ class E10Batch3FlowTest {
         find("5875","wow-forever:npc:5875")
         rule.onNodeWithTag("entry_description").assertTextContains("Classic reference",substring=true)
         rule.onNodeWithTag("entry_location_0").performScrollTo().performClick()
-        rule.onNodeWithTag("map_1454").assertIsSelected()
+        rule.onNodeWithTag("current_map_1454").assertExists()
         rule.runOnIdle{assertEquals("wow-forever:npc:5875",model.selectedPoint!!.entryKey);assertEquals(6,model.contentMetadata!!.generation)}
         shot("classic-map")
     }

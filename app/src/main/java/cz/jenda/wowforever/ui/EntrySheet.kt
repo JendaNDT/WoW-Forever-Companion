@@ -90,6 +90,7 @@ import kotlinx.coroutines.launch
                 Spacer(Modifier.height(16.dp))
             }
             }
+            PersonalUndoBar(model)
         }
     }
 }

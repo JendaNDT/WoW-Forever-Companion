@@ -39,7 +39,7 @@ class E13UpgradeApplication:E13HistoricalApplication() {
 class E13BundledFlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
-    private fun ready(){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}}
+    private fun ready(){rule.finishWelcomeIfShown();rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}}
     private fun shot(name:String){rule.runOnIdle{
         val dialog=org.robolectric.shadows.ShadowDialog.getShownDialogs().lastOrNull{it.isShowing}
         val bitmap=captureView(dialog?.window?.decorView ?: rule.activity.window.decorView)

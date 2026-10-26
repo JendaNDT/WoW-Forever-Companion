@@ -22,7 +22,7 @@ import java.io.File
 class E04MapFlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
-    @Before fun ready() {
+    @Before fun ready() {rule.finishWelcomeIfShown();
         rule.waitUntil(20_000) { rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty() }
         rule.runOnIdle { model.navigate(Destination.MAP);model.chooseMap(1411);model.resetLayers() }
         rule.waitUntil(20_000) { rule.onAllNodesWithTag("native_map").fetchSemanticsNodes().isNotEmpty() }
@@ -35,11 +35,11 @@ class E04MapFlowTest {
         file.outputStream().use { bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it) }
     }
     @Test fun globalSearchOpensTheCorrectMapAndLinksToCatalog() {
-        rule.onNodeWithTag("map_1454").performClick()
+        rule.chooseMap(1454)
         rule.onNodeWithTag("map_search").performClick()
         rule.onNodeWithTag("catalog_query").performTextReplacement("ruzan")
         rule.onNodeWithTag("result_map_wow-forever:npc:5765").performScrollTo().performClick()
-        rule.onNodeWithTag("map_1411").assertIsSelected()
+        rule.onNodeWithTag("current_map_1411").assertExists()
         rule.onNodeWithTag("point_catalog").performClick()
         rule.onNodeWithTag("entry_location_0").performScrollTo().assertExists()
         shot("catalog-location",true)
@@ -73,7 +73,7 @@ class E04MapFlowTest {
         rule.onNodeWithContentDescription("Kaltunk",useUnmergedTree=true).assertDoesNotExist()
     }
     @Test fun longPressNoteDraftSurvivesRotationAndSavedNoteCanBeEditedAndDeleted() {
-        rule.onNodeWithTag("map_1454").performClick()
+        rule.chooseMap(1454)
         rule.onNodeWithTag("fit").performClick()
         rule.waitForIdle()
         lateinit var before:cz.jenda.wowforever.model.Viewport

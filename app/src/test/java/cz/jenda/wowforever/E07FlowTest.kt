@@ -18,7 +18,7 @@ import java.io.File
 class E07FlowTest {
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private val model get()=ViewModelProvider(rule.activity)[GuideViewModel::class.java]
-    @Before fun ready() {
+    @Before fun ready() {rule.finishWelcomeIfShown();
         rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}
         rule.runOnIdle{model.navigate(Destination.MAP);model.chooseMap(1411);model.resetLayers();model.chooseSpoilers(Spoilers.FULL)}
     }
@@ -39,7 +39,7 @@ class E07FlowTest {
         rule.onNodeWithTag("entry_description").assertTextContains("Trenér démonů",substring=true)
         rule.onNodeWithTag("entry_location_0").performScrollTo();shot("hraug")
         rule.onNodeWithTag("entry_location_0").performClick()
-        rule.onNodeWithTag("map_1411").assertIsSelected()
+        rule.onNodeWithTag("current_map_1411").assertExists()
         rule.runOnIdle{assertEquals("wow-forever:npc:12776",model.selectedPoint!!.entryKey)}
         shot("map",false)
     }

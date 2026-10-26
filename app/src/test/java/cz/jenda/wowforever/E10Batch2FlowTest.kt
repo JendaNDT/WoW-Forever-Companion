@@ -27,6 +27,7 @@ class E10Batch2FlowTest {
         File("build/reports/e10b-$name.png").apply{parentFile.mkdirs();outputStream().use{bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it)}};bitmap.recycle()
     }}
     @Test fun actualSignedGenerationFiveImportsIntoE12ShowsCoverageAndFindsNewNpc(){
+        rule.finishWelcomeIfShown()
         rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}
         rule.runOnIdle{model.requestQuest("wow-forever:quest:788",QuestState.COMPLETED)}
         settled{model.questStates["wow-forever:quest:788"]==QuestState.COMPLETED}
@@ -47,9 +48,9 @@ class E10Batch2FlowTest {
         rule.onNodeWithTag("catalog_query").performTextReplacement("Pal'juh")
         rule.onNodeWithTag("catalog_wow-forever:npc:275811").performClick()
         rule.onNodeWithTag("entry_location_0").performScrollTo().performClick()
-        rule.onNodeWithTag("map_1411").assertIsSelected()
+        rule.onNodeWithTag("current_map_1411").assertExists()
         rule.runOnIdle{assertEquals("wow-forever:npc:275811",model.selectedPoint!!.entryKey)}
-        rule.activityRule.scenario.recreate();rule.onNodeWithTag("map_1411").assertIsSelected()
+        rule.activityRule.scenario.recreate();rule.onNodeWithTag("current_map_1411").assertExists()
         rule.runOnIdle{assertEquals("wow-forever:npc:275811",model.selectedPoint!!.entryKey)}
         assertEquals(before,runBlocking{store.journal.profileBackup(model.profile.id)})
     }

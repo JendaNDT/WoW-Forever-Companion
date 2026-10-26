@@ -15,27 +15,27 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class MapFlowTest {
     @get:Rule val rule = createAndroidComposeRule<MainActivity>()
-    @Before fun awaitDatabase() {
+    @Before fun awaitDatabase() {rule.finishWelcomeIfShown();
         rule.waitUntil(20_000) { rule.onAllNodesWithTag("native_map").fetchSemanticsNodes().isNotEmpty() }
     }
 
     @Test fun offlineMapSelectionAndNpcDetailSurviveRecreation() {
-        rule.onNodeWithTag("map_1454").performClick()
+        rule.chooseMap(1454)
         rule.onNodeWithTag("points").performClick()
         rule.onNodeWithText("V této mapě zatím nejsou doložené body. Mapu můžeš prohlížet offline.").assertExists()
-        rule.onNodeWithText("Zavřít").performClick()
-        rule.onNodeWithTag("map_1411").performClick()
+        rule.onNodeWithTag("area_points_close").performClick()
+        rule.chooseMap(1411)
         rule.onNodeWithTag("points").performClick()
         rule.onNodeWithTag("points_list").performScrollToNode(hasTestTag("point_5765"))
         rule.onNodeWithTag("point_5765").performClick()
         rule.onNodeWithText("Ruzan").assertExists()
-        rule.onNodeWithTag("zoom_in").performClick()
+        rule.zoomMap()
         rule.waitForIdle()
         lateinit var before: Viewport
         rule.runOnIdle { before = ViewModelProvider(rule.activity)[GuideViewModel::class.java].engine.viewport(1411)!! }
         rule.activityRule.scenario.recreate()
         rule.onNodeWithText("Ruzan").assertExists()
-        rule.onNodeWithTag("map_1411").assertIsSelected()
+        rule.onNodeWithTag("current_map_1411").assertExists()
         rule.runOnIdle {
             val after = ViewModelProvider(rule.activity)[GuideViewModel::class.java].engine.viewport(1411)!!
             assertEquals(before.scale, after.scale, 0.001)

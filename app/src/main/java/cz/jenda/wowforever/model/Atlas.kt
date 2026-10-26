@@ -2,6 +2,7 @@ package cz.jenda.wowforever.model
 
 import cz.jenda.wowforever.content.TransformRecord
 import cz.jenda.wowforever.content.Verification
+import cz.jenda.wowforever.domain.MarkerRole
 
 /** uiMapId identifies the coordinate frame. An areaId must never be substituted. */
 data class MapDescriptor(
@@ -38,7 +39,8 @@ enum class PointKind(val label: String) {
 }
 data class MapPoint(val id: String, val name: String, val position: MapPosition, val sourceUrl: String,
     val entryKey: String? = id, val kind: PointKind = PointKind.NPC, val precisionPercent: Double = 0.1,
-    val verification: Verification = Verification.BETA, val planNumbers:List<Int> = emptyList()) {
+    val verification: Verification = Verification.BETA, val planNumbers:List<Int> = emptyList(),
+    val markerRole:MarkerRole = if(kind==PointKind.NOTE)MarkerRole.NOTE else MarkerRole.PERSON) {
     val approximate get() = precisionPercent > 1.0
 }
 data class Atlas(val maps: List<MapDescriptor>, val points: List<MapPoint>) {

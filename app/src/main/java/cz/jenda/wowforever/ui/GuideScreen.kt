@@ -47,11 +47,12 @@ import java.util.Locale
         }
         return
     }
-    GuideReadyScreen(model)
+    if(model.welcomeRequired)WelcomeScreen(model) else GuideReadyScreen(model)
 }
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable private fun GuideReadyScreen(model:GuideViewModel) {
+    KeepMapAwake(model.keepMapScreenOn && model.destination==Destination.MAP)
     val window=LocalWindowInfo.current.containerSize
     val wide=with(LocalDensity.current) { window.width.toDp()>=600.dp || (window.width.toDp()>=480.dp && window.height.toDp()<480.dp) }
     val compactHeader=LocalDensity.current.fontScale>=1.5f
@@ -76,6 +77,7 @@ import java.util.Locale
     val openSearch:()->Unit={model.navigate(Destination.SEARCH)}
     BackHandler(enabled=model.destination!=Destination.MAP && overlay==null && detailKey==null && detailPoint==null && model.noteDraft==null) { model.back() }
     Surface(Modifier.fillMaxSize().semantics { testTagsAsResourceId=true }) {
+        Box(Modifier.fillMaxSize()) {
         Row(Modifier.fillMaxSize().safeDrawingPadding().imePadding()) {
             if(wide)NavigationRail(Modifier.fillMaxHeight().testTag("navigation_rail")) {
                 Column(Modifier.verticalScroll(rememberScrollState())) {
@@ -106,6 +108,8 @@ import java.util.Locale
                 }
             }
         }
+        if(detailKey==null && detailPoint==null && overlay==null)Box(Modifier.align(Alignment.BottomCenter).navigationBarsPadding().padding(bottom=if(wide)0.dp else 80.dp)) { PersonalUndoBar(model) }
+        }
     }
     when {
         model.dataError!=null->AlertDialog(onDismissRequest=model::dismissError,title={Text("Změnu se nepodařilo dokončit")},text={Text(model.dataError!!)},confirmButton={TextButton(onClick=model::dismissError){Text("Rozumím")}})
@@ -124,6 +128,7 @@ import java.util.Locale
         overlay=="HELP"->HelpDialog(model,closeOverlay,onBackup={openOverlay("BACKUP")},onPackages={openOverlay("PACKAGES")},onCoverage={openOverlay("COVERAGE")})
         overlay=="ABOUT"->AboutDialog(model,onHelp={openOverlay("HELP")},onClose=closeOverlay)
         overlay=="EXPEDITION"->ExpeditionDialog(model,closeOverlay,openEntry)
+        overlay=="LEAVING"->BeforeLeavingSheet(model,closeOverlay,openEntry)
     }
 }
 
@@ -139,110 +144,6 @@ import java.util.Locale
             Destination.SETTINGS->{drawCircle(color,w*.28f,style=stroke);drawCircle(color,w*.09f,style=stroke);(0..7).forEach { i->val a=i*Math.PI/4;drawLine(color,androidx.compose.ui.geometry.Offset(w/2+(kotlin.math.cos(a)*w*.3).toFloat(),h/2+(kotlin.math.sin(a)*h*.3).toFloat()),androidx.compose.ui.geometry.Offset(w/2+(kotlin.math.cos(a)*w*.43).toFloat(),h/2+(kotlin.math.sin(a)*h*.43).toFloat()),2.dp.toPx()) }}
         }
     }
-}
-
-@Composable private fun MapScreen(model: GuideViewModel, wide: Boolean, onSearch: () -> Unit,onPlan:()->Unit, onPoint:(String)->Unit) {
-    val scope = rememberCoroutineScope()
-    var showMapSelector by rememberSaveable { mutableStateOf(false) }
-    var showPoints by rememberSaveable { mutableStateOf(false) }
-    var showLayers by rememberSaveable { mutableStateOf(false) }
-    BackHandler(enabled = model.selectedPoint != null && !showPoints && !showLayers && model.noteDraft == null) { model.select(null) }
-    val map = model.atlas.map(model.mapId,model.floorId)
-    LaunchedEffect(model.focusTarget,map.frameKey) {
-        val target=model.focusTarget
-        val point=model.selectedPoint
-        if(target != null && point?.id == target) {
-            withFrameNanos { }; withFrameNanos { }
-            model.engine.focus(point);model.consumedFocus(target)
-        }
-    }
-    BoxWithConstraints(Modifier.fillMaxSize()) {
-        val compactDetail = maxHeight < 420.dp
-        val compactMap=LocalDensity.current.fontScale>=1.5f && maxHeight<420.dp
-        Column(Modifier.fillMaxSize()) {
-            Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                if(model.atlas.maps.size>8) {
-                    FilterChip(selected=true,onClick={showMapSelector=true},label={Text(map.name)},modifier=Modifier.testTag("map_${map.uiMapId}"))
-                    OutlinedButton(onClick={showMapSelector=true},modifier=Modifier.testTag("choose_map")){Text("Oblasti (${model.atlas.maps.size})")}
-                } else model.atlas.maps.distinctBy { it.uiMapId }.forEach { descriptor ->
-                    FilterChip(selected = model.mapId == descriptor.uiMapId,
-                        onClick = { model.chooseMap(descriptor.uiMapId) }, label = { Text(descriptor.name) },
-                        modifier = Modifier.testTag("map_${descriptor.uiMapId}"))
-                }
-            }
-            Row(Modifier.fillMaxWidth().then(if(compactMap)Modifier.horizontalScroll(rememberScrollState())else Modifier).padding(horizontal = 20.dp, vertical = 2.dp), verticalAlignment = Alignment.CenterVertically) {
-                val actionModifier=if(compactMap)Modifier else Modifier.weight(1f)
-                val actionPadding=PaddingValues(horizontal=if(compactMap)8.dp else 2.dp)
-                TextButton(onClick = onSearch, modifier = actionModifier.testTag("map_search"), contentPadding = actionPadding) { Text("Hledat") }
-                TextButton(onClick = { showLayers = true }, modifier = actionModifier.testTag("map_layers"), contentPadding = actionPadding) { Text("Vrstvy") }
-                TextButton(onClick = { showPoints = true }, modifier = actionModifier.testTag("points"), contentPadding = actionPadding) { Text("Body (${model.pointsOnMap().size})",maxLines=1,softWrap=false) }
-            }
-            val floors = model.atlas.maps.filter { it.uiMapId == model.mapId }
-            if (floors.size > 1) Row(Modifier.horizontalScroll(rememberScrollState()).padding(horizontal=16.dp)) {
-                floors.forEach { floor -> FilterChip(selected=floor.floorId == model.floorId,onClick={model.chooseMap(model.mapId,floor.floorId)},label={Text(floor.floorLabel)},modifier=Modifier.testTag("floor_${floor.floorId}")) }
-            }
-            BoxWithConstraints(Modifier.weight(1f).fillMaxWidth()) {
-                val compactControls = maxHeight < 220.dp
-                val detailWidth = if (maxWidth >= 640.dp) 300.dp else 220.dp
-                val compactDetailWidth=maxWidth*0.55f
-                Row(Modifier.fillMaxSize()) {
-                    Box(Modifier.weight(1f).fillMaxHeight().padding(start = 12.dp, end = 12.dp, bottom = 8.dp)
-                        .clip(RoundedCornerShape(20.dp)).background(MaterialTheme.colorScheme.surfaceVariant)) {
-                        key(map.frameKey) {
-                            key(model.contentEpoch){model.engine.Render(map, Modifier.fillMaxSize().testTag("native_map"), onLongPress = { model.requestNote(it) }) { id -> model.select(id);onPoint(id) }}
-                        }
-                        val controls: @Composable () -> Unit = {
-                            MapButton("+", "Přiblížit", "zoom_in") { scope.launch { model.engine.zoom(model.mapId, 1.7, model.floorId) } }
-                            MapButton("−", "Oddálit", "zoom_out") { scope.launch { model.engine.zoom(model.mapId, 1.0 / 1.7, model.floorId) } }
-                            MapButton("↔", "Celá mapa", "fit") { scope.launch { model.engine.fit(model.mapId,model.floorId) } }
-                        }
-                        if (compactControls) {
-                            Row(Modifier.align(Alignment.TopEnd).padding(4.dp), horizontalArrangement = Arrangement.spacedBy(2.dp)) { controls() }
-                        } else {
-                            Column(Modifier.align(Alignment.TopEnd).padding(10.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) { controls() }
-                        }
-                        FilledTonalButton(onClick=onPlan,modifier=Modifier.align(Alignment.BottomEnd).padding(10.dp).testTag("expedition").semantics { contentDescription="Výprava (${model.personalState.stops.size})" }) { Text(if(compactMap)"☆ ${model.personalState.stops.size}" else "Výprava (${model.personalState.stops.size})") }
-                        if(!compactMap)Surface(Modifier.align(Alignment.BottomStart).padding(10.dp), shape = RoundedCornerShape(10.dp), color = MaterialTheme.colorScheme.surface.copy(alpha = 0.94f)) {
-                            Column(Modifier.padding(horizontal=12.dp,vertical=8.dp)) {
-                                Text("${map.name} · ${model.pointsOnMap().size} bodů",style=MaterialTheme.typography.labelMedium)
-                                if(model.personalState.stops.isNotEmpty()) Text("Čísla = pořadí cílů",style=MaterialTheme.typography.labelSmall,modifier=Modifier.testTag("plan_map_legend"))
-                            }
-                        }
-                    }
-                }
-            }
-            val selected=model.selectedPoint
-            if(selected!=null)Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal=12.dp),verticalAlignment=Alignment.CenterVertically) {
-                TextButton(onClick={onPoint(selected.id)},modifier=Modifier.testTag("selected_point_detail")) { Text(selected.name,maxLines=1) }
-                TextButton(onClick={scope.launch { model.engine.focus(selected) }},modifier=Modifier.testTag("focus")) { Text("Na mapě") }
-                if(selected.entryKey!=null)TextButton(onClick={onPoint(selected.id)},modifier=Modifier.testTag("point_catalog")) { Text("Detail") }
-                else TextButton(onClick={model.requestNote(selected.position,selected.id)},modifier=Modifier.testTag("edit_note")) { Text("Upravit") }
-                TextButton(onClick={model.select(null)}) { Text("Zavřít") }
-            }
-            if (!compactMap && (!compactDetail || selected == null)) Text("Mapy © Blizzard Entertainment • beta ${map.build}", Modifier.padding(horizontal = 20.dp, vertical = 6.dp),
-                style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-        }
-    }
-    if(showMapSelector) MapSelectorDialog(model.atlas.maps,model.mapId,{model.chooseMap(it)},onClose={showMapSelector=false})
-    if (showLayers) LayerDialog(model) { showLayers=false }
-    if (showPoints) AlertDialog(onDismissRequest = { showPoints = false }, title = { Text("Body v oblasti ${map.name}") },
-        text = {
-            val points = model.pointsOnMap()
-            if (points.isEmpty() && model.allPoints.none { it.position.uiMapId == model.mapId && it.position.floorId == model.floorId }) Text("V této mapě zatím nejsou doložené body. Mapu můžeš prohlížet offline.")
-            else if (points.isEmpty()) Text("Filtr skrývá všechny body. Uprav vrstvy mapy.")
-            else LazyColumn(Modifier.heightIn(max = 380.dp).testTag("points_list")) {
-                items(points, key = { it.id }) { point ->
-                    TextButton(onClick = {
-                        model.showPoint(point.id); showPoints = false
-                    }, modifier = Modifier.fillMaxWidth().testTag("point_${point.id.substringAfterLast(':')}")) {
-                        Column(Modifier.fillMaxWidth()) {
-                            Text(point.name)
-                            Text(pointCoordinates(model,point), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                        }
-                    }
-                }
-            }
-        }, confirmButton = { TextButton(onClick = { showPoints = false }) { Text("Zavřít") } })
 }
 
 @Composable private fun AboutDialog(model: GuideViewModel, onHelp:()->Unit, onClose: () -> Unit) {

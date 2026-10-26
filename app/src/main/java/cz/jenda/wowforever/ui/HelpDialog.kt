@@ -33,7 +33,7 @@ import cz.jenda.wowforever.GuideViewModel
             item(key="map") {
                 Text("3. Mapa a hledání",style=MaterialTheme.typography.titleMedium)
                 Text("Mapa se drží severem nahoru. Přibližuj prsty nebo tlačítky. Prohlížení jiné mapy nemění oblast postavy. Podržením volného místa vytvoříš poznámku; Jedna záložka Hledat najde úkoly, NPC, předměty i poznámky. Klepnutí otevře společný detail; Na mapě ukáže doloženou polohu.")
-                Text("Značky C jsou reference z Classicu, ? komunitní podklady. Čísla výpravy jsou tvoje pořadí cílů. Chybějící polohy ani průchozí cesty se nedomýšlejí.")
+                Text("Značky ! ukazují zadání, ? odevzdání a ◆ cíl nebo zdroj předmětu podle vazeb v podkladech. Hotové úkoly jsou skryté; zapneš je ve filtrech nebo panelu V této oblasti. Čísla výpravy jsou tvoje pořadí cílů. Chybějící polohy ani průchozí cesty se nedomýšlejí.")
             }
             item(key="coverage") {
                 Text("4. Obsah bez internetu",style=MaterialTheme.typography.titleMedium)
@@ -60,7 +60,7 @@ import cz.jenda.wowforever.GuideViewModel
             item(key="licenses") { TextButton(onClick={showLicenses=true}) { Text("Původ dat a licence") } }
             item(key="changes") {
                 Text("Poslední změny",style=MaterialTheme.typography.titleMedium)
-                Text("Tři záložky Mapa / Úkoly / Hledat, přepínač Co dál / Deník, společný vytahovací detail a Nastavení v horní liště. Herní data ani formát zálohy se nemění.")
+                Text("Mapa má vrstvy přímo na obrazovce, panel V této oblasti a tlačítko Jsem tady pro nastavení oblasti postavy. Změnu úkolu nebo předmětu můžeš 5 sekund vrátit. Než odejdeš připomene tvoje cíle v oblasti. Nezhasínání displeje na mapě zapneš v Nastavení → Zobrazení; poslední záloha a jemná připomínka jsou v Nastavení. Herní data ani formát zálohy se nemění.")
                 Text("Sestavení ${BuildConfig.SOURCE_REVISION.take(8)}. Telefonní přejímka a měření výkonu zůstávají samostatnou kontrolou.",style=MaterialTheme.typography.bodySmall)
             }
         }
