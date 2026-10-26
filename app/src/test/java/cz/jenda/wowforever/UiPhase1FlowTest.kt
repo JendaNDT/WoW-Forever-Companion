@@ -4,6 +4,7 @@ import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.lifecycle.ViewModelProvider
 import cz.jenda.wowforever.data.Destination
+import cz.jenda.wowforever.data.Spoilers
 import cz.jenda.wowforever.data.db.QuestState
 import kotlinx.coroutines.runBlocking
 import org.junit.*
@@ -23,7 +24,7 @@ class UiPhase1FlowTest {
     private val store get()=(rule.activity.application as GuideApplication).store
     @Before fun ready() {
         rule.waitUntil(30_000) { rule.onAllNodesWithTag("quick_level_up").fetchSemanticsNodes().isNotEmpty() }
-        rule.runOnIdle { model.navigate(Destination.MAP) }
+        rule.runOnIdle { model.navigate(Destination.MAP);model.chooseSpoilers(Spoilers.FULL) }
     }
     private fun settled(check:()->Boolean) {
         rule.waitUntil(15_000) { rule.onAllNodesWithTag("quick_level").fetchSemanticsNodes();!model.isBusy && check() }

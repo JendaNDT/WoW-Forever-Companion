@@ -19,7 +19,7 @@ fun stateLabel(value:QuestState)=when(value) {
 @Composable fun QuestStateActions(model:GuideViewModel,entry:EntryRecord) {
         val state=model.questStates[entry.key] ?: QuestState.NOT_STARTED
         FlowRow(horizontalArrangement=Arrangement.spacedBy(6.dp)) {
-            QuestState.entries.forEach { choice -> FilterChip(selected=state==choice,onClick={model.requestQuest(entry.key,choice)},enabled=!model.isBusy,
+            listOf(QuestState.IN_PROGRESS,QuestState.COMPLETED,QuestState.DEFERRED,QuestState.NOT_STARTED).forEach { choice -> FilterChip(selected=state==choice,onClick={model.requestQuest(entry.key,choice)},enabled=!model.isBusy,
                 label={Text(when(choice) { QuestState.IN_PROGRESS->"Beru";QuestState.COMPLETED->"Hotovo";QuestState.DEFERRED->"Později";else->"Nezahájeno" })},modifier=Modifier.testTag("quest_state_${choice.name}")) }
         }
  }

@@ -54,12 +54,13 @@ import java.util.Locale
 @Composable private fun GuideReadyScreen(model: GuideViewModel) {
     val window = LocalWindowInfo.current.containerSize
     val wide = with(LocalDensity.current) { window.width.toDp() >= 600.dp || (window.width.toDp() >= 480.dp && window.height.toDp() < 480.dp) }
-    val compactHeader=LocalDensity.current.fontScale>=1.5f && with(LocalDensity.current){window.height.toDp()<600.dp}
+    val compactHeader=LocalDensity.current.fontScale>=1.5f
     var showQuickArea by rememberSaveable { mutableStateOf(false) }
     var showBackup by rememberSaveable { mutableStateOf(false) }
     var showAbout by rememberSaveable { mutableStateOf(false) }
     var showHelp by rememberSaveable { mutableStateOf(false) }
     var showCoverage by rememberSaveable { mutableStateOf(false) }
+    var coverageFromHelp by rememberSaveable { mutableStateOf(false) }
     var showCatalog by rememberSaveable { mutableStateOf(false) }
     var showExpedition by rememberSaveable { mutableStateOf(false) }
     var showPackages by rememberSaveable { mutableStateOf(false) }
@@ -81,7 +82,7 @@ import java.util.Locale
             }
             Column(Modifier.weight(1f).fillMaxHeight()) {
                 Row(Modifier.fillMaxWidth().padding(horizontal=8.dp), verticalAlignment=Alignment.CenterVertically) {
-                    Row(Modifier.weight(1f).horizontalScroll(rememberScrollState()),verticalAlignment=Alignment.CenterVertically) {
+                    Row(Modifier.weight(1f),verticalAlignment=Alignment.CenterVertically) {
                     if(!compactHeader)Text(raceLabel(model.profile.race),style=MaterialTheme.typography.labelMedium,modifier=Modifier.padding(horizontal=8.dp))
                     IconButton(onClick={model.changeLevel(-1)},enabled=model.canQuickEdit && model.headerLevel>1,
                         modifier=Modifier.size(48.dp).testTag("quick_level_down").semantics { contentDescription="Snížit úroveň" }) { Text("−",fontSize=24.sp) }
@@ -89,8 +90,8 @@ import java.util.Locale
                         modifier=Modifier.testTag("quick_level").semantics { contentDescription="Úroveň ${model.headerLevel}" })
                     IconButton(onClick={model.changeLevel(1)},enabled=model.canQuickEdit && model.headerLevel<60,
                         modifier=Modifier.size(48.dp).testTag("quick_level_up").semantics { contentDescription="Zvýšit úroveň" }) { Text("+",fontSize=24.sp) }
-                    TextButton(onClick={showQuickArea=true},enabled=model.canQuickEdit,modifier=Modifier.testTag("quick_area")) {
-                        Text((model.atlas.maps.firstOrNull { it.uiMapId==model.headerArea }?.name ?: "Vybrat oblast")+" ▾",maxLines=1)
+                    TextButton(onClick={showQuickArea=true},enabled=model.canQuickEdit,modifier=Modifier.weight(1f).testTag("quick_area")) {
+                        Text((model.atlas.maps.firstOrNull { it.uiMapId==model.headerArea }?.name ?: "Vybrat oblast")+" ▾",maxLines=1,overflow=TextOverflow.Ellipsis)
                     }
                     }
                     IconButton(onClick={showAbout=true},modifier=Modifier.size(48.dp).testTag("about").semantics { contentDescription="O aplikaci" }) { Text("i") }
@@ -99,7 +100,7 @@ import java.util.Locale
                     holder.SaveableStateProvider(model.destination.name) {
                         when (model.destination) {
                             Destination.MAP -> MapScreen(model, wide, openCatalog,onPlan={showExpedition=true}) { key -> catalogKey = key; showCatalog = true }
-                            Destination.NOW -> NowScreen(model, openCatalog, onEntry={ key -> catalogKey=key;showCatalog=true },onCoverage={showCoverage=true})
+                            Destination.NOW -> NowScreen(model, openCatalog, onEntry={ key -> catalogKey=key;showCatalog=true },onCoverage={coverageFromHelp=false;showCoverage=true})
                             Destination.JOURNEY -> JourneyScreen(model, openCatalog, onBackup={showBackup=true},onPlan={showExpedition=true}) { key -> catalogKey = key; showCatalog = true }
                             Destination.CHARACTER -> CharacterScreen(model,onBackup={showBackup=true},onPackages={showPackages=true})
                         }
@@ -118,8 +119,8 @@ import java.util.Locale
     if(showQuickArea) MapSelectorDialog(model.atlas.maps,model.headerArea,model::changeCurrentArea,onClose={showQuickArea=false})
     if (model.noteDraft != null) NoteEditorDialog(model)
     if (showAbout) AboutDialog(model,onHelp={showAbout=false;showHelp=true}) { showAbout = false }
-    if (showHelp) HelpDialog(model,onClose={showHelp=false},onBackup={showHelp=false;showBackup=true},onPackages={showHelp=false;showPackages=true},onCoverage={showHelp=false;showCoverage=true})
-    if (showCoverage) ContentCoverageDialog(model,onClose={showCoverage=false;showHelp=true})
+    if (showHelp) HelpDialog(model,onClose={showHelp=false},onBackup={showHelp=false;showBackup=true},onPackages={showHelp=false;showPackages=true},onCoverage={showHelp=false;coverageFromHelp=true;showCoverage=true})
+    if (showCoverage) ContentCoverageDialog(model,onClose={showCoverage=false;showHelp=coverageFromHelp})
     if (showCatalog) CatalogDialog(model, onClose = { showCatalog = false }, initialEntryKey = catalogKey)
     if (showExpedition) ExpeditionDialog(model,onClose={showExpedition=false})
     if (showBackup) BackupDialog(model) { showBackup=false }
