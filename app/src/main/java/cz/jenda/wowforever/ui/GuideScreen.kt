@@ -63,7 +63,7 @@ import java.util.Locale
     val height=maxHeight-padding.calculateTopPadding()-maxOf(padding.calculateBottomPadding(),with(density){WindowInsets.ime.getBottom(density).toDp()})
     val wide=width>=600.dp || (width>=480.dp && height<480.dp)
     val contentWidth=width-if(wide)80.dp else 0.dp
-    val sidePaneEnabled=currentDestination!=Destination.SETTINGS && supportsCompanionPane(contentWidth.value,(height-56.dp).value,density.fontScale)
+    val sidePaneEnabled=supportsCompanionPane(contentWidth.value,(height-56.dp).value,density.fontScale)
     val compactHeader=LocalDensity.current.fontScale>=1.5f
     var showQuickArea by rememberSaveable { mutableStateOf(false) }
     var overlay by rememberSaveable { mutableStateOf<String?>(null) }
@@ -149,7 +149,7 @@ import java.util.Locale
         }
         }
     }
-    BackHandler(enabled=sidePaneEnabled && (detailKey!=null || detailPoint!=null) && overlay==null && model.pendingChange==null && model.dataError==null && model.noteDraft==null) {
+    BackHandler(enabled=sidePaneEnabled && model.destination!=Destination.SETTINGS && (detailKey!=null || detailPoint!=null) && overlay==null && model.pendingChange==null && model.dataError==null && model.noteDraft==null) {
         if(detailTrail.isNotEmpty()){detailKey=detailTrail.last();detailTrail=detailTrail.dropLast(1)}
         else { val previous=detailReturn;closeDetail();overlay=previous }
     }
@@ -157,7 +157,7 @@ import java.util.Locale
         model.dataError!=null->AlertDialog(onDismissRequest=model::dismissError,title={Text("Změnu se nepodařilo dokončit")},text={Text(model.dataError!!)},confirmButton={TextButton(onClick=model::dismissError){Text("Rozumím")}})
         model.pendingChange!=null->AlertDialog(onDismissRequest=model::cancelChange,title={Text("Potvrdit změnu?")},text={Text(model.pendingChange!!.message)},confirmButton={TextButton(onClick=model::confirmChange,enabled=!model.isBusy,modifier=Modifier.testTag("confirm_personal_change")){Text("Potvrdit")}},dismissButton={TextButton(onClick=model::cancelChange){Text("Zrušit")}})
         model.noteDraft!=null->NoteEditorDialog(model)
-        (detailKey!=null || detailPoint!=null) && !sidePaneEnabled->renderDetail(false)
+        (detailKey!=null || detailPoint!=null) && (!sidePaneEnabled || model.destination==Destination.SETTINGS)->renderDetail(false)
         showQuickArea->MapSelectorDialog(model.atlas.maps,model.headerArea,model::changeCurrentArea,onClose={showQuickArea=false})
         overlay=="BACKUP"->BackupDialog(model,closeOverlay)
         overlay=="PACKAGES"->PackagesDialog(model,closeOverlay)

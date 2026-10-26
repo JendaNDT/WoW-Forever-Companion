@@ -80,5 +80,8 @@ abstract class TabletLayoutChecks {
         assertTrue(rule.onNodeWithTag("character_form").fetchSemanticsNode().boundsInRoot.width/density<=840.5f)
         rule.onNodeWithTag("save_profile").performScrollTo().assertIsDisplayed()
         shot("landscape-character")
+        rule.activityRule.scenario.recreate()
+        rule.onNodeWithTag("nav_MAP").performClick()
+        rule.onNodeWithTag("companion_pane").assertIsDisplayed()
     }
 }
