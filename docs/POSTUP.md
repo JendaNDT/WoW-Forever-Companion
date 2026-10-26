@@ -1,14 +1,16 @@
 # Aktuální stav projektu
 
-Aktualizováno **26. 10. 2026**. První fáze jednoduššího ovládání z [NAVRH_UI.md](NAVRH_UI.md) je dokončená a funkčně potvrzená uživatelem: **0.17.0-ui1 / kód 18**, přibalená data **8**. Popis změn a přejímka: [UI_FAZE_1.md](UI_FAZE_1.md). Jenda dne 26. 10. 2026 potvrdil **„Vše funguje jak má“**. Fáze 2 nezačala.
+Aktualizováno **26. 10. 2026**. Celá Fáze 2 jednoduššího ovládání z [NAVRH_UI.md](NAVRH_UI.md) je implementovaná ve větvi `codex/ui-faze-2`: **0.18.0-ui2 / kód 19**, přibalená data **8**. Tři záložky Mapa / Úkoly / Hledat, společný detail a jedno Nastavení. Popis a výsledky jsou v [UI_FAZE_2.md](UI_FAZE_2.md). Telefonní přejímka verze 19 zatím neproběhla; Fáze 3 nezačala.
 
-Celý sestavitelný projekt je v repozitáři [JendaNDT/WoW-Forever-Companion](https://github.com/JendaNDT/WoW-Forever-Companion), změny Fáze 1 [PR #1](https://github.com/JendaNDT/WoW-Forever-Companion/pull/1). Původ a obnovu popisuje [GITHUB_IMPORT.md](GITHUB_IMPORT.md).
+Fázi 1 (verze 18) Jenda po předání APK funkčně potvrdil slovy **„Vše funguje jak má“** a je sloučená v hlavní větvi. Toto potvrzení se automaticky nepřenáší na nové vydání.
 
-Podrobné historické výsledky E11 níže se vztahují k předchozí verzi **17**; automatické výsledky verze **18** i nové potvrzení jsou v UI_FAZE_1.md.
+Celý sestavitelný projekt je v repozitáři [JendaNDT/WoW-Forever-Companion](https://github.com/JendaNDT/WoW-Forever-Companion), změny Fáze 2 ve větvi `codex/ui-faze-2`; Fáze 1 byla sloučená přes [PR #1](https://github.com/JendaNDT/WoW-Forever-Companion/pull/1). Původ a obnovu popisuje [GITHUB_IMPORT.md](GITHUB_IMPORT.md).
+
+Podrobné historické výsledky E11 níže se vztahují k předchozí verzi **17**; výsledky verze **18** a její potvrzení jsou v UI_FAZE_1.md. Aktuální verze **19** má 228 aplikačních a 35 Python testů bez chyb a úspěšné nativní běhy na Androidu 8 a 16; podrobnosti jsou v UI_FAZE_2.md.
 
 ## Potvrzeno na telefonu
 
-**Aktuální verze 18:** po předání APK `Warlock_Forever_0.17.0_UI1.apk` uživatel uvedl **„Vše funguje jak má“**. Jde o základní funkční potvrzení celé Fáze 1; podrobný průběh jednotlivých scénářů, výkon, přístupnost a herní údaje tím nejsou samostatně ověřené.
+**Předchozí verze 18:** po předání APK `Warlock_Forever_0.17.0_UI1.apk` uživatel uvedl **„Vše funguje jak má“**. Jde o základní funkční potvrzení celé Fáze 1; podrobný průběh jednotlivých scénářů, výkon, přístupnost a herní údaje tím nejsou samostatně ověřené.
 
 **Historická verze 17:** Jenda po předání APK pro čistou instalaci uvedl **„Ok, funguje to“**. Tím je zaznamenané základní funkční potvrzení verze 17. Uživatel předtím výslovně přijal čistou instalaci místo aktualizace původní aplikace.
 
@@ -32,7 +34,7 @@ Dlouhý běh Androidu 16 přerušilo vypnutí runneru; nepočítá se jako dokon
 
 ## Další nejvhodnější krok
 
-Doporučit Fázi 2: sjednotit navigaci na Mapa / Úkoly / Hledat, sloučit hledání a katalog, použít společný detail a jedno Nastavení. Fáze 1 je funkčně potvrzená; implementace Fáze 2 zatím nezačala.
+Vyzkoušet celou Fázi 2 na telefonu: tři záložky, Co dál / Deník, společný detail a návraty přes související záznamy, hledání a dostupnost záloh v Nastavení. Po přijetí pokračovat Fází 3 (značky mapy podle významu a pohodlí při hraní).
 
 Herní přejímka návazností, třídních úkolů a dopravy se provede až po vydání hry. Technická spolehlivost sama správnost herních údajů nepotvrzuje.
 

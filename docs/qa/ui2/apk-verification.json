@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "package": "cz.jenda.wowforever.guide",
+  "versionCode": 19,
+  "versionName": "0.18.0-ui2",
+  "certificateSha256": "ec5843957fe4444d55ab3adfb61b5b3ff423ac7f72fb323ae27508d6ea6fa98f",
+  "debuggable": true,
+  "sourceRevision": "e2193db6e75fed937d85f897fbff8449e7e48acb",
+  "buildInputsSha256": "81c30e1da0d47a37e45773965c9ca579b5e98dc62a680bc0df5d605d5e99d58c",
+  "inputFiles": 152,
+  "gitRevisionVerified": true,
+  "verifiedAssets": 93,
+  "offlinePackagesStoredForStreaming": true,
+  "apkBytes": 150471714,
+  "apkSha256": "74b16005dcf4da5bffa4eb2eb8adfe47b7131f66f8bb9262b0b28c0b06b97c29",
+  "physicalPhoneTested": false,
+  "ownerSignedUpdate": false
+}

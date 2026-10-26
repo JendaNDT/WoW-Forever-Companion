@@ -171,10 +171,12 @@ Implementace: [UI_FAZE_1.md](UI_FAZE_1.md), verze 0.17.0-ui1 (18). Automatické 
 
 **Fáze 2 – nová kostra:**
 
-- [ ] 3 záložky (Mapa, Úkoly, Hledat), lišta postavy a obrazovka Nastavení.
-- [ ] Sloučit Hledat a Katalog do jedné obrazovky.
-- [ ] Detail jako spodní panel, bez dialogů v dialozích.
-- [ ] Úkoly s přepínačem Co dál / Deník.
+- [x] 3 záložky (Mapa, Úkoly, Hledat), lišta postavy a obrazovka Nastavení.
+- [x] Sloučit Hledat a Katalog do jedné obrazovky.
+- [x] Detail jako spodní panel, bez dialogů v dialozích.
+- [x] Úkoly s přepínačem Co dál / Deník.
+
+Implementace: [UI_FAZE_2.md](UI_FAZE_2.md), verze 0.18.0-ui2 (19). Automatické kontroly prošly; telefonní přejímka této verze čeká.
 
 **Fáze 3 – mapa a pohodlí:**
 
