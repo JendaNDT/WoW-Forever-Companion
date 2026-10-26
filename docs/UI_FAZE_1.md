@@ -21,13 +21,13 @@ Sestavení pochází z revize `546da51a899810fe6a5822055cacdddd326ef209`, otisk 
 
 Regresní test nad skutečnými daty 8 má pro Orka úrovně 1 v Durotaru 13 návrhů v běžném seznamu, 28 v Brzy a 2 s neznámými údaji. Dostupnost zůstává UNVERIFIED. Snímky mapy, detailu a seznamu z testů byly vizuálně zkontrolované.
 
- Přidané regresní scénáře ověřují reference v datech 8, hranice úrovní, neznámé údaje, rychlá klepnutí, uložení oblasti, zachování dalších polí, rekreaci obrazovky a dokončení úkolu přímo ze seznamu. Telefonní přejímka nové verze zatím neproběhla.
+Přidané regresní scénáře ověřují reference v datech 8, hranice úrovní, neznámé údaje, rychlá klepnutí, uložení oblasti, zachování dalších polí, rekreaci obrazovky a dokončení úkolu přímo ze seznamu. Jenda dne 26. 10. 2026 po předání APK potvrdil **„Vše funguje jak má“**. Tím je potvrzená základní funkčnost Fáze 1 na jeho telefonu. Jednotlivé scénáře nebyly doložené samostatně; nejde o měření výkonu, ověření TalkBacku, druhého zařízení ani správnosti údajů ve vydané hře.
 
-## Vyzkoušení na telefonu
+## Doporučené scénáře kontroly na telefonu
 
 1. Několikrát rychle klepnout na +, změnit oblast a znovu spustit aplikaci. Úroveň i oblast musí zůstat uložené.
 2. V Teď pro mě porovnat úroveň 1 a 10 v Durotaru; na úrovni 1 se v běžném seznamu nesmějí objevit úkoly pro 60.
 3. Otevřít úkol a použít Beru / Hotovo nahoře nebo přímo v seznamu; zkontrolovat záznam v Moje cesta.
 4. Ověřit mapu, velké písmo a orientaci telefonu. Před změnou instalace vyexportovat JSON zálohu.
 
-Další krok po potvrzení na telefonu: Fáze 2 (Mapa / Úkoly / Hledat a společné Nastavení).
+Další doporučený krok: Fáze 2 (Mapa / Úkoly / Hledat a společné Nastavení).

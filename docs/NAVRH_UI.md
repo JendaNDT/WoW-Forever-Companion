@@ -167,7 +167,7 @@ Každou fázi stavět jako samostatnou větev, nechat proběhnout Android checks
 - [x] Vypnout otáčení mapy, odstranit tlačítko N, schovat nápovědu pod mapou.
 - [x] Aktualizovat Návod a O aplikaci na data 8, bez zmínek o E09 a E13.
 
-Implementace: [UI_FAZE_1.md](UI_FAZE_1.md), verze 0.17.0-ui1 (18). Automatické kontroly prošly; telefonní přejímka nové verze čeká na Jendu.
+Implementace: [UI_FAZE_1.md](UI_FAZE_1.md), verze 0.17.0-ui1 (18). Automatické kontroly prošly. Jenda dne 26. 10. 2026 po předání APK potvrdil „Vše funguje jak má“; základní funkčnost Fáze 1 na telefonu je přijatá.
 
 **Fáze 2 – nová kostra:**
 
