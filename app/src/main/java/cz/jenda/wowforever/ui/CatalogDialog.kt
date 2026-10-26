@@ -6,141 +6,125 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
-import cz.jenda.wowforever.data.Spoilers
-import cz.jenda.wowforever.data.searchEntries
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import cz.jenda.wowforever.GuideViewModel
 import cz.jenda.wowforever.content.*
 
-@OptIn(ExperimentalLayoutApi::class)
-@Composable fun CatalogDialog(model: GuideViewModel, onClose: () -> Unit, initialEntryKey: String? = null) {
-    var selectedKey by rememberSaveable(initialEntryKey) { mutableStateOf(initialEntryKey) }
+@OptIn(ExperimentalLayoutApi::class,ExperimentalMaterial3Api::class)
+@Composable fun SearchScreen(model:GuideViewModel,onEntry:(String)->Unit,onPoint:(String)->Unit,onCoverage:()->Unit) {
     var query by rememberSaveable { mutableStateOf("") }
     var filtersOpen by rememberSaveable { mutableStateOf(false) }
     var category by rememberSaveable { mutableStateOf("ALL") }
     var levelBand by rememberSaveable { mutableIntStateOf(0) }
     var onlyArea by rememberSaveable { mutableStateOf(false) }
+    var myLevel by rememberSaveable { mutableStateOf(false) }
+    var onlyBookmarks by rememberSaveable { mutableStateOf(false) }
     val classKeys=remember(model.guideRules) { model.guideRules.filter { it.importance==Importance.CLASS }.map { it.entryKey }.toSet()+WarlockQuestIndex.keys }
     val areaKeys=remember(model.recommendations,model.profile.currentUiMapId) { model.recommendations.all.filter { model.profile.currentUiMapId in it.areaIds }.map { it.entry.key }.toSet() }
-    var onlyBookmarks by rememberSaveable { mutableStateOf(false) }
-    var coverageOpen by rememberSaveable { mutableStateOf(false) }
     val listState=rememberLazyListState()
-    LaunchedEffect(onlyBookmarks,category,levelBand,onlyArea) { listState.scrollToItem(0) }
-    var trail by rememberSaveable(initialEntryKey) { mutableStateOf(listOf<String>()) }
-    val entry = selectedKey?.let(model::historyEntry)
-    val backEntry:()->Unit = {
-        if(trail.isNotEmpty()) { selectedKey=trail.last();trail=trail.dropLast(1) }
-        else if(initialEntryKey!=null)onClose() else selectedKey=null
+    val requester=remember { FocusRequester() }
+    val keyboard=LocalSoftwareKeyboardController.current
+    LaunchedEffect(Unit) { requester.requestFocus() }
+    val filterSignature=listOf(query,onlyBookmarks.toString(),category,levelBand.toString(),onlyArea.toString(),myLevel.toString()).joinToString("\u0000")
+    var previousFilters by rememberSaveable { mutableStateOf(filterSignature) }
+    LaunchedEffect(filterSignature) { if(previousFilters!=filterSignature){listState.scrollToItem(0);previousFilters=filterSignature} }
+    val entries=remember(model.catalogSearchIndex,query,onlyBookmarks,model.bookmarks,category,levelBand,onlyArea,myLevel,model.profile.level,classKeys,areaKeys) {
+        if(query.isBlank() && category=="ALL" && !onlyBookmarks && !onlyArea && !myLevel && levelBand==0)emptyList()
+        else model.searchCatalog(query).filter { e->
+            val level=listOfNotNull(e.reportedLevel,e.minimumLevel).filter { it>0 }.maxOrNull()
+            (!onlyBookmarks || e.key in model.bookmarks) && (!onlyArea || e.key in areaKeys) &&
+            (!myLevel || level?.let { it<=model.profile.level+2 }==true) &&
+            (when(category) {
+                "CLASS"->e.key in classKeys;"DUNGEON"->e.key.startsWith("wow-forever:travel:dungeon_")
+                "QUEST"->e.kind==EntryKind.QUEST;"NPC"->e.kind==EntryKind.NPC
+                "ITEM"->e.kind==EntryKind.ITEM;"SPELL"->e.kind==EntryKind.SPELL;else->true
+            }) && (levelBand==0 || level?.let { it in ((levelBand-1)*10+1)..(levelBand*10) }==true)
+        }
     }
-    val related:(String)->Unit = { key -> if(model.historyEntry(key)!=null){selectedKey?.let { trail=trail+it };selectedKey=key} }
-    val uri = LocalUriHandler.current
-    var sourceError by remember { mutableStateOf(false) }
-    if (entry != null) {
-        val detailScroll=key(entry.key) { rememberScrollState() }
-        AlertDialog(onDismissRequest = backEntry, title = { Text(entry.nameOriginal) }, text = {
-            Column(Modifier.verticalScroll(detailScroll), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                if(entry.kind==EntryKind.QUEST) QuestStateActions(model,entry)
-                Text(entryLabel(entry))
-                var revealed by rememberSaveable(entry.key, model.spoilers) { mutableStateOf(false) }
-                if (model.spoilers == Spoilers.FULL || revealed) Text(entry.descriptionCs, modifier = Modifier.testTag("entry_description"))
-                else {
-                    Text("Popis je skrytý podle tvého nastavení.")
-                    TextButton(onClick = { revealed = true }, modifier = Modifier.testTag("reveal_description")) { Text("Odkrýt tento popis") }
-                }
-                Text(verificationLabel(entry.verification), color = MaterialTheme.colorScheme.primary)
-                if(model.catalogEntries.none { it.key==entry.key }) Text("Osobní historie · položka momentálně chybí v katalogu.")
-                ProgressPanel(model,entry,onClose,related)
-                OutlinedButton(onClick={model.addPlanStop(entry.key)},enabled=!model.isBusy,modifier=Modifier.testTag("plan_add_entry")) {
-                    Text(if(model.personalState.stops.any { it.entryKey==entry.key })"Přidat znovu do výpravy" else "Přidat cíl do výpravy")
-                }
-                if(model.personalState.stops.any { it.entryKey==entry.key })Text("Ve výpravě: "+model.expeditionStops.filter { it.stored.entryKey==entry.key }.joinToString { it.number.toString() },style=MaterialTheme.typography.bodySmall)
-                entry.sourceIds.forEachIndexed { index, id ->
-                    model.sourceUrls[id]?.let { url ->
-                        TextButton(onClick = { runCatching { uri.openUri(url) }.onFailure { sourceError = true } }) { Text("Zdroj ${index+1} ↗") }
-                    }
-                }
-                if(sourceError) Text("Otevření zdroje vyžaduje prohlížeč a připojení.")
-                if (entry.kind == EntryKind.QUEST) Text(entry.minimumLevel?.let { "Minimální úroveň: $it" } ?: "Minimální úroveň není ověřená.")
-                Text("Záložka ukládá položku pro pozdější návrat.")
-                Button(onClick = { model.toggleBookmark(entry) }, enabled=!model.isBusy,modifier = Modifier.testTag("bookmark_toggle")) {
-                    Text(if (entry.key in model.bookmarks) "Odebrat záložku" else "Přidat záložku")
-                }
-                RelatedEntryLinks(model,entry,related)
-                val locations = model.pointsForEntry(entry.key)
-                if (locations.isEmpty()) Text("Přímá poloha není doložená. Odkaz na mapu se nenabízí.",style=MaterialTheme.typography.bodySmall)
-                locations.forEachIndexed { index, point ->
-                    TextButton(onClick={model.showPoint(point.id);onClose()},modifier=Modifier.testTag("entry_location_$index")) {
-                        Column { Text("Ukázat na mapě: "+pointCoordinates(model,point));Text(precisionLabel(point),style=MaterialTheme.typography.labelSmall) }
-                    }
-                }
+    val notes=remember(model.notes,query,onlyArea,model.profile.currentUiMapId,category,onlyBookmarks) {
+        val normalized=normalizeSearch(query.trim())
+        if(category!="ALL" || onlyBookmarks)emptyList() else model.notes.filter {
+            normalized in normalizeSearch(it.text) && (!onlyArea || it.uiMapId==model.profile.currentUiMapId)
+        }
+    }
+    Column(Modifier.fillMaxSize().padding(horizontal=16.dp)) {
+            Row(Modifier.fillMaxWidth()) {
+                Text("Hledat",style=MaterialTheme.typography.titleLarge,modifier=Modifier.weight(1f).padding(top=10.dp))
+                TextButton(onClick={keyboard?.hide();model.back()},modifier=Modifier.testTag("catalog_close")) { Text("Zavřít") }
             }
-        }, confirmButton = { TextButton(onClick = backEntry) { Text(if(trail.isNotEmpty()) "Zpět na předchozí" else if (initialEntryKey == null) "Zpět do katalogu" else "Zpět") } })
-    } else AlertDialog(onDismissRequest = onClose, title = { Text("Herní katalog") }, text = {
-            val entries = remember(model.catalogSearchIndex,query,onlyBookmarks,model.bookmarks,category,levelBand,onlyArea,classKeys,areaKeys) {
-                model.searchCatalog(query).filter { e ->
-                    (!onlyBookmarks || e.key in model.bookmarks) && (!onlyArea || e.key in areaKeys) &&
-                    (when(category) { "CLASS" -> e.key in classKeys; "DUNGEON" -> e.key.startsWith("wow-forever:travel:dungeon_"); "ITEM" -> e.kind==EntryKind.ITEM; else -> true }) &&
-                    (levelBand==0 || (e.reportedLevel ?: e.minimumLevel)?.let { it in ((levelBand-1)*10+1)..(levelBand*10) }==true)
-                }
-            }
-            LazyColumn(Modifier.heightIn(max=420.dp).testTag("catalog_list"),state=listState) {
-                item(key="search") { Column {
-                    Text("Hledat v katalogu")
-                    OutlinedTextField(query,{query=it.take(120)},singleLine=true,modifier=Modifier.fillMaxWidth().testTag("catalog_query").semantics { contentDescription="Hledat v katalogu" })
-                } }
-                item(key="coverage") { TextButton(onClick={coverageOpen=true},modifier=Modifier.testTag("content_coverage")) { Text("Co průvodce pokrývá") } }
-                item(key="summary") { Text("${model.catalogEntries.size} položek z bety a komunitních podkladů. Úplnost ani dostupnost v aktuální hře nejsou potvrzené.", style = MaterialTheme.typography.bodySmall) }
-                if(model.atlas.maps.size>8) item(key="route_filters") {
-                    TextButton(onClick={filtersOpen=true},modifier=Modifier.testTag("catalog_filters")) { Text("Filtry cesty 1–60 · nalezeno ${entries.size}") }
-                }
-                item(key="filter") { FilterChip(selected = onlyBookmarks, onClick = { onlyBookmarks = !onlyBookmarks },
-                    label = { Text("Moje záložky (${model.bookmarks.size})") }, modifier = Modifier.testTag("only_bookmarks")) }
-                if (entries.isEmpty()) item(key="empty") { Text(if (query.isNotBlank()) "Nic nenalezeno." else "Zatím tu nemáš žádné záložky.") }
-                items(entries, key = { it.key }) { e ->
-                    TextButton(onClick = { selectedKey = e.key }, modifier = Modifier.fillMaxWidth().testTag("catalog_${e.key}")) {
-                        Column(Modifier.fillMaxWidth()) {
-                            Text((if (e.key in model.bookmarks) "★  " else "") + e.nameOriginal)
-                            Text(entryLabel(e), style = MaterialTheme.typography.labelSmall)
-                        }
-                    }
-                }
-            }
-    }, confirmButton = { TextButton(onClick = onClose,modifier=Modifier.testTag("catalog_close")) { Text("Zavřít") } })
-    if(filtersOpen) AlertDialog(onDismissRequest={filtersOpen=false},title={Text("Filtry katalogu")},text={
-        Column(verticalArrangement=Arrangement.spacedBy(8.dp)) {
-            FlowRow(horizontalArrangement=Arrangement.spacedBy(6.dp)) {
-                listOf("ALL" to "Vše","CLASS" to "Warlock","DUNGEON" to "Dungeony","ITEM" to "Předměty").forEach { (id,label) ->
+            OutlinedTextField(query,{query=it.take(120)},label={Text("Název, český popis nebo poznámka")},singleLine=true,
+                keyboardActions=KeyboardActions(onDone={model.rememberSearch(query);keyboard?.hide()}),
+                modifier=Modifier.fillMaxWidth().focusRequester(requester).testTag("catalog_query").semantics { contentDescription="Hledat v průvodci" })
+        LazyColumn(Modifier.weight(1f).fillMaxWidth().testTag("catalog_list"),state=listState,verticalArrangement=Arrangement.spacedBy(8.dp)) {
+        item(key="types") {
+            Row(Modifier.horizontalScroll(rememberScrollState()),horizontalArrangement=Arrangement.spacedBy(6.dp)) {
+                listOf("ALL" to "Vše","QUEST" to "Úkoly","NPC" to "Postavy","ITEM" to "Předměty","SPELL" to "Kouzla","CLASS" to "Warlock","DUNGEON" to "Dungeony").forEach { (id,label)->
                     FilterChip(selected=category==id,onClick={category=id},label={Text(label)},modifier=Modifier.testTag("catalog_category_$id"))
                 }
             }
-            FilterChip(selected=onlyArea,onClick={onlyArea=!onlyArea},label={Text("Oblast postavy")},modifier=Modifier.testTag("catalog_current_area"))
-            Text("Úrovně podle podkladu; filtr nepotvrzuje dostupnost.",style=MaterialTheme.typography.labelSmall)
             FlowRow(horizontalArrangement=Arrangement.spacedBy(6.dp)) {
-                (0..6).forEach { band -> FilterChip(selected=levelBand==band,onClick={levelBand=band},label={Text(if(band==0)"1–60" else "${(band-1)*10+1}–${band*10}")},modifier=Modifier.testTag("catalog_level_$band")) }
+                FilterChip(selected=onlyBookmarks,onClick={onlyBookmarks=!onlyBookmarks},label={Text("★ Moje (${model.bookmarks.size})")},modifier=Modifier.testTag("only_bookmarks"))
+                FilterChip(selected=onlyArea,onClick={onlyArea=!onlyArea},label={Text("Oblast postavy")},modifier=Modifier.testTag("catalog_current_area"))
+                FilterChip(selected=myLevel,onClick={myLevel=!myLevel},label={Text("Moje úroveň")},modifier=Modifier.testTag("search_my_level"))
+                TextButton(onClick={filtersOpen=!filtersOpen},modifier=Modifier.testTag("catalog_filters")) { Text("Další filtry") }
             }
         }
-    },confirmButton={TextButton(onClick={filtersOpen=false},modifier=Modifier.testTag("apply_catalog_filters")){Text("Použít filtry")}},dismissButton={TextButton(onClick={category="ALL";levelBand=0;onlyArea=false;filtersOpen=false}){Text("Vymazat filtry")}})
-    if(coverageOpen) ContentCoverageDialog(model,onClose={coverageOpen=false})
+        if(filtersOpen)item(key="advanced") {
+            Text("Pásmo úrovní podle podkladů",style=MaterialTheme.typography.labelMedium)
+            FlowRow(horizontalArrangement=Arrangement.spacedBy(6.dp)) { (0..6).forEach { band->
+                FilterChip(selected=levelBand==band,onClick={levelBand=band},label={Text(if(band==0)"1–60" else "${(band-1)*10+1}–${band*10}")},modifier=Modifier.testTag("catalog_level_$band"))
+            } }
+            TextButton(onClick={filtersOpen=false},modifier=Modifier.testTag("apply_catalog_filters")) { Text("Použít filtry") }
+        }
+        if(query.isBlank() && model.recentSearches.isNotEmpty())item(key="recent") {
+            Text("Poslední hledání",style=MaterialTheme.typography.titleMedium)
+            FlowRow(horizontalArrangement=Arrangement.spacedBy(6.dp)) { model.recentSearches.forEach { q->SuggestionChip(onClick={query=q},label={Text(q)},modifier=Modifier.testTag("recent_$q")) } }
+        }
+        items(notes,key={"note:"+it.id}) { note->
+            OutlinedCard(onClick={keyboard?.hide();model.rememberSearch(query);onPoint(note.id)},modifier=Modifier.fillMaxWidth().testTag("search_${note.id}")) {
+                Text("✎ ${note.text}",modifier=Modifier.padding(12.dp))
+            }
+        }
+        items(entries,key={it.key}) { e->
+            OutlinedCard(onClick={keyboard?.hide();model.rememberSearch(query);onEntry(e.key)},modifier=Modifier.fillMaxWidth().testTag("catalog_${e.key}")) {
+                Column(Modifier.padding(12.dp),verticalArrangement=Arrangement.spacedBy(4.dp)) {
+                    Text((if(e.key in model.bookmarks)"★ " else "")+e.nameOriginal,style=MaterialTheme.typography.titleMedium)
+                    val level=listOfNotNull(e.reportedLevel,e.minimumLevel).filter { it>0 }.maxOrNull()
+                    Text(entryLabel(e)+(level?.let { " · úroveň $it" } ?: ""),style=MaterialTheme.typography.labelMedium)
+                    val points=model.pointsForEntry(e.key)
+                    if(points.isNotEmpty())Text(points.map { model.atlas.map(it.position.uiMapId,it.position.floorId).name }.distinct().joinToString(),style=MaterialTheme.typography.bodySmall)
+                    if(points.isNotEmpty())TextButton(onClick={keyboard?.hide();model.rememberSearch(query);if(points.size==1){model.showPoint(points.single().id)}else onEntry(e.key)},modifier=Modifier.testTag("result_map_${e.key}")) { Text("Na mapě") }
+                }
+            }
+        }
+        if(entries.isEmpty() && notes.isEmpty())item(key="empty") { Text(if(query.isBlank())"Napiš název nebo vyber filtr." else "Nic nenalezeno. Zkus jiné slovo nebo změň filtry.") }
+        item(key="coverage") {
+            TextButton(onClick=onCoverage,modifier=Modifier.testTag("content_coverage")) { Text("Co průvodce pokrývá") }
+            Text("${model.catalogEntries.size} položek · podklady z bety a Classicu",style=MaterialTheme.typography.bodySmall)
+            Spacer(Modifier.height(16.dp))
+        }
+        }
+    }
 }
-
-private fun entryLabel(e: EntryRecord): String = when(e.kind) {
-    EntryKind.OBJECT -> "Herní objekt"; EntryKind.NPC -> "NPC"; EntryKind.QUEST -> "Úkol ${e.gameId ?: e.key.substringAfterLast(':')}"
-    EntryKind.ITEM -> "Předmět"; EntryKind.SPELL -> "Kouzlo"; EntryKind.TRAVEL -> "Doprava — údaj k ověření"
+fun entryLabel(e:EntryRecord):String=when(e.kind) {
+    EntryKind.OBJECT->"Herní objekt";EntryKind.NPC->"NPC";EntryKind.QUEST->"Úkol ${e.gameId ?: e.key.substringAfterLast(':')}"
+    EntryKind.ITEM->"Předmět";EntryKind.SPELL->"Kouzlo";EntryKind.TRAVEL->"Doprava"
 }
-fun verificationLabel(v: Verification): String = when(v) {
-    Verification.BETA -> "Údaj z bety — ve vydané hře nepotvrzeno"
-    Verification.CLASSIC -> "Reference z Classicu — Forever čeká na ověření"
-    Verification.COMMUNITY -> "Komunitní reference — čeká na ověření"
-    Verification.CONFLICT -> "Zdroje se v některých údajích rozcházejí"
-    Verification.UNVERIFIED -> "Neověřený údaj"
-    Verification.RELEASE -> "Potvrzeno ve vydané hře"
+fun verificationLabel(v:Verification):String=when(v) {
+    Verification.BETA->"Údaj z bety — ve vydané hře nepotvrzeno"
+    Verification.CLASSIC->"Reference z Classicu — Forever čeká na ověření"
+    Verification.COMMUNITY->"Komunitní reference — čeká na ověření"
+    Verification.CONFLICT->"Zdroje se v některých údajích rozcházejí"
+    Verification.UNVERIFIED->"Neověřený údaj";Verification.RELEASE->"Potvrzeno ve vydané hře"
 }

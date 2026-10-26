@@ -12,11 +12,12 @@ import org.robolectric.annotation.GraphicsMode
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class E12HelpLargeTextTest:E11LargeTextChecks() {
     @Test fun recoveryActionAndCloseRemainReachableWithTwoHundredPercentText(){
-        rule.onNodeWithTag("about").performClick()
+        rule.openSettings()
         rule.onNodeWithTag("open_help").performScrollTo().performClick()
         rule.onNodeWithTag("help_list").performScrollToNode(hasTestTag("help_backup"))
         rule.onNodeWithTag("help_backup").assertIsDisplayed();shot("help-large-text",true)
         rule.onNodeWithText("Zavřít návod").assertIsDisplayed().performClick()
+        rule.onNodeWithTag("settings_back").performClick()
         rule.onNodeWithTag("native_map").assertIsDisplayed()
     }
 }

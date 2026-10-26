@@ -32,13 +32,12 @@ class E06FlowTest {
     private val model get()=custom ?: ViewModelProvider(rule.activity)[GuideViewModel::class.java]
     private val store get()=(rule.activity.application as GuideApplication).store
     @Before fun ready(){
-        rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_NOW").fetchSemanticsNodes().isNotEmpty()}
-        rule.runOnIdle{model.navigate(Destination.NOW);model.chooseSpoilers(Spoilers.FULL);model.chooseGuideFocus(GuideFocus.BALANCED)}
+        rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_QUESTS").fetchSemanticsNodes().isNotEmpty()}
+        rule.runOnIdle{model.showSuggestions();model.chooseSpoilers(Spoilers.FULL);model.chooseGuideFocus(GuideFocus.BALANCED)}
     }
     @After fun close(){rule.runOnIdle{extras.clear();custom=null;model.navigate(Destination.MAP);model.chooseMap(1411)}}
-    private fun settled(predicate:()->Boolean) {rule.waitUntil(15_000){rule.onAllNodesWithTag("nav_NOW").fetchSemanticsNodes();!model.isBusy && predicate()}}
+    private fun settled(predicate:()->Boolean) {rule.waitUntil(15_000){rule.onAllNodesWithTag("nav_QUESTS").fetchSemanticsNodes();!model.isBusy && predicate()}}
     private fun scroll(tag:String){rule.onNodeWithTag("advice_list").performScrollToNode(hasTestTag(tag));rule.onNodeWithTag(tag).performScrollTo()}
-    private fun tab(id:String){scroll("advice_tab_$id");rule.onNodeWithTag("advice_tab_$id").performClick()}
     private fun shot(name:String,dialog:Boolean=false) {
         lateinit var bitmap:android.graphics.Bitmap
         rule.runOnIdle{bitmap=captureView(if(dialog)org.robolectric.shadows.ShadowDialog.getShownDialogs().last { it.isShowing }.window!!.decorView else rule.activity.window.decorView)}
@@ -50,37 +49,36 @@ class E06FlowTest {
             custom=GuideViewModel(rule.activity.application,SavedStateHandle());extras.put("fixture",model)
             rule.activity.setContent { GuideTheme { GuideScreen(model) } }
         }
-        rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_NOW").fetchSemanticsNodes();model.ready || model.dataError!=null}
-        rule.runOnIdle{assertNull(model.dataError);model.saveProfile(model.profile.copy(level=level));model.navigate(Destination.NOW)}
+        rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_QUESTS").fetchSemanticsNodes();model.ready || model.dataError!=null}
+        rule.runOnIdle{assertNull(model.dataError);model.saveProfile(model.profile.copy(level=level));model.showSuggestions()}
         settled{model.profile.level==level && model.guideRules.size==5}
     }
     @Test fun realCatalogShowsUncertaintyAndCoverageWithoutInventedAvailableQuests() {
         rule.runOnIdle{assertTrue(model.recommendations.now.isEmpty());assertTrue(model.recommendations.uncertain.isNotEmpty())}
-        shot("now")
-        tab("UNCERTAIN");scroll("advice_$E6_A")
-        rule.onNodeWithTag("availability_$E6_A").assertDoesNotExist()
         scroll("reference_notice");rule.onNodeWithTag("reference_notice").assertExists()
-        scroll("advice_$E6_A")
-        shot("uncertain")
+        scroll("advice_$E6_A");rule.onNodeWithTag("availability_$E6_A").assertDoesNotExist();shot("now")
         rule.onNodeWithTag("why_$E6_A").performScrollTo().performClick()
         rule.onNodeWithTag("advice_explanation").assertExists();shot("why-reference",true)
-        rule.onNodeWithText("Zavřít").performClick()
-        tab("LEAVE");scroll("coverage_warning");rule.onNodeWithTag("coverage_warning").assertTextContains("nepotvrzuje",substring=true)
-        shot("leave")
+        rule.onNodeWithTag("detail_back").performClick()
+        scroll("advice_coverage");rule.onNodeWithTag("advice_coverage").performClick()
+        rule.onNodeWithTag("coverage_counts").assertExists();shot("coverage",true)
+        rule.onNodeWithText("Zavřít pokrytí").performClick()
     }
     @Test fun actualProfileEditorChangesLevelAndRaceAndRecommendationsFollowSavedValues() {
         fixture(1)
         rule.runOnIdle{assertEquals(Availability.LATER,model.recommendations.all.first { it.entry.key==E6_A }.availability)}
-        rule.onNodeWithTag("nav_CHARACTER").performClick()
+        rule.openCharacter()
         rule.onNodeWithTag("profile_level").performScrollTo().performTextReplacement("5")
         rule.onNodeWithTag("save_profile").performScrollTo().performClick();settled{model.profile.level==5}
-        rule.onNodeWithTag("nav_NOW").performClick();scroll("advice_$E6_A")
+        rule.openSuggestions();scroll("advice_$E6_A")
         rule.onNodeWithTag("availability_$E6_A").assertTextContains("Dostupné",substring=true)
         shot("fixture-available")
-        rule.onNodeWithTag("nav_CHARACTER").performClick();rule.onNodeWithTag("race_UNDEAD").performScrollTo().performClick()
+        rule.openCharacter();rule.onNodeWithTag("race_UNDEAD").performScrollTo().performClick()
         rule.onNodeWithTag("save_profile").performScrollTo().performClick();settled{model.profile.race=="UNDEAD"}
-        rule.onNodeWithTag("nav_NOW").performClick();tab("WAITING");scroll("advice_$E6_A")
-        rule.onNodeWithTag("availability_$E6_A").assertTextContains("Vyloučené",substring=true)
+        rule.runOnIdle { assertEquals(Availability.EXCLUDED,model.recommendations.all.first { it.entry.key==E6_A }.availability) }
+        rule.openSearch();rule.onNodeWithTag("catalog_query").performTextReplacement("4641")
+        rule.onNodeWithTag("catalog_$E6_A").performClick()
+        rule.onNodeWithText("Vyloučené podmínkou").performScrollTo().assertExists()
     }
     @Test fun completionAndDeferralImmediatelyUpdateFeedAndLeavingChecklist() {
         fixture();scroll("advice_open_$E6_A");rule.onNodeWithTag("advice_open_$E6_A").performClick()
@@ -89,8 +87,9 @@ class E06FlowTest {
         rule.runOnIdle{assertTrue(model.recommendations.all.none{it.entry.key==E6_A})}
         scroll("advice_open_$E6_C");rule.onNodeWithTag("advice_open_$E6_C").performClick()
         rule.onNodeWithTag("quest_state_DEFERRED").performScrollTo().performClick();settled{model.questStates[E6_C]==QuestState.DEFERRED}
-        rule.onNodeWithText("Zpět").performClick();tab("DEFERRED");scroll("advice_$E6_C")
-        rule.onNodeWithTag("availability_$E6_C").assertExists()
+        rule.onNodeWithTag("detail_back").performClick();rule.openJournal()
+        rule.onNodeWithTag("journey_list").performScrollToNode(hasTestTag("journal_filter_DEFERRED"));rule.onNodeWithTag("journal_filter_DEFERRED").performClick()
+        rule.onNodeWithTag("journey_list").performScrollToNode(hasTestTag("journal_$E6_C"));rule.onNodeWithTag("journal_$E6_C").assertExists()
         rule.runOnIdle{assertTrue(model.recommendations.now.none{it.entry.key==E6_C});assertTrue(model.recommendations.leave.none{it.entry.key==E6_C})}
         rule.runOnIdle{model.undoPersonal()};settled{E6_C !in model.questStates}
         rule.runOnIdle{assertTrue(model.recommendations.now.any{it.entry.key==E6_C})}
@@ -102,12 +101,12 @@ class E06FlowTest {
         rule.onNodeWithText("Testovací důvod pro 4641").assertDoesNotExist()
         rule.onNodeWithTag("reveal_advice").performScrollTo().performClick()
         rule.onNodeWithText("Testovací důvod pro 4641").performScrollTo().assertIsDisplayed();shot("fixture-reason",true)
-        rule.onNodeWithText("Zavřít").performClick()
+        rule.onNodeWithTag("detail_back").performClick()
         rule.onNodeWithText("Testovací důvod pro 4641").assertDoesNotExist()
     }
     @Test fun acquiredWishDisappearsAndRelatedNpcStillOpensRealMap() {
         fixture();rule.runOnIdle{model.toggleBookmark(model.historyEntry(E6_ITEM)!!)};settled{E6_ITEM in model.bookmarks}
-        rule.onNodeWithTag("nav_JOURNEY").performClick()
+        rule.openJournal()
         rule.onNodeWithTag("journey_$E6_ITEM").performScrollTo().performClick()
         rule.onNodeWithTag("item_acquired").performScrollTo().performClick();settled{E6_ITEM in model.acquiredItems}
         rule.onNodeWithText("Zpět").performClick();rule.runOnIdle{assertTrue(model.recommendations.leave.none{it.entry.key==E6_ITEM})}
@@ -119,16 +118,16 @@ class E06FlowTest {
     }
     @Test @Config(sdk=[28],qualifiers="w560dp-h360dp-land")
     fun focusAndSpoilersPersistAcrossRecreationAndFreshViewModelInShortLandscape() {
-        scroll("focus_settings");rule.onNodeWithTag("focus_settings").performClick();rule.onNodeWithTag("focus_EQUIPMENT").performClick()
+        rule.openDisplay();rule.onNodeWithTag("focus_EQUIPMENT").performScrollTo().performClick()
         rule.runOnIdle{model.chooseSpoilers(Spoilers.HINTS)}
         rule.waitUntil(10_000){runBlocking{store.session.read().let { it.guideFocus=="EQUIPMENT" && it.spoilers=="HINTS" }}}
-        rule.activityRule.scenario.recreate();scroll("focus_settings");rule.onNodeWithTag("focus_settings").performClick();rule.onNodeWithTag("focus_EQUIPMENT").assertIsSelected();rule.onNodeWithText("Hotovo").performClick()
+        rule.activityRule.scenario.recreate();rule.onNodeWithTag("focus_EQUIPMENT").performScrollTo().assertIsSelected()
         rule.runOnIdle{
             custom=GuideViewModel(rule.activity.application,SavedStateHandle());extras.put("cold",model)
             rule.activity.setContent { GuideTheme { GuideScreen(model) } }
         }
-        rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_NOW").fetchSemanticsNodes();model.ready || model.dataError!=null}
+        rule.waitUntil(20_000){rule.onAllNodesWithTag("nav_QUESTS").fetchSemanticsNodes();model.ready || model.dataError!=null}
         rule.runOnIdle{assertNull(model.dataError);assertEquals(GuideFocus.EQUIPMENT,model.guideFocus);assertEquals(Spoilers.HINTS,model.spoilers)}
-        rule.onNodeWithTag("nav_NOW").assertIsSelected();tab("LEAVE");scroll("coverage_warning");shot("small-landscape")
+        rule.openSuggestions();rule.onNodeWithTag("nav_QUESTS").assertIsSelected();scroll("reference_notice");shot("small-landscape")
     }
 }

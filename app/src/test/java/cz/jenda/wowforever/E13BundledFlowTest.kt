@@ -47,10 +47,10 @@ class E13BundledFlowTest {
     }}
     @Test fun productionFirstLaunchShowsAllDataAndOfflineHelpWithoutImport(){
         ready();rule.runOnIdle{assertEquals(6,model.contentMetadata!!.generation);assertEquals(216,model.catalogEntries.size);assertEquals(5,model.atlas.maps.size)}
-        rule.onNodeWithTag("catalog").performClick();rule.onNodeWithTag("content_coverage").performClick()
+        rule.openSearch();rule.onNodeWithTag("content_coverage").performClick()
         rule.onNodeWithTag("coverage_counts").assertTextContains("216 položek · 84 přímých poloh · 5 offline map");shot("integrated-coverage")
         rule.onNodeWithText("Zavřít pokrytí").performClick();rule.onNodeWithTag("catalog_close").performClick()
-        rule.onNodeWithTag("about").performClick();rule.onNodeWithTag("open_help").performScrollTo().performClick()
+        rule.openSettings();rule.onNodeWithTag("open_help").performScrollTo().performClick()
         rule.onNodeWithTag("help_current").assertTextContains("Data 6 · 216 položek · 5 map",substring=true);shot("integrated-help")
     }
     @Test @Config(application=E13UpgradeApplication::class)
@@ -69,7 +69,7 @@ class E13BundledFlowTest {
         ready()
         val store=(rule.activity.application as GuideApplication).store
         val before=runBlocking{store.journal.profileBackup(model.profile.id)}
-        rule.onNodeWithTag("nav_CHARACTER").performClick()
+        rule.openCharacter()
         rule.onNodeWithTag("character_form").performScrollToNode(hasTestTag("packages"))
         rule.onNodeWithTag("packages").performClick()
         fun scroll(tag:String){rule.onNodeWithTag("packages_list").performScrollToNode(hasTestTag(tag))}

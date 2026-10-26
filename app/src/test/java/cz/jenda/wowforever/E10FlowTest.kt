@@ -24,7 +24,7 @@ class E10FlowTest {
     private val store get()=(rule.activity.application as GuideApplication).store
     @Before fun ready(){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}}
     private fun settled(check:()->Boolean){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes();!model.isBusy && check()}}
-    private fun openPackages(){rule.onNodeWithTag("nav_CHARACTER").performClick();rule.onNodeWithTag("character_form").performScrollToNode(hasTestTag("packages"));rule.onNodeWithTag("packages").performClick()}
+    private fun openPackages(){rule.openSettings();rule.onNodeWithTag("packages").performScrollTo();rule.onNodeWithTag("packages").performClick()}
     private fun scroll(tag:String){rule.onNodeWithTag("packages_list").performScrollToNode(hasTestTag(tag))}
     private fun install(){
         openPackages();rule.onNodeWithTag("e10_package_hint").assertExists()
@@ -83,7 +83,7 @@ class E10FlowTest {
     }
     @Test fun coverageUsesActiveAreaScopeAndUnlocatedEbruNeverGetsAFakePin(){
         install();rule.onNodeWithText("Zavřít balíčky").performClick();rule.onNodeWithTag("nav_MAP").performClick()
-        rule.onNodeWithTag("catalog").performClick();rule.onNodeWithTag("content_coverage").performClick()
+        rule.openSearch();rule.onNodeWithTag("content_coverage").performClick()
         rule.onNodeWithTag("coverage_counts").assertTextContains("139 položek · 62 přímých poloh · 5 offline map")
         rule.onNodeWithTag("coverage_scope_1413").performScrollTo().assertTextContains("Crossroads",substring=true);shot("coverage-barrens")
         rule.onNodeWithTag("coverage_release").performScrollTo().assertTextContains("0 položek a 0 návazností",substring=true)

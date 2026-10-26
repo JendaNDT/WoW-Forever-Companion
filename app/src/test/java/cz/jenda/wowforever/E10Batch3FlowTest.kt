@@ -25,18 +25,18 @@ class E10Batch3FlowTest {
         File("build/reports/e10c-$name.png").apply{parentFile.mkdirs();outputStream().use{bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it)}};bitmap.recycle()
     }}
     @Test fun newStaffAndLargerBagAreAvailableOfflineWithoutImport(){
-        ready();rule.onNodeWithTag("catalog").performClick()
+        ready();rule.openSearch()
         find("Makeshift Stormcaller","wow-forever:item:281274")
         rule.onNodeWithTag("entry_description").assertTextContains("+4 Spell Power",substring=true).assertTextContains("pevnou odměnu",substring=true);shot("stormcaller")
-        rule.onNodeWithText("Zpět do katalogu").performClick()
+        rule.onNodeWithText("Zpět do hledání").performClick()
         find("šest míst","wow-forever:item:11845")
         rule.onNodeWithTag("entry_description").assertTextContains("šest míst",substring=true).assertTextContains("nikoli volbu",substring=true);shot("bag")
     }
     @Test fun orcVoidwalkerQuestLinksAndClassicNpcPointAreUsable(){
-        ready();rule.onNodeWithTag("catalog").performClick()
+        ready();rule.openSearch()
         find("Creature of the Void","wow-forever:quest:1501")
         rule.onNodeWithTag("entry_description").assertTextContains("Tablet of Verga",substring=true).assertTextContains("Undercity",substring=true);shot("voidwalker")
-        rule.onNodeWithText("Zpět do katalogu").performClick()
+        rule.onNodeWithText("Zpět do hledání").performClick()
         find("5875","wow-forever:npc:5875")
         rule.onNodeWithTag("entry_description").assertTextContains("Classic reference",substring=true)
         rule.onNodeWithTag("entry_location_0").performScrollTo().performClick()

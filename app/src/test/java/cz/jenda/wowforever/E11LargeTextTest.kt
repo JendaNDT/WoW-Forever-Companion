@@ -41,8 +41,8 @@ abstract class E11LargeTextChecks {
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class E11LargeTextTest:E11LargeTextChecks() {
     @Test fun catalogueAtTwoHundredPercentStillAllowsSearchingAndOpeningTheResult() {
-        rule.onNodeWithTag("catalog").performScrollTo().performClick()
-        assertTrue(rule.onNodeWithText("Herní katalog").fetchSemanticsNode().boundsInRoot.height>=40f)
+        rule.openSearch()
+        assertTrue(rule.onNodeWithTag("catalog_query").fetchSemanticsNode().boundsInRoot.height>=40f)
         rule.onNodeWithTag("catalog_query").performTextReplacement("Ruzan")
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("catalog_wow-forever:npc:5765"))
         rule.onNodeWithTag("catalog_wow-forever:npc:5765").assertIsDisplayed().performClick()
@@ -50,16 +50,16 @@ class E11LargeTextTest:E11LargeTextChecks() {
     }
     @Test fun mapSearchAtTwoHundredPercentCanReachTheNpcAndItsMap() {
         rule.onNodeWithTag("map_search").performClick()
-        rule.onNodeWithTag("map_search_query").performTextReplacement("Ruzan")
-        rule.onNodeWithTag("search_results").performScrollToNode(hasTestTag("search_wow-forever:npc:5765"))
-        rule.onNodeWithTag("search_wow-forever:npc:5765").assertIsDisplayed();shot("large-text-search",true)
-        rule.onNodeWithTag("search_wow-forever:npc:5765").performClick()
+        rule.onNodeWithTag("catalog_query").performTextReplacement("Ruzan")
+        rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("result_map_wow-forever:npc:5765"))
+        rule.onNodeWithTag("result_map_wow-forever:npc:5765").assertIsDisplayed();shot("large-text-search")
+        rule.onNodeWithTag("result_map_wow-forever:npc:5765").performClick()
         rule.onNodeWithText("Ruzan").assertExists();rule.onNodeWithTag("native_map").assertIsDisplayed()
         shot("large-text-map")
-        rule.onNodeWithTag("compact_point_detail").performClick()
-        rule.onNodeWithTag("compact_point_panel").assertExists()
-        rule.onNodeWithTag("point_catalog").performScrollTo().assertIsDisplayed()
-        rule.onNodeWithText("Zavřít detail").performClick()
+        rule.onNodeWithTag("selected_point_detail").performClick()
+        rule.onNodeWithTag("entry_sheet").assertExists()
+        rule.onNodeWithTag("entry_location_0").performScrollTo().assertIsDisplayed()
+        rule.onNodeWithTag("detail_back").performClick()
     }
 }
 @RunWith(RobolectricTestRunner::class)
@@ -68,7 +68,7 @@ class E11LargeTextTest:E11LargeTextChecks() {
 class E11LandscapeTextTest:E11LargeTextChecks() {
     @Test fun shortLandscapeAtTwoHundredPercentCanReachCharacterAndSave() {
         rule.onNodeWithTag("navigation_rail").assertExists()
-        rule.onNodeWithTag("nav_CHARACTER").performScrollTo().performClick()
+        rule.openCharacter()
         rule.onNodeWithTag("character_form").performScrollToNode(hasTestTag("save_profile"))
         rule.onNodeWithTag("save_profile").assertIsDisplayed().performClick();shot("large-text-landscape")
     }

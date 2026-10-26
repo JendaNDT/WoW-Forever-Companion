@@ -41,12 +41,12 @@ class ProfileFlowTest {
         else rule.activity.onBackPressedDispatcher.onBackPressed()
     } }
     @Test fun profileValidatesAndRetainsDraftAcrossNavigationAndRecreation() {
-        rule.onNodeWithTag("nav_CHARACTER").performClick()
+        rule.openCharacter()
         rule.onNodeWithTag("profile_name").performTextReplacement("Jenda")
         rule.onNodeWithTag("profile_level").performTextReplacement("61")
         rule.onNodeWithTag("save_profile").performScrollTo().assertIsNotEnabled()
         rule.onNodeWithTag("profile_level").performScrollTo().performTextReplacement("12")
-        rule.onNodeWithTag("nav_JOURNEY").performClick()
+        rule.openJournal()
         back()
         rule.onNodeWithTag("profile_level").performScrollTo().assertTextContains("12")
         rule.activityRule.scenario.recreate()
@@ -57,18 +57,18 @@ class ProfileFlowTest {
         rule.waitUntil(10_000) { rule.onAllNodesWithTag("profile_saved").fetchSemanticsNodes().isNotEmpty() }
         rule.onNodeWithTag("profile_level").performScrollTo()
         shot("profile")
-        rule.onNodeWithTag("nav_NOW").performClick()
-        rule.onNodeWithText("Troll • Warlock • úroveň 12").assertExists()
-        rule.onNodeWithText("Oblast: Orgrimmar").assertExists()
-        rule.onNodeWithText("Zobrazit oblast").performScrollTo().performClick()
+        rule.openSuggestions()
+        rule.onNodeWithTag("quick_level").assertTextEquals("12")
+        rule.onNodeWithTag("quick_area").assertTextContains("Orgrimmar",substring=true)
+        rule.onNodeWithTag("nav_MAP").performClick()
         rule.onNodeWithTag("map_1454").assertIsSelected()
     }
     @Test fun spoilerChoiceHidesDescriptionAndBookmarkOpensFromJourney() {
-        rule.onNodeWithTag("nav_CHARACTER").performClick()
+        rule.openDisplay()
         rule.onNodeWithTag("spoilers_HINTS").performScrollTo().performClick()
         rule.onNodeWithTag("nav_MAP").performClick()
-        rule.onNodeWithTag("catalog").performClick()
-        rule.onNodeWithTag("catalog_query").performTextInput("5778")
+        rule.openSearch()
+        rule.onNodeWithTag("catalog_query").performTextReplacement("5778")
         rule.onNodeWithTag("catalog_wow-forever:item:5778").performClick()
         rule.onNodeWithTag("entry_description").assertDoesNotExist()
         rule.onNodeWithTag("reveal_description").performClick()
@@ -76,7 +76,7 @@ class ProfileFlowTest {
         rule.onNodeWithTag("bookmark_toggle").performScrollTo().performClick()
         rule.waitUntil(10_000) { rule.onAllNodesWithText("Odebrat záložku").fetchSemanticsNodes().isNotEmpty() }
         back(); back()
-        rule.onNodeWithTag("nav_JOURNEY").performClick()
+        rule.openJournal()
         rule.onNodeWithTag("journey_wow-forever:item:5778").performClick()
         rule.onNodeWithTag("entry_description").assertDoesNotExist()
         rule.onNodeWithText("Zpět").performClick()
@@ -89,20 +89,20 @@ class ProfileFlowTest {
         rule.onNodeWithTag("points").performClick()
         rule.onNodeWithTag("points_list").performScrollToNode(hasTestTag("point_5765"))
         rule.onNodeWithTag("point_5765").performClick()
-        listOf("native_map","zoom_in","zoom_out","fit","focus","nav_CHARACTER").forEach { rule.onNodeWithTag(it).assertIsDisplayed() }
+        listOf("native_map","zoom_in","zoom_out","fit","focus","settings").forEach { rule.onNodeWithTag(it).assertIsDisplayed() }
         shot("small-landscape")
     }
     @Test @Config(sdk=[28],qualifiers="w800dp-h400dp-land")
     fun wideLayoutUsesRailAndNewViewModelReadsPersistedSession() {
         rule.onNodeWithTag("navigation_rail").assertIsDisplayed()
         rule.onNodeWithTag("map_1454").performClick()
-        rule.onNodeWithTag("nav_CHARACTER").performClick()
+        rule.openCharacter()
         rule.onNodeWithTag("save_profile").performScrollTo().assertIsDisplayed()
-        rule.onNodeWithTag("nav_JOURNEY").performClick()
+        rule.openJournal()
         shot("landscape")
         lateinit var app:GuideApplication
         rule.runOnIdle { app=rule.activity.application as GuideApplication }
-        rule.waitUntil(10_000) { kotlinx.coroutines.runBlocking { app.store.session.read().history.last() == "JOURNEY" } }
+        rule.waitUntil(10_000) { kotlinx.coroutines.runBlocking { app.store.session.read().history.last() == "QUESTS" } }
         // New ViewModel without retained objects or SavedStateHandle data: cold session read.
         lateinit var restored:GuideViewModel
         rule.runOnIdle {
@@ -110,12 +110,12 @@ class ProfileFlowTest {
             rule.activity.setContentForTest(restored)
         }
         rule.waitUntil(20_000) {
-            rule.onAllNodesWithTag("nav_JOURNEY").fetchSemanticsNodes()
+            rule.onAllNodesWithTag("nav_QUESTS").fetchSemanticsNodes()
             restored.ready || restored.dataError != null
         }
         assertNull("Cold load error",restored.dataError)
-        rule.runOnIdle { assertEquals(Destination.JOURNEY,restored.destination);assertEquals(1454,restored.mapId) }
-        rule.onNodeWithTag("nav_JOURNEY").assertIsSelected()
+        rule.runOnIdle { assertEquals(Destination.QUESTS,restored.destination);assertEquals(1454,restored.mapId) }
+        rule.onNodeWithTag("nav_QUESTS").assertIsSelected()
         rule.onNodeWithTag("nav_MAP").performClick()
         rule.onNodeWithTag("map_1454").assertIsSelected()
     }

@@ -36,7 +36,7 @@ class E05FlowTest {
     @After fun reset(){rule.runOnIdle{model.cancelChange();model.cancelNote();model.navigate(Destination.MAP)}}
     private fun awaitState(key:String,state:QuestState) {rule.waitUntil(10_000){rule.onAllNodesWithTag("bookmark_toggle").fetchSemanticsNodes();!model.isBusy && model.questStates[key]==state}}
     private fun open(key:String,query:String) {
-        rule.onNodeWithTag("catalog").performClick();rule.onNodeWithTag("catalog_query").performTextInput(query)
+        rule.openSearch();rule.onNodeWithTag("catalog_query").performTextReplacement(query)
         rule.onNodeWithTag("catalog_$key").performClick()
     }
     private fun shot(name:String,dialog:Boolean=true){
@@ -108,7 +108,7 @@ class E05FlowTest {
         assertEquals(original.id,model.profile.id)
         val snapshot=model.snapshots.single().id
         rule.onNodeWithText("Zavřít").performClick()
-        rule.onNodeWithTag("nav_JOURNEY").performClick()
+        rule.openJournal()
         rule.onNodeWithTag("journey_list").performScrollToNode(hasTestTag("journal_wow-forever:quest:990001"))
         rule.onNodeWithTag("journal_wow-forever:quest:990001").performClick()
         rule.onNodeWithText("Úkol 990001").assertExists()
@@ -142,7 +142,7 @@ class E05FlowTest {
             rule.waitUntil(10_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes();!fresh.isBusy && fresh.questStates[b]==QuestState.IN_PROGRESS}
         } finally {rule.runOnIdle{originalStore.clear()}}
     }
-    private fun backupDialog(){rule.onNodeWithTag("nav_CHARACTER").performClick();rule.onNodeWithTag("backup").performScrollTo().performClick()}
+    private fun backupDialog(){rule.openSettings();rule.onNodeWithTag("backup").performScrollTo().performClick()}
     @Test fun systemDocumentContractsExportPreviewAndDefaultNewProfileRestore() {
         rule.runOnIdle{model.requestQuest("wow-forever:quest:4641",QuestState.DEFERRED)}
         rule.waitUntil(10_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes();!model.isBusy && model.questStates.isNotEmpty()}
@@ -186,7 +186,7 @@ class E05FlowTest {
         val uri=Uri.parse("content://e05.test/broken.json")
         shadowOf(rule.activity.contentResolver).registerInputStream(uri,"{\"formatVersion\":2}".byteInputStream())
         rule.runOnIdle{model.readBackup(uri)}
-        rule.waitUntil(10_000){rule.onAllNodesWithTag("nav_CHARACTER").fetchSemanticsNodes();!model.backupBusy && model.dataError!=null}
+        rule.waitUntil(10_000){rule.onAllNodesWithTag("settings").fetchSemanticsNodes();!model.backupBusy && model.dataError!=null}
         assertNull(model.backupPreview);assertEquals(before,runBlocking{store.journal.profileBackup(model.profile.id)})
     }
 }

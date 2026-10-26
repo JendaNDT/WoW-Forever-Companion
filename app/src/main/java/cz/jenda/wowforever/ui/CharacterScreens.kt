@@ -23,7 +23,7 @@ import kotlinx.serialization.encodeToString
 fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UNDEAD" -> "Nemrtvý"; else -> id }
 
 @OptIn(ExperimentalLayoutApi::class)
-@Composable fun CharacterScreen(model: GuideViewModel, onBackup:()->Unit,onPackages:()->Unit = {}) {
+@Composable fun CharacterScreen(model: GuideViewModel, onBackup:()->Unit = {},onPackages:()->Unit = {}) {
     var showAreaSelector by rememberSaveable { mutableStateOf(false) }
     val p = model.profile
     var name by rememberSaveable(p.id) { mutableStateOf(p.displayName) }
@@ -40,9 +40,6 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 20.dp, vertical = 12.dp).testTag("character_form"), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("Tvůj Warlock", style = MaterialTheme.typography.headlineSmall)
         Text("Horda • Warlock. Údaje zadáváš ručně podle své postavy.", style = MaterialTheme.typography.bodyMedium)
-        OutlinedButton(onClick=onBackup,modifier=Modifier.testTag("backup")){Text("Profily a záloha")}
-        OutlinedButton(onClick=onPackages,modifier=Modifier.testTag("packages")){Text("Balíčky a mapy")}
-        Text("Záloha obsahuje uložené údaje. Rozepsané změny nejdřív potvrď tlačítkem Uložit postavu.",style=MaterialTheme.typography.bodySmall)
         OutlinedTextField(name, { name = it.take(60); model.profileEdited() }, label = { Text("Jméno nebo název cesty") }, singleLine = true,
             isError = name.isBlank(), modifier = Modifier.fillMaxWidth().testTag("profile_name"))
         OutlinedTextField(level, { level = it.take(3); model.profileEdited() }, label = { Text("Úroveň (1–60)") }, singleLine = true,
@@ -74,28 +71,18 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
             modifier = Modifier.fillMaxWidth().testTag("save_profile")) { Text(if (model.savingProfile) "Ukládám…" else "Uložit postavu") }
         if (model.profileSaved && !dirty) Text("Postava uložená.", color = MaterialTheme.colorScheme.secondary, modifier = Modifier.testTag("profile_saved"))
         else if (dirty) Text("Změny nejsou uložené. Můžeš se k nim vrátit v části Postava.", style = MaterialTheme.typography.bodySmall)
-        HorizontalDivider()
-        Text("Kolik chceš prozradit?", style = MaterialTheme.typography.titleLarge)
-        Text("Nastavení se ukládá ihned. Názvy a polohy zůstávají viditelné.", style = MaterialTheme.typography.bodySmall)
-        Spoilers.entries.forEach { choice ->
-            Row(Modifier.fillMaxWidth()) {
-                RadioButton(selected = model.spoilers == choice, onClick = { model.chooseSpoilers(choice) }, modifier = Modifier.testTag("spoilers_${choice.name}"))
-                TextButton(onClick = { model.chooseSpoilers(choice) }) { Text(choice.label) }
-            }
-        }
-        Text("Při volbě „Jen názvy a místa“ zůstanou popisy v katalogu skryté. Jednotlivý popis si můžeš odkrýt.", style = MaterialTheme.typography.bodySmall)
         Spacer(Modifier.height(12.dp))
     }
     if(showAreaSelector) MapSelectorDialog(model.atlas.maps,area,onChoose={area=it;model.profileEdited()},onClose={showAreaSelector=false})
 }
 
 @OptIn(ExperimentalLayoutApi::class)
-@Composable fun JourneyScreen(model: GuideViewModel, onCatalog: () -> Unit, onBackup:()->Unit = {},onPlan:()->Unit = {}, onEntry: (String) -> Unit) {
+@Composable fun JourneyScreen(model: GuideViewModel, onCatalog: () -> Unit, onBackup:()->Unit = {},onPlan:()->Unit = {}, onPoint:(String)->Unit = {}, onEntry: (String) -> Unit) {
     val entries = model.catalogEntries.filter { it.key in model.bookmarks }
     var questFilter by rememberSaveable(model.profile.id) { mutableStateOf("RECORDS") }
     val questCatalog=model.catalogEntries.filter { it.kind==cz.jenda.wowforever.content.EntryKind.QUEST }
     val quests=(questCatalog+model.personalState.quests.mapNotNull { model.historyEntry(it.questKey) }).distinctBy { it.key }.filter {
-        when(questFilter) { "ALL"->true;"RECORDS"->it.key in model.questStates;else->(model.questStates[it.key] ?: cz.jenda.wowforever.data.db.QuestState.NOT_STARTED).name==questFilter }
+        when(questFilter) { "RECORDS"->it.key in model.questStates;else->(model.questStates[it.key] ?: cz.jenda.wowforever.data.db.QuestState.NOT_STARTED).name==questFilter }
     }
     LazyColumn(Modifier.fillMaxSize().padding(horizontal = 20.dp).testTag("journey_list"), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         item {
@@ -104,7 +91,6 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
             Text("Místa a položky, ke kterým se chceš vrátit. Záložka neoznačuje úkol za splněný.", Modifier.padding(vertical = 12.dp))
             Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
                 OutlinedButton(onClick = onCatalog) { Text("Otevřít katalog") }
-                OutlinedButton(onClick=onBackup,modifier=Modifier.testTag("backup")){Text("Záloha")}
             }
             if(model.undoAction!=null) TextButton(onClick=model::undoPersonal,enabled=!model.isBusy,modifier=Modifier.testTag("undo_personal")){Text("Vrátit poslední změnu")}
 
@@ -115,12 +101,12 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
         }
         item { Text("Moje poznámky (${model.notes.size})",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(top=16.dp)) }
         items(model.allPoints.filter { it.kind == cz.jenda.wowforever.model.PointKind.NOTE },key={it.id}) { point ->
-            OutlinedButton(onClick={model.showPoint(point.id)},modifier=Modifier.fillMaxWidth().testTag("journey_${point.id}")) { Text("✎ ${point.name}") }
+            OutlinedButton(onClick={onPoint(point.id)},modifier=Modifier.fillMaxWidth().testTag("journey_${point.id}")) { Text("✎ ${point.name}") }
         }
         item { Text("Úkoly",style=MaterialTheme.typography.headlineSmall,modifier=Modifier.padding(top=16.dp)) }
         item {
             FlowRow(horizontalArrangement=Arrangement.spacedBy(6.dp)) {
-                listOf("RECORDS" to "Moje záznamy","ALL" to "Všechny úkoly","IN_PROGRESS" to "Rozpracované","COMPLETED" to "Hotové","DEFERRED" to "Odložené").forEach { (key,label) ->
+                listOf("RECORDS" to "Moje záznamy","IN_PROGRESS" to "Rozpracované","COMPLETED" to "Hotové","DEFERRED" to "Odložené").forEach { (key,label) ->
                     FilterChip(selected=questFilter==key,onClick={questFilter=key},label={Text(label)},modifier=Modifier.testTag("journal_filter_$key"))
                 }
             }

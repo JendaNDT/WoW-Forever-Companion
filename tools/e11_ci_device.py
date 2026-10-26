@@ -66,7 +66,7 @@ def main():
                 nodes = list(ET.fromstring(xml).iter("node"))
             except ET.ParseError:
                 nodes = []
-            if any(n.get("text") == "Mapa" for n in nodes) and any(n.get("text") == "Postava" for n in nodes):
+            if any(n.get("text") == "Mapa" for n in nodes) and any(n.get("text") == "Úkoly" for n in nodes):
                 break
             time.sleep(1)
         else:

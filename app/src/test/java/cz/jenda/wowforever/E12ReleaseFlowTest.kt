@@ -24,7 +24,7 @@ class E12ReleaseFlowTest {
     private val store get()=(rule.activity.application as GuideApplication).store
     @Before fun ready(){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}}
     private fun settled(check:()->Boolean){rule.waitUntil(30_000){rule.waitForIdle();!model.isBusy && check()}}
-    private fun help(){rule.onNodeWithTag("about").performClick();rule.onNodeWithTag("open_help").performScrollTo().performClick()}
+    private fun help(){rule.openSettings();rule.onNodeWithTag("open_help").performScrollTo().performClick()}
     private fun scroll(tag:String){rule.onNodeWithTag("help_list").performScrollToNode(hasTestTag(tag))}
     private fun shot(name:String){rule.runOnIdle {
         val bitmap=captureView(org.robolectric.shadows.ShadowDialog.getShownDialogs().last{it.isShowing}.window!!.decorView)
@@ -52,7 +52,7 @@ class E12ReleaseFlowTest {
         help();scroll("help_coverage");rule.onNodeWithTag("help_coverage").performClick()
         rule.onNodeWithTag("coverage_counts").assertTextContains("53 položek",substring=true)
         rule.onNodeWithText("Zavřít pokrytí").performClick();rule.onNodeWithTag("help_list").assertExists()
-        rule.onNodeWithText("Zavřít návod").performClick();rule.onNodeWithTag("native_map").assertIsDisplayed()
+        rule.onNodeWithText("Zavřít návod").performClick();rule.onNodeWithTag("settings_back").performClick();rule.onNodeWithTag("native_map").assertIsDisplayed()
         rule.runOnIdle {assertEquals(Destination.MAP,model.destination)}
     }
 }

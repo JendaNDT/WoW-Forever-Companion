@@ -25,7 +25,7 @@ fun stateLabel(value:QuestState)=when(value) {
  }
 
 @OptIn(ExperimentalLayoutApi::class)
-@Composable fun ProgressPanel(model:GuideViewModel,entry:EntryRecord,onClose:()->Unit,onRelated:(String)->Unit) {
+@Composable fun ProgressPanel(model:GuideViewModel,entry:EntryRecord,onClose:()->Unit,onRelated:(String)->Unit,includeItemAction:Boolean=true) {
     if(entry.kind==EntryKind.QUEST) {
         when(model.questRules.status(entry.key,model.questStates)) {
             PrerequisiteStatus.SATISFIED -> Text("Doložené předchozí kroky jsou splněné. Další podmínky dostupnosti ověř ve hře.")
@@ -61,15 +61,15 @@ fun stateLabel(value:QuestState)=when(value) {
             }
             if(reward!=null && candidates.none { it.ownerKey==reward.itemKey }) Text("${reward.itemNameSnapshot} · momentálně mimo katalog")
         }
-        TextButton(onClick={model.navigate(Destination.JOURNEY);onClose()},modifier=Modifier.testTag("entry_journey")) { Text("Moje cesta") }
+        TextButton(onClick={model.showJournal();onClose()},modifier=Modifier.testTag("entry_journey")) { Text("Moje cesta") }
     }
-    if(entry.kind==EntryKind.ITEM) {
+    if(entry.kind==EntryKind.ITEM && includeItemAction) {
         HorizontalDivider()
         Text("Evidence získání",style=MaterialTheme.typography.titleMedium)
         FilterChip(selected=entry.key in model.acquiredItems,onClick={model.setAcquired(entry.key,entry.key !in model.acquiredItems)},enabled=!model.isBusy,
             label={Text(if(entry.key in model.acquiredItems) "Předmět získaný" else "Označit jako získaný")},modifier=Modifier.testTag("item_acquired"))
         Text("Jde o získání předmětu, nikoli o aktuálně nasazenou výbavu. Záložka u předmětu slouží také jako přání.",style=MaterialTheme.typography.bodySmall)
-        TextButton(onClick={model.navigate(Destination.JOURNEY);onClose()},modifier=Modifier.testTag("entry_journey")){Text("Moje cesta")}
+        TextButton(onClick={model.showJournal();onClose()},modifier=Modifier.testTag("entry_journey")){Text("Moje cesta")}
     }
     if(model.undoAction!=null && entry.kind in setOf(EntryKind.ITEM,EntryKind.QUEST)) {
         TextButton(onClick=model::undoPersonal,enabled=!model.isBusy,modifier=Modifier.testTag("undo_personal")){Text("Vrátit poslední změnu")}

@@ -1,5 +1,9 @@
 # E10.3 · 0.14.0-e10.3 · 2026-10-25
 
+## 0.18.0-ui2 (19)
+
+Celá druhá fáze jednoduššího ovládání: Mapa / Úkoly / Hledat, Co dál / Deník, společný vytahovací detail s historií souvisejících položek a jedno Nastavení. Sjednocené hledání má filtry a pět posledních dotazů. Staré názvy navigace se bezpečně převádějí. Herní data 8, databázové schéma a zálohy se nemění. Podrobnosti: docs/UI_FAZE_2.md.
+
 ## 0.17.0-ui1 (18)
 
 První fáze jednoduššího ovládání: rychlá úroveň a oblast s automatickým uložením, doporučení podle úrovně a oblasti i pro neověřené reference, stav úkolu nahoře a v seznamu, mapa severem nahoru a aktuální návod. Data 8 a zálohy se nemění. Podrobnosti: docs/UI_FAZE_1.md.

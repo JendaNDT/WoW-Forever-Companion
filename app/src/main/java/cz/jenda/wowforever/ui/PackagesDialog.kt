@@ -23,7 +23,7 @@ fun packageSize(bytes:Long)=String.format(Locale.forLanguageTag("cs-CZ"),"%.1f M
     val pick=rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()){uri->if(uri!=null)model.readContentPackage(uri)}
     LaunchedEffect(Unit){model.refreshPackages()}
     val status=model.packageStatus
-    AlertDialog(onDismissRequest={if(!model.packageBusy)onClose()},title={Text("Balíčky a mapy")},text={
+    if(confirm==null) AlertDialog(onDismissRequest={if(!model.packageBusy)onClose()},title={Text("Balíčky a mapy")},text={
         LazyColumn(Modifier.heightIn(max=500.dp).testTag("packages_list"),verticalArrangement=Arrangement.spacedBy(12.dp)) {
             item {
                 Text("Obsah generace ${status?.generation ?: "…"}",style=MaterialTheme.typography.titleMedium,modifier=Modifier.testTag("package_generation"))
