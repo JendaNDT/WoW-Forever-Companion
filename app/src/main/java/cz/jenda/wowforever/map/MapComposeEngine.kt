@@ -52,13 +52,12 @@ class MapComposeEngine(
         return MapState(map.levels, map.width, map.height, workerCount = 2) {
             scale(initial?.scale ?: 1.0)
             maxScale(8.0)
-            rotation(initial?.rotation ?: 0f)
+            rotation(0f)
             scroll(initial?.x ?: 0.5, initial?.y ?: 0.5)
         }.apply {
             addLayer(TileStreamProvider { row, col, zoom ->
                 tileStream("${map.tilePath}/$zoom/$row/$col.png")
             })
-            enableRotation()
             setMapBackground(Color(0xFF252728))
             addClusterer("npcs", clusteringThreshold = 48.dp) { ids ->
                 { Pin(ids.size.toString(), "Skupina ${ids.size} bodů") }

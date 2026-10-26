@@ -159,13 +159,15 @@ Každou fázi stavět jako samostatnou větev, nechat proběhnout Android checks
 
 **Fáze 1 – před spuštěním 4. 11.** (malé úpravy, navigace zůstává):
 
-- [ ] Úroveň − / + a výběr oblasti v horní liště, okamžité uložení.
-- [ ] V detailu úkolu přesunout volbu stavu nad popis.
-- [ ] V doporučeních řadit a filtrovat podle úrovně i u neověřených položek; v seznamu jen úkoly a kouzla.
-- [ ] Jedno globální upozornění místo štítku u každé karty.
-- [ ] Skrýt pole Režim a Profese.
-- [ ] Vypnout otáčení mapy, odstranit tlačítko N, schovat nápovědu pod mapou.
-- [ ] Aktualizovat Návod a O aplikaci na data 8, bez zmínek o E09 a E13.
+- [x] Úroveň − / + a výběr oblasti v horní liště, okamžité uložení.
+- [x] V detailu úkolu přesunout volbu stavu nad popis.
+- [x] V doporučeních řadit a filtrovat podle úrovně i u neověřených položek; v seznamu jen úkoly a kouzla.
+- [x] Jedno globální upozornění místo štítku u každé karty.
+- [x] Skrýt pole Režim a Profese.
+- [x] Vypnout otáčení mapy, odstranit tlačítko N, schovat nápovědu pod mapou.
+- [x] Aktualizovat Návod a O aplikaci na data 8, bez zmínek o E09 a E13.
+
+Implementace: [UI_FAZE_1.md](UI_FAZE_1.md), verze 0.17.0-ui1 (18). Automatické kontroly prošly. Jenda dne 26. 10. 2026 po předání APK potvrdil „Vše funguje jak má“; základní funkčnost Fáze 1 na telefonu je přijatá.
 
 **Fáze 2 – nová kostra:**
 

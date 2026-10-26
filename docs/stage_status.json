@@ -20,9 +20,9 @@
     "statement": "Zatím vše otestováno bez problémů",
     "scope": "basic preceding build check; not new full stage or measured performance"
   },
-  "stage": "E11-reliability-automated-complete",
-  "version": "0.16.0-audit",
-  "versionCode": 17,
+  "stage": "UI-phase-1-user-confirmed",
+  "version": "0.17.0-ui1",
+  "versionCode": 18,
   "room_schemas_unchanged": true,
   "backup_format": 1,
   "fallback_generation": 2,
@@ -43,12 +43,12 @@
   "implementation_delivery_complete": true,
   "reference_1_60_catalog_delivered": true,
   "M2_M3_game_acceptance_complete": false,
-  "M1": "Version 17 clean-install basic functional phone check confirmed by user on 2026-10-26; release game acceptance pending",
+  "M1": "UI phase 1 version 18 automated checks passed and basic functional phone acceptance confirmed by user on 2026-10-26. Game acceptance remains pending.",
   "release_verified_entries": 0,
   "verified_transport_edges": 0,
   "physical_E10_3_basic_check_verified": true,
   "physical_installation_verified": true,
-  "physical_phone_acceptance": "User confirmed version 17 works after receiving the clean-install debug APK; no measured performance, second-device restore, TalkBack or game acceptance asserted",
+  "physical_phone_acceptance": "User confirmed version 18 works as intended after APK handover on 2026-10-26. General basic functional acceptance; no per-scenario record, measured performance, TalkBack, second-device restore or game accuracy asserted.",
   "performance_phone_goals_verified": false,
   "talkback_verified": false,
   "second_device_restore_verified": false,
@@ -56,7 +56,7 @@
   "public_hosting_or_store_published": false,
   "private_key_backup": "E09 existing archive retained; keys not regenerated",
   "bundledContentSha256": "8c805d7f25a7d0e33b760026c32bb82216f153ed27dadfde2e3faa7f47d2b94e",
-  "host_validation": "Passed: Android checks 40291857619; 213 app tests, 35 Python tests, 0 failures; native Android 26 and 36 reliability checks passed; extended Android 26 map soak passed.",
+  "host_validation": "Passed: Android checks 40331668550, 221 app tests and 35 Python tests without failures or skipped tests; Android 26 and 36 native reliability run 40331668566 passed. Current version 18 basic functional phone check confirmed by user.",
   "python_tests": {
     "tests": 35,
     "failures": 0
@@ -77,15 +77,15 @@
       "result": "passed"
     }
   },
-  "offline_content_bytes_unchanged": false,
+  "offline_content_bytes_unchanged": true,
   "release_owner_and_source_verified": false,
-  "upgrade_eligibility_from_E10_full_verified": true,
+  "upgrade_eligibility_from_E10_full_verified": false,
   "host_tests": {
-    "tests": 213,
+    "tests": 221,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
-    "suites": 54
+    "suites": 56
   },
   "lint": {
     "debug": {
@@ -117,21 +117,21 @@
     "scope": "Basic functional phone confirmation after clean-install APK handover and first-launch/offline-map check recommendation. Individual scenarios were not reported separately; measured performance, TalkBack, backup restore and game accuracy remain unconfirmed."
   },
   "remote_validation": {
-    "run_id": 40291857619,
-    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40291857619",
-    "sourceRevision": "ba0fca609cda1ce171e69ff46ea52e1ff2559e43",
+    "run_id": 40331668550,
+    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40331668550",
+    "sourceRevision": "546da51a899810fe6a5822055cacdddd326ef209",
     "status": "success",
-    "productionInputsSha256": "572304f16108952fb5ac4446a6fc19496fc4fad4bba23924ccb150db7137af2b",
+    "productionInputsSha256": "14f59d50e4ea3a57874a50e473e81467b1deeca512aae7c6aeaa44be2fdff92a",
     "python_tests": {
       "tests": 35,
       "failures": 0
     },
     "host_tests": {
-      "tests": 213,
+      "tests": 221,
       "failures": 0,
       "errors": 0,
       "skipped": 0,
-      "suites": 54
+      "suites": 56
     },
     "physical_instrumentation_executed": false
   },
@@ -200,5 +200,51 @@
     "new_apk_installation_required": false,
     "report": "docs/E11_AKTUALNI_OVERENI.md"
   },
-  "next_recommended_step": "In-game acceptance of early Horde/Warlock quest prerequisites and route; phone performance/accessibility remain explicitly pending."
+  "next_recommended_step": "UI phase 2: Map / Quests / Search, unified search and detail, shared Settings. Phase 2 implementation not started; game acceptance after release.",
+  "E11_previous_remote_validation": {
+    "run_id": 40291857619,
+    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40291857619",
+    "sourceRevision": "ba0fca609cda1ce171e69ff46ea52e1ff2559e43",
+    "status": "success",
+    "productionInputsSha256": "572304f16108952fb5ac4446a6fc19496fc4fad4bba23924ccb150db7137af2b",
+    "python_tests": {
+      "tests": 35,
+      "failures": 0
+    },
+    "host_tests": {
+      "tests": 213,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "suites": 54
+    },
+    "physical_instrumentation_executed": false
+  },
+  "UI_phase_1": {
+    "implementation_complete": true,
+    "phone_acceptance_complete": true,
+    "sourceRevision": "546da51a899810fe6a5822055cacdddd326ef209",
+    "apkSha256": "eb31185fc5002e7dbcacf82fd1a2a0d49aa1987536eae8e06017559de164fb7c",
+    "apkBytes": 150471718,
+    "ownerSignedUpdate": false,
+    "native_run_id": 40331668566,
+    "native_apis": [
+      26,
+      36
+    ],
+    "native_tests_each": 5,
+    "force_stops_each": 2,
+    "map_soak_seconds_each": 300,
+    "game_data_changed": false,
+    "backup_format_changed": false,
+    "report": "docs/UI_FAZE_1.md",
+    "user_basic_phone_check": {
+      "status": "confirmed_by_user",
+      "reportedOn": "2026-10-26",
+      "statement": "Vše funguje jak má",
+      "versionCode": 18,
+      "handed_over_apk_sha256": "eb31185fc5002e7dbcacf82fd1a2a0d49aa1987536eae8e06017559de164fb7c",
+      "scope": "General functional confirmation after delivery; individual scenarios, on-device APK checksum, measured performance, TalkBack, second-device restore and game accuracy not independently reported."
+    }
+  }
 }

@@ -1,10 +1,16 @@
 # Aktuální stav projektu
 
-Aktualizováno **26. 10. 2026**. Automatické ověření spolehlivosti **E11 dokončeno**; [výsledky a meze ověření](E11_AKTUALNI_OVERENI.md). Aktuální aplikace je **0.16.0-audit / kód 17**, přibalená data **8**. Celý sestavitelný projekt je ve větvi `main` repozitáře [JendaNDT/WoW-Forever-Companion](https://github.com/JendaNDT/WoW-Forever-Companion). Původ a obnovu popisuje [GITHUB_IMPORT.md](GITHUB_IMPORT.md).
+Aktualizováno **26. 10. 2026**. První fáze jednoduššího ovládání z [NAVRH_UI.md](NAVRH_UI.md) je dokončená a funkčně potvrzená uživatelem: **0.17.0-ui1 / kód 18**, přibalená data **8**. Popis změn a přejímka: [UI_FAZE_1.md](UI_FAZE_1.md). Jenda dne 26. 10. 2026 potvrdil **„Vše funguje jak má“**. Fáze 2 nezačala.
+
+Celý sestavitelný projekt je v repozitáři [JendaNDT/WoW-Forever-Companion](https://github.com/JendaNDT/WoW-Forever-Companion), změny Fáze 1 [PR #1](https://github.com/JendaNDT/WoW-Forever-Companion/pull/1). Původ a obnovu popisuje [GITHUB_IMPORT.md](GITHUB_IMPORT.md).
+
+Podrobné historické výsledky E11 níže se vztahují k předchozí verzi **17**; automatické výsledky verze **18** i nové potvrzení jsou v UI_FAZE_1.md.
 
 ## Potvrzeno na telefonu
 
-Jenda po předání APK pro čistou instalaci uvedl **„Ok, funguje to“**. Tím je zaznamenané základní funkční potvrzení verze 17. Uživatel předtím výslovně přijal čistou instalaci místo aktualizace původní aplikace.
+**Aktuální verze 18:** po předání APK `Warlock_Forever_0.17.0_UI1.apk` uživatel uvedl **„Vše funguje jak má“**. Jde o základní funkční potvrzení celé Fáze 1; podrobný průběh jednotlivých scénářů, výkon, přístupnost a herní údaje tím nejsou samostatně ověřené.
+
+**Historická verze 17:** Jenda po předání APK pro čistou instalaci uvedl **„Ok, funguje to“**. Tím je zaznamenané základní funkční potvrzení verze 17. Uživatel předtím výslovně přijal čistou instalaci místo aktualizace původní aplikace.
 
 Předané APK odpovídá revizi `d99734dea435c517553d13442f1e0f89fd0b250e`; SHA-256 je `cc4776e0fde062985c62233fce65336d5575876a6f5625700e98fc00dcb86fa4`. Jde o vývojově podepsanou variantu. Čistá instalace nedokládá aktualizaci přes původní vlastnický podpis ani zachování postupu při takové aktualizaci.
 
@@ -26,6 +32,8 @@ Dlouhý běh Androidu 16 přerušilo vypnutí runneru; nepočítá se jako dokon
 
 ## Další nejvhodnější krok
 
-Pokračovat herní přejímkou: ověřit návaznosti a podmínky úkolů v úvodní trase Hordy / Warlocka, zejména třídní úkoly a dopravu. Postupně doplňovat doložené herní výsledky a otevřené rozpory zdrojů. Technická spolehlivost sama správnost herních údajů nepotvrzuje.
+Doporučit Fázi 2: sjednotit navigaci na Mapa / Úkoly / Hledat, sloučit hledání a katalog, použít společný detail a jedno Nastavení. Fáze 1 je funkčně potvrzená; implementace Fáze 2 zatím nezačala.
+
+Herní přejímka návazností, třídních úkolů a dopravy se provede až po vydání hry. Technická spolehlivost sama správnost herních údajů nepotvrzuje.
 
 Skutečné telefonní měření výkonu a přístupnosti zůstává samostatně popsané v [E11_TELEFON.md](E11_TELEFON.md); jeho neprovedené části se neoznačují za splněné.

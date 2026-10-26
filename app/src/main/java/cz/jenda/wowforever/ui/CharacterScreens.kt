@@ -27,9 +27,9 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
     var showAreaSelector by rememberSaveable { mutableStateOf(false) }
     val p = model.profile
     var name by rememberSaveable(p.id) { mutableStateOf(p.displayName) }
-    var level by rememberSaveable(p.id) { mutableStateOf(p.level.toString()) }
+    var level by rememberSaveable(p.id,p.level) { mutableStateOf(p.level.toString()) }
     var race by rememberSaveable(p.id) { mutableStateOf(p.race) }
-    var area by rememberSaveable(p.id) { mutableIntStateOf(p.currentUiMapId) }
+    var area by rememberSaveable(p.id,p.currentUiMapId) { mutableIntStateOf(p.currentUiMapId) }
     var mode by rememberSaveable(p.id) { mutableStateOf(p.ruleset.orEmpty()) }
     var professions by rememberSaveable(p.id) { mutableStateOf(runCatching { ContentJson.decodeFromString<List<String>>(p.professionsJson).joinToString(", ") }.getOrDefault("")) }
     val validLevel = level.toIntOrNull()?.takeIf { it in 1..60 }
@@ -62,9 +62,9 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
         }
         Text("Dostupných offline map: ${model.atlas.maps.size}. Přesný rozsah bodů najdeš v katalogu přes Co průvodce pokrývá.", style = MaterialTheme.typography.bodySmall)
         if(!validArea)Text("Uložená oblast není v aktivním balíčku. Pro uložení změn vyber dostupnou oblast; původní údaje zatím zůstávají zachované.",modifier=Modifier.testTag("profile_missing_area"))
-        OutlinedTextField(mode, { mode = it.take(60); model.profileEdited() }, label = { Text("Režim (nepovinné)") },
+        if(model.guideRules.any { it.condition.usesMode() }) OutlinedTextField(mode, { mode = it.take(60); model.profileEdited() }, label = { Text("Režim (nepovinné)") },
             supportingText = { Text("Můžeš nechat prázdné a doplnit později.") }, singleLine = true, modifier = Modifier.fillMaxWidth().testTag("profile_mode"))
-        OutlinedTextField(professions, { professions = it.take(160); model.profileEdited() }, label = { Text("Profese (nepovinné)") },
+        if(model.guideRules.any { it.condition.usesProfession() }) OutlinedTextField(professions, { professions = it.take(160); model.profileEdited() }, label = { Text("Profese (nepovinné)") },
             supportingText = { Text("Odděl čárkou, nebo nech prázdné.") }, modifier = Modifier.fillMaxWidth().testTag("profile_professions"))
         Button(onClick = {
             focus.clearFocus()
@@ -147,4 +147,17 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
         }
         item { Spacer(Modifier.height(20.dp)) }
     }
+}
+
+private fun cz.jenda.wowforever.content.GuideCondition.usesMode():Boolean=when(this) {
+    is cz.jenda.wowforever.content.GuideCondition.Mode->true
+    is cz.jenda.wowforever.content.GuideCondition.All->conditions.any { it.usesMode() }
+    is cz.jenda.wowforever.content.GuideCondition.AnyOf->conditions.any { it.usesMode() }
+    else->false
+}
+private fun cz.jenda.wowforever.content.GuideCondition.usesProfession():Boolean=when(this) {
+    is cz.jenda.wowforever.content.GuideCondition.Profession->true
+    is cz.jenda.wowforever.content.GuideCondition.All->conditions.any { it.usesProfession() }
+    is cz.jenda.wowforever.content.GuideCondition.AnyOf->conditions.any { it.usesProfession() }
+    else->false
 }

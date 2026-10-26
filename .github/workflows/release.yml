@@ -60,14 +60,14 @@ jobs:
       - name: Bind APK to source and package artifacts
         run: |
           mkdir -p dist/pilot
-          cp app/build/outputs/apk/release/app-release.apk dist/pilot/WoW_Forever_0.16.0-audit.apk
-          python3 tools/verify_release.py --apk dist/pilot/WoW_Forever_0.16.0-audit.apk --aapt "$ANDROID_HOME/build-tools/35.0.0/aapt" --apksigner "$ANDROID_HOME/build-tools/35.0.0/apksigner" --output dist/pilot/WoW_Forever_0.16.0-audit_release.json
-          python3 tools/package_sources.py --apk dist/pilot/WoW_Forever_0.16.0-audit.apk --output dist/pilot/WoW_Forever_0.16.0-audit_zdroje.zip
-          cp docs/E10_AUDIT.md dist/pilot/WoW_Forever_0.16.0-audit_navod.md
+          cp app/build/outputs/apk/release/app-release.apk dist/pilot/WoW_Forever_0.17.0-ui1.apk
+          python3 tools/verify_release.py --apk dist/pilot/WoW_Forever_0.17.0-ui1.apk --aapt "$ANDROID_HOME/build-tools/35.0.0/aapt" --apksigner "$ANDROID_HOME/build-tools/35.0.0/apksigner" --output dist/pilot/WoW_Forever_0.17.0-ui1_release.json
+          python3 tools/package_sources.py --apk dist/pilot/WoW_Forever_0.17.0-ui1.apk --output dist/pilot/WoW_Forever_0.17.0-ui1_zdroje.zip
+          cp docs/E10_AUDIT.md dist/pilot/WoW_Forever_0.17.0-ui1_navod.md
       - name: Upload owner-signed pilot artifacts
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: forever-0.16.0-audit-pilot-${{ github.sha }}
+          name: forever-0.17.0-ui1-pilot-${{ github.sha }}
           path: dist/pilot/
           if-no-files-found: error
           compression-level: 0

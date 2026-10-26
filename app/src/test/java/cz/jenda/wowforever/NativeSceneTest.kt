@@ -83,7 +83,7 @@ class NativeSceneTest {
         rule.onNodeWithTag("points_list").performScrollToNode(hasTestTag("point_5765"))
         rule.onNodeWithTag("point_5765").performClick()
         rule.onNodeWithTag("native_map").assertIsDisplayed()
-        listOf("zoom_in", "zoom_out", "north", "fit", "focus").forEach {
+        listOf("zoom_in", "zoom_out", "fit", "focus").forEach {
             rule.onNodeWithTag(it).assertIsDisplayed()
         }
         rule.onAllNodesWithText("Ruzan").assertCountEquals(1)
