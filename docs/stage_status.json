@@ -20,7 +20,7 @@
     "statement": "Zatím vše otestováno bez problémů",
     "scope": "basic preceding build check; not new full stage or measured performance"
   },
-  "stage": "UI-phase-3-automated-complete-phone-pending",
+  "stage": "UI-phase-3-user-confirmed",
   "version": "0.19.0-ui3",
   "versionCode": 20,
   "room_schemas_unchanged": true,
@@ -43,12 +43,12 @@
   "implementation_delivery_complete": true,
   "reference_1_60_catalog_delivered": true,
   "M2_M3_game_acceptance_complete": false,
-  "M1": "UI phase 3 version 20 implemented; 241 host app tests, 35 Python tests and Android 26/36 emulator reliability passed. Current phone acceptance pending; game acceptance remains pending.",
+  "M1": "UI phases 1-3 implemented; version 20 automated checks passed and basic functional phone acceptance confirmed by user on 2026-10-26. Game acceptance remains pending until release.",
   "release_verified_entries": 0,
   "verified_transport_edges": 0,
   "physical_E10_3_basic_check_verified": true,
-  "physical_installation_verified": false,
-  "physical_phone_acceptance": "Version 20 not yet accepted on a physical phone. Version 19 basic functional confirmation remains recorded under UI_phase_2.",
+  "physical_installation_verified": true,
+  "physical_phone_acceptance": "User confirmed version 20 works after APK handover on 2026-10-26. Basic functional acceptance only; per-scenario results, installation mode, backup restore, on-device APK checksum, measured performance, TalkBack, second-device restore and game accuracy not independently reported.",
   "performance_phone_goals_verified": false,
   "talkback_verified": false,
   "second_device_restore_verified": false,
@@ -56,7 +56,7 @@
   "public_hosting_or_store_published": false,
   "private_key_backup": "E09 existing archive retained; keys not regenerated",
   "bundledContentSha256": "8c805d7f25a7d0e33b760026c32bb82216f153ed27dadfde2e3faa7f47d2b94e",
-  "host_validation": "Passed: Android checks 40358040776, 241 app tests and 35 Python tests without failures or skipped tests; native Android 26 and 36 run 40358041033 passed. Version 20 phone acceptance pending.",
+  "host_validation": "Passed: Android checks 40358040776, 241 app tests and 35 Python tests without failures or skipped tests; native Android 26 and 36 run 40358041033 passed. Current version 20 basic functional phone check confirmed by user.",
   "python_tests": {
     "tests": 35,
     "failures": 0
@@ -200,7 +200,7 @@
     "new_apk_installation_required": false,
     "report": "docs/E11_AKTUALNI_OVERENI.md"
   },
-  "next_recommended_step": "Export backup, clean-install version 20, restore backup and check all Phase 3 features on phone: map roles and completed filter, area panel and I am here, five-second undo, before leaving, welcome, backup reminder and keep map awake. Game acceptance remains after release.",
+  "next_recommended_step": "Keep version 0.19.0-ui3 as the stable app baseline. UI phases 1-3 are implemented and basic phone functionality accepted. After game release verify game data, quest chains, class quests and travel.",
   "E11_previous_remote_validation": {
     "run_id": 40291857619,
     "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40291857619",
@@ -309,7 +309,7 @@
   },
   "UI_phase_3": {
     "implementation_complete": true,
-    "phone_acceptance_complete": false,
+    "phone_acceptance_complete": true,
     "sourceRevision": "891372daaec42b515cd6e0ab15d004a6fa32e1d4",
     "apkSha256": "85341e92b50213bcb8a5c81323fbf75b58014c1357f9a802a581a26a19e2f118",
     "apkBytes": 150520870,
@@ -356,6 +356,15 @@
     "game_data_changed": false,
     "backup_format_changed": false,
     "room_schemas_changed": false,
-    "report": "docs/UI_FAZE_3.md"
+    "report": "docs/UI_FAZE_3.md",
+    "user_basic_phone_check": {
+      "status": "confirmed_by_user",
+      "reportedOn": "2026-10-26",
+      "statement": "ok, funguje to",
+      "versionCode": 20,
+      "handed_over_apk_sha256": "85341e92b50213bcb8a5c81323fbf75b58014c1357f9a802a581a26a19e2f118",
+      "installationMode": "not_reported",
+      "scope": "General functional confirmation after APK delivery; individual scenarios, installation mode, backup restore, on-device APK checksum, measured performance, TalkBack, second-device restore and game accuracy not independently reported."
+    }
   }
 }

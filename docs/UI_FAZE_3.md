@@ -1,6 +1,6 @@
 # Mapa a pohodlí při hraní — Fáze 3
 
-Verze **0.19.0-ui3 (20)**, data **8**. Navazuje na telefonem potvrzenou Fázi 2. Telefonní přejímka nové verze zatím neproběhla.
+Verze **0.19.0-ui3 (20)**, data **8**. Navazuje na telefonem potvrzenou Fázi 2. Jenda dne 26. 10. 2026 po předání APK potvrdil „ok, funguje to“; základní funkčnost Fáze 3 na telefonu je přijatá.
 
 ## Rozsah
 
@@ -32,11 +32,11 @@ Skutečné souhrny výsledků: [qa/ui3](qa/ui3). Jde o emulátory; stav vypnutý
 - Zdrojová revize: `891372daaec42b515cd6e0ab15d004a6fa32e1d4`, čistá a dohledatelná; produkční vstupy (156 souborů): `79bc42102d38a1b6ea943206325cbaf73e77b36e73a92339c16d12fcd6fd14ff`. Následné zapsání dokumentace tyto vstupy nemění.
 - Vývojový podpis: `13745b7a4c824c1875d41f0926a65b55dfb8faf12fde906a92017830273bb89c`. Liší se od předaného APK Fáze 2. **Před odinstalací exportovat zálohu, poté čistě nainstalovat novou verzi a zálohu obnovit.** Přímá aktualizace přes předchozí podpis není možná.
 
-Telefonní přejímka verze 20 zatím neproběhla. Potvrzení Fáze 2 / verze 19 je historické.
+Jenda dne **26. 10. 2026** po předání APK verze 20 uvedl **„ok, funguje to“**. Jde o základní funkční potvrzení Fáze 3. Jednotlivé scénáře, způsob instalace a obnova zálohy nebyly samostatně popsány; měření výkonu, TalkBack, druhé zařízení a správnost herních údajů tím nejsou samostatně ověřené.
 
 Databáze, formát zálohy, balíčky ani herní data se nemění. Samostatné měření výkonu na fyzickém telefonu, TalkBack, obnova na druhém zařízení a herní potvrzení údajů nejsou automatickými běhy nahrazené.
 
-## Doporučená kontrola na telefonu
+## Kontrolní scénáře pro telefon (bez samostatného záznamu jednotlivých bodů)
 
 1. Před čistou instalací exportovat zálohu a po instalaci ji obnovit. Zkontrolovat postavu a osobní záznamy.
 2. Prohlédnout mapu, vrstvy a V této oblasti; vyzkoušet zadání a odevzdání, hotové úkoly i čísla výpravy.
@@ -44,4 +44,4 @@ Databáze, formát zálohy, balíčky ani herní data se nemění. Samostatné m
 4. Změnit úkol a do 5 sekund použít Vrátit. Otevřít Než odejdeš, detail a vrátit se do seznamu.
 5. Zapnout nezhasínání na mapě, přejít do Hledat a aplikaci odložit. Zkontrolovat velké písmo, orientaci a datum uložené zálohy.
 
-Další doporučený krok po předání je funkční kontrola celé Fáze 3 na telefonu. Herní přejímka zůstává až po vydání hry.
+Fáze 1–3 jednoduššího ovládání jsou implementované a základně funkčně potvrzené na telefonu. Další doporučený krok je ověření herních údajů, návazností, třídních úkolů a dopravy po vydání hry.
