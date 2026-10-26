@@ -1,0 +1,20 @@
+{
+  "sourceRevision": "19669d4c3543da6ced5f1324b83bfe62bbb85da0",
+  "run_id": 40390993822,
+  "job_id": 121811624118,
+  "status": "passed",
+  "environment": "Android emulator / Pixel C profile, overridden display",
+  "api": 35,
+  "tests": 3,
+  "displayPixels": [
+    2560,
+    1600
+  ],
+  "densityDpi": 320,
+  "scenarios": [
+    "map + area list + detail, Back, retained viewport",
+    "replace search detail without losing query",
+    "navigation, reading width, Settings recreation, return to map"
+  ],
+  "physicalLenovoTested": false
+}

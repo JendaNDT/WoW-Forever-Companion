@@ -1,0 +1,11 @@
+{
+  "sourceRevision": "19669d4c3543da6ced5f1324b83bfe62bbb85da0",
+  "tool": "tools/tablet_dev.py",
+  "guide": "docs/VYVOJ_TABLET_USB.md",
+  "unitTests": 4,
+  "unitTestMode": "mocked commands; included in the 39 Python tests",
+  "userReportedLocalAdbState": "device",
+  "physicalConnectionAgentVerified": false,
+  "directInstallationExecuted": false,
+  "reason": "Agent command environment is Linux without adb or forwarded USB; user reports adb on the Mac. Run the prepared workflow in local Codex on that Mac."
+}

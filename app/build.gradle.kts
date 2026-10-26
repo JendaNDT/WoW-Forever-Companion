@@ -11,8 +11,8 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization")
     id("com.google.devtools.ksp")
 }
-val releaseCode=20
-val releaseVersion="0.19.0-ui3"
+val releaseCode=21
+val releaseVersion="0.20.0-tablet"
 fun digest(bytes:ByteArray)=MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it) }
 val inputPrefixes=listOf("app/src/main/","app/src/release/","gradle/wrapper/")
 val inputNames=setOf("app/build.gradle.kts","build.gradle.kts","settings.gradle.kts","gradle.properties","gradlew","gradlew.bat","release/owner-certificate.sha256")
@@ -142,3 +142,4 @@ tasks.withType<Test>().configureEach {
         }
     }
 }
+
