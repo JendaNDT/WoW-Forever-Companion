@@ -20,6 +20,21 @@ import java.time.Duration
 
 class Ui3WelcomeApplication:GuideApplication() {
     override val store by lazy { cz.jenda.wowforever.data.GuideStore(this) }
+    override fun onCreate() {
+        super.onCreate()
+        // Robolectric retains the process-wide DataStore between method configurations.
+        // Explicitly model a clean installation before Activity/ViewModel creation.
+        runBlocking(kotlinx.coroutines.Dispatchers.IO) {
+            store.initialize()
+            val dao=store.personal.personal()
+            dao.profiles().forEach { dao.deleteProfile(it.id) }
+            dao.createProfile(cz.jenda.wowforever.data.db.ProfileEntity())
+            store.session.save(cz.jenda.wowforever.data.SessionSerializer.defaultValue)
+            kotlinx.coroutines.withTimeout(10_000) {
+                while(store.session.read().welcomeComplete)kotlinx.coroutines.delay(10)
+            }
+        }
+    }
 }
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk=[28])
