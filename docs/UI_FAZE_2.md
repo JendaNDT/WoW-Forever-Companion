@@ -30,13 +30,13 @@ Souhrny skutečných výsledků: [qa/ui2](qa/ui2). Jde o emulátory a vývojové
 - Otisk produkčních vstupů: `81c30e1da0d47a37e45773965c9ca579b5e98dc62a680bc0df5d605d5e99d58c`; 152 souborů, čistá a dohledatelná revize zdrojů. Následný zápis dokumentace produkční vstupy nemění.
 - Vývojový podpis `ec5843957fe4444d55ab3adfb61b5b3ff423ac7f72fb323ae27508d6ea6fa98f` se liší od předaného APK Fáze 1. **Před odinstalací exportovat zálohu, poté provést čistou instalaci a obnovit zálohu.** Databáze, formát zálohy 1 a herní data 8 jsou zachované; přímá aktualizace přes předchozí podpis není možná.
 
-Telefonní přejímka verze 19 zatím neproběhla. Potvrzení verze 18 je historické. Fáze 3 nezačala.
+Jenda dne **26. 10. 2026** po předání APK verze 19 potvrdil **„Ok, funguje to“**. Základní funkčnost Fáze 2 na telefonu je přijatá. Jde o obecné potvrzení; jednotlivé scénáře, způsob instalace a obnova zálohy nebyly samostatně popsány. Měření výkonu, TalkBack, druhé zařízení a ověření herních údajů zůstávají otevřené. Fáze 3 nezačala.
 
-## Doporučená kontrola na telefonu
+## Kontrolní scénáře pro telefon (bez samostatného záznamu jednotlivých bodů)
 
 1. Otevřít Mapa / Úkoly / Hledat a Nastavení. Zkontrolovat, že postava, záložky, poznámky a postup zůstaly zachované.
 2. Najít úkol, otevřít detail, označit Beru / Hotovo a porovnat záznam v Deníku.
 3. Otevřít související NPC, vrátit se Zpět a použít Na mapě. Zavřít panel a ověřit návrat k rozepsanému hledání.
 4. Vyzkoušet panel v poloviční a celé výšce, otočení telefonu, velké písmo a dostupnost zálohy v Nastavení.
 
-Další krok po přijetí: Fáze 3 — značky mapy podle významu a pohodlí při hraní.
+Další doporučený krok: Fáze 3 — značky mapy podle významu a pohodlí při hraní.

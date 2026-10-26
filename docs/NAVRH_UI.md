@@ -176,7 +176,7 @@ Implementace: [UI_FAZE_1.md](UI_FAZE_1.md), verze 0.17.0-ui1 (18). Automatické 
 - [x] Detail jako spodní panel, bez dialogů v dialozích.
 - [x] Úkoly s přepínačem Co dál / Deník.
 
-Implementace: [UI_FAZE_2.md](UI_FAZE_2.md), verze 0.18.0-ui2 (19). Automatické kontroly prošly; telefonní přejímka této verze čeká.
+Implementace: [UI_FAZE_2.md](UI_FAZE_2.md), verze 0.18.0-ui2 (19). Automatické kontroly prošly. Jenda dne 26. 10. 2026 po předání APK potvrdil „Ok, funguje to“; základní funkčnost Fáze 2 na telefonu je přijatá.
 
 **Fáze 3 – mapa a pohodlí:**
 
