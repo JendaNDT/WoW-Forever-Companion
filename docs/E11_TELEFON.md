@@ -1,19 +1,23 @@
-# E11 — přejímka na Samsungu
+# E11 — zbývající ověření na skutečném telefonu
 
-## Instalace a postup
+Aktuálně 0.16.0-audit (17), data 8. Uživatel dne 26. 10. 2026 potvrdil „Ok, funguje to“ po předání APK pro čistou instalaci. Základní funkční potvrzení je zapsané; kvůli doplnění automatických testů není nutné aplikaci znovu instalovat ani ručně importovat obsah.
 
-1. Nejdřív vyexportuj osobní zálohu. Nainstaluj WoW_Forever_E11.apk přes E09/E10 **bez odinstalování**. Postavy, postup a aktivní generace dat mají zůstat zachované. Máš-li pouze E08, ponech starší aplikaci a přenes profil zálohou do souběžné novější větve.
-2. Obsah se v E11 nemění. Jestli máš aktivní data 4, další import nepotřebuješ. Jestli jsi data 4 ještě neimportoval, použij dosavadní WoW_Forever_E10_data_4.wfp přes Postava → Balíčky a mapy.
-3. V režimu letadlo otevři Barrens, najdi Sergra, přidej vlastní poznámku a vyznač zkušební stav úkolu. Zapiš si název poznámky, úkol a aktivní generaci.
-4. V systémovém Nastavení → Aplikace → Forever průvodce E11 použij Vynutit ukončení. Potom aplikaci otevři. Ověř postavu, úkol, poznámku, plán i aktivní generaci. Samotné přejetí aplikace pryč z přehledu není totéž jako nucené ukončení.
-5. Vyzkoušej návrat ke starším datům a zpět podle E10_TELEFON.md. Poznámka a postava v chybějící oblasti se nesmějí přemístit ani ztratit. Export musí jít obnovit také na druhém skutečném zařízení.
+Aktuální automatické scénáře a jejich meze popisuje [E11_AKTUALNI_OVERENI.md](E11_AKTUALNI_OVERENI.md). Starší zprávy E11 zachycují tehdejší menší katalog a původní způsob aktualizace.
 
-## Čitelnost a dlouhé používání
+## Funkční kontrola telefonu
 
-V nastavení telefonu zvětši písmo na maximum. Vyzkoušej hledání v katalogu i na mapě, otevření výsledku, úpravu postavy a uložení na výšku i na šířku. Boční navigace a celé panely hledání se mají dát posunout. Zkus i rozdělené okno, systémová tlačítka a gesta. Podle možností ověř názvy ovládání se čtečkou TalkBack; matematické testy sémantiky ji nenahrazují. Potom si písmo vrať podle své preference.
+Při nejbližším běžném používání lze společně ověřit: zapsat stav úkolu a poznámku, uložit zálohu přes Postava, v systémovém nastavení vynutit ukončení průvodce a znovu jej otevřít. Postava, úkol, poznámka, plán a vybraná oblast mají zůstat zachované. Samotné odstranění z přehledu posledních aplikací nemusí proces ukončit.
 
-Asi dvacet minut střídej oblasti, přibližuj a posouvej mapu. Aplikace nemá padat ani postupně přestávat reagovat. Poznamenej místo případného problému. Pocitová kontrola nepotvrdí skutečnou spotřebu paměti nebo počet snímků; pro to slouží nástroje popsané v E11_DATA.md a skutečný záznam z telefonu.
+Obnovu zálohy zkoušet přednostně jako nové profily; původní zůstanou zachované. Obnova na druhém skutečném zařízení zůstává samostatnou kontrolou. Záloha obsahuje osobní záznamy, nikoli mapové podklady; současné APK má celý katalog a mapy přibalené.
 
-Pracovní cíle plánu: studený start oblasti přibližně do 3 s, hledání v 10 000 testovacích položkách přibližně do 300 ms, mapa kolem 60 FPS s kontrolou dlouhých snímků, 5 000 seskupovaných kandidátů a 20 minut bez trvalého růstu paměti. Zdejší APK má skutečný obsah 139 položek, nikoli vestavěných 10 000 testovacích dat.
+## Čitelnost a systémové ovládání
 
-M1 i fyzická část E11 zůstávají otevřené do této přejímky. Nejvhodnější další krok je tato kontrola; po ní E12 — podepsané vydání a provoz v přiznaném rozsahu obsahu. Rozšíření dalších oblastí pokračuje samostatnými dávkami E10.
+Zvětšit systémové písmo, vyzkoušet hledání a uložení postavy na výšku i na šířku a projít ovládání pomocí TalkBack. Potom písmo vrátit podle vlastní preference. Hostitelské testy rozložení ani běh v emulátoru nenahrazují TalkBack na konkrétním telefonu.
+
+## Výkon a delší používání
+
+Při dvacetiminutovém používání střídat oblasti, posouvat a přibližovat mapu. Pád nebo postupné zpomalování uvést s oblastí a provedenou akcí. Pocitová kontrola sama nepotvrdí FPS, přesnou odezvu nebo růst paměti.
+
+Pro skutečné měření jsou připravené nástroje v [E11_DATA.md](E11_DATA.md). Vyžadují výslovně vybraný telefon připojený přes adb a sestavení určené k měření. Nynější vývojové APK není podkladem pro potvrzení výkonových cílů vydané varianty. Dokud není záznam ze Samsungu, zůstávají 3sekundový start, 300ms celková odezva hledání, 60 FPS a dlouhodobý vývoj PSS nepotvrzené.
+
+Správnost herních údajů se ověřuje samostatně při hraní; technické testy ji nepotvrzují.

@@ -1,0 +1,50 @@
+{
+  "serial": "emulator-5554",
+  "physical_phone_tested": false,
+  "scope": "disposable emulator / debug APK; no physical-phone FPS or latency claim",
+  "passed": true,
+  "android_api": "26",
+  "radio_disable_requests": {
+    "wifi": {
+      "returncode": 137,
+      "output": ""
+    },
+    "data": {
+      "returncode": 0,
+      "output": ""
+    }
+  },
+  "offline_radio_state_verified": false,
+  "phases": [
+    {
+      "phase": "01-prepare",
+      "tests": 1,
+      "passed": true
+    },
+    {
+      "phase": "02-first-force-stop",
+      "process_before": "4801",
+      "process_stopped": true
+    },
+    {
+      "phase": "03-restore",
+      "tests": 1,
+      "passed": true
+    },
+    {
+      "phase": "04-second-force-stop",
+      "process_before": "5074",
+      "process_stopped": true
+    },
+    {
+      "phase": "05-restart-restored",
+      "tests": 1,
+      "passed": true
+    },
+    {
+      "phase": "06-full-catalog-and-map-soak",
+      "tests": 2,
+      "passed": true
+    }
+  ]
+}

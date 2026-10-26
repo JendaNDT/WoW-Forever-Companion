@@ -16,7 +16,7 @@ import java.io.File
 @RunWith(AndroidJUnit4::class)
 class E11ProcessReliabilityDeviceTest {
     private val context = ApplicationProvider.getApplicationContext<Context>()
-    private fun evidence(name: String) = File(context.filesDir, "e11/$name").apply { parentFile.mkdirs() }
+    private fun evidence(name: String) = File(context.filesDir, "e11/$name").apply { parentFile?.mkdirs() }
     private suspend fun open() = GuideStore(context, bundledAsset = BUNDLED_CONTENT_ASSET).also {
         it.initialize()
         assertEquals(8, it.packages.status().generation)

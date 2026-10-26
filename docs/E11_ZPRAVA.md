@@ -1,5 +1,7 @@
 # E11 — výsledek a předání
 
+> Historický dokument k verzi 0.11.0 a tehdejším datům. Aktuální ověření plného katalogu verze 0.16.0 je v [E11_AKTUALNI_OVERENI.md](E11_AKTUALNI_OVERENI.md); dnešní rozsah určuje [POSTUP.md](POSTUP.md).
+
 25. 10. 2026 · 0.11.0-e11 / kód 11 · cz.jenda.wowforever.guide.
 
 ## Výsledek

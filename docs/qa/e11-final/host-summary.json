@@ -1,0 +1,460 @@
+{
+  "sourceRevision": "ba0fca609cda1ce171e69ff46ea52e1ff2559e43",
+  "runUrl": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40291857619",
+  "productionInputsSha256": "572304f16108952fb5ac4446a6fc19496fc4fad4bba23924ccb150db7137af2b",
+  "pythonTests": {
+    "tests": 35,
+    "failures": 0
+  },
+  "suites": [
+    {
+      "name": "cz.jenda.wowforever.AtlasAssetsTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "6.385"
+    },
+    {
+      "name": "cz.jenda.wowforever.CatalogFlowTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.299"
+    },
+    {
+      "name": "cz.jenda.wowforever.ContentValidationTest",
+      "tests": "17",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.171"
+    },
+    {
+      "name": "cz.jenda.wowforever.CoordinatesTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.001"
+    },
+    {
+      "name": "cz.jenda.wowforever.DatabaseTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.44"
+    },
+    {
+      "name": "cz.jenda.wowforever.E04CatalogTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.01"
+    },
+    {
+      "name": "cz.jenda.wowforever.E04MapFlowTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.125"
+    },
+    {
+      "name": "cz.jenda.wowforever.E04StorageTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.084"
+    },
+    {
+      "name": "cz.jenda.wowforever.E05BackupTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.07"
+    },
+    {
+      "name": "cz.jenda.wowforever.E05ExclusiveTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.096"
+    },
+    {
+      "name": "cz.jenda.wowforever.E05FlowTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.365"
+    },
+    {
+      "name": "cz.jenda.wowforever.E05RulesTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.011"
+    },
+    {
+      "name": "cz.jenda.wowforever.E05StorageTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.593"
+    },
+    {
+      "name": "cz.jenda.wowforever.E06FlowTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.583"
+    },
+    {
+      "name": "cz.jenda.wowforever.E06RecommendationsTest",
+      "tests": "15",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.084"
+    },
+    {
+      "name": "cz.jenda.wowforever.E06StorageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.253"
+    },
+    {
+      "name": "cz.jenda.wowforever.E06ValidationTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.042"
+    },
+    {
+      "name": "cz.jenda.wowforever.E07ContentTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.035"
+    },
+    {
+      "name": "cz.jenda.wowforever.E07FlowTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.951"
+    },
+    {
+      "name": "cz.jenda.wowforever.E08FlowTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.053"
+    },
+    {
+      "name": "cz.jenda.wowforever.E07UpdateTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.214"
+    },
+    {
+      "name": "cz.jenda.wowforever.E08TransportTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.084"
+    },
+    {
+      "name": "cz.jenda.wowforever.E08StorageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.385"
+    },
+    {
+      "name": "cz.jenda.wowforever.E09FlowTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.571"
+    },
+    {
+      "name": "cz.jenda.wowforever.E09PackagesTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "14.238"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10AuditDataTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.871"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10Batch2DataTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.024"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10Batch2FlowTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.269"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10Batch2StorageTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.522"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10Batch3DataTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.115"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10Batch3FlowTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.769"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10Batch3StorageTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.282"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10DataTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.052"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10FlowTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.288"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10FullDataTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.767"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10FullFlowTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "8.329"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10FullUpgradeTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "22.326"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10MemoryFixTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.116"
+    },
+    {
+      "name": "cz.jenda.wowforever.E10StorageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.557"
+    },
+    {
+      "name": "cz.jenda.wowforever.E11CleanupFlowTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.958"
+    },
+    {
+      "name": "cz.jenda.wowforever.E11LargeTextTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.624"
+    },
+    {
+      "name": "cz.jenda.wowforever.E11LandscapeTextTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.258"
+    },
+    {
+      "name": "cz.jenda.wowforever.E11MapStressHostTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.008"
+    },
+    {
+      "name": "cz.jenda.wowforever.E11SearchTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.44"
+    },
+    {
+      "name": "cz.jenda.wowforever.E11RecoveryTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.138"
+    },
+    {
+      "name": "cz.jenda.wowforever.E12BuildIdentityTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.02"
+    },
+    {
+      "name": "cz.jenda.wowforever.E12HelpLargeTextTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.323"
+    },
+    {
+      "name": "cz.jenda.wowforever.E12ReleaseFlowTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.707"
+    },
+    {
+      "name": "cz.jenda.wowforever.E13BundledContentTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "8.422"
+    },
+    {
+      "name": "cz.jenda.wowforever.E13BundledFlowTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.257"
+    },
+    {
+      "name": "cz.jenda.wowforever.NativeMapHostTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.022"
+    },
+    {
+      "name": "cz.jenda.wowforever.NativeSceneTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.961"
+    },
+    {
+      "name": "cz.jenda.wowforever.ProfileFlowTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.52"
+    },
+    {
+      "name": "cz.jenda.wowforever.ProfileStorageTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.061"
+    }
+  ],
+  "lint": {
+    "debug": {
+      "errors": 0,
+      "warnings": 17
+    },
+    "release": {
+      "errors": 0,
+      "warnings": 18
+    }
+  },
+  "hostTests": {
+    "tests": 213,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 54
+  }
+}

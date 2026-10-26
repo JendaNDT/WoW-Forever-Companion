@@ -1,0 +1,12 @@
+{
+  "maps": 61,
+  "points": 17330,
+  "area_changes": 3477,
+  "complete_cycles": 57,
+  "peak_retained_frames": 2,
+  "tile_streams_opened": 14022,
+  "duration_ms": 1210901,
+  "scope": "emulator stability, all bundled frames, state retention and memory trim; not physical-phone FPS\/PSS acceptance",
+  "environment": "Android emulator \/ debug APK",
+  "physical_phone_performance_verified": false
+}

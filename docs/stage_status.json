@@ -20,7 +20,7 @@
     "statement": "Zatím vše otestováno bez problémů",
     "scope": "basic preceding build check; not new full stage or measured performance"
   },
-  "stage": "E10-audit",
+  "stage": "E11-reliability-automated-complete",
   "version": "0.16.0-audit",
   "versionCode": 17,
   "room_schemas_unchanged": true,
@@ -55,10 +55,10 @@
   "remote_workflow_executed": true,
   "public_hosting_or_store_published": false,
   "private_key_backup": "E09 existing archive retained; keys not regenerated",
-  "bundledContentSha256": "ba94fb218ad63cae250c7d32b32ef16532c4daa5b8ab822685d5b623a8cb563e",
-  "host_validation": "GitHub Actions Android checks passed for d99734dea435c517553d13442f1e0f89fd0b250e; see remote_validation. Historical host_tests and lint figures are retained and are not a new phone measurement.",
+  "bundledContentSha256": "8c805d7f25a7d0e33b760026c32bb82216f153ed27dadfde2e3faa7f47d2b94e",
+  "host_validation": "Passed: Android checks 40291857619; 213 app tests, 35 Python tests, 0 failures; native Android 26 and 36 reliability checks passed; extended Android 26 map soak passed.",
   "python_tests": {
-    "tests": 27,
+    "tests": 35,
     "failures": 0
   },
   "pixel_exact_new_map_reconstructions": 56,
@@ -81,20 +81,20 @@
   "release_owner_and_source_verified": false,
   "upgrade_eligibility_from_E10_full_verified": true,
   "host_tests": {
-    "suites": 53,
-    "tests": 210,
+    "tests": 213,
     "failures": 0,
     "errors": 0,
-    "skipped": 0
+    "skipped": 0,
+    "suites": 54
   },
   "lint": {
     "debug": {
       "errors": 0,
-      "warnings": 5
+      "warnings": 17
     },
     "release": {
       "errors": 0,
-      "warnings": 4
+      "warnings": 18
     }
   },
   "bundled_archive_stored_for_streaming": true,
@@ -117,25 +117,88 @@
     "scope": "Basic functional phone confirmation after clean-install APK handover and first-launch/offline-map check recommendation. Individual scenarios were not reported separately; measured performance, TalkBack, backup restore and game accuracy remain unconfirmed."
   },
   "remote_validation": {
-    "run_id": 40231787304,
-    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40231787304",
-    "sourceRevision": "d99734dea435c517553d13442f1e0f89fd0b250e",
+    "run_id": 40291857619,
+    "url": "https://github.com/JendaNDT/WoW-Forever-Companion/actions/runs/40291857619",
+    "sourceRevision": "ba0fca609cda1ce171e69ff46ea52e1ff2559e43",
     "status": "success",
-    "completedAt": "2026-10-25T20:50:58Z",
-    "checks": [
-      "data_validation",
-      "python_tests",
-      "debug_build",
-      "android_test_apk_build",
-      "unit_tests",
-      "lint_debug",
-      "lint_release",
-      "apk_identity_and_bundled_assets"
-    ],
+    "productionInputsSha256": "572304f16108952fb5ac4446a6fc19496fc4fad4bba23924ccb150db7137af2b",
     "python_tests": {
-      "tests": 32,
+      "tests": 35,
       "failures": 0
     },
+    "host_tests": {
+      "tests": 213,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "suites": 54
+    },
     "physical_instrumentation_executed": false
-  }
+  },
+  "E11_automated_validation": {
+    "status": "passed",
+    "reportedOn": "2026-10-26",
+    "sourceRevision": "ba0fca609cda1ce171e69ff46ea52e1ff2559e43",
+    "production_inputs_match_user_confirmed_apk": true,
+    "productionInputsSha256": "572304f16108952fb5ac4446a6fc19496fc4fad4bba23924ccb150db7137af2b",
+    "native_runs": [
+      {
+        "api": 26,
+        "scope": "android26",
+        "run_id": 40291857502,
+        "job_id": 121468544957,
+        "status": "passed",
+        "tests": 5,
+        "force_stops": 2,
+        "duration_ms": 317301,
+        "area_changes": 915,
+        "complete_cycles": 15,
+        "maps": 61,
+        "points": 17330,
+        "peak_retained_frames": 2,
+        "evidence": "qa/e11-final/android26"
+      },
+      {
+        "api": 36,
+        "scope": "android36",
+        "run_id": 40291857502,
+        "job_id": 121468544503,
+        "status": "passed",
+        "tests": 5,
+        "force_stops": 2,
+        "duration_ms": 320763,
+        "area_changes": 915,
+        "complete_cycles": 15,
+        "maps": 61,
+        "points": 17330,
+        "peak_retained_frames": 2,
+        "evidence": "qa/e11-final/android36"
+      },
+      {
+        "api": 26,
+        "scope": "android26-long",
+        "run_id": 40289701001,
+        "job_id": 121461603896,
+        "status": "passed",
+        "tests": 5,
+        "force_stops": 2,
+        "duration_ms": 1210901,
+        "area_changes": 3477,
+        "complete_cycles": 57,
+        "maps": 61,
+        "points": 17330,
+        "peak_retained_frames": 2,
+        "evidence": "qa/e11-final/android26-long"
+      }
+    ],
+    "extended_android36_soak": "Interrupted by external runner shutdown; not accepted as completed. Separate bounded run passed.",
+    "physical_phone_performance_verified": false,
+    "physical_talkback_verified": false,
+    "second_physical_device_restore_verified": false,
+    "game_accuracy_verified": false,
+    "production_behavior_changed": false,
+    "new_apk_installation_required": false,
+    "report": "docs/E11_AKTUALNI_OVERENI.md"
+  },
+  "next_recommended_step": "In-game acceptance of early Horde/Warlock quest prerequisites and route; phone performance/accessibility remain explicitly pending."
 }
