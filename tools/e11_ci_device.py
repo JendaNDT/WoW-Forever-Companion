@@ -95,8 +95,12 @@ def main():
         # the instrumentation results and persisted-data assertions remain mandatory.
         clear_logs = run("logcat", "-c", check=False)
         (args.output / "logcat-clear.txt").write_text(clear_logs.stdout + clear_logs.stderr)
-        run("shell", "svc", "wifi", "disable")
-        run("shell", "svc", "data", "disable")
+        radio_requests = {}
+        for radio in ("wifi", "data"):
+            result = run("shell", "svc", radio, "disable", check=False)
+            radio_requests[radio] = {"returncode": result.returncode, "output": result.stdout + result.stderr}
+        report["radio_disable_requests"] = radio_requests
+        report["offline_radio_state_verified"] = False
         instrument("E11ProcessReliabilityDeviceTest#prepareState", 1, "01-prepare")
         force_stop_after_ui_launch("02-first-force-stop")
         instrument("E11ProcessReliabilityDeviceTest#verifyAfterForceStopAndRestoreBackup", 1, "03-restore")
