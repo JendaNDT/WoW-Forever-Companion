@@ -98,7 +98,7 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
                     FilterChip(selected=questFilter==key,onClick={questFilter=key},label={Text(label)},modifier=Modifier.testTag("journal_filter_$key"))
                 }
             }
-            if(quests.isEmpty())Text("Žádný úkol v tomto filtru. Stav si nastav v detailu katalogu.",style=MaterialTheme.typography.bodySmall)
+            if(quests.isEmpty())Text("Žádný úkol v tomto filtru. Stav si nastav v detailu úkolu.",style=MaterialTheme.typography.bodySmall)
         }
         items(quests,key={"quest:"+it.key}) { entry ->
             OutlinedButton(onClick={onEntry(entry.key)},modifier=Modifier.fillMaxWidth().testTag("journal_${entry.key}")) {
@@ -107,7 +107,7 @@ fun raceLabel(id: String) = when (id) { "ORC" -> "Ork"; "TROLL" -> "Troll"; "UND
             }
         }
         item { Text("Záložky a přání (${model.bookmarks.size})",style=MaterialTheme.typography.titleLarge) }
-        if (entries.isEmpty()) item { Text("První záložku si přidej v detailu položky v katalogu.", Modifier.padding(vertical = 16.dp)) }
+        if (entries.isEmpty()) item { Text("První záložku si přidej v detailu položky v Hledat.", Modifier.padding(vertical = 16.dp)) }
         items(entries, key = { it.key }) { entry ->
             OutlinedButton(onClick = { onEntry(entry.key) }, modifier = Modifier.fillMaxWidth().testTag("journey_${entry.key}")) { Text((if(entry.kind==cz.jenda.wowforever.content.EntryKind.ITEM && entry.key !in model.acquiredItems)"☆ Chci · " else "★  ")+entry.nameOriginal) }
         }

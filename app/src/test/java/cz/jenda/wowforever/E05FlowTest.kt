@@ -37,6 +37,7 @@ class E05FlowTest {
     private fun awaitState(key:String,state:QuestState) {rule.waitUntil(10_000){rule.onAllNodesWithTag("bookmark_toggle").fetchSemanticsNodes();!model.isBusy && model.questStates[key]==state}}
     private fun open(key:String,query:String) {
         rule.openSearch();rule.onNodeWithTag("catalog_query").performTextReplacement(query)
+        rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("catalog_$key"))
         rule.onNodeWithTag("catalog_$key").performClick()
     }
     private fun shot(name:String,dialog:Boolean=true){

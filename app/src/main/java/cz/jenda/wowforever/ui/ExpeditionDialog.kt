@@ -59,7 +59,7 @@ import cz.jenda.wowforever.domain.*
                     }
                 }
             } else {
-                if(stops.isEmpty())item { Text("Výprava je zatím prázdná. Přidej první cíl z katalogu nebo z jeho detailu.") }
+                if(stops.isEmpty())item { Text("Výprava je zatím prázdná. Přidej první cíl pomocí Hledat nebo z detailu položky.") }
                 items(stops,key={"stop:${it.stored.position}"}) { stop ->
                     OutlinedCard(Modifier.fillMaxWidth().testTag("plan_stop_${stop.number}")) {
                         Column(Modifier.padding(10.dp),verticalArrangement=Arrangement.spacedBy(6.dp)) {

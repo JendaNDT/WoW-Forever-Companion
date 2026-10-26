@@ -107,7 +107,8 @@ class E06FlowTest {
     @Test fun acquiredWishDisappearsAndRelatedNpcStillOpensRealMap() {
         fixture();rule.runOnIdle{model.toggleBookmark(model.historyEntry(E6_ITEM)!!)};settled{E6_ITEM in model.bookmarks}
         rule.openJournal()
-        rule.onNodeWithTag("journey_$E6_ITEM").performScrollTo().performClick()
+        rule.onNodeWithTag("journey_list").performScrollToNode(hasTestTag("journey_$E6_ITEM"))
+        rule.onNodeWithTag("journey_$E6_ITEM").performClick()
         rule.onNodeWithTag("item_acquired").performScrollTo().performClick();settled{E6_ITEM in model.acquiredItems}
         rule.onNodeWithText("Zpět").performClick();rule.runOnIdle{assertTrue(model.recommendations.leave.none{it.entry.key==E6_ITEM})}
         rule.runOnIdle{model.toggleBookmark(model.historyEntry(E6_NPC)!!)};settled{E6_NPC in model.bookmarks}

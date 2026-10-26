@@ -43,7 +43,7 @@ import cz.jenda.wowforever.data.db.QuestState
     }
     LazyColumn(Modifier.fillMaxSize().padding(horizontal=20.dp).testTag("advice_list"),verticalArrangement=Arrangement.spacedBy(12.dp)) {
         item {
-            Text("Co dál v ${model.atlas.map(p.currentUiMapId).name}",style=MaterialTheme.typography.titleLarge)
+            Text(model.atlas.maps.firstOrNull { it.uiMapId==p.currentUiMapId }?.name?.let { "Co dál v $it" } ?: "Co dál · vyber dostupnou oblast",style=MaterialTheme.typography.titleLarge)
         }
         if(showNotice && model.catalogEntries.any { it.verification!=Verification.RELEASE })item {
             Surface(color=MaterialTheme.colorScheme.secondaryContainer,shape=MaterialTheme.shapes.medium,modifier=Modifier.testTag("reference_notice")) {

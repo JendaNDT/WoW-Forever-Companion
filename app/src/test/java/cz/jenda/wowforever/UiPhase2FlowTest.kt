@@ -55,7 +55,7 @@ class UiPhase2FlowTest {
     fun oneSheetNavigatesRelatedEntriesAndRestoresTheSearchAfterRotation() {
         search("Ruzan","wow-forever:npc:5765")
         rule.onNodeWithTag("entry_sheet").assertExists();rule.onNodeWithTag("detail_expand").performClick()
-        rule.onNodeWithTag("related_wow-forever:quest:1485").performScrollTo().performClick()
+        rule.onAllNodesWithTag("related_wow-forever:quest:1485").onFirst().performScrollTo().performClick()
         rule.onNodeWithTag("detail_title").assertIsDisplayed()
         rule.runOnIdle { assertEquals(1,ShadowDialog.getShownDialogs().count { it.isShowing }) }
         rule.activityRule.scenario.recreate()

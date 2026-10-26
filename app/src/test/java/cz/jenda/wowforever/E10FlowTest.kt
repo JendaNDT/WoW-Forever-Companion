@@ -82,6 +82,8 @@ class E10FlowTest {
         rule.onNodeWithTag("character_form").performScrollToNode(hasTestTag("save_profile"));rule.onNodeWithTag("save_profile").assertIsNotEnabled();shot("missing-area",false)
         rule.runOnIdle{assertEquals(1413,model.profile.currentUiMapId);assertNull(model.expeditionStops.single().location);assertTrue(model.allPoints.none{it.kind==cz.jenda.wowforever.model.PointKind.NOTE})}
         assertEquals(before,runBlocking{store.journal.profileBackup(model.profile.id)})
+        rule.openSuggestions();rule.onNodeWithTag("advice_list").assertIsDisplayed()
+        rule.runOnIdle { assertEquals(1413,model.profile.currentUiMapId) }
     }
     @Test fun coverageUsesActiveAreaScopeAndUnlocatedEbruNeverGetsAFakePin(){
         install();rule.onNodeWithText("Zavřít balíčky").performClick();rule.onNodeWithTag("nav_MAP").performClick()
