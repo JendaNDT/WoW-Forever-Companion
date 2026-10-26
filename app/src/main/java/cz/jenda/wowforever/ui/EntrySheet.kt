@@ -1,6 +1,7 @@
 package cz.jenda.wowforever.ui
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
@@ -28,7 +29,7 @@ import kotlinx.coroutines.launch
     val sheet=rememberModalBottomSheetState(skipPartiallyExpanded=expandedOnly)
     val scope=rememberCoroutineScope()
     val content:@Composable ()->Unit={
-        stateHolder.SaveableStateProvider("entry-content") {
+        stateHolder.SaveableStateProvider(entryKey ?: pointId ?: "missing") {
             EntryContent(model,entryKey,pointId,backLabel,onBack,onExit,onRelated,onShowPoint,onJournal,
                 onExpand=if(docked || expandedOnly)null else ({scope.launch { if(sheet.currentValue==SheetValue.Expanded && sheet.hasPartiallyExpandedState)sheet.partialExpand() else sheet.expand() };Unit}),
                 expandLabel=if(sheet.currentValue==SheetValue.Expanded)"Zmenšit" else "Celý detail")
@@ -46,7 +47,6 @@ import kotlinx.coroutines.launch
     val entry=entryKey?.let(model::historyEntry)
     val point=pointId?.let { id->model.allPoints.firstOrNull { it.id==id } }
     val note=pointId?.let { id->model.notes.firstOrNull { it.id==id } }
-    val detailStates=rememberSaveableStateHolder()
     val uri=LocalUriHandler.current
     var sourceError by remember(entryKey,pointId) { mutableStateOf(false) }
         Column(Modifier.fillMaxSize()) {
@@ -55,8 +55,7 @@ import kotlinx.coroutines.launch
                 Spacer(Modifier.weight(1f))
                 if(onExpand!=null)TextButton(onClick=onExpand,modifier=Modifier.testTag("detail_expand")) { Text(expandLabel) }
             }
-            detailStates.SaveableStateProvider(entryKey ?: pointId ?: "missing") {
-            Column(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal=20.dp),verticalArrangement=Arrangement.spacedBy(10.dp)) {
+            Column(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberSaveable(key="detail-scroll",saver=ScrollState.Saver) { ScrollState(0) }).padding(horizontal=20.dp),verticalArrangement=Arrangement.spacedBy(10.dp)) {
                 Text(entry?.nameOriginal ?: note?.text?.lineSequence()?.first()?.take(80) ?: point?.name ?: "Detail",style=MaterialTheme.typography.titleLarge,modifier=Modifier.testTag("detail_title"))
                 if(entry!=null)key(entry.key) {
                     if(entry.kind==EntryKind.QUEST)QuestStateActions(model,entry)
@@ -79,13 +78,13 @@ import kotlinx.coroutines.launch
                         ProgressPanel(model,entry,onJournal,onRelated,includeItemAction=false)
                     }
                     DetailSection("Popis", "detail_description") {
-                        var revealed by rememberSaveable(entry.key,model.spoilers) { mutableStateOf(false) }
+                        var revealed by rememberSaveable(entry.key,model.spoilers,key="description-revealed") { mutableStateOf(false) }
                         if(model.spoilers==Spoilers.FULL || revealed)Text(entry.descriptionCs,modifier=Modifier.testTag("entry_description"))
                         else TextButton(onClick={revealed=true},modifier=Modifier.testTag("reveal_description")) { Text("Odkrýt tento popis") }
                     }
                     DetailSection("Podmínky a zdroje", "detail_conditions") {
                         Text(verificationLabel(entry.verification),style=MaterialTheme.typography.bodySmall)
-                        var revealed by rememberSaveable(entry.key,model.spoilers) { mutableStateOf(false) }
+                        var revealed by rememberSaveable(entry.key,model.spoilers,key="conditions-revealed") { mutableStateOf(false) }
                         val advice=model.recommendations.all.firstOrNull { it.entry.key==entry.key }
                         Column(Modifier.testTag("advice_explanation")) {
                             advice?.let { Text(it.availability.label) }
@@ -105,12 +104,11 @@ import kotlinx.coroutines.launch
                 }
                 Spacer(Modifier.height(16.dp))
             }
-            }
             PersonalUndoBar(model)
         }
 }
 @Composable private fun DetailSection(title:String,tag:String,content:@Composable ()->Unit) {
-    var open by rememberSaveable { mutableStateOf(true) }
+    var open by rememberSaveable(key="section-$tag") { mutableStateOf(true) }
     HorizontalDivider()
     TextButton(onClick={open=!open},modifier=Modifier.fillMaxWidth().testTag(tag)) { Text((if(open)"▾ " else "▸ ")+title,style=MaterialTheme.typography.titleMedium) }
     if(open)content()

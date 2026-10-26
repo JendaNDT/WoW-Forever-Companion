@@ -6,6 +6,8 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -105,13 +107,13 @@ import kotlinx.coroutines.launch
     }
 }
 
-@Composable internal fun AreaPointsPanel(model:GuideViewModel,onPoint:(String)->Unit,onClose:(()->Unit)?=null) {
+@Composable internal fun AreaPointsPanel(model:GuideViewModel,onPoint:(String)->Unit,onClose:(()->Unit)?=null,listState:LazyListState=rememberLazyListState()) {
     val map=model.atlas.map(model.mapId,model.floorId)
     val points=model.pointsOnMap()
         Column(Modifier.fillMaxSize().testTag("area_points_panel")) {
             if(onClose!=null)TextButton(onClick=onClose,modifier=Modifier.testTag("area_points_close")){Text("Zpět na mapu")}
             Text("V této oblasti · ${map.name}",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(horizontal=20.dp,vertical=12.dp))
-            LazyColumn(Modifier.weight(1f).fillMaxWidth().testTag("points_list"),contentPadding=PaddingValues(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
+            LazyColumn(Modifier.weight(1f).fillMaxWidth().testTag("points_list"),state=listState,contentPadding=PaddingValues(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
                 item {
                     Text("! zadání · ? odevzdání · ◆ cíl nebo zdroj · ✎ poznámka · čísla výpravy",style=MaterialTheme.typography.bodySmall)
                     FilterChip(selected=model.showCompletedQuests,onClick=model::toggleCompletedQuests,label={Text("Zobrazit hotové úkoly")},modifier=Modifier.testTag("show_completed_quests"))

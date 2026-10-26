@@ -44,7 +44,7 @@ class TabletLayoutTest:TabletLayoutChecks() {
         rule.onNodeWithTag("native_map").assertIsDisplayed()
         shot("portrait-map")
     }
-    @Test fun expandingAfterADetailRestoresTheAreaListScrollPosition() {
+    @Test fun closingADetailRestoresTheAreaListScrollPosition() {
         openRuzanFromArea()
         rule.onNodeWithTag("detail_back").performClick()
         rule.onNodeWithTag("area_detail_wow-forever:npc:5765").assertIsDisplayed()

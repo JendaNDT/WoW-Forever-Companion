@@ -6,6 +6,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -71,9 +72,11 @@ import java.util.Locale
     var detailTrail by rememberSaveable(model.profile.id) { mutableStateOf(emptyList<String>()) }
     var detailReturn by rememberSaveable { mutableStateOf<String?>(null) }
     val holder=rememberSaveableStateHolder()
-    val detailHolder=rememberSaveableStateHolder()
+    var detailGeneration by rememberSaveable { mutableIntStateOf(0) }
+    val detailHolder=key(detailGeneration) { rememberSaveableStateHolder() }
+    val areaListState=rememberLazyListState()
     val companionHolder=rememberSaveableStateHolder()
-    val closeDetail:()->Unit={detailKey=null;detailPoint=null;detailTrail=emptyList();detailReturn=null}
+    val closeDetail:()->Unit={detailKey=null;detailPoint=null;detailTrail=emptyList();detailReturn=null;detailGeneration++}
     val openEntry:(String)->Unit={key->
         detailKey=key;detailPoint=null;detailTrail=emptyList();detailReturn=overlay;overlay=null
     }
@@ -127,7 +130,7 @@ import java.util.Locale
                             when {
                                 detailKey!=null || detailPoint!=null->renderDetail(true)
                                 model.destination==Destination.MAP->companionHolder.SaveableStateProvider("area-points") {
-                                    AreaPointsPanel(model,onPoint=openPoint)
+                                    AreaPointsPanel(model,onPoint=openPoint,listState=areaListState)
                                 }
                                 else->Column(Modifier.fillMaxSize().padding(24.dp),verticalArrangement=Arrangement.Center) {
                                     Text("Vyber položku",style=MaterialTheme.typography.titleLarge)

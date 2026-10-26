@@ -23,3 +23,7 @@ history.bundle
 # Exact compressed generated catalogs are tracked.
 content/e10-v7.json
 content/e10-v8.json
+
+
+# Local physical-device identity, logs and screenshots.
+.local/

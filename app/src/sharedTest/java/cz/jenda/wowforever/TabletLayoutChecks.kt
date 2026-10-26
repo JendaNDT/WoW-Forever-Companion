@@ -17,6 +17,8 @@ abstract class TabletLayoutChecks {
         rule.finishWelcomeIfShown()
         rule.runOnIdle { model.navigate(Destination.MAP);model.chooseMap(1411);model.dismissMapHint();model.chooseSpoilers(Spoilers.FULL) }
         rule.waitUntil(30_000) { rule.onAllNodesWithTag("native_map").fetchSemanticsNodes().isNotEmpty() }
+        println("Tablet test configuration: "+rule.activity.resources.configuration)
+        shot("initial-tablet")
     }
     protected fun shot(name:String) { rule.runOnIdle {
         val image=captureView(rule.activity.window.decorView)
