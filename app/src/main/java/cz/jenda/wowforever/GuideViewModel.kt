@@ -71,6 +71,12 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         private set
     var destination by mutableStateOf(Destination.MAP)
         private set
+    var settingsPage by mutableStateOf(saved.get<String>("settingsPage") ?: "MENU")
+        private set
+    var questTab by mutableStateOf("NEXT")
+        private set
+    var recentSearches by mutableStateOf<List<String>>(emptyList())
+        private set
     var spoilers by mutableStateOf(Spoilers.FULL)
         private set
     var floorId by mutableIntStateOf(0)
@@ -193,8 +199,11 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
                 onlyBookmarks = session.onlyBookmarks
 
                 selectedId = (if (saved.contains("pointId")) saved.get<String>("pointId") else session.selectedId)?.takeIf { id -> pointsOnMap().any { it.id == id } }
-                val history = (saved.get<ArrayList<String>>("history") ?: session.history).filter { id -> Destination.entries.any { it.name == id } }
-                session = session.copy(history = (listOf("MAP") + history.filter { it != "MAP" }).distinct())
+                val rawHistory=saved.get<ArrayList<String>>("history") ?: session.history
+                val history=migrateDestinationHistory(rawHistory)
+                questTab=(saved.get<String>("questTab") ?: if(rawHistory.lastOrNull { it in setOf("NOW","JOURNEY") }=="JOURNEY")"JOURNAL" else session.questTab).takeIf { it in setOf("NEXT","JOURNAL") } ?: "NEXT"
+                recentSearches=session.recentSearches.filter { it.isNotBlank() && it.length<=120 }.distinct().take(5)
+                session = session.copy(history = history)
                 destination = Destination.valueOf(session.history.last())
                 spoilers = Spoilers.entries.firstOrNull { it.name == session.spoilers } ?: Spoilers.FULL
                 engine = MapComposeEngine(appAssets, atlas, ::restore, ::save,store.packages.tileOpener())
@@ -260,11 +269,11 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
         require(updated.race in listOf("ORC", "TROLL", "UNDEAD") && updated.displayName.length <= 60)
         require(atlas.maps.any { it.uiMapId == updated.currentUiMapId })
         if (isBusy) return
+        val changedArea = profile.currentUiMapId != updated.currentUiMapId
         savingProfile = true; profileSaved = false
         viewModelScope.launch {
             try {
                 check(withContext(Dispatchers.IO) { store.personal.personal().updateProfile(updated) } == 1)
-                val changedArea = profile.currentUiMapId != updated.currentUiMapId
                 profile = updated;personalState=personalState.copy(profile=updated);refreshRecommendations()
                 if (changedArea) chooseMap(updated.currentUiMapId)
                 profileSaved = true
@@ -292,6 +301,23 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
     }
     fun profileEdited() { profileSaved = false }
     fun chooseSpoilers(value: Spoilers) { spoilers = value; persist() }
+    fun chooseSettingsPage(value:String) {
+        if(value !in setOf("MENU","CHARACTER","DISPLAY"))return
+        settingsPage=value;saved["settingsPage"]=value
+    }
+    fun openSettings() { chooseSettingsPage("MENU");navigate(Destination.SETTINGS) }
+    fun chooseQuestTab(value:String) {
+        if(value !in setOf("NEXT","JOURNAL"))return
+        questTab=value;saved["questTab"]=value;persist()
+    }
+    fun showSuggestions() { chooseQuestTab("NEXT");navigate(Destination.QUESTS) }
+    fun showJournal() { chooseQuestTab("JOURNAL");navigate(Destination.QUESTS) }
+    fun rememberSearch(query:String) {
+        val value=query.trim().take(120)
+        if(value.isBlank())return
+        recentSearches=(listOf(value)+recentSearches.filter { normalizeSearch(it)!=normalizeSearch(value) }).take(5)
+        persist()
+    }
     fun navigate(target: Destination) {
         if (target == destination) return
         checkpoint()
@@ -376,7 +402,7 @@ class GuideViewModel(application: Application, private val saved: SavedStateHand
     private fun persist() {
         if (!ready) return
         session = session.copy(mapId = mapId,floorId = floorId,selectedId = selectedId,spoilers = spoilers.name,
-            visibleKinds = visibleKinds.toList(),onlyBookmarks = onlyBookmarks,activeProfileId = profile.id,guideFocus = guideFocus.name)
+            visibleKinds = visibleKinds.toList(),onlyBookmarks = onlyBookmarks,activeProfileId = profile.id,guideFocus = guideFocus.name,questTab=questTab,recentSearches=recentSearches)
         saved["mapId"] = mapId; saved["floorId"] = floorId; saved["pointId"] = selectedId
         saved["history"] = ArrayList(session.history)
         store.session.save(session)

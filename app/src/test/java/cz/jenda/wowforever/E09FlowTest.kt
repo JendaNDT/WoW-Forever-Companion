@@ -27,7 +27,7 @@ class E09FlowTest {
     private val store get()=(rule.activity.application as GuideApplication).store
     @Before fun ready(){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes().isNotEmpty()}}
     private fun settled(check:()->Boolean){rule.waitUntil(30_000){rule.onAllNodesWithTag("nav_MAP").fetchSemanticsNodes();!model.isBusy && check()}}
-    private fun open(){rule.onNodeWithTag("nav_CHARACTER").performClick();rule.onNodeWithTag("character_form").performScrollToNode(hasTestTag("packages"));rule.onNodeWithTag("packages").performClick()}
+    private fun open(){rule.openSettings();rule.onNodeWithTag("packages").performScrollTo();rule.onNodeWithTag("packages").performClick()}
     private fun scroll(tag:String){rule.onNodeWithTag("packages_list").performScrollToNode(hasTestTag(tag))}
     private fun import(bytes:ByteArray){
         val file=File(rule.activity.cacheDir,"e09-test-${System.nanoTime()}.wfp").apply{writeBytes(bytes)}

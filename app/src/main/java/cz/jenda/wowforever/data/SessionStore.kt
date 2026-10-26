@@ -22,8 +22,19 @@ import java.io.OutputStream
         Viewport(x, y, scale, rotation) else null
 }
 enum class Destination(val label: String, val symbol: String) {
-    MAP("Mapa", "◎"), NOW("Teď pro mě", "◇"), JOURNEY("Moje cesta", "☆"), CHARACTER("Postava", "◉")
+    MAP("Mapa", "◎"), QUESTS("Úkoly", "◇"), SEARCH("Hledat", "⌕"), SETTINGS("Nastavení", "⚙");
+    companion object {
+        val tabs=listOf(MAP,QUESTS,SEARCH)
+        fun fromSaved(value:String):Destination?=when(value) {
+            "NOW","JOURNEY"->QUESTS
+            "CHARACTER"->SETTINGS
+            else->entries.firstOrNull { it.name==value }
+        }
+    }
 }
+fun migrateDestinationHistory(values:List<String>):List<String> = listOf("MAP") + values.mapNotNull { Destination.fromSaved(it)?.name }
+    .filter { it!="MAP" }.asReversed().distinct().asReversed()
+
 enum class Spoilers(val label: String) { HINTS("Jen názvy a místa"), FULL("Podrobné popisy") }
 @Serializable data class Session(
     val mapId: Int = 1411, val selectedId: String? = null,
@@ -33,6 +44,8 @@ enum class Spoilers(val label: String) { HINTS("Jen názvy a místa"), FULL("Pod
     val visibleKinds: List<String> = listOf("NPC","QUEST","ITEM","SPELL","TRAVEL","NOTE"),
     val onlyBookmarks: Boolean = false, val activeProfileId: String = "profile:default",
     val guideFocus:String = "BALANCED",
+    val questTab:String = "NEXT",
+    val recentSearches:List<String> = emptyList(),
     val settingsRecovered:Boolean = false,
 )
 object SessionSerializer : Serializer<Session> {

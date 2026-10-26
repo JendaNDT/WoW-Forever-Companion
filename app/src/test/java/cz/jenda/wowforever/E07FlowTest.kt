@@ -29,7 +29,7 @@ class E07FlowTest {
         File("build/reports/e07-$name.png").also { it.parentFile!!.mkdirs();it.outputStream().use { stream->bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,stream) } }
     }
     @Test fun pilotCoverageDisclosesActualScopeAndNewDemonTrainerOpensCorrectMap() {
-        rule.onNodeWithTag("catalog").performClick();rule.onNodeWithTag("content_coverage").performClick()
+        rule.openSearch();rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("content_coverage"));rule.onNodeWithTag("content_coverage").performClick()
         rule.onNodeWithTag("coverage_counts").assertTextContains("53 položek · 27 přímých poloh · 4 offline map")
         shot("coverage")
         rule.onNodeWithTag("coverage_release").performScrollTo().assertTextContains("0 položek a 0 návazností",substring=true)
@@ -45,11 +45,11 @@ class E07FlowTest {
     }
     @Test fun galgarShowsThreeDistinctManualChoicesAndWishSurvivesRecreation() {
         rule.runOnIdle{assertEquals(53,model.catalogEntries.size)}
-        rule.onNodeWithTag("catalog").performClick();rule.onNodeWithTag("catalog_query").performTextReplacement("4402")
+        rule.openSearch();rule.onNodeWithTag("catalog_query").performTextReplacement("4402")
         rule.onNodeWithTag("catalog_wow-forever:quest:4402").assertIsDisplayed().performClick()
         listOf(247840,247841,247846).forEach { id->rule.onNodeWithTag("reward_wow-forever:item:$id").performScrollTo().assertExists() }
         shot("reward-choice")
-        rule.onNodeWithText("Zpět do katalogu").performClick()
+        rule.onNodeWithText("Zpět do hledání").performClick()
         rule.onNodeWithTag("catalog_query").performTextReplacement("247841")
         rule.onNodeWithTag("catalog_wow-forever:item:247841").performClick()
         rule.onNodeWithTag("bookmark_toggle").performScrollTo().performClick()

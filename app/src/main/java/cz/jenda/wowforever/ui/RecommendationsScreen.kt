@@ -21,6 +21,7 @@ import cz.jenda.wowforever.data.Destination
 import cz.jenda.wowforever.data.Spoilers
 import cz.jenda.wowforever.domain.*
 import cz.jenda.wowforever.content.EntryKind
+import cz.jenda.wowforever.content.Importance
 import cz.jenda.wowforever.content.Verification
 import cz.jenda.wowforever.data.db.QuestState
 
@@ -34,9 +35,6 @@ import cz.jenda.wowforever.data.db.QuestState
     var showSoon by rememberSaveable(p.id) { mutableStateOf(false) }
     var showUnknown by rememberSaveable(p.id) { mutableStateOf(false) }
     var showNotice by rememberSaveable(model.contentMetadata?.generation) { mutableStateOf(true) }
-    var tab by rememberSaveable { mutableStateOf("NOW") }
-    var showFocus by rememberSaveable { mutableStateOf(false) }
-    var detailKey by rememberSaveable { mutableStateOf<String?>(null) }
     val lifecycle=LocalLifecycleOwner.current.lifecycle
     DisposableEffect(lifecycle) {
         val observer=LifecycleEventObserver { _,event->if(event==Lifecycle.Event.ON_RESUME)model.refreshRecommendations() }
@@ -45,20 +43,7 @@ import cz.jenda.wowforever.data.db.QuestState
     }
     LazyColumn(Modifier.fillMaxSize().padding(horizontal=20.dp).testTag("advice_list"),verticalArrangement=Arrangement.spacedBy(12.dp)) {
         item {
-            Text(p.displayName,style=MaterialTheme.typography.titleLarge)
-            Text("${raceLabel(p.race)} • Warlock • úroveň ${p.level}")
-            Text("Oblast: ${model.atlas.map(p.currentUiMapId).name}",style=MaterialTheme.typography.titleMedium)
-            Text("Podle uložené postavy, oblast zadáváš ručně.",style=MaterialTheme.typography.bodySmall)
-            Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-                Button(onClick={model.chooseMap(p.currentUiMapId);model.navigate(Destination.MAP)}){Text("Zobrazit oblast")}
-                TextButton(onClick={model.navigate(Destination.CHARACTER)}){Text("Upravit postavu")}
-            }
-            TextButton(onClick={showFocus=true},modifier=Modifier.testTag("focus_settings")){Text("Řazení: ${model.guideFocus.label}")}
-            FlowRow(horizontalArrangement=Arrangement.spacedBy(6.dp)) {
-                listOf("NOW" to "Teď","LEAVE" to "Před odchodem","UNCERTAIN" to "K ověření (${report.uncertain.size})","WAITING" to "Podmínky (${report.waiting.size})","DEFERRED" to "Odložené (${report.deferred.size})").forEach { (id,label) ->
-                    FilterChip(selected=tab==id,onClick={tab=id},label={Text(label)},modifier=Modifier.testTag("advice_tab_$id"))
-                }
-            }
+            Text(model.atlas.maps.firstOrNull { it.uiMapId==p.currentUiMapId }?.name?.let { "Co dál v $it" } ?: "Co dál · vyber dostupnou oblast",style=MaterialTheme.typography.titleLarge)
         }
         if(showNotice && model.catalogEntries.any { it.verification!=Verification.RELEASE })item {
             Surface(color=MaterialTheme.colorScheme.secondaryContainer,shape=MaterialTheme.shapes.medium,modifier=Modifier.testTag("reference_notice")) {
@@ -71,51 +56,19 @@ import cz.jenda.wowforever.data.db.QuestState
                 }
             }
         }
-        when(tab) {
-            "NOW" -> {
-                adviceSection("Rozpracované a tvoje cíle",suggestions.personal,"Rozpracované úkoly a záložky úkolů se objeví tady.",model,onEntry,{detailKey=it})
-                adviceSection("Podle úrovně a oblasti",suggestions.current,"Pro tuto úroveň a oblast zatím nemám vhodný úkol v podkladech.",model,onEntry,{detailKey=it})
-                if(p.level<58)item {
-                    TextButton(onClick={showSoon=!showSoon},modifier=Modifier.testTag("advice_soon")) { Text("Brzy · úroveň ${p.level+3}–${minOf(60,p.level+5)} (${suggestions.soon.size})") }
-                }
-                if(showSoon)adviceRows(suggestions.soon,model,onEntry,{detailKey=it})
-                item {
-                    TextButton(onClick={showUnknown=!showUnknown},modifier=Modifier.testTag("advice_unknown")) { Text("Bez známé úrovně nebo oblasti (${suggestions.unknown.size})") }
-                }
-                if(showUnknown)adviceRows(suggestions.unknown,model,onEntry,{detailKey=it})
-            }
-            "LEAVE" -> {
-                item {
-                    Text("Před odchodem z ${model.atlas.map(p.currentUiMapId).name}",style=MaterialTheme.typography.headlineSmall)
-                    Text("Kontrola pokrývá jen nahraný katalog. Ani prázdný seznam nepotvrzuje, že máš celou oblast hotovou.",modifier=Modifier.testTag("coverage_warning"),style=MaterialTheme.typography.bodyMedium)
-                }
-                adviceSection("Dostupné důležité cíle a přání",report.leave,"Žádný doložený otevřený cíl v této skupině.",model,onEntry,{detailKey=it})
-                adviceSection("Chybějící předchozí kroky",report.leaveMissing,"Žádná potvrzená chybějící podmínka v nahraných pravidlech.",model,onEntry,{detailKey=it})
-                adviceSection("Nejistoty před odchodem",report.leaveUncertain,"Žádná další nejistota v této skupině. Rozsah katalogu zůstává omezený.",model,onEntry,{detailKey=it})
-                item { Text("Odložené úkoly nejsou splněné. Zkontroluj je samostatně podle potřeby.",style=MaterialTheme.typography.bodySmall) }
-            }
-            "UNCERTAIN" -> {
-                item { Text("Podklady k ověření",style=MaterialTheme.typography.headlineSmall);Text("Beta, Classic a komunitní podklady se nepovažují za potvrzenou dostupnost ve Forever. Chybějící údaje se nedoplňují odhadem.") }
-                adviceRows(report.uncertain,model,onEntry,{detailKey=it})
-                if(report.uncertain.isEmpty())item{Text("Žádné položky k ověření pro tuto oblast.")}
-            }
-            "WAITING" -> adviceSection("Později, chybějící podmínky a vyloučené volby",report.waiting,"Žádné takové potvrzené pravidlo pro tuto oblast.",model,onEntry,{detailKey=it})
-            "DEFERRED" -> adviceSection("Tvoje odložené úkoly",report.deferred,"Žádný odložený úkol pro tuto oblast.",model,onEntry,{detailKey=it})
-        }
+        adviceSection("Rozpracované a tvoje cíle",suggestions.personal,"Rozpracované úkoly a záložky úkolů se objeví tady.",model,onEntry,onEntry)
+        adviceSection("Warlock",suggestions.current.filter { it.importance==Importance.CLASS },"Pro tuto úroveň tu nemám další třídní krok.",model,onEntry,onEntry)
+        adviceSection("Tady",suggestions.current.filter { it.importance!=Importance.CLASS },"Pro tuto úroveň a oblast zatím nemám vhodný úkol v podkladech.",model,onEntry,onEntry)
+        if(p.level<58)item { TextButton(onClick={showSoon=!showSoon},modifier=Modifier.testTag("advice_soon")) { Text("Brzy · úroveň ${p.level+3}–${minOf(60,p.level+5)} (${suggestions.soon.size})") } }
+        if(showSoon)adviceRows(suggestions.soon,model,onEntry,onEntry)
+        item { TextButton(onClick={showUnknown=!showUnknown},modifier=Modifier.testTag("advice_unknown")) { Text("Bez známé úrovně nebo oblasti (${suggestions.unknown.size})") } }
+        if(showUnknown)adviceRows(suggestions.unknown,model,onEntry,onEntry)
         item {
             Text("${model.catalogEntries.size} položek v katalogu. Seznam není úplný přehled hry. Položky s nedoloženou oblastí mohou být uvedené i zde.",style=MaterialTheme.typography.bodySmall)
-            OutlinedButton(onClick=onCatalog){Text("Prohlédnout katalog")}
+            OutlinedButton(onClick=onCatalog){Text("Hledat další úkol")}
             Spacer(Modifier.height(16.dp))
         }
     }
-    if(showFocus)AlertDialog(onDismissRequest={showFocus=false},title={Text("Čemu dát přednost?")},text={
-        Column(verticalArrangement=Arrangement.spacedBy(8.dp)) {
-            Text("Řazení nemění podmínky dostupnosti. Doložené výlučné volby a důležité kroky Warlocka mají přednost.")
-            GuideFocus.entries.forEach { focus->FilterChip(selected=model.guideFocus==focus,onClick={model.chooseGuideFocus(focus);showFocus=false},label={Text(focus.label)},modifier=Modifier.fillMaxWidth().testTag("focus_${focus.name}")) }
-        }
-    },confirmButton={TextButton(onClick={showFocus=false}){Text("Hotovo")}})
-    val detail=report.all.firstOrNull { it.entry.key==detailKey }
-    if(detail!=null)AdviceExplanation(model,detail,onClose={detailKey=null},onEntry={detailKey=null;onEntry(it)})
 }
 
 private fun LazyListScope.adviceSection(title:String,rows:List<Advice>,empty:String,model:GuideViewModel,onEntry:(String)->Unit,onWhy:(String)->Unit) {
@@ -125,9 +78,9 @@ private fun LazyListScope.adviceSection(title:String,rows:List<Advice>,empty:Str
 private fun LazyListScope.adviceRows(rows:List<Advice>,model:GuideViewModel,onEntry:(String)->Unit,onWhy:(String)->Unit) {
     items(rows.filter { it.entry.kind in setOf(EntryKind.QUEST,EntryKind.SPELL) },key={"advice:"+it.entry.key}) { a -> AdviceCard(model,a,onEntry,onWhy) }
 }
-@OptIn(ExperimentalLayoutApi::class)
+@OptIn(ExperimentalLayoutApi::class,ExperimentalMaterial3Api::class)
 @Composable private fun AdviceCard(model:GuideViewModel,a:Advice,onEntry:(String)->Unit,onWhy:(String)->Unit) {
-    ElevatedCard(Modifier.fillMaxWidth().testTag("advice_${a.entry.key}")) {
+    ElevatedCard(onClick={onEntry(a.entry.key)},modifier=Modifier.fillMaxWidth().testTag("advice_${a.entry.key}")) {
         Column(Modifier.padding(14.dp),verticalArrangement=Arrangement.spacedBy(6.dp)) {
             Text(a.entry.nameOriginal,style=MaterialTheme.typography.titleMedium)
             if(a.availability!=Availability.UNVERIFIED || a.inProgress || a.wish)Text(
@@ -145,36 +98,8 @@ private fun LazyListScope.adviceRows(rows:List<Advice>,model:GuideViewModel,onEn
                     modifier=Modifier.testTag("advice_done_${a.entry.key}")) { Text("Hotovo") }
             }
             Row(horizontalArrangement=Arrangement.spacedBy(6.dp)) {
-                TextButton(onClick={onWhy(a.entry.key)},modifier=Modifier.testTag("why_${a.entry.key}")){Text("Proč a podmínky")}
                 TextButton(onClick={onEntry(a.entry.key)},modifier=Modifier.testTag("advice_open_${a.entry.key}")){Text("Otevřít detail")}
             }
         }
     }
-}
-@Composable private fun AdviceExplanation(model:GuideViewModel,a:Advice,onClose:()->Unit,onEntry:(String)->Unit) {
-    var revealed by rememberSaveable(a.entry.key,model.spoilers) { mutableStateOf(false) }
-    val uri=LocalUriHandler.current
-    var sourceError by remember { mutableStateOf(false) }
-    AlertDialog(onDismissRequest=onClose,title={Text("Proč: ${a.entry.nameOriginal}")},text={
-        Column(Modifier.heightIn(max=430.dp).verticalScroll(rememberScrollState()).testTag("advice_explanation"),verticalArrangement=Arrangement.spacedBy(10.dp)) {
-            Text(a.availability.label);Text(verificationLabel(a.entry.verification))
-            if(a.ruleVerification!=null)Text("Pravidlo: "+verificationLabel(a.ruleVerification))
-            if(model.spoilers==Spoilers.FULL || revealed) {
-                a.ruleReason?.let { Text(it,style=MaterialTheme.typography.titleMedium) }
-                a.explanation.forEach { Text(it,style=MaterialTheme.typography.bodyMedium) }
-                if(a.unlockCount>0)Text("Dokončení doplní předchozí kroky pro ${a.unlockCount} dalších úkolů. Jejich ostatní podmínky se posuzují zvlášť.")
-                if(a.relatedKeys.isNotEmpty())Text("Související záznamy z podkladů",style=MaterialTheme.typography.titleSmall)
-                a.relatedKeys.sorted().forEach { key->
-                    model.historyEntry(key)?.let { e->TextButton(onClick={onEntry(key)},modifier=Modifier.testTag("advice_related_$key")){Text("Otevřít: ${e.nameOriginal}")} }
-                }
-            } else {
-                Text("Podrobnosti jsou skryté podle tvého nastavení.")
-                TextButton(onClick={revealed=true},modifier=Modifier.testTag("reveal_advice")){Text("Odkrýt tyto podrobnosti")}
-            }
-            Text("Podklady",style=MaterialTheme.typography.titleSmall)
-            if(a.sourceIds.isEmpty())Text("Osobní historie nemá zdroj v aktuálním katalogu.")
-            a.sourceIds.sorted().forEachIndexed { i,id->model.sourceUrls[id]?.let { url->TextButton(onClick={runCatching{uri.openUri(url)}.onFailure{sourceError=true}}){Text("Zdroj ${i+1} ↗")} } }
-            if(sourceError)Text("Otevření zdroje vyžaduje prohlížeč a připojení.")
-        }
-    },confirmButton={TextButton(onClick=onClose){Text("Zavřít")}})
 }

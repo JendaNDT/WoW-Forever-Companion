@@ -68,19 +68,19 @@ class UiPhase1FlowTest {
         rule.onNodeWithTag("quick_area").assertTextContains("Orgrimmar",substring=true)
     }
     @Test fun detailStartsWithQuestActionsAndFeedAllowsCompletionWithoutOpeningIt() {
-        rule.onNodeWithTag("catalog").performClick()
+        rule.openSearch()
         rule.onNodeWithTag("catalog_query").performTextReplacement("4641")
         rule.onNodeWithTag("catalog_$E6_A").performClick()
         rule.onNodeWithTag("quest_state_COMPLETED").assertIsDisplayed()
-        val actions=rule.onNodeWithTag("quest_state_COMPLETED").fetchSemanticsNode().boundsInRoot
-        val description=rule.onNodeWithTag("entry_description").fetchSemanticsNode().boundsInRoot
+        val actions=rule.onNodeWithTag("quest_state_COMPLETED").getUnclippedBoundsInRoot()
+        val description=rule.onNodeWithTag("entry_description").getUnclippedBoundsInRoot()
         assertTrue("Quest actions must precede description",actions.top<description.top)
         shot("detail",true)
-        rule.onNodeWithText("Zpět do katalogu").performClick()
+        rule.onNodeWithText("Zpět do hledání").performClick()
         rule.onNodeWithTag("catalog_close").performClick()
         rule.runOnIdle { model.saveProfile(model.profile.copy(level=10)) }
         settled { model.profile.level==10 }
-        rule.onNodeWithTag("nav_NOW").performClick()
+        rule.openSuggestions()
         rule.onNodeWithTag("advice_list").performScrollToNode(hasTestTag("advice_done_$E6_A"))
         rule.onNodeWithTag("advice_done_$E6_A").performClick()
         settled { model.questStates[E6_A]==QuestState.COMPLETED }
@@ -89,7 +89,7 @@ class UiPhase1FlowTest {
     }
     @Test fun unusedFieldsAreHiddenAndNorthButtonIsGone() {
         rule.onNodeWithTag("north").assertDoesNotExist()
-        rule.onNodeWithTag("nav_CHARACTER").performClick()
+        rule.openCharacter()
         rule.onNodeWithTag("profile_mode").assertDoesNotExist()
         rule.onNodeWithTag("profile_professions").assertDoesNotExist()
         rule.onNodeWithTag("save_profile").performScrollTo().assertIsDisplayed()

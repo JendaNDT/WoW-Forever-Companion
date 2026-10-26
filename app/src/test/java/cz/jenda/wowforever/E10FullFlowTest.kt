@@ -29,14 +29,14 @@ class E10FullFlowTest {
         rule.onNodeWithTag("select_map_902959").performClick();rule.onNodeWithTag("map_902959").assertIsSelected();shot("dalaran")
         rule.onNodeWithTag("choose_map").performClick();rule.onNodeWithTag("map_selector_query").performTextInput("Winterspring")
         rule.onNodeWithTag("select_map_1452").performClick();rule.onNodeWithTag("map_1452").assertIsSelected();shot("winterspring")
-        rule.onNodeWithTag("catalog").performClick();rule.onNodeWithTag("catalog_query").performTextInput("Dreadsteed of Xoroth")
+        rule.openSearch();rule.onNodeWithTag("catalog_query").performTextReplacement("Dreadsteed of Xoroth")
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("catalog_filters"));rule.onNodeWithTag("catalog_filters").performClick()
-        rule.onNodeWithTag("catalog_category_CLASS").performClick();rule.onNodeWithTag("apply_catalog_filters").performClick()
+        rule.onNodeWithTag("catalog_category_CLASS").performScrollTo().performClick();rule.onNodeWithTag("apply_catalog_filters").performScrollTo().performClick()
         val target=model.catalogEntries.first { it.nameOriginal=="Dreadsteed of Xoroth" }.key
         rule.onNodeWithTag("catalog_list").performScrollToNode(hasTestTag("catalog_$target"));rule.onNodeWithTag("catalog_$target").performClick()
         rule.onNodeWithTag("entry_description").assertTextContains("Warlock",substring=true);shot("warlock60")
-        rule.onNodeWithText("Zpět do katalogu").performClick();rule.onNodeWithTag("catalog_close").performClick()
-        rule.onNodeWithTag("nav_CHARACTER").performClick();rule.onNodeWithTag("character_form").performScrollToNode(hasTestTag("choose_profile_area"))
+        rule.onNodeWithText("Zpět do hledání").performClick();rule.onNodeWithTag("catalog_close").performClick()
+        rule.openCharacter();rule.onNodeWithTag("character_form").performScrollToNode(hasTestTag("choose_profile_area"))
         rule.onNodeWithTag("choose_profile_area").performClick();rule.onNodeWithTag("map_selector_query").performTextInput("Winterspring");rule.onNodeWithTag("select_map_1452").performClick()
         rule.onNodeWithTag("save_profile").performScrollTo().performClick();rule.waitUntil(30_000){model.profile.currentUiMapId==1452 && !model.savingProfile}
         rule.activityRule.scenario.recreate();ready();rule.runOnIdle{assertEquals(1452,model.profile.currentUiMapId);assertEquals(8,model.contentMetadata!!.generation)}

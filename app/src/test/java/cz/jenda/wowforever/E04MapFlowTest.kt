@@ -37,8 +37,8 @@ class E04MapFlowTest {
     @Test fun globalSearchOpensTheCorrectMapAndLinksToCatalog() {
         rule.onNodeWithTag("map_1454").performClick()
         rule.onNodeWithTag("map_search").performClick()
-        rule.onNodeWithTag("map_search_query").performTextInput("ruzan")
-        rule.onNodeWithTag("search_wow-forever:npc:5765").performClick()
+        rule.onNodeWithTag("catalog_query").performTextReplacement("ruzan")
+        rule.onNodeWithTag("result_map_wow-forever:npc:5765").performScrollTo().performClick()
         rule.onNodeWithTag("map_1411").assertIsSelected()
         rule.onNodeWithTag("point_catalog").performClick()
         rule.onNodeWithTag("entry_location_0").performScrollTo().assertExists()
@@ -58,12 +58,12 @@ class E04MapFlowTest {
         rule.onNodeWithTag("reset_layers").assertIsDisplayed().performClick()
         rule.onNodeWithTag("layer_NPC").assertIsSelected()
         rule.onNodeWithText("Hotovo").performClick()
-        rule.onNodeWithTag("catalog").performClick()
-        rule.onNodeWithTag("catalog_query").performTextInput("ruzan")
+        rule.openSearch()
+        rule.onNodeWithTag("catalog_query").performTextReplacement("ruzan")
         rule.onNodeWithTag("catalog_wow-forever:npc:5765").performClick()
         rule.onNodeWithTag("bookmark_toggle").performScrollTo().performClick()
         rule.waitUntil(10_000) { rule.onAllNodesWithText("Odebrat záložku").fetchSemanticsNodes().isNotEmpty() }
-        rule.onNodeWithText("Zpět do katalogu").performClick();rule.onNodeWithText("Zavřít").performClick()
+        rule.onNodeWithText("Zpět do hledání").performClick();rule.onNodeWithTag("catalog_close").performClick()
         rule.onNodeWithTag("map_layers").performClick()
         rule.onNodeWithTag("layer_bookmarks").performClick()
         shot("layers",true)
@@ -107,7 +107,7 @@ class E04MapFlowTest {
                 assertFalse("NPC" in fresh.visibleKinds)
             }
         } finally { rule.runOnIdle { freshStore.clear() } }
-        rule.onNodeWithTag("nav_JOURNEY").performClick()
+        rule.openJournal()
         rule.onNodeWithTag("journey_list").performScrollToNode(hasTestTag("journey_$noteId"))
         rule.onNodeWithTag("journey_$noteId").performClick()
         rule.onNodeWithTag("edit_note").performClick()

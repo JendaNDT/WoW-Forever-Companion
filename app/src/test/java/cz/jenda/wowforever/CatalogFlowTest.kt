@@ -18,8 +18,8 @@ class CatalogFlowTest {
         rule.waitUntil(20_000) { rule.onAllNodesWithTag("native_map").fetchSemanticsNodes().isNotEmpty() }
     }
     @Test fun addingBookmarkAndRecreatingActivityKeepsTheBookmark() {
-        rule.onNodeWithTag("catalog").performClick()
-        rule.onNodeWithTag("catalog_query").performTextInput("5778")
+        rule.openSearch()
+        rule.onNodeWithTag("catalog_query").performTextReplacement("5778")
         rule.onNodeWithTag("catalog_wow-forever:item:5778").performClick()
         rule.onNodeWithText("Přidat záložku").performScrollTo().performClick()
         rule.waitUntil(10_000) { rule.onAllNodesWithText("Odebrat záložku").fetchSemanticsNodes().isNotEmpty() }
@@ -29,7 +29,7 @@ class CatalogFlowTest {
         file.outputStream().use { screenshot.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it) }
         rule.activityRule.scenario.recreate()
         rule.onNodeWithTag("bookmark_toggle").assertExists()
-        rule.onNodeWithText("Zpět do katalogu").performClick()
+        rule.onNodeWithText("Zpět do hledání").performClick()
         rule.onNodeWithTag("only_bookmarks").performClick()
         rule.onNodeWithTag("catalog_wow-forever:item:5778").assertExists()
         rule.onNodeWithTag("catalog_wow-forever:item:5778").performClick()

@@ -18,10 +18,9 @@ import cz.jenda.wowforever.content.*
 import cz.jenda.wowforever.data.searchEntries
 import cz.jenda.wowforever.domain.*
 
-@Composable fun ExpeditionDialog(model:GuideViewModel,onClose:()->Unit) {
+@Composable fun ExpeditionDialog(model:GuideViewModel,onClose:()->Unit,onEntry:(String)->Unit) {
     var mode by rememberSaveable(model.profile.id) { mutableStateOf("PLAN") }
     var query by rememberSaveable(model.profile.id) { mutableStateOf("") }
-    var entryKey by rememberSaveable(model.profile.id) { mutableStateOf<String?>(null) }
     val stops=model.expeditionStops;val legs=model.expeditionLegs
     val uri=LocalUriHandler.current
     val listState=rememberLazyListState()
@@ -60,7 +59,7 @@ import cz.jenda.wowforever.domain.*
                     }
                 }
             } else {
-                if(stops.isEmpty())item { Text("Výprava je zatím prázdná. Přidej první cíl z katalogu nebo z jeho detailu.") }
+                if(stops.isEmpty())item { Text("Výprava je zatím prázdná. Přidej první cíl pomocí Hledat nebo z detailu položky.") }
                 items(stops,key={"stop:${it.stored.position}"}) { stop ->
                     OutlinedCard(Modifier.fillMaxWidth().testTag("plan_stop_${stop.number}")) {
                         Column(Modifier.padding(10.dp),verticalArrangement=Arrangement.spacedBy(6.dp)) {
@@ -77,7 +76,7 @@ import cz.jenda.wowforever.domain.*
                             }
                             Row {
                                 if(stop.location!=null)TextButton(onClick={model.showPlanStop(stop.number);onClose()},enabled=!model.isBusy,modifier=Modifier.testTag("plan_map_${stop.number}")){Text("Mapa")}
-                                TextButton(onClick={entryKey=stop.stored.entryKey},modifier=Modifier.testTag("plan_detail_${stop.number}")){Text("Detail")}
+                                TextButton(onClick={onEntry(stop.stored.entryKey)},modifier=Modifier.testTag("plan_detail_${stop.number}")){Text("Detail")}
                             }
                         }
                     }
@@ -109,5 +108,4 @@ import cz.jenda.wowforever.domain.*
             }
         }
     },confirmButton={TextButton(onClick=onClose){Text("Zavřít výpravu")}})
-    entryKey?.let { CatalogDialog(model,onClose={entryKey=null},initialEntryKey=it) }
 }

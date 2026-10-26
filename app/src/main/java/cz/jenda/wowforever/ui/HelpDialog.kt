@@ -15,7 +15,7 @@ import cz.jenda.wowforever.GuideViewModel
 @Composable fun HelpDialog(model:GuideViewModel,onClose:()->Unit,onBackup:()->Unit,onPackages:()->Unit,onCoverage:()->Unit) {
     var showLicenses by remember { mutableStateOf(false) }
     val list=rememberLazyListState()
-    AlertDialog(onDismissRequest=onClose,title={Text("Návod k použití")},text={
+    if(!showLicenses) AlertDialog(onDismissRequest=onClose,title={Text("Návod k použití")},text={
         LazyColumn(Modifier.heightIn(max=440.dp).testTag("help_list"),state=list,verticalArrangement=Arrangement.spacedBy(12.dp)) {
             item(key="current") {
                 Text("Tvoje vydání",style=MaterialTheme.typography.titleMedium)
@@ -24,15 +24,15 @@ import cz.jenda.wowforever.GuideViewModel
             }
             item(key="start") {
                 Text("1. Postava",style=MaterialTheme.typography.titleMedium)
-                Text("Úroveň měň tlačítky − / + v horní liště, oblast klepnutím na její název. Změny se ukládají automaticky. Rasu a jméno upravíš v Postavě tlačítkem Uložit postavu.")
+                Text("Úroveň měň tlačítky − / + v horní liště, oblast klepnutím na její název. Změny se ukládají automaticky. Rasu a jméno upravíš v Nastavení → Postava tlačítkem Uložit postavu.")
             }
             item(key="quests") {
                 Text("2. Co dělat dál",style=MaterialTheme.typography.titleMedium)
-                Text("Teď pro mě nabízí úkoly a kouzla podle úrovně a oblasti. Brzy a neúplné údaje jsou sbalené. Beru zaznamená rozpracovaný úkol, Hotovo jeho dokončení; obě tlačítka jsou i nahoře v detailu. Podmínky a zdroje zkontroluj podle hry.")
+                Text("Úkoly → Co dál nabízí úkoly a kouzla podle úrovně a oblasti. Brzy a neúplné údaje jsou sbalené. Beru zaznamená rozpracovaný úkol, Hotovo jeho dokončení; obě tlačítka jsou i nahoře v detailu. Podmínky a zdroje zkontroluj podle hry.")
             }
             item(key="map") {
                 Text("3. Mapa a hledání",style=MaterialTheme.typography.titleMedium)
-                Text("Mapa se drží severem nahoru. Přibližuj prsty nebo tlačítky. Prohlížení jiné mapy nemění oblast postavy. Podržením volného místa vytvoříš poznámku; Katalog a Hledat najdou i NPC a předměty.")
+                Text("Mapa se drží severem nahoru. Přibližuj prsty nebo tlačítky. Prohlížení jiné mapy nemění oblast postavy. Podržením volného místa vytvoříš poznámku; Jedna záložka Hledat najde úkoly, NPC, předměty i poznámky. Klepnutí otevře společný detail; Na mapě ukáže doloženou polohu.")
                 Text("Značky C jsou reference z Classicu, ? komunitní podklady. Čísla výpravy jsou tvoje pořadí cílů. Chybějící polohy ani průchozí cesty se nedomýšlejí.")
             }
             item(key="coverage") {
@@ -47,7 +47,7 @@ import cz.jenda.wowforever.GuideViewModel
             }
             item(key="recovery") {
                 Text("5. Záloha a obnova postupu",style=MaterialTheme.typography.titleMedium)
-                Text("Záloha obsahuje uložené změny. Rozpracovanou Postavu nejdřív ulož. Soubor JSON schovej také mimo telefon. Při obnově je výchozí volbou nový profil; potvrzené nahrazení má místní vratný snímek.")
+                Text("Záloha obsahuje uložené změny. Rozpracované změny jména a rasy nejdřív ulož. Soubor JSON schovej také mimo telefon. Při obnově je výchozí volbou nový profil; potvrzené nahrazení má místní vratný snímek.")
                 Text("Při problému aplikaci nejdřív znovu otevři a zkontroluj aktivní profil. Návrat ke starším herním datům provedeš ve správci balíčků; osobní historie zůstane zachovaná. Poznámka z chybějící mapy čeká na opětovné zapnutí správného obsahu.")
                 Text("Neodinstalovávej aplikaci kvůli návratu ke starší verzi APK: odinstalování může odstranit místní postup. Pro změnu dat použij návrat balíčku, pro obnovu postupu vlastní zálohu.")
                 OutlinedButton(onClick=onBackup,modifier=Modifier.testTag("help_backup")){Text("Otevřít profily a zálohu")}
@@ -60,7 +60,7 @@ import cz.jenda.wowforever.GuideViewModel
             item(key="licenses") { TextButton(onClick={showLicenses=true}) { Text("Původ dat a licence") } }
             item(key="changes") {
                 Text("Poslední změny",style=MaterialTheme.typography.titleMedium)
-                Text("Rychlá změna úrovně a oblasti, úkoly podle úrovně, stav úkolu nahoře v detailu a mapa se severem nahoru. Herní data ani formát zálohy se nemění.")
+                Text("Tři záložky Mapa / Úkoly / Hledat, přepínač Co dál / Deník, společný vytahovací detail a Nastavení v horní liště. Herní data ani formát zálohy se nemění.")
                 Text("Sestavení ${BuildConfig.SOURCE_REVISION.take(8)}. Telefonní přejímka a měření výkonu zůstávají samostatnou kontrolou.",style=MaterialTheme.typography.bodySmall)
             }
         }
