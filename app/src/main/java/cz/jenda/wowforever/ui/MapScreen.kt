@@ -22,7 +22,7 @@ import cz.jenda.wowforever.GuideViewModel
 import cz.jenda.wowforever.model.PointKind
 import kotlinx.coroutines.launch
 
-@Composable fun MapScreen(model:GuideViewModel,wide:Boolean,onSearch:()->Unit,onPlan:()->Unit,onPoint:(String)->Unit) {
+@Composable fun MapScreen(model:GuideViewModel,wide:Boolean,onSearch:()->Unit,onPlan:()->Unit,onPoint:(String)->Unit,onArea:(()->Unit)?=null) {
     val scope=rememberCoroutineScope()
     var showMapSelector by rememberSaveable { mutableStateOf(false) }
     var showArea by rememberSaveable { mutableStateOf(false) }
@@ -75,7 +75,7 @@ import kotlinx.coroutines.launch
                 modifier=Modifier.align(Alignment.BottomStart).background(MaterialTheme.colorScheme.surface.copy(alpha=.8f)).padding(horizontal=4.dp,vertical=2.dp))
         }
         Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal=8.dp),verticalAlignment=Alignment.CenterVertically) {
-            TextButton(onClick={showArea=true},modifier=Modifier.testTag("points")){Text("V této oblasti (${points.size})")}
+            TextButton(onClick={if(onArea!=null)onArea() else showArea=true},modifier=Modifier.testTag("points")){Text("V této oblasti (${points.size})")}
             FilledTonalButton(onClick=onPlan,modifier=Modifier.testTag("expedition").semantics { contentDescription="Výprava (${model.personalState.stops.size})" }){Text("Výprava (${model.personalState.stops.size})")}
             if(model.personalState.stops.isNotEmpty())Text("Čísla = pořadí cílů",style=MaterialTheme.typography.labelSmall,modifier=Modifier.padding(start=8.dp).testTag("plan_map_legend"))
         }
@@ -98,12 +98,19 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable private fun AreaPointsSheet(model:GuideViewModel,onClose:()->Unit,onPoint:(String)->Unit) {
+    ModalBottomSheet(onDismissRequest=onClose,sheetState=rememberModalBottomSheetState(skipPartiallyExpanded=true),modifier=Modifier.testTag("area_points_sheet")) {
+        Box(Modifier.fillMaxWidth().fillMaxHeight(.92f).navigationBarsPadding()) {
+            AreaPointsPanel(model,onPoint,onClose)
+        }
+    }
+}
+
+@Composable internal fun AreaPointsPanel(model:GuideViewModel,onPoint:(String)->Unit,onClose:(()->Unit)?=null) {
     val map=model.atlas.map(model.mapId,model.floorId)
     val points=model.pointsOnMap()
-    ModalBottomSheet(onDismissRequest=onClose,sheetState=rememberModalBottomSheetState(skipPartiallyExpanded=true),modifier=Modifier.testTag("area_points_sheet")) {
-        Column(Modifier.fillMaxWidth().fillMaxHeight(.92f).navigationBarsPadding()) {
-            TextButton(onClick=onClose,modifier=Modifier.testTag("area_points_close")){Text("Zpět na mapu")}
-            Text("V této oblasti · ${map.name}",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(horizontal=20.dp))
+        Column(Modifier.fillMaxSize().testTag("area_points_panel")) {
+            if(onClose!=null)TextButton(onClick=onClose,modifier=Modifier.testTag("area_points_close")){Text("Zpět na mapu")}
+            Text("V této oblasti · ${map.name}",style=MaterialTheme.typography.titleLarge,modifier=Modifier.padding(horizontal=20.dp,vertical=12.dp))
             LazyColumn(Modifier.weight(1f).fillMaxWidth().testTag("points_list"),contentPadding=PaddingValues(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
                 item {
                     Text("! zadání · ? odevzdání · ◆ cíl nebo zdroj · ✎ poznámka · čísla výpravy",style=MaterialTheme.typography.bodySmall)
@@ -113,7 +120,7 @@ import kotlinx.coroutines.launch
                 items(points,key={it.id}) { p->
                     OutlinedCard(Modifier.fillMaxWidth()) {
                         Column(Modifier.padding(horizontal=8.dp)) {
-                            TextButton(onClick={model.showPoint(p.id);onClose()},modifier=Modifier.fillMaxWidth().testTag("point_${p.id.substringAfterLast(':')}")) {
+                            TextButton(onClick={model.showPoint(p.id);onClose?.invoke()},modifier=Modifier.fillMaxWidth().testTag("point_${p.id.substringAfterLast(':')}")) {
                                 Column(Modifier.fillMaxWidth()) {
                                     Text(p.name)
                                     Text((if(p.planNumbers.isNotEmpty())p.planNumbers.joinToString("·") else p.markerRole.symbol)+" · "+p.markerRole.label,style=MaterialTheme.typography.labelSmall)
@@ -126,5 +133,4 @@ import kotlinx.coroutines.launch
                 }
             }
         }
-    }
 }

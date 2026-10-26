@@ -7,6 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.saveable.rememberSaveableStateHolder
+import androidx.compose.runtime.saveable.SaveableStateHolder
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.LocalDensity
@@ -20,24 +21,39 @@ import cz.jenda.wowforever.model.MapPoint
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class,ExperimentalLayoutApi::class,androidx.compose.ui.ExperimentalComposeUiApi::class)
-@Composable fun EntrySheet(model:GuideViewModel,entryKey:String?,pointId:String?,backLabel:String,onBack:()->Unit,onDismiss:()->Unit,onExit:()->Unit,onRelated:(String)->Unit,onShowPoint:(MapPoint)->Unit,onJournal:()->Unit) {
-    val entry=entryKey?.let(model::historyEntry)
-    val point=pointId?.let { id->model.allPoints.firstOrNull { it.id==id } }
-    val note=pointId?.let { id->model.notes.firstOrNull { it.id==id } }
+@Composable fun EntrySheet(model:GuideViewModel,entryKey:String?,pointId:String?,backLabel:String,onBack:()->Unit,onDismiss:()->Unit,onExit:()->Unit,onRelated:(String)->Unit,onShowPoint:(MapPoint)->Unit,onJournal:()->Unit,docked:Boolean=false,stateHolder:SaveableStateHolder=rememberSaveableStateHolder()) {
     val density=LocalDensity.current
     val window=LocalWindowInfo.current.containerSize
     val expandedOnly=density.fontScale>=1.5f || with(density) { window.height.toDp()<480.dp }
     val sheet=rememberModalBottomSheetState(skipPartiallyExpanded=expandedOnly)
-    val detailStates=rememberSaveableStateHolder()
     val scope=rememberCoroutineScope()
+    val content:@Composable ()->Unit={
+        stateHolder.SaveableStateProvider("entry-content") {
+            EntryContent(model,entryKey,pointId,backLabel,onBack,onExit,onRelated,onShowPoint,onJournal,
+                onExpand=if(docked || expandedOnly)null else ({scope.launch { if(sheet.currentValue==SheetValue.Expanded && sheet.hasPartiallyExpandedState)sheet.partialExpand() else sheet.expand() };Unit}),
+                expandLabel=if(sheet.currentValue==SheetValue.Expanded)"Zmenšit" else "Celý detail")
+        }
+    }
+    if(docked)Surface(Modifier.fillMaxSize().testTag("entry_side_pane"),color=MaterialTheme.colorScheme.surface) {
+        Box(Modifier.fillMaxSize().testTag("entry_sheet")) { content() }
+    } else ModalBottomSheet(onDismissRequest=onDismiss,sheetState=sheet,modifier=Modifier.testTag("entry_sheet")) {
+        Box(Modifier.fillMaxWidth().fillMaxHeight(.94f).navigationBarsPadding()) { content() }
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable private fun EntryContent(model:GuideViewModel,entryKey:String?,pointId:String?,backLabel:String,onBack:()->Unit,onExit:()->Unit,onRelated:(String)->Unit,onShowPoint:(MapPoint)->Unit,onJournal:()->Unit,onExpand:(()->Unit)?,expandLabel:String) {
+    val entry=entryKey?.let(model::historyEntry)
+    val point=pointId?.let { id->model.allPoints.firstOrNull { it.id==id } }
+    val note=pointId?.let { id->model.notes.firstOrNull { it.id==id } }
+    val detailStates=rememberSaveableStateHolder()
     val uri=LocalUriHandler.current
     var sourceError by remember(entryKey,pointId) { mutableStateOf(false) }
-    ModalBottomSheet(onDismissRequest=onDismiss,sheetState=sheet,modifier=Modifier.testTag("entry_sheet")) {
-        Column(Modifier.fillMaxWidth().fillMaxHeight(0.94f).navigationBarsPadding()) {
+        Column(Modifier.fillMaxSize()) {
             Row(Modifier.fillMaxWidth().padding(horizontal=12.dp),horizontalArrangement=Arrangement.spacedBy(4.dp)) {
                 TextButton(onClick=onBack,modifier=Modifier.testTag("detail_back")) { Text(backLabel) }
                 Spacer(Modifier.weight(1f))
-                if(!expandedOnly)TextButton(onClick={scope.launch { if(sheet.currentValue==SheetValue.Expanded && sheet.hasPartiallyExpandedState)sheet.partialExpand() else sheet.expand() }},modifier=Modifier.testTag("detail_expand")) { Text(if(sheet.currentValue==SheetValue.Expanded)"Zmenšit" else "Celý detail") }
+                if(onExpand!=null)TextButton(onClick=onExpand,modifier=Modifier.testTag("detail_expand")) { Text(expandLabel) }
             }
             detailStates.SaveableStateProvider(entryKey ?: pointId ?: "missing") {
             Column(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal=20.dp),verticalArrangement=Arrangement.spacedBy(10.dp)) {
@@ -92,7 +108,6 @@ import kotlinx.coroutines.launch
             }
             PersonalUndoBar(model)
         }
-    }
 }
 @Composable private fun DetailSection(title:String,tag:String,content:@Composable ()->Unit) {
     var open by rememberSaveable { mutableStateOf(true) }
@@ -100,3 +115,4 @@ import kotlinx.coroutines.launch
     TextButton(onClick={open=!open},modifier=Modifier.fillMaxWidth().testTag(tag)) { Text((if(open)"▾ " else "▸ ")+title,style=MaterialTheme.typography.titleMedium) }
     if(open)content()
 }
+

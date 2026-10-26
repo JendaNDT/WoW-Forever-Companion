@@ -1,3 +1,10 @@
+## 0.20.0-tablet (21)
+
+- Rozložení pro Lenovo IdeaTab 11 5G a další velká okna: mapa se seznamem bodů vedle sebe, detail bez zakrytí mapy a výsledků hledání.
+- Čitelné šířky formulářů; otevřený detail, rozbalené části a seznamy se zachovají při změně rozložení. Velké písmo a užší okna používají jednu plochu.
+- Nové tabletové kontroly včetně Androidu 15 s rozměrem 2560 × 1600; výkon fyzického Lenova zatím není změřený.
+- Herní obsah a formát záloh zůstávají v generaci 8 / formátu 1.
+
 # E10.3 · 0.14.0-e10.3 · 2026-10-25
 
 ## 0.19.0-ui3 (20)
@@ -76,3 +83,4 @@ Správa podepsaných datových balíčků, náhled, atomické přepnutí, návra
 ## Dřívější etapy
 
 E01–E08 přidaly nativní mapu, datový katalog, profil, hledání, filtry, poznámky, osobní postup, zálohy, doporučení a plán výpravy. Podrobné výsledky jsou v docs/E01_ZPRAVA.md až docs/E08_ZPRAVA.md. Poslední obecné potvrzení fungování telefonu od uživatele je E05; automatické dokončení pozdějších etap není fyzická přejímka.
+

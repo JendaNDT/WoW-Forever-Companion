@@ -15,6 +15,7 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -22,7 +23,7 @@ import cz.jenda.wowforever.GuideViewModel
 import cz.jenda.wowforever.content.*
 
 @OptIn(ExperimentalLayoutApi::class,ExperimentalMaterial3Api::class)
-@Composable fun SearchScreen(model:GuideViewModel,onEntry:(String)->Unit,onPoint:(String)->Unit,onCoverage:()->Unit) {
+@Composable fun SearchScreen(model:GuideViewModel,onEntry:(String)->Unit,onPoint:(String)->Unit,onCoverage:()->Unit,selectedEntryKey:String?=null) {
     var query by rememberSaveable { mutableStateOf("") }
     var filtersOpen by rememberSaveable { mutableStateOf(false) }
     var category by rememberSaveable { mutableStateOf("ALL") }
@@ -98,7 +99,8 @@ import cz.jenda.wowforever.content.*
             }
         }
         items(entries,key={it.key}) { e->
-            OutlinedCard(onClick={keyboard?.hide();model.rememberSearch(query);onEntry(e.key)},modifier=Modifier.fillMaxWidth().testTag("catalog_${e.key}")) {
+            OutlinedCard(onClick={keyboard?.hide();model.rememberSearch(query);onEntry(e.key)},modifier=Modifier.fillMaxWidth().testTag("catalog_${e.key}").semantics { selected=selectedEntryKey==e.key },
+                colors=CardDefaults.outlinedCardColors(containerColor=if(selectedEntryKey==e.key)MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.surface)) {
                 Column(Modifier.padding(12.dp),verticalArrangement=Arrangement.spacedBy(4.dp)) {
                     Text((if(e.key in model.bookmarks)"★ " else "")+e.nameOriginal,style=MaterialTheme.typography.titleMedium)
                     val level=listOfNotNull(e.reportedLevel,e.minimumLevel).filter { it>0 }.maxOrNull()
@@ -131,3 +133,4 @@ fun verificationLabel(v:Verification):String=when(v) {
     Verification.CONFLICT->"Zdroje se v některých údajích rozcházejí"
     Verification.UNVERIFIED->"Neověřený údaj";Verification.RELEASE->"Potvrzeno ve vydané hře"
 }
+

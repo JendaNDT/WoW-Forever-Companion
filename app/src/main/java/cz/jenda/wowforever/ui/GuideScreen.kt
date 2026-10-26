@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.LocalWindowInfo
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
@@ -53,8 +54,14 @@ import java.util.Locale
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable private fun GuideReadyScreen(model:GuideViewModel) {
     KeepMapAwake(model.keepMapScreenOn && model.destination==Destination.MAP)
-    val window=LocalWindowInfo.current.containerSize
-    val wide=with(LocalDensity.current) { window.width.toDp()>=600.dp || (window.width.toDp()>=480.dp && window.height.toDp()<480.dp) }
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+    val density=LocalDensity.current
+    val padding=WindowInsets.safeDrawing.asPaddingValues()
+    val width=maxWidth-padding.calculateLeftPadding(LocalLayoutDirection.current)-padding.calculateRightPadding(LocalLayoutDirection.current)
+    val height=maxHeight-padding.calculateTopPadding()-maxOf(padding.calculateBottomPadding(),with(density){WindowInsets.ime.getBottom(density).toDp()})
+    val wide=width>=600.dp || (width>=480.dp && height<480.dp)
+    val contentWidth=width-if(wide)80.dp else 0.dp
+    val sidePaneEnabled=model.destination!=Destination.SETTINGS && supportsCompanionPane(contentWidth.value,(height-56.dp).value,density.fontScale)
     val compactHeader=LocalDensity.current.fontScale>=1.5f
     var showQuickArea by rememberSaveable { mutableStateOf(false) }
     var overlay by rememberSaveable { mutableStateOf<String?>(null) }
@@ -64,6 +71,8 @@ import java.util.Locale
     var detailTrail by rememberSaveable(model.profile.id) { mutableStateOf(emptyList<String>()) }
     var detailReturn by rememberSaveable { mutableStateOf<String?>(null) }
     val holder=rememberSaveableStateHolder()
+    val detailHolder=rememberSaveableStateHolder()
+    val companionHolder=rememberSaveableStateHolder()
     val closeDetail:()->Unit={detailKey=null;detailPoint=null;detailTrail=emptyList();detailReturn=null}
     val openEntry:(String)->Unit={key->
         detailKey=key;detailPoint=null;detailTrail=emptyList();detailReturn=overlay;overlay=null
@@ -74,14 +83,22 @@ import java.util.Locale
     }
     val openOverlay:(String)->Unit={next->overlayReturn=overlay;overlay=next}
     val closeOverlay:()->Unit={overlay=overlayReturn;overlayReturn=null}
-    val openSearch:()->Unit={model.navigate(Destination.SEARCH)}
+    val openSearch:()->Unit={closeDetail();model.navigate(Destination.SEARCH)}
     BackHandler(enabled=model.destination!=Destination.MAP && overlay==null && detailKey==null && detailPoint==null && model.noteDraft==null) { model.back() }
+    val renderDetail:@Composable (Boolean)->Unit={docked->
+        EntrySheet(model,detailKey,detailPoint,
+            backLabel=if(detailTrail.isNotEmpty())"Zpět na předchozí" else if(model.destination==Destination.SEARCH)"Zpět do hledání" else "Zpět",
+            onBack={if(detailTrail.isNotEmpty()){detailKey=detailTrail.last();detailTrail=detailTrail.dropLast(1)}else{val previous=detailReturn;closeDetail();overlay=previous}},
+            onDismiss={val previous=detailReturn;closeDetail();overlay=previous},onExit=closeDetail,
+            onRelated={key->detailKey?.let { detailTrail=detailTrail+it };detailKey=key;detailPoint=null},
+            onShowPoint={p->closeDetail();model.showPoint(p.id)},onJournal={closeDetail();model.showJournal()},docked=docked,stateHolder=detailHolder)
+    }
     Surface(Modifier.fillMaxSize().semantics { testTagsAsResourceId=true }) {
         Box(Modifier.fillMaxSize()) {
         Row(Modifier.fillMaxSize().safeDrawingPadding().imePadding()) {
             if(wide)NavigationRail(Modifier.fillMaxHeight().testTag("navigation_rail")) {
                 Column(Modifier.verticalScroll(rememberScrollState())) {
-                    Destination.tabs.forEach { target->NavigationRailItem(selected=model.destination==target,onClick={model.navigate(target)},icon={NavigationIcon(target)},label={Text(target.label)},modifier=Modifier.testTag("nav_${target.name}")) }
+                    Destination.tabs.forEach { target->NavigationRailItem(selected=model.destination==target,onClick={closeDetail();model.navigate(target)},icon={NavigationIcon(target)},label={Text(target.label)},modifier=Modifier.testTag("nav_${target.name}")) }
                 }
             }
             Column(Modifier.weight(1f).fillMaxHeight()) {
@@ -91,36 +108,52 @@ import java.util.Locale
                     Text("${model.headerLevel}",style=MaterialTheme.typography.titleMedium,modifier=Modifier.testTag("quick_level").semantics { contentDescription="Úroveň ${model.headerLevel}" })
                     IconButton(onClick={model.changeLevel(1)},enabled=model.canQuickEdit && model.headerLevel<60,modifier=Modifier.size(48.dp).testTag("quick_level_up").semantics { contentDescription="Zvýšit úroveň" }) { Text("+",fontSize=24.sp) }
                     TextButton(onClick={showQuickArea=true},enabled=model.canQuickEdit,modifier=Modifier.weight(1f).testTag("quick_area")) { Text((model.atlas.maps.firstOrNull { it.uiMapId==model.headerArea }?.name ?: "Oblast")+" ▾",maxLines=1,overflow=TextOverflow.Ellipsis) }
-                    IconButton(onClick={model.openSettings()},modifier=Modifier.size(48.dp).testTag("settings").semantics { contentDescription="Nastavení" }) { NavigationIcon(Destination.SETTINGS) }
+                    IconButton(onClick={closeDetail();model.openSettings()},modifier=Modifier.size(48.dp).testTag("settings").semantics { contentDescription="Nastavení" }) { NavigationIcon(Destination.SETTINGS) }
                 }
-                Box(Modifier.weight(1f).fillMaxWidth()) {
+                Row(Modifier.weight(1f).fillMaxWidth()) {
+                    Box(Modifier.weight(1f).fillMaxHeight()) {
                     holder.SaveableStateProvider(model.destination.name) {
                         when(model.destination) {
-                            Destination.MAP->MapScreen(model,wide,openSearch,onPlan={openOverlay("EXPEDITION")},onPoint=openPoint)
-                            Destination.QUESTS->QuestsScreen(model,openSearch,openOverlay,openEntry,openPoint)
-                            Destination.SEARCH->SearchScreen(model,openEntry,openPoint,onCoverage={openOverlay("COVERAGE")})
-                            Destination.SETTINGS->SettingsScreen(model,openOverlay)
+                            Destination.MAP->MapScreen(model,wide,openSearch,onPlan={openOverlay("EXPEDITION")},onPoint=openPoint,onArea=if(sidePaneEnabled)closeDetail else null)
+                            Destination.QUESTS->ReadingPane { QuestsScreen(model,openSearch,openOverlay,openEntry,openPoint) }
+                            Destination.SEARCH->ReadingPane { SearchScreen(model,openEntry,openPoint,onCoverage={openOverlay("COVERAGE")},selectedEntryKey=detailKey) }
+                            Destination.SETTINGS->ReadingPane { SettingsScreen(model,openOverlay) }
+                        }
+                    }
+                    }
+                    if(sidePaneEnabled) {
+                        VerticalDivider()
+                        Box(Modifier.width(companionPaneWidth(contentWidth.value,density.fontScale).dp).fillMaxHeight().testTag("companion_pane")) {
+                            when {
+                                detailKey!=null || detailPoint!=null->renderDetail(true)
+                                model.destination==Destination.MAP->companionHolder.SaveableStateProvider("area-points") {
+                                    AreaPointsPanel(model,onPoint=openPoint)
+                                }
+                                else->Column(Modifier.fillMaxSize().padding(24.dp),verticalArrangement=Arrangement.Center) {
+                                    Text("Vyber položku",style=MaterialTheme.typography.titleLarge)
+                                    Text("Její detail se zobrazí tady. Seznam zůstane po ruce.",modifier=Modifier.padding(top=12.dp))
+                                }
+                            }
                         }
                     }
                 }
                 if(detailKey==null && detailPoint==null && overlay==null)PersonalUndoBar(model)
                 if(!wide)NavigationBar(windowInsets=WindowInsets(0,0,0,0),modifier=Modifier.testTag("navigation_bar")) {
-                    Destination.tabs.forEach { target->NavigationBarItem(selected=model.destination==target,onClick={model.navigate(target)},icon={NavigationIcon(target)},label={Text(target.label)},modifier=Modifier.testTag("nav_${target.name}")) }
+                    Destination.tabs.forEach { target->NavigationBarItem(selected=model.destination==target,onClick={closeDetail();model.navigate(target)},icon={NavigationIcon(target)},label={Text(target.label)},modifier=Modifier.testTag("nav_${target.name}")) }
                 }
             }
         }
         }
     }
+    BackHandler(enabled=sidePaneEnabled && (detailKey!=null || detailPoint!=null) && overlay==null && model.pendingChange==null && model.dataError==null && model.noteDraft==null) {
+        if(detailTrail.isNotEmpty()){detailKey=detailTrail.last();detailTrail=detailTrail.dropLast(1)}
+        else { val previous=detailReturn;closeDetail();overlay=previous }
+    }
     when {
         model.dataError!=null->AlertDialog(onDismissRequest=model::dismissError,title={Text("Změnu se nepodařilo dokončit")},text={Text(model.dataError!!)},confirmButton={TextButton(onClick=model::dismissError){Text("Rozumím")}})
         model.pendingChange!=null->AlertDialog(onDismissRequest=model::cancelChange,title={Text("Potvrdit změnu?")},text={Text(model.pendingChange!!.message)},confirmButton={TextButton(onClick=model::confirmChange,enabled=!model.isBusy,modifier=Modifier.testTag("confirm_personal_change")){Text("Potvrdit")}},dismissButton={TextButton(onClick=model::cancelChange){Text("Zrušit")}})
         model.noteDraft!=null->NoteEditorDialog(model)
-        detailKey!=null || detailPoint!=null->EntrySheet(model,detailKey,detailPoint,
-            backLabel=if(detailTrail.isNotEmpty())"Zpět na předchozí" else if(model.destination==Destination.SEARCH)"Zpět do hledání" else "Zpět",
-            onBack={if(detailTrail.isNotEmpty()){detailKey=detailTrail.last();detailTrail=detailTrail.dropLast(1)}else{val previous=detailReturn;closeDetail();overlay=previous}},
-            onDismiss={val previous=detailReturn;closeDetail();overlay=previous},onExit=closeDetail,
-            onRelated={key->detailKey?.let { detailTrail=detailTrail+it };detailKey=key;detailPoint=null},
-            onShowPoint={p->closeDetail();model.showPoint(p.id)},onJournal={closeDetail();model.showJournal()})
+        (detailKey!=null || detailPoint!=null) && !sidePaneEnabled->renderDetail(false)
         showQuickArea->MapSelectorDialog(model.atlas.maps,model.headerArea,model::changeCurrentArea,onClose={showQuickArea=false})
         overlay=="BACKUP"->BackupDialog(model,closeOverlay)
         overlay=="PACKAGES"->PackagesDialog(model,closeOverlay)
@@ -129,6 +162,7 @@ import java.util.Locale
         overlay=="ABOUT"->AboutDialog(model,onHelp={openOverlay("HELP")},onClose=closeOverlay)
         overlay=="EXPEDITION"->ExpeditionDialog(model,closeOverlay,openEntry)
         overlay=="LEAVING"->BeforeLeavingSheet(model,closeOverlay,openEntry)
+    }
     }
 }
 
@@ -167,3 +201,4 @@ import java.util.Locale
 }
 
 private fun Modifier.semanticsDescription(text: String): Modifier = this.then(Modifier.semantics { contentDescription = text })
+
