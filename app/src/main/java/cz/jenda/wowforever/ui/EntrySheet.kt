@@ -18,8 +18,8 @@ import cz.jenda.wowforever.data.Spoilers
 import cz.jenda.wowforever.model.MapPoint
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class,ExperimentalLayoutApi::class)
-@Composable fun EntrySheet(model:GuideViewModel,entryKey:String?,pointId:String?,backLabel:String,onBack:()->Unit,onDismiss:()->Unit,onRelated:(String)->Unit,onShowPoint:(MapPoint)->Unit,onJournal:()->Unit) {
+@OptIn(ExperimentalMaterial3Api::class,ExperimentalLayoutApi::class,androidx.compose.ui.ExperimentalComposeUiApi::class)
+@Composable fun EntrySheet(model:GuideViewModel,entryKey:String?,pointId:String?,backLabel:String,onBack:()->Unit,onDismiss:()->Unit,onExit:()->Unit,onRelated:(String)->Unit,onShowPoint:(MapPoint)->Unit,onJournal:()->Unit) {
     val entry=entryKey?.let(model::historyEntry)
     val point=pointId?.let { id->model.allPoints.firstOrNull { it.id==id } }
     val note=pointId?.let { id->model.notes.firstOrNull { it.id==id } }
@@ -47,7 +47,7 @@ import kotlinx.coroutines.launch
                     FlowRow(horizontalArrangement=Arrangement.spacedBy(6.dp)) {
                         TextButton(onClick={model.toggleBookmark(entry)},enabled=!model.isBusy,modifier=Modifier.testTag("bookmark_toggle")) { Text(if(entry.key in model.bookmarks)"Odebrat záložku" else "Přidat záložku") }
                         TextButton(onClick={model.addPlanStop(entry.key)},enabled=!model.isBusy,modifier=Modifier.testTag("plan_add_entry")) { Text("Do výpravy") }
-                        model.pointsForEntry(entry.key).firstOrNull()?.let { p->TextButton(onClick={onDismiss();model.requestNote(p.position)},modifier=Modifier.testTag("entry_note")) { Text("Poznámka") } }
+                        model.pointsForEntry(entry.key).firstOrNull()?.let { p->TextButton(onClick={onExit();model.requestNote(p.position)},modifier=Modifier.testTag("entry_note")) { Text("Poznámka") } }
                     }
                     if(entry.kind==EntryKind.ITEM)TextButton(onClick=onJournal,modifier=Modifier.testTag("entry_journey")) { Text("Otevřít deník") }
                     DetailSection("Kde", "detail_locations") {
@@ -81,7 +81,7 @@ import kotlinx.coroutines.launch
                     Text(note?.text ?: point?.let { pointCoordinates(model,it) } ?: "Položka momentálně není v aktivních datech.")
                     if(point!=null) {
                         TextButton(onClick={onShowPoint(point)},modifier=Modifier.testTag("focus")) { Text("Na mapě") }
-                        if(note!=null)TextButton(onClick={onDismiss();model.requestNote(point.position,note.id)},modifier=Modifier.testTag("edit_note")) { Text("Upravit") }
+                        if(note!=null)TextButton(onClick={onExit();model.requestNote(point.position,note.id)},modifier=Modifier.testTag("edit_note")) { Text("Upravit") }
                     }
                 }
                 Spacer(Modifier.height(16.dp))

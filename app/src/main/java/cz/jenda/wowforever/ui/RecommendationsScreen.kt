@@ -21,6 +21,7 @@ import cz.jenda.wowforever.data.Destination
 import cz.jenda.wowforever.data.Spoilers
 import cz.jenda.wowforever.domain.*
 import cz.jenda.wowforever.content.EntryKind
+import cz.jenda.wowforever.content.Importance
 import cz.jenda.wowforever.content.Verification
 import cz.jenda.wowforever.data.db.QuestState
 
@@ -77,9 +78,9 @@ private fun LazyListScope.adviceSection(title:String,rows:List<Advice>,empty:Str
 private fun LazyListScope.adviceRows(rows:List<Advice>,model:GuideViewModel,onEntry:(String)->Unit,onWhy:(String)->Unit) {
     items(rows.filter { it.entry.kind in setOf(EntryKind.QUEST,EntryKind.SPELL) },key={"advice:"+it.entry.key}) { a -> AdviceCard(model,a,onEntry,onWhy) }
 }
-@OptIn(ExperimentalLayoutApi::class)
+@OptIn(ExperimentalLayoutApi::class,ExperimentalMaterial3Api::class)
 @Composable private fun AdviceCard(model:GuideViewModel,a:Advice,onEntry:(String)->Unit,onWhy:(String)->Unit) {
-    ElevatedCard(Modifier.fillMaxWidth().testTag("advice_${a.entry.key}")) {
+    ElevatedCard(onClick={onEntry(a.entry.key)},modifier=Modifier.fillMaxWidth().testTag("advice_${a.entry.key}")) {
         Column(Modifier.padding(14.dp),verticalArrangement=Arrangement.spacedBy(6.dp)) {
             Text(a.entry.nameOriginal,style=MaterialTheme.typography.titleMedium)
             if(a.availability!=Availability.UNVERIFIED || a.inProgress || a.wish)Text(
@@ -97,7 +98,6 @@ private fun LazyListScope.adviceRows(rows:List<Advice>,model:GuideViewModel,onEn
                     modifier=Modifier.testTag("advice_done_${a.entry.key}")) { Text("Hotovo") }
             }
             Row(horizontalArrangement=Arrangement.spacedBy(6.dp)) {
-                TextButton(onClick={onWhy(a.entry.key)},modifier=Modifier.testTag("why_${a.entry.key}")){Text("Proč a podmínky")}
                 TextButton(onClick={onEntry(a.entry.key)},modifier=Modifier.testTag("advice_open_${a.entry.key}")){Text("Otevřít detail")}
             }
         }

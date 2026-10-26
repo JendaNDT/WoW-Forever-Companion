@@ -114,7 +114,7 @@ import java.util.Locale
         detailKey!=null || detailPoint!=null->EntrySheet(model,detailKey,detailPoint,
             backLabel=if(detailTrail.isNotEmpty())"Zpět na předchozí" else if(model.destination==Destination.SEARCH)"Zpět do hledání" else "Zpět",
             onBack={if(detailTrail.isNotEmpty()){detailKey=detailTrail.last();detailTrail=detailTrail.dropLast(1)}else{val previous=detailReturn;closeDetail();overlay=previous}},
-            onDismiss=closeDetail,
+            onDismiss={val previous=detailReturn;closeDetail();overlay=previous},onExit=closeDetail,
             onRelated={key->detailKey?.let { detailTrail=detailTrail+it };detailKey=key;detailPoint=null},
             onShowPoint={p->closeDetail();model.showPoint(p.id)},onJournal={closeDetail();model.showJournal()})
         showQuickArea->MapSelectorDialog(model.atlas.maps,model.headerArea,model::changeCurrentArea,onClose={showQuickArea=false})

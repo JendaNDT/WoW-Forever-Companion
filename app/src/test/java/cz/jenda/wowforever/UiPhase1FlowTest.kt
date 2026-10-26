@@ -72,8 +72,8 @@ class UiPhase1FlowTest {
         rule.onNodeWithTag("catalog_query").performTextReplacement("4641")
         rule.onNodeWithTag("catalog_$E6_A").performClick()
         rule.onNodeWithTag("quest_state_COMPLETED").assertIsDisplayed()
-        val actions=rule.onNodeWithTag("quest_state_COMPLETED").fetchSemanticsNode().boundsInRoot
-        val description=rule.onNodeWithTag("entry_description").fetchSemanticsNode().boundsInRoot
+        val actions=rule.onNodeWithTag("quest_state_COMPLETED").getUnclippedBoundsInRoot()
+        val description=rule.onNodeWithTag("entry_description").getUnclippedBoundsInRoot()
         assertTrue("Quest actions must precede description",actions.top<description.top)
         shot("detail",true)
         rule.onNodeWithText("Zpět do hledání").performClick()

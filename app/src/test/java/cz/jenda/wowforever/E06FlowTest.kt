@@ -57,7 +57,7 @@ class E06FlowTest {
         rule.runOnIdle{assertTrue(model.recommendations.now.isEmpty());assertTrue(model.recommendations.uncertain.isNotEmpty())}
         scroll("reference_notice");rule.onNodeWithTag("reference_notice").assertExists()
         scroll("advice_$E6_A");rule.onNodeWithTag("availability_$E6_A").assertDoesNotExist();shot("now")
-        rule.onNodeWithTag("why_$E6_A").performScrollTo().performClick()
+        rule.onNodeWithTag("advice_open_$E6_A").performScrollTo().performClick()
         rule.onNodeWithTag("advice_explanation").assertExists();shot("why-reference",true)
         rule.onNodeWithTag("detail_back").performClick()
         scroll("advice_coverage");rule.onNodeWithTag("advice_coverage").performClick()
@@ -97,7 +97,7 @@ class E06FlowTest {
     @Test fun spoilerChoiceHidesReasonsUntilSingleDetailIsRevealed() {
         fixture();rule.runOnIdle{model.chooseSpoilers(Spoilers.HINTS)}
         scroll("advice_$E6_A");rule.onNodeWithText("Testovací důvod pro 4641").assertDoesNotExist()
-        rule.onNodeWithTag("why_$E6_A").performScrollTo().performClick()
+        rule.onNodeWithTag("advice_open_$E6_A").performScrollTo().performClick()
         rule.onNodeWithText("Testovací důvod pro 4641").assertDoesNotExist()
         rule.onNodeWithTag("reveal_advice").performScrollTo().performClick()
         rule.onNodeWithText("Testovací důvod pro 4641").performScrollTo().assertIsDisplayed();shot("fixture-reason",true)
